@@ -1,0 +1,728 @@
+\chapter{Semántica de Manchester}
+
+\section{Vocabulario}
+
+\lstset{language=owlms,numbers=none,literate=,mathescape,backgroundcolor=}
+
+El mapa de los tipos de datos es una sextupla de la forma: \newline
+\begin{center}
+$D=(N_{DT}, N_{LS}, N_{FS}, \cdot^{DT},\cdot^{LS},\cdot^{FS})$
+\end{center}
+donde:
+\begin{itemize}
+	\item $N_{DT}$ es un conjunto de tipos de datos donde no está incluido el tipo $rdfs:Literal$.
+	\item $N_{LS}$ es una función que asigna a cada tipo de datos $DT \in N_{DT}$ un conjunto $N_{LS}(DT)$ de strings llamados \textit{formas léxicas}. El conjunto $N_{LS}(DT)$ recibe el nombre de \textit{espacio léxico} de DT.
+	\item $N_{FS}$ es una función que asigna a cada tipo de datos $DT \in N_{DT}$ un conjunto $N_{FS}(DT)$ de pares $(F, v)$, donde $F$ es una \textit{dimensión restringida} y $v$ es un valor arbitrario llamado \textit{valor restringido}. El conjunto $N_{FS}(DT)$ se llama \textit{espacio de dimensiones} de $DT$.
+	\item Para cada tipo de datos $DT \in N_{DT}$, la \textit{función de interpretación} $\cdot^{DT}$ asigna a $DT$ un conjunto $(DT)^{DT}$ llamado \textit{espacio de valores} de $DT$.
+	\item Para cada tipo de datos $DT \in N_{DT}$ y cada forma léxica $LV \in N_{LS}(DT)$, la \textit{función de interpretación} $\cdot^{LS}$ asigna al par $(LV, DT)$ el valor $(LV, DT)^{LS} \in (DT)^{DT}$.
+	\item Para cada tipo de datos $DT \in N_{DT}$ y cada par $(F, v) \in N_{FS}(DT)$, la \textit{función de interpretación} $\cdot^{FS}$ asigna a $(F, v)$ el conjunto $(F, v)^{FS} \subseteq (DT)^{DT}$.
+\end{itemize}
+%
+Un vocabulario $V=(V_C, V_{OP}, V_{DP}, V_I, V_{DT}, V_{LT}, V_{FA})$ sobre un mapa de datos $D$ es una séptupla que consta de los siguientes elementos:
+\begin{itemize}
+	\item $V_C$ es un conjunto de clases según la especificación \textit{OWL2}\footnote{http://www.w3.org/TR/owl2-direct-semantics/\#ref-owl-2-specification} que contiene al menos las clases \textit{owl:Thing} y \textit{owl:Nothing}.
+	\item $V_{OP}$ es un conjunto de propiedades sobre objetos tal y como están definidos en la especificación \textit{OWL2}, que contiene al menos las propiedades \textit{owl:topObjectPropertiy} y \textit{owl:bottomObjectProperty}.
+	\item $V_{DP}$ es un conjunto de propiedades de datos según la especificación \textit{OWL2} que contiene al menos las propiedades \textit{owl:topDataProperty} y \textit{owl:bottomDataProperty}.
+	\item $V_I$ es un conjunto de individuos (con nombre y anónimos) tal y como se definen en la especificación de \textit{OWL2}
+	\item $V_{DT}$ es el conjunto que contiene todos los tipos de datos definidos en $D$, el tipo de datos \textit{rdfs:Literal}, y posiblemente otros tipos de datos, lo que nos lleva a inferir que $N_{DT} \cup \{ rdfs:Literal \} \subseteq V_{DT}$.
+	\item $V_{LT}$ es un conjunto de literales $(LV)^{DT}$ para cada tipo de datos $DT \in N_{DT}$ y cada forma léxica $LV \in N_{LS}(DT)$.
+	\item $V_{FA}$ es el conjunto de pares $(F, lt)$ para cada dimensión restringida $F$, tipo de datos $DT \in N_{DT}$ y literal $lt \in V_{LT}$ tales que $(F, (LV, DT_1)^{LS}) \in N_{FS}(DT)$, donde $LV$ es la forma léxica de $lt$ y $DT_1$ es el tipo de datos de $lt$.
+\end{itemize}
+
+Dado un vocabulario $V$, de ahora en adelante se utilizará la siguiente notacíón:
+\begin{itemize}
+	\item $OP$ denota una propiedad de un objeto.
+	\item $OPE$ denota una expresión de una propiedad de un objeto.
+	\item $DP$ denota una propiedad de un dato.
+	\item $DPE$ denota una expresión de una propiedad de un dato.
+	\item $C$ denota una clase.
+	\item $CE$ denota una expresión de una clase.
+	\item $DT$ denota un tipo de datos.
+	\item $DR$ denota un rango de datos.
+	\item $a$ denota un individuo, con nombre o anónimo.
+	\item $lt$ denota un literal.
+	\item $F$ denota una dimensión restringida.
+\end{itemize}
+
+\section{Interpretación}
+	Dado un mapa de tipos de datos $D$, y un vocabulario $V$ sobre $D$, una interpretación $I=(\bigtriangleup_I, \bigtriangleup_D, \cdot^C, \cdot^{OP}, \cdot^{DP}, \cdot^I, \cdot^{DT}, \cdot^{LT}, \cdot^{FA})$ para $D$ y $V$ es una 9-tupla con la siguiente estructura:
+	\begin{itemize}
+		\item $\bigtriangleup_I$ es un conjunto no vacío llamado el \textit{dominio de objetos}.
+		\item $\bigtriangleup_D$ es un conjunto no vacío disjunto a $\bigtriangleup_I$ llamado el \textit{dominio de datos} tal que $(DT)^{DT} \subseteq \bigtriangleup_D$ para cada tipo de datos $DT \in V_{DT}$.
+		\item $\cdot^C$ es la \textit{función de intrepretación de clases} que asigna a cada clase $C \in V_C$ un subconjunto $(C)^C \subseteq \bigtriangleup_I$ tal que $(owl_Thing)^C=\bigtriangleup_I \cap (owl:Thing)^C=\varnothing$.
+		\item $\cdot^{OP}$ es la \textit{función de interpretación de propiedades de objetos} que asigna a cada propiedad $OP \in V_{OP}$ un subconjunto $(OP)^{OP} \subseteq \bigtriangleup_I \times \bigtriangleup_I$ tal que $(owl:topObjectProperty)^{OP}=\bigtriangleup_I \times \bigtriangleup_I \land (owl:bottomObjectProperty)^{OP}=\varnothing$.
+		\item $\cdot^{DP}$ es la \textit{función de interpretación de datos} que asigna a cada propiedad $DP \in V_{DP}$ un subconjunto $(DP)^{DP} \subseteq \bigtriangleup_I \times \bigtriangleup_D$ tal que $(owl:topDataProperty)^{DP}=\bigtriangleup_I \times \bigtriangleup_D \land (owl:bottomDataProperty)^{DP}=\varnothing$.
+		\item $\cdot^I$ es la \textit{función de interpretación de individuos} que asigna a cada individuo $a \in V_I$ un elemento $(a)^I \in \bigtriangleup_I$.
+		\item $\cdot^{DT}$ es la función de interpretación de tipos de datos que asigna a cada tipo de datos $DT \in V_{DT}$ un subconjunto $(DT)^{DT} \subseteq \bigtriangleup_D$ tal que $\cdot^{DT}$ es igual que en D para cada tipo de datos $DT \in N_{DT} \land (rdfs:Literal)^{DT} = \bigtriangleup_D$.
+		\item $\cdot^{LT}$ es la \textit{función de interpretación literal} que se define como $(lt)^{LT}=(LV,, DT)^{LS}$ para cada $lt \in V_{LT}$, donde $LV$ es la forma léxica de $lt$ y $DT$ es el tipo de datos de $lt$.
+		\item $\cdot^{FA}$ es la \textit{función de interpretación de dimensiones} que se define como $(F, lt)^{FA}=(F,(lt)^{LT})^{FS}$ para cada $(F, lt) \in V_{FA}$.
+	\end{itemize}
+
+\section{Satisfacción de axiomas}
+
+\begin{center}
+	\begin{longtable}{||p{0.45\linewidth}|p{0.55\linewidth}||}
+		\hline
+		\hline
+		\multicolumn{2}{||c||}{Satisfacción de axiomas sobre clases:}\\
+		\hline
+		Axioma & Condición\\
+		\hline
+		\endhead
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Class: A SubClassOf B %%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+Class: $CE$
+  SubClassOf: $CE_1,\dotsc,CE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+      \begin{array}{l}
+        (CE)^c\subseteq(CE_1)^c \cap \dotsb \cap (CE)^c\subseteq(CE_n)^c\\
+      \end{array}
+    \end{displaymath}
+    \\
+    \hline
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Class: A EquivalentOf B %%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+Class: $CE_1$ 
+   EquivalentTo: $CE_2,\dotsc,CE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   (CE_j)^c = (CE_k)^c \\
+   		   \text{ para cada } 1 \leq j \leq n, 1 \leq j \leq n\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+   	\hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% Class: A DisjointWith B %%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+Class: $CE_1$
+	DisjointWith: $CE_2,\dotsc,CE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   (CE_j)^c \cap (CE_k)^c = \varnothing \\
+   		   \text{ para cada } 1 \leq j \leq n, 1 \leq k \leq n \\
+   		   \text{ tales que } j \neq k\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+    \hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% Class: A DisjointUnionOf B %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+Class: $CE$
+  DisjointUnionOf: $CE_1,\dotsc,CE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+      \begin{array}{l}
+        CE^c=(CE_1)^c \cup \dotsc \cup (CE_n)^c \\
+        \land \\
+        (CE_j)^c \cap (CE_k)^c = \varnothing \\
+        \text{ para cada } 1\leq j \leq  n, 1 \leq k \leq  n \\
+        \text{ tales que } j \neq k\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline
+   	\hline
+   	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{||p{0.45\linewidth}|p{0.55\linewidth}||}
+		\hline
+		\hline
+		\multicolumn{2}{||c||}{Satisfacción de axiomas sobre propiedades de objetos:}\\
+		\hline
+		Axioma & Condición\\
+		\hline
+		\endhead
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A Domain B %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	Domain: $CE$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \forall x,y:(x,y) \in (OPE)^{op} \Rightarrow x \in (CE)^c\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A Range B %%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	Range: $CE$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+    		\forall x,y:(x,y) \in (OPE)^{op} \Rightarrow y \in (CE)^c\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A Characteristics:Functional %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	Characteristics: Functional
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   \forall x,y_1,y_2:(x,y_1) \in (OPE)^{op}\\
+   		   \land\\
+   		   (x,y_2) \in (OPE)^{op}	 \Rightarrow  y_1=y_2\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+    \hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A Characteristcs: InverseFunctional %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	Characteristics: InverseFunctional
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   \forall x_1,x_2,y:(x_1,y)\in (OPE)^{op}\\
+   		   \land \\
+   		   (x_2,y) \in (OPE)^{op} \Rightarrow x_1=x_2\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A Characteristics: Reflexive %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	Characteristics: Reflexive
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   \forall x:x\in \bigtriangleup_I \Rightarrow (x,x) \in (OPE)^{op}\\\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A Characteristics: Irreflexive %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	Characteristics: Irreflexive
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   \forall x:x \in \bigtriangleup_I \Rightarrow (x,x) \notin (OPE)^{op}\\\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A Characteristics: Symmetric %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	Charactetistics: Symmetric
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   \forall x,y:(x,y) \in (OPE)^{op} \Rightarrow (y,x)\in (OPE)^{op}\\\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A Charactetistics: Asymmetric %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	Characteristics: Asymmetric
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   \forall x,y:(x,y) \in (OPE)^{op} \Rightarrow (y,x)\notin (OPE)^{op}\\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A Characteristics: Transitive %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	Characteristics: Transitive
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   \forall x,y,z:(x,y) \in (OPE)^op \\
+   		   \land \\
+   		   y,z) \in (OPE)^{op} \Rightarrow (x,z) \in (OPE)^{op}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A SubPropertyOf B %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE_1$
+	SubPropertyOf: $OPE_2$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   (OPE_1)^{op} \subseteq (OPE_2)^{op}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A EquivalentTo B %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE_1$
+	EquivalentTo: $OPE_2,\dotsc,OPE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   (OPE_j)^{op}=(OPE_k)^{op} \\
+   		   \text{para cada } 1 \leq j \leq n \text{ y cada } 1 \leq k \leq n\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A DisjointWith B %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE_1$
+	DisjointWith: $OPE_2,\dotsc,OPE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   (OPE_j)^{op} \cap (OPE_k)^{op} = \varnothing \\
+   		   \text{para cada } 1 \leq j \leq n \text{ y cada } 1 \leq k \leq n\\
+   		   \text{tales que } j \neq k
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline  
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% ObjectProperty: A InverseOf B %%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE_1$
+	InverseOf: $OPE_2$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  (OPE_1)^{op} = \{(x,y) \vert (y,x) \in (OPE_2)^{op}\}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+    \hline
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{||p{0.45\linewidth}|p{0.55\linewidth}||}
+		\hline
+		\hline
+		\multicolumn{2}{||c||}{Satisfacción de axiomas sobre datos:}\\
+		\hline
+		Axioma & Condición\\
+		\hline
+		\endhead
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% DataProperty: A Domain B %%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+DataProperty: $DPE$
+	Domain: $CE$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   \forall x,y:(x,y) \in (DPE)^{dp} \Rightarrow x \in (CE)^{c}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% DataProperty: A Range B %%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+DataProperty: $DPE_1$
+	Range: $DR$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   \forall x,y(x,y) \in (DPE)^{dp} \Rightarrow y \in (DR)^{dt}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% DataProperty: A Characteristics Functional %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+DataProperty: $DPE$
+	Characteristics: Functional
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+    		\forall x,y_1,y_2:(x,y_1)\in (DPE)^{dp}\\
+				\land\\	
+				(x,y_2)\in (DPE)^{dp} \Rightarrow y_1=y_2\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% DataProperty: A SubPropertyOf B %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+DataProperty: $DPE_1$
+	SubPropertyOf: $DPE_2$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   (DPE_1)^{dp} \subseteq (DPE_2)^{dp}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline  
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% DataProperty: A EquivalentTo B %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+DataProperty: $DPE_1$
+	EquivalentTo: $DPE_2,\dotsc,DPE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   (DPE_j)^{dp}=(DPE_k)^{dp}\\
+   		   \text{ para cada } 1 \leq j \leq n \\
+   		   \text{ y cada } 1 \leq k \leq n\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% DataProperty: A DisjointWith B %%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+DataProperty: $DPE_1$
+	DisjointWith: $DPE_2,\dotsc,DPE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		   (DPE_j)^{dp} \cap (DPE_k)^{dp} = \varnothing \\
+   		   	\text{para cada} 1 \leq j \leq n \\
+   		   \text{y cada } 1 \leq k \leq n 
+   		   \text{tales que } j \neq k\\
+   		\end{array}
+   	\end{displaymath}
+   	\\
+    \hline 
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{||p{0.45\linewidth}|p{0.55\linewidth}||}
+		\hline
+		\hline
+		\multicolumn{2}{||c||}{Expresiones:}\\
+		\hline
+		Expresión & Interpretación\\
+		\hline
+		\endhead
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% A and B %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$CE_1$ and $\dotsc$ and $CE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  (CE_1)^c \cap \dotsc \cap (CE_n)^c\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% A or B %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$CE_1$ or $\dotsc$ or $CE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  (CE_1)^c \cup \dotsc \cup (CE_n)^c\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline  
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% NOT A %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+not $CE$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \bigtriangleup_I \backslash (CE)^c \\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline  
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% {a, b} %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+{$a_1$, $\dotsc$, $a_n$}
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{(a_1)^I, \dotsc, (a_n)^I\}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline  
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% M some A %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$OPE$ some $CE$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x| \exists y:(x,y) \in (OPE)^{op} \land y \in (CE)^c\}
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline  
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% M only A %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$OPE$ only $CE$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x| \forall y:(x,y) \in (OPE)^{op} \implies y \in (CE)^c\}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline  
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% M has value a %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$OPE$ value $a$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x| (x,(a)^I) \in (OPE)^{op}\}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline  
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% M self %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$OPE$ self
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x| (x,x) \in (OPE)^{op}\}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% M min n %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$OPE$ min $n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x|\ \#\ \{y|(x,y)\in(OPE)^{OP}\} \geq n \} \\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline     	  
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% M max n %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$OPE$ max $n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x|\ \#\ \{y|(x,y)\in(OPE)^{OP}\} \leq n \} \\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline 
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% M exactly n %%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$OPE$ exactly $n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x|\ \#\ \{y|(x,y)\in(OPE)^{OP}\} = n \} \\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline     	  
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% P some n %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$DPE$ some $DR$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x|\exists y:(x,y) \in (DPE)^{DP} \land y \in (DR)^{DT}\}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline     	  
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% P only n %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$DPE$ only $DR$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x|\forall y:(x,y) \in (DPE)^{DP} \Rightarrow y \in (DR)^{DT}\}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline    
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% P value lt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$DPE$ value $lt$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x|(x,(lt)^{LT}) \in (DPE)^{DP} \}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline  
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% P min n %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$DPE$ min $n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x|\ \#\ \{y|(x,y) \in (DPE)^{DP}\} \geq n\} \\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline     	  
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% P max n %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$DPE$ max $n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x|\ \#\ \{y|(x,y) \in (DPE)^{DP}\} \leq n\} \\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline     	  
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% P exact n %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+$DPE$ exactly $n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \{x|\ \#\ \{y|(x,y) \in (DPE)^{DP}\} = n\} \\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline 	  
+  
+
+
+ 	   	 	
+	\end{longtable}
+\end{center}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "tfc-ontologia-grado"
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "castellano"
+%%% End: 
