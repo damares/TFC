@@ -5,31 +5,32 @@
 \BOOKMARK [2][-]{subsection.1.1.1}{Historia}{section.1.1}% 5
 \BOOKMARK [2][-]{subsection.1.1.2}{El EEES en la actualidad}{section.1.1}% 6
 \BOOKMARK [1][-]{section.1.2}{Motivaci\363n}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.2.1}{Ontolog\355as}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.2}{Unificar conocimiento en un marco \372nico y formal}{section.1.2}% 9
-\BOOKMARK [2][-]{subsection.1.2.3}{Marco unificado}{section.1.2}% 10
-\BOOKMARK [2][-]{subsection.1.2.4}{Hip\363tesis: herramientas autom\341ticas}{section.1.2}% 11
-\BOOKMARK [2][-]{subsection.1.2.5}{Cr\355tica al sistema de hojas de c\341lculo disgregadas \(disgregaci\363n de la informaci\363n, redundancia, incoherencia, etc.\)}{section.1.2}% 12
-\BOOKMARK [1][-]{section.1.3}{Objetivos}{chapter.1}% 13
-\BOOKMARK [0][-]{chapter.2}{Ontolog\355a de nuestro plan de grado}{}% 14
-\BOOKMARK [1][-]{section.2.1}{Herramienta utilizada:Prot\351g\351}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.2}{Introducci\363n al documento de trabajo}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.3}{Explicaci\363n de la ontolog\355a}{chapter.2}% 17
-\BOOKMARK [2][-]{subsection.2.3.1}{Clases de la ontolog\355a}{section.2.3}% 18
-\BOOKMARK [1][-]{section.2.4}{Vocabulario}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.5}{Interpretaci\363n}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.5.1}{Propiedades de la ontolog\355a}{section.2.5}% 21
-\BOOKMARK [2][-]{subsection.2.5.2}{Propiedades sobre tipos de datos}{section.2.5}% 22
-\BOOKMARK [1][-]{section.2.6}{Instancia UPM \(varios ejemplos?\)}{chapter.2}% 23
-\BOOKMARK [2][-]{subsection.2.6.1}{Individuos de la ontolog\355a}{section.2.6}% 24
-\BOOKMARK [0][-]{chapter.3}{Generalizaci\363n}{}% 25
-\BOOKMARK [1][-]{section.3.1}{Intro: \277qui\351n puede usar esta ontolog\355a? \277La UCM? S\355, no, pq, etc.}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.2}{Idea: jerarquia \(refinamiento desde la ley hasta los planes\)}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.3}{Test: Instancia UCM?}{chapter.3}% 28
-\BOOKMARK [0][-]{chapter.4}{Aplicaciones \(autom\341ticas\)}{}% 29
-\BOOKMARK [1][-]{section.4.1}{Mencionar nuestras ideas sobre c\363mo sacar partido a esto}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.2}{Ejemplo de razonamiento \(puede que encuentres una inconsistencia al ir metiendo la info en la ontolog\355a,ap\372ntalo\).}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.3}{Ejemplo de vis. de la informaci\363n \(html\).}{chapter.4}% 32
-\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 33
-\BOOKMARK [0][-]{appendix.A}{T-Box en sintaxis M\341nchester}{}% 34
-\BOOKMARK [0][-]{lstnumber.-48.445}{Bibliograf\355a}{}% 35
+\BOOKMARK [2][-]{subsection.1.2.1}{Cr\355tica al sistema de hojas de c\341lculo}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.2}{Ontolog\355as}{section.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.2.3}{Unificar conocimiento en un marco \372nico y formal}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.4}{Procesos automatizados}{section.1.2}% 11
+\BOOKMARK [1][-]{section.1.3}{Objetivos}{chapter.1}% 12
+\BOOKMARK [0][-]{chapter.2}{Ontolog\355a de nuestro plan de grado}{}% 13
+\BOOKMARK [1][-]{section.2.1}{Herramienta utilizada:Prot\351g\351}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.2}{Introducci\363n al documento de trabajo}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.3}{Explicaci\363n de la ontolog\355a}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.3.1}{Clases de la ontolog\355a}{section.2.3}% 17
+\BOOKMARK [2][-]{subsection.2.3.2}{Propiedades de la ontolog\355a}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.3}{Propiedades sobre tipos de datos}{section.2.3}% 19
+\BOOKMARK [1][-]{section.2.4}{Instancia UPM \(varios ejemplos?\)}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.4.1}{Individuos de la ontolog\355a}{section.2.4}% 21
+\BOOKMARK [0][-]{chapter.3}{Generalizaci\363n}{}% 22
+\BOOKMARK [1][-]{section.3.1}{Intro: \277qui\351n puede usar esta ontolog\355a? \277La UCM? S\355, no, pq, etc.}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.2}{Idea: jerarquia \(refinamiento desde la ley hasta los planes\)}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.3}{Test: Instancia UCM?}{chapter.3}% 25
+\BOOKMARK [0][-]{chapter.4}{Aplicaciones \(autom\341ticas\)}{}% 26
+\BOOKMARK [1][-]{section.4.1}{Mencionar nuestras ideas sobre c\363mo sacar partido a esto}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.2}{Ejemplo de razonamiento \(puede que encuentres una inconsistencia al ir metiendo la info en la ontolog\355a,ap\372ntalo\).}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.3}{Ejemplo de vis. de la informaci\363n \(html\).}{chapter.4}% 29
+\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 30
+\BOOKMARK [0][-]{appendix.A}{Sem\341ntica de Manchester}{}% 31
+\BOOKMARK [1][-]{section.A.1}{Vocabulario}{appendix.A}% 32
+\BOOKMARK [1][-]{section.A.2}{Interpretaci\363n}{appendix.A}% 33
+\BOOKMARK [1][-]{section.A.3}{Satisfacci\363n de axiomas}{appendix.A}% 34
+\BOOKMARK [0][-]{appendix.B}{T-Box en sintaxis M\341nchester}{}% 35
+\BOOKMARK [0][-]{lstnumber.-55.504}{Bibliograf\355a}{}% 36

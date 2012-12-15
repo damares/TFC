@@ -750,6 +750,7 @@
         <Ontology1322242361907:AS_Ubicacion rdf:datatype="&xsd;string">7o semestre</Ontology1322242361907:AS_Ubicacion>
         <Ontology1322242361907:AS_Caracter rdf:datatype="&xsd;string">Obligatoria</Ontology1322242361907:AS_Caracter>
         <Ontology1322242361907:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas"/>
+        <Ontology1322242361907:AS_formaParteDe_MA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Empresa"/>
     </owl:NamedIndividual>
     
 
@@ -1928,6 +1929,20 @@ refactorización, etc.
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Ingeniería_de_computadores">
         <rdf:type rdf:resource="&Ontology1322242361907;Materia"/>
+        <Ontology1322242361907:MA_Creditos rdf:datatype="&xsd;decimal">12</Ontology1322242361907:MA_Creditos>
+        <Ontology1322242361907:MA_Duracion_Y_Ubicacion rdf:datatype="&rdfs;Literal">Materia compuesta por 2 asignaturas programadas en el 3º y 4º trimestre, tal y como se recoge a continuación en la tabla de asignaturas.</Ontology1322242361907:MA_Duracion_Y_Ubicacion>
+        <Ontology1322242361907:MA_Caracter rdf:datatype="&xsd;string">Obligatoria</Ontology1322242361907:MA_Caracter>
+        <Ontology1322242361907:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-11"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-22"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-26/27"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-30"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-5"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-7"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasGenerales_CG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-1/21"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasGenerales_CG rdf:resource="&CG-2;CE45"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasGenerales_CG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-3/4"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasGenerales_CG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-5"/>
+        <Ontology1322242361907:MA_otorgaCompetenciasGenerales_CG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-6"/>
     </owl:NamedIndividual>
     
 

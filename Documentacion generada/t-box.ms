@@ -11,11 +11,35 @@ Prefix: Seminarios: <http://www.semanticweb.org/ontologies/2011/10/Ontology13222
 Ontology: <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl>
 
 
+Datatype: tipoCaracterMateria
+
+    EquivalentTo: 
+        {"Basica" , "Mixta" , "Obligatoria" , "Optativa"}
+    
+    
 Datatype: xsd:decimal
 
     
+Datatype: tipoCredito
+
+    EquivalentTo: 
+        xsd:decimal[> 0]
+    
+    
 Datatype: rdf:PlainLiteral
 
+    
+Datatype: tipoCaracterAsignatura
+
+    EquivalentTo: 
+        {"Basica" , "Obligatoria" , "Optativa"}
+    
+    
+Datatype: tipoUbicacion
+
+    EquivalentTo: 
+        {"1er semestre" , "2o semestre" , "3er semestre" , "4o semestre" , "5o semestre" , "6o semestre" , "7o semestre" , "Ultimo curso"}
+    
     
 Datatype: xsd:integer
 
@@ -23,7 +47,7 @@ Datatype: xsd:integer
 Datatype: rdfs:Literal
 
     
-	Property: CE_esOtorgadaPor_MA
+ObjectProperty: CE_esOtorgadaPor_MA
 
     Domain: 
         Competencia_Especifica
@@ -49,6 +73,9 @@ ObjectProperty: MA_seImparteMediante_ME
     
 ObjectProperty: MA_seImparteSegun_AF
 
+    Characteristics: 
+        InverseFunctional
+    
     Domain: 
         Materia
     
@@ -181,6 +208,9 @@ ObjectProperty: MA_constaDe_AS
     
 ObjectProperty: AF_utilizadaParaImpartir_MA
 
+    Characteristics: 
+        Functional
+    
     Domain: 
         Actividad_Formativa
     
@@ -227,6 +257,18 @@ DataProperty: MA_Resultados
         rdfs:Literal
     
     
+DataProperty: AS_Creditos
+
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        Asignatura
+    
+    Range: 
+        tipoCredito
+    
+    
 DataProperty: MA_Caracter
 
     Characteristics: 
@@ -236,7 +278,7 @@ DataProperty: MA_Caracter
         Materia
     
     Range: 
-        {"Basica" , "Mixta" , "Obligatoria" , "Optativa"}
+        tipoCaracterMateria
     
     
 DataProperty: MA_Coordinacion
@@ -269,7 +311,7 @@ DataProperty: AS_Caracter
         Asignatura
     
     Range: 
-        {"Basica" , "Obligatoria" , "Optativa"}
+        tipoCaracterAsignatura
     
     
 DataProperty: AS_Extension
@@ -305,7 +347,7 @@ DataProperty: AS_Ubicacion
         Asignatura
     
     Range: 
-        {"1er semestre" , "2o semestre" , "3er semestre" , "4o semestre" , "5o semestre" , "6o semestre" , "7o semestre" , "Ultimo curso"}
+        tipoUbicacion
     
     
 DataProperty: OG_Descripcion
@@ -341,7 +383,7 @@ DataProperty: AF_Creditos
         Actividad_Formativa
     
     Range: 
-        xsd:decimal[> 0]
+        tipoCredito
     
     
 DataProperty: MA_Creditos
@@ -353,7 +395,7 @@ DataProperty: MA_Creditos
         Materia
     
     Range: 
-        xsd:decimal[> 0]
+        tipoCredito
     
     
 DataProperty: MA_Duracion_Y_Ubicacion
@@ -368,6 +410,9 @@ DataProperty: MA_Duracion_Y_Ubicacion
         rdfs:Literal
     
     
+Class: owl:Thing
+
+    
 Class: Competencia_Especifica
 
     EquivalentTo: 
@@ -376,20 +421,21 @@ Class: Competencia_Especifica
          and (CE_esOtorgadaPor_MA only Materia))
     
     SubClassOf: 
+        owl:Thing,
         Competencia
     
     DisjointWith: 
         Competencia_General
     
     
-Class: owl:Thing
-
-    
 Class: Metodo_Docente
 
     EquivalentTo: 
         (ME_utilizadoParaImpartir_MA some Materia)
          and (ME_utilizadoParaImpartir_MA only Materia)
+    
+    SubClassOf: 
+        owl:Thing
     
     
 Class: Competencia
@@ -410,6 +456,7 @@ Class: Competencia_General
          and (CG_esOtorgadaPor_MA only Materia))
     
     SubClassOf: 
+        owl:Thing,
         Competencia
     
     DisjointWith: 
@@ -421,6 +468,9 @@ Class: Asignatura
     EquivalentTo: 
         (AS_formaParteDe_MA some Materia)
          and (AS_formaParteDe_MA only Materia)
+    
+    SubClassOf: 
+        owl:Thing
     
     
 Class: Objetivo_General
@@ -435,6 +485,9 @@ Class: Materia
         (MA_otorgaCompetenciasGenerales_CG some Competencia)
          and (MA_otorgaCompetenciasGenerales_CG only Competencia)
     
+    SubClassOf: 
+        owl:Thing
+    
     
 Class: Actividad_Formativa
 
@@ -442,4 +495,10 @@ Class: Actividad_Formativa
         (AF_utilizadaParaImpartir_MA some Materia)
          and (AF_utilizadaParaImpartir_MA only Materia)
     
+    SubClassOf: 
+        owl:Thing
     
+    
+DisjointClasses: 
+    Actividad_Formativa,Asignatura,Competencia,Materia,Metodo_Docente,Objetivo_General
+
