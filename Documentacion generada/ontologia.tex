@@ -154,124 +154,127 @@ conocimientos o metodologías).
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_otorgaCompetenciasGenerales_CG-CG_esOtorgadaPor_MA]{t-box.ms}	
     
 
-    \item CE\_esOtorgadaPor\_MA.
-    Dominio: 	Competencia\_Especifica.
-    Rango: 	Materia.
-    Inversa: 	MA\_otorgaCompetenciasEspecíficas\_CE.
-    Un alumno adquiere una cierta competencia específica al cursar la materia que la otorga. Se podría decir de otro modo: Para que un alumno adquiera una competencia específica, es preciso que curse una cierta materia.
-    \item MA\_otorgaCompetenciasEspecíficas\_CE.
-    Dominio: 	Materia.
-    Rango: 	Compentencia\_Específica.
-    Inversa: 	CE\_esOtortgadaPor\_MA.
-    El curso de una materia por parte de un alumno, le otorga ciertas competencias específicas definidas en la ficha de cada materia.
-    \item MA\_constaDe\_AS.
-    Dominio: 	Materia.
-    Rango: 	Asignatura.
-    Inversa: 	AS\_formaParteDe\_MA.
-    Una materia está compuesta por varias asignaturas, que quedan de ese modo agrupadas bajo esa materia. Se podría decird de otro modo: que las asignaturas quedan agrupadas en diversas materias. Es una relación inversamente funcional, es decir, su función inversa es funcional. Dicho coloquialmente, significa que una materia puede constar de una o varias asignaturas, pero una asignatura sólo puede pertenecer a una materia.
-    \item MA\_seImparteMediante\_ME.
-    Dominio: 	Materia.
-    Rango: 	Metodo\_Docente.
-    Inversa: 	ME\_utilizadoParaImpartir\_MA.
-    Las materias se imparten según dictan ciertos métodos docentes considerados adecuados por los docentes de la titulación. Estos métodos docentes pueden ser complementarios entre sí, y en ningún caso son excluyeentes entre ellos.
-    \item MA\_seImparteSegún\_AF.
-    Dominio: 	Materia.
-    Rango: 	Actividad\_Formativa.
-    Inversa: 	AF\_utilizadaParaImpartir\_MA.
-    Las materias se imparten realizando ciertas activides formativas definidas por los docentes de la materia. Los créditos de docencia de esa materia, deben estar por tanto distribuidos entre las distintas actividades formativas. Al igual que ocurre con los métodos docentes, las diferentes actividades formativas no son excluyentes entre sí, sino complementarios.
-    \item AS\_esRequisitoPara\_AS.
-    Dominio: 	Asignatura.
-    Rango: 	Asignatura.
-    Inversa: 	AS\_tieneComoRequisito\_AS.
-    Como ya se explicó antes, el hecho de que una asignatura tenga como requisito en la guía de la titulación el haber cursado una asignatura anteriormente, no implica que obligatoriamente se haya de cursar esa asignatura con anterioridad. Es decir, se trata de una mera recomendación de cara al itinerio a seguir en la titulación, y en ningñun caso de obligado cumplimiento. Se ha tenido en cuenta a la hora de elaborar la ontología, ya que el fín último de esta es proporcionar una herramienta para un diseño de la titulación correcto, lo que incluye el trayecto curricular del alumno, y no para el control del desarrollo del alumno. Por tanto, dado que lo que estamos haciendo es ayudar a diseñar el título, vamos a incluir los requisitos para el curso de asignaturas, como si de cumplimiento obligatorio se tratase.
+    \item [CE\_esOtorgadaPor\_MA y MA\_otorgaCompetenciasEspecíficas\_CE.] Al igual que ocurre con las competencias generales, también es preciso que un alumno adquiera las competencias específicas propias de la titulación para cumplir los objetivos generales de esa titulación. Y al igual que ocurre con las competencias generales, las específicas únicamente se obtienen cuando el alumno supera con éxito las materias de la titulación.
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ CE_esOtorgadaPor_MA-MA_otorgaCompetenciasEspecificas_CE]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_otorgaCompetenciasEspecificas_CE-CE_esOtorgadaPor_MA]{t-box.ms}
+
+    
+    \item [MA\_constaDe\_AS y AS\_formaParteDe\_MA.] Una materia está compuesta por varias asignaturas, que quedan de ese modo agrupadas bajo esa materia. Se podría decird de otro modo: que las asignaturas quedan agrupadas en diversas materias. Es una relación inversamente funcional, es decir, su función inversa es funcional. Dicho coloquialmente, significa que una materia puede constar de una o varias asignaturas, pero una asignatura sólo puede pertenecer a una materia.
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_constaDe_AS-AS_formaParteDe_MA]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AS_formaParteDe_MA-MA_constaDe_AS]{t-box.ms}
+    
+    \item [MA\_seImparteMediante\_ME y ME\_utilizadaParaImpartir\_MA.] Las materias se imparten según dictan ciertos métodos docentes considerados adecuados por los docentes de la titulación. Estos métodos docentes pueden ser complementarios entre sí, y en ningún caso son excluyeentes entre ellos. De este modo se logra que la adquisición de competencias por parte del alumno sea optima.
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_seImparteMediante_ME-ME_utilizadoParaImpartir_MA]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ ME_utilizadoParaImpartir_MA-MA_seImparteMediante_ME]{t-box.ms}
+    
+    \item [MA\_seImparteSegún\_AF y AF\_utilizadaParaImpartir\_MA.] Las materias se imparten realizando ciertas activides formativas definidas por los docentes de la materia. Los créditos de docencia de esa materia, deben estar por tanto distribuidos entre las distintas actividades formativas. Al igual que ocurre con los métodos docentes, las diferentes actividades formativas no son excluyentes entre sí, sino complementarios. Además se ha considerado importante, de cara al diseño del título, conocer cuántos créditos se dedican a cada actividad formativa. Más adelante, veremos cómo se almacena esa información.
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_seImparteSegun_AF-AF_utilizadaParaImpartir_MA]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AF_utilizadaParaImpartir_MA-MA_seImparteSegun_AF]{t-box.ms}
+
+
+    \item [AS\_esRequisitoPara\_AS y AS\_tieneComoRequisito\_AS.] Como ya se explicó antes, el hecho de que una asignatura tenga como requisito en la guía de la titulación el haber cursado una asignatura anteriormente, no implica que obligatoriamente se haya de cursar esa asignatura con anterioridad. Es decir, se trata de una mera recomendación de cara al itinerio a seguir en la titulación, y en ningñun caso de obligado cumplimiento. Se ha tenido en cuenta a la hora de elaborar la ontología, ya que el fín último de esta es proporcionar una herramienta para un diseño de la titulación correcto, lo que incluye el trayecto curricular del alumno, y no para el control del desarrollo del alumno. Por tanto, dado que lo que estamos haciendo es ayudar a diseñar el título, vamos a incluir los requisitos para el curso de asignaturas, como si de cumplimiento obligatorio se tratase.
     Es una relación transitiva, es decir, que si la asignatura ``A'' es requisito de la asignatura ``B'' y a su vez ``B'' es requisito de la asignatura ``C'', entonces la asignatura ``A'' es un requisito de la asignatura ``C''.
-    \item AS\_formaParteDe\_MA.
-    Dominio: 	Asignatura.
-    Rango: 	Materia.
-    Inversa: 	MA\_constaDe\_AS.
-    Las asignaturas se agrupan por temática en diversas materias, de las que forman parte. Se trata de una relación funcional, dado que una asignatura sólo puede pertenecer a una materia, mientras que una materia puede estar compuesta por varias asignaturas.
-    \item AS\_tieneComoRequisito\_AS.
-    Dominio: 	Asignatura.
-    Rango: 	Asignatura.
-    Inversa: 	AS\_esRequisitoPara\_AS.
-    Es la relación inversa de AS\_esRequisitoPara\_AS, y al tratarse con rango y dominio coincidentes, su explicación y detalle es el mismo que el explicado para su inversa. 
-    \item ME\_utilizadaParaImpartir\_MA.
-    Dominio: 	Metodo\_Docente.
-    Rango: 	Materia.
-    Inversa: 	MA\_seImparteMediante\_ME.
-    Los métodos docentes se siguen al impartir las diferentes materias, según lo establecido en la guía del título, de modo que la adquisición de competencias por parte del alumno pueda ser óptima. 
-    \item AF\_utilizadaParaImpartir\_MA.
-    Dominio: 	Actividad\_Formativa.
-    Rango: 	Materia.
-    Inversa: 	MA\_seImparteSegún\_AF.
-    Las actividades formativas se realizan para impartir las diferentes materias, según cierto número de créditos especificado en la guía del plan de estudios. Además se ha considerado importante, de cara al diseño del título, conocer cuántos créditos se dedican a cada actividad formativa. Más adelante, en la descripción de los distintos individuos, veremos cómo se almacena esa información. 
+
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AS_esRequisitoPara_AS-AS_tieneComoRequisito_AS]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AS_tieneComoRequisito_AS-AS_esRequisitoPara_AS]{t-box.ms}
     
   \end{description}
   
 \subsection{Propiedades sobre tipos de datos}
-  Las propiedaddes sobre tipos de datos son relaciones entre individuos y tipos de datos, de modo que se puede asociar a los individuos implicados en la relación ciertas características, ya sean de un tipo definido o indefinido, pero concretas y especificas. 
-  \begin{enumerate}
-   \item OG\_Descripción.
-   Dominio:	Objetivo\_General.
-   Rango:	Literal.
-   Se trata de una relación entre un individuo de la clase Objetivo\_General y un dato de tipo literal. Esta relación funcional (un objetivo sólo puede tener una descripción) es util para guardar la descripción del objetivo descrito, y poder identificarlo por algo menos formal y más útil que la numeración del objetivo.
-   \item CO\_Descripción
-   Dominio:	Competencia.
-   Rango:	Literal.
-   Esta propiedad relaciona una competencia con un literal. También es una propiedad funcional, y al igual que el resto de propiedades dedicadas a almacenar información acerca de descripciones de individuos, es útil para poder identificar los mismos por algo más que el código descriptivo.
-   \item MA\_Carácter
-   Dominio:	Materia.
-   Rango:	\{"Básica", "Mixta", "Obligatoria", "Optativa"\}.
-   Une un individuo de clase Materia con un dato enumerado de entre los cuatro descritos en rango, lo que permite asignar a la materia un carácter de entre los cuatro descritos.
-   \item MA\_Créditos
-   Dominio:	Materia
-   Rango:	decimal[> "0"^^integer]
-   Se utliza para saber qué cantidad de créditos otorga al alumno el curso de una materia, o lo que es lo mismo, el coste en créditos ECTS de cursar una materia. Como todas la propiedades que sólo pueden aparecer asociadas a un mismo individuo una vez, se trata de una propiedad funcional.
-   \item MA\_Coordinación
-   Dominio:	Materia
-   Rango:	literal
-   Esta type property se utiliza como un campo libre donde se define de manera informal los agentes que coordinarán la materia, y cuando se defina, las herramentas que utilizarán en su cometido.
-   \item MA\_Duración\_Y\_Ubicación
-   Dominio:	Materia
-   Rango:	literal
-   Especifica en qué cuatrimestre se estudiará la materia, ayudando a la coordinación de la materia. 
-   \item MA\_Evaluación
-   Dominio:	Materia
-   Rango:	Literal
-   Recoge el conjunto de pruebas y técnicas de evaluación que el docente utilizará a la hora de comrpobar el nivel de adquisición de competencias por aprte de los alumnos. Podría ser posible utilizar una relación por cada prueba, pero dado que las pruebas de evaluación quedan fuera del alcance de la ontología, y no se encuentran modeladas dentro de la misma más allá de esta mención, se utilizará una única entrada por cada materia.
-   \item MA\_Resultados
-   Dominio:	Materia
-   Rango:	Literal
-   esta relación sólo enmerará a título informativo,los resultados del aprendizaje obtenidos, o dicho de otro modo, el nivel de adquisicion de competencias una vez finalizado el curso de la materia objeto de estudio.  
-   \item ME\_Descripción
-   Dominio:	Método\_Docente
-   Rango:	Literal
-   Se trata de una relación entre un individuo de la clase Método\_Docente y un dato de tipo literal. Esta relación funcional (un método docente sólo puede tener una descripción) es util para guardar la descripción del método descrito.
-   \item AF\_Descripción
-   Dominio:	Actividad\_Formativa
-   Rango:	Literal
-   Se trata de una relación entre un individuo de la clase Actividad\_Formativa y un dato de tipo literal. Esta relación funcional se utiliza para guardar la descripción de la actividad descrita.
-   \item AF\_Créditos
-   Dominio:	Actividad\_Formativa
-   Rango:	decimal[> "0"^^integer]
-   Es preciso, de cara a la construcción y mantenimiento del título conocer qué tiempo ha de dedicar el alumno a cada actividad formativa, con el fin de asegurar la correcta adquisición de las competencias en el tiempo establecido. 
-   \item AS\_Carácter
-   Dominio:	Asignatura
-   Rango:	\{"Básica", "Mixta", "Obligatoria", "Optativa"\}.
-   Asigna a un individuo de la clase Asignatura un dato enumerado de entre los cuatro descritos, lo que permite asignarle un carácter.    
-   \item AS\_Contenidos
-   Dominio:	Asignatura
-   Rango:	Literal.
-   La relación AS\_Contenidos, permite relacionar un individuo de la clase asignatura con un dato literal, de modo que nos permite almacenar una descripción algo más extensa, que ayude en su identificación.  
-   \item AS\_Extensión
-   Dominio:	Asignatura
-   Rango:	decimal[> "0"^^integer]
-   Esta propiedad nos permite relacionar cada asignatura con su extensión en créditos ECTS, almacenado en forma de número decimal positivo, haciendo posible almacenar esta característica de las asignaturas.
-   \item AS\_Ubicación
-   Dominio:	Asignatura
-   Rango:	\{"1er semestre", "2o semestre", "3er semestre", "4o semestre", "5o semestre", "6o semestre", "7o semestre", "Ultimo curso"\}
-   Las asignaturas se ubican por trimestres. La propiedad AS\_Ubicación, nos permite asignar a cada asignatura su ubicación temporal correcta, de modo que su distribución sea adecuada.
-  \end{enumerate}
+  Las propiedaddes sobre tipos de datos son relaciones entre individuos y tipos de datos, de modo que se puede asociar a los individuos implicados en la relación ciertas características de tipos definidos, concretas y especificas. 
+  \begin{description}
+   \item [OG\_Descripción.] Se trata de una relación entre un individuo de la clase \lstinline{Objetivo\_General} y un dato de tipo literal. Esta relación funcional (un objetivo sólo puede tener una descripción) es util para guardar la descripción del objetivo descrito, y poder identificarlo por algo menos formal y más útil que la numeración del objetivo.
+   		\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ OG_Descripcion-rdfs:Literal]{t-box.ms}
+
+   
+   \item [CO\_Descripción.] Esta propiedad relaciona una competencia con un literal. También es una propiedad funcional, y al igual que el resto de propiedades dedicadas a almacenar información acerca de descripciones de individuos, es útil para poder identificar los mismos por algo más que el código descriptivo.
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ CO_Descripcion-rdfs:Literal]{t-box.ms}
+  
+   
+   \item [MA\_Carácter.] Une un individuo de clase \lstinline{Materia} con un dato enumerado de entre los cuatro descritos en rango, lo que permite asignar a la materia un carácter de entre los cuatro descritos.
+ 
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Caracter-tipoCaracterMateria]{t-box.ms}
+   
+   
+   \item [MA\_Créditos.] Se utliza para saber qué cantidad de créditos otorga al alumno el curso de una materia, o lo que es lo mismo, el coste en créditos ECTS de cursar una materia. Como todas la propiedades que sólo pueden aparecer asociadas a un mismo individuo una vez, se trata de una propiedad funcional.
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Creditos-tipoCredito]{t-box.ms} 
+   
+   \item [MA\_Coordinación.] Esta type property se utiliza como un campo libre donde se define de manera informal los agentes que coordinarán la materia, y cuando se defina, las herramentas que utilizarán en su cometido.
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Coordinacion-rdfs:Literal]{t-box.ms} 
+
+   
+   \item [MA\_Duración\_Y\_Ubicación.] Especifica en qué cuatrimestre se estudiará la materia, ayudando a la coordinación de la materia. 
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Duracion_Y_Ubicacion-rdfs:Literal]{t-box.ms}    
+   
+   \item [MA\_Evaluación.] Recoge el conjunto de pruebas y técnicas de evaluación que el docente utilizará a la hora de comrpobar el nivel de adquisición de competencias por parte de los alumnos. Podría ser posible utilizar una relación por cada prueba, pero dado que las pruebas de evaluación quedan fuera del alcance de la ontología, y no se encuentran modeladas dentro de la misma más allá de esta mención, se utilizará una única entrada por cada materia.
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Evaluacion-rdfs:Literal]{t-box.ms} 
+   
+   \item [MA\_Resultados.] Esta relación sólo enumerará a título informativo,los resultados del aprendizaje obtenidos, o dicho de otro modo, el nivel de adquisicion de competencias una vez finalizado el curso de la materia objeto de estudio.  
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Resultados-rdfs:Literal]{t-box.ms}
+   
+   \item [ME\_Descripción.] Se trata de una relación entre un individuo de la clase \lstinline{Método\_Docente} y un dato de tipo literal. Esta relación funcional (un método docente sólo puede tener una descripción) es util para guardar la descripción del método descrito.
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ ME_Descripcion-rdfs:Literal]{t-box.ms}   
+   
+   \item [AF\_Créditos.]Es preciso, de cara a la construcción y mantenimiento del título conocer qué tiempo ha de dedicar el alumno a cada actividad formativa, con el fin de asegurar la correcta adquisición de las competencias en el tiempo establecido. 
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ AF_Creditos-tipoCredito]{t-box.ms}   
+   
+   \item [AS\_Carácter.]Asigna a un individuo de la clase \lstinline{Asignatura} un dato enumerado de entre los cuatro descritos, lo que permite asignarle un carácter.    
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ AS_Caracter-tipoCaracterAsignatura]{t-box.ms}   
+  
+   \item [AS\_Contenidos.] La relación \lstinline{AS\_Contenidos}, permite relacionar un individuo de la clase asignatura con un dato literal, de modo que nos permite almacenar una descripción algo más extensa, que ayude en su identificación.  
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ AS_Contenidos-rdfs:Literal]{t-box.ms}   
+   
+   \item [AS\_Extensión.] Esta propiedad nos permite relacionar cada asignatura con su extensión en créditos ECTS, almacenado en forma de número decimal positivo, haciendo posible almacenar esta característica de las asignaturas.
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ AS_Extension-xsd:decimal\[>\ 0\]]{t-box.ms}   
+   
+   \item [AS\_Ubicación.] Las asignaturas se ubican por trimestres. La propiedad \lstinline{AS\_Ubicación}, nos permite asignar a cada asignatura su ubicación temporal correcta, de modo que su distribución sea adecuada.
+   
+\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ AS_Ubicacion-tipoUbicacion]{t-box.ms}   
+   
+  \end{description}
+  
+\subsection{Definiciones de tipos de datos}
+Por comodidad se han definido varios tipos de datos, más por comodidad a la hora de definir las clases y propiedades, que por que sea realmente necesario a la hora del desarrollo de la ontología. En el caso de que definiésemos un tipo de datos cuya primitiva no fuese alguno de los tipos de datos definidos en el estándar de OWL2, el lenguaje de la ontología pasaría a ser OWL-Full, con lo que no podríamos realizar razonamiento alguno sobre dicha ontología, perdiendo una cualidad básica de las que buscamos con el desarrollo del presente trabajo.
+
+\begin{description}
+	\item[tipoCaracterMateria.] Este tipo de datos, define el carácter de las materias, que puede ser básica, mixta, obligatoria u optativa. 
+	
+\lstinputlisting[language=owlms,literate=,linerange=Datatype:\ tipoCaracterMateria-{"Basica"\ ,\ "Mixta"\ ,\ "Obligatoria"\ ,\  "Optativa"}]{t-box.ms}   
+
+	\item[tipoCredito.] Esta definición nos será útil para poder almacenar los créditos de materias y asignaturas. 
+	
+\lstinputlisting[language=owlms,literate=,linerange=Datatype:\ tipoCredito-xsd:decimal\[>\ 0\]]{t-box.ms}  
+
+	\item[tipoUbicacion.] Este tipo de datos hará posible que ubiquemos temporalmente las asignaturas facilitando la planificación de la docencia. 
+		
+\lstinputlisting[language=owlms,literate=,linerange=Datatype:\ tipoUbicacion-{"1er\ semestre"\ ,\ "2o\ semestre"\ ,\ "3er\  semestre"\ ,\ "4o\ semestre"\ ,\ "5o\ semestre"\ ,\ "6o\  semestre"\ ,\ "7o\ semestre"\ ,\ "Ultimo\ curso"}]{t-box.ms} 
+ 
+	\item[tipoCaracterAsignatura.] Este tipo de datos, define el carácter de las asignaturas, que puede ser básica, obligatoria u optativa. 
+	
+\lstinputlisting[language=owlms,literate=,linerange=Datatype:\ tipoCaracterAsignatura-{"Basica"\ ,\ "Obligatoria"\ ,\  "Optativa"}]{t-box.ms}  
+ 
+ 
+\end{description}
 
 \section{Instancia UPM (varios ejemplos?)}
 %\item Individuos de la ontología.

@@ -17,20 +17,21 @@
 \BOOKMARK [2][-]{subsection.2.3.1}{Clases de la ontolog\355a}{section.2.3}% 17
 \BOOKMARK [2][-]{subsection.2.3.2}{Propiedades de la ontolog\355a}{section.2.3}% 18
 \BOOKMARK [2][-]{subsection.2.3.3}{Propiedades sobre tipos de datos}{section.2.3}% 19
-\BOOKMARK [1][-]{section.2.4}{Instancia UPM \(varios ejemplos?\)}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.4.1}{Individuos de la ontolog\355a}{section.2.4}% 21
-\BOOKMARK [0][-]{chapter.3}{Generalizaci\363n}{}% 22
-\BOOKMARK [1][-]{section.3.1}{Intro: \277qui\351n puede usar esta ontolog\355a? \277La UCM? S\355, no, pq, etc.}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.2}{Idea: jerarquia \(refinamiento desde la ley hasta los planes\)}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.3}{Test: Instancia UCM?}{chapter.3}% 25
-\BOOKMARK [0][-]{chapter.4}{Aplicaciones \(autom\341ticas\)}{}% 26
-\BOOKMARK [1][-]{section.4.1}{Mencionar nuestras ideas sobre c\363mo sacar partido a esto}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.2}{Ejemplo de razonamiento \(puede que encuentres una inconsistencia al ir metiendo la info en la ontolog\355a,ap\372ntalo\).}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.3}{Ejemplo de vis. de la informaci\363n \(html\).}{chapter.4}% 29
-\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 30
-\BOOKMARK [0][-]{appendix.A}{Sem\341ntica de Manchester}{}% 31
-\BOOKMARK [1][-]{section.A.1}{Vocabulario}{appendix.A}% 32
-\BOOKMARK [1][-]{section.A.2}{Interpretaci\363n}{appendix.A}% 33
-\BOOKMARK [1][-]{section.A.3}{Satisfacci\363n de axiomas}{appendix.A}% 34
-\BOOKMARK [0][-]{appendix.B}{T-Box en sintaxis M\341nchester}{}% 35
-\BOOKMARK [0][-]{lstnumber.-55.504}{Bibliograf\355a}{}% 36
+\BOOKMARK [2][-]{subsection.2.3.4}{Definiciones de tipos de datos}{section.2.3}% 20
+\BOOKMARK [1][-]{section.2.4}{Instancia UPM \(varios ejemplos?\)}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.4.1}{Individuos de la ontolog\355a}{section.2.4}% 22
+\BOOKMARK [0][-]{chapter.3}{Generalizaci\363n}{}% 23
+\BOOKMARK [1][-]{section.3.1}{Intro: \277qui\351n puede usar esta ontolog\355a? \277La UCM? S\355, no, pq, etc.}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.2}{Idea: jerarquia \(refinamiento desde la ley hasta los planes\)}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.3}{Test: Instancia UCM?}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Aplicaciones \(autom\341ticas\)}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Mencionar nuestras ideas sobre c\363mo sacar partido a esto}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Ejemplo de razonamiento \(puede que encuentres una inconsistencia al ir metiendo la info en la ontolog\355a,ap\372ntalo\).}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{Ejemplo de vis. de la informaci\363n \(html\).}{chapter.4}% 30
+\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 31
+\BOOKMARK [0][-]{appendix.A}{Sem\341ntica de Manchester}{}% 32
+\BOOKMARK [1][-]{section.A.1}{Vocabulario}{appendix.A}% 33
+\BOOKMARK [1][-]{section.A.2}{Interpretaci\363n}{appendix.A}% 34
+\BOOKMARK [1][-]{section.A.3}{Satisfacci\363n de axiomas}{appendix.A}% 35
+\BOOKMARK [0][-]{appendix.B}{T-Box en sintaxis M\341nchester}{}% 36
+\BOOKMARK [0][-]{lstnumber.-83.504}{Bibliograf\355a}{}% 37

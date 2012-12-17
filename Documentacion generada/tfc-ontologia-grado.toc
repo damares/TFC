@@ -30,21 +30,22 @@
 \contentsline {section}{\numberline {2.3}Explicaci\'on de la ontolog\IeC {\'\i }a}{29}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Clases de la ontolog\IeC {\'\i }a}{30}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Propiedades de la ontolog\IeC {\'\i }a}{35}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Propiedades sobre tipos de datos}{39}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Instancia UPM (varios ejemplos?)}{41}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Individuos de la ontolog\IeC {\'\i }a}{42}{subsection.2.4.1}
-\contentsline {chapter}{\numberline {3}Generalizaci\'on}{47}{chapter.3}
-\contentsline {section}{\numberline {3.1}Intro: \IeC {\textquestiondown }qui\'en puede usar esta ontolog\IeC {\'\i }a? \IeC {\textquestiondown }La UCM? S\IeC {\'\i }, no, pq, etc.}{47}{section.3.1}
-\contentsline {section}{\numberline {3.2}Idea: jerarquia (refinamiento desde la ley hasta los planes)}{47}{section.3.2}
-\contentsline {section}{\numberline {3.3}Test: Instancia UCM?}{47}{section.3.3}
-\contentsline {chapter}{\numberline {4}Aplicaciones (autom\'aticas)}{49}{chapter.4}
-\contentsline {section}{\numberline {4.1}Mencionar nuestras ideas sobre c\'omo sacar partido a esto}{50}{section.4.1}
-\contentsline {section}{\numberline {4.2}Ejemplo de razonamiento (puede que encuentres una inconsistencia al ir metiendo la info en la ontolog\IeC {\'\i }a,ap\'untalo).}{51}{section.4.2}
-\contentsline {section}{\numberline {4.3}Ejemplo de vis. de la informaci\'on (html).}{51}{section.4.3}
-\contentsline {chapter}{\numberline {5}Conclusiones}{53}{chapter.5}
-\contentsline {chapter}{\numberline {A}Sem\'antica de Manchester}{55}{appendix.A}
-\contentsline {section}{\numberline {A.1}Vocabulario}{55}{section.A.1}
-\contentsline {section}{\numberline {A.2}Interpretaci\'on}{57}{section.A.2}
-\contentsline {section}{\numberline {A.3}Satisfacci\'on de axiomas}{58}{section.A.3}
-\contentsline {chapter}{\numberline {B}T-Box en sintaxis M\'anchester}{65}{appendix.B}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{79}{lstnumber.-55.504}
+\contentsline {subsection}{\numberline {2.3.3}Propiedades sobre tipos de datos}{41}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Definiciones de tipos de datos}{47}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Instancia UPM (varios ejemplos?)}{48}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Individuos de la ontolog\IeC {\'\i }a}{48}{subsection.2.4.1}
+\contentsline {chapter}{\numberline {3}Generalizaci\'on}{53}{chapter.3}
+\contentsline {section}{\numberline {3.1}Intro: \IeC {\textquestiondown }qui\'en puede usar esta ontolog\IeC {\'\i }a? \IeC {\textquestiondown }La UCM? S\IeC {\'\i }, no, pq, etc.}{53}{section.3.1}
+\contentsline {section}{\numberline {3.2}Idea: jerarquia (refinamiento desde la ley hasta los planes)}{53}{section.3.2}
+\contentsline {section}{\numberline {3.3}Test: Instancia UCM?}{53}{section.3.3}
+\contentsline {chapter}{\numberline {4}Aplicaciones (autom\'aticas)}{55}{chapter.4}
+\contentsline {section}{\numberline {4.1}Mencionar nuestras ideas sobre c\'omo sacar partido a esto}{56}{section.4.1}
+\contentsline {section}{\numberline {4.2}Ejemplo de razonamiento (puede que encuentres una inconsistencia al ir metiendo la info en la ontolog\IeC {\'\i }a,ap\'untalo).}{57}{section.4.2}
+\contentsline {section}{\numberline {4.3}Ejemplo de vis. de la informaci\'on (html).}{57}{section.4.3}
+\contentsline {chapter}{\numberline {5}Conclusiones}{59}{chapter.5}
+\contentsline {chapter}{\numberline {A}Sem\'antica de Manchester}{61}{appendix.A}
+\contentsline {section}{\numberline {A.1}Vocabulario}{61}{section.A.1}
+\contentsline {section}{\numberline {A.2}Interpretaci\'on}{63}{section.A.2}
+\contentsline {section}{\numberline {A.3}Satisfacci\'on de axiomas}{64}{section.A.3}
+\contentsline {chapter}{\numberline {B}T-Box en sintaxis M\'anchester}{71}{appendix.B}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{85}{lstnumber.-83.504}

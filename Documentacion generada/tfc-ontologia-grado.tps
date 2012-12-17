@@ -3,8 +3,8 @@ Type=TeXnicCenterProjectSessionInformation
 Version=2
 
 [SessionInfo]
-ActiveTab=1
-FrameCount=6
+ActiveTab=0
+FrameCount=7
 ActiveFrame=2
 
 [Frame0]
@@ -82,17 +82,17 @@ Class=CLatexEdit
 Document=ontologia.tex
 
 [Frame2_Row0]
-cyCur=719
+cyCur=284
 cyMin=10
 
 [Frame2_Col0]
-cxCur=1187
+cxCur=680
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=153
-Cursor.column=126
-TopSubLine=266
+Cursor.row=273
+Cursor.column=129
+TopSubLine=715
 
 [Frame3]
 Columns=1
@@ -119,9 +119,9 @@ cxCur=959
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=112
-Cursor.column=27
-TopSubLine=79
+Cursor.row=34
+Cursor.column=47
+TopSubLine=30
 
 [Frame4]
 Columns=1
@@ -177,6 +177,35 @@ cxCur=959
 cxMin=10
 
 [Frame5_View0,0]
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
+
+[Frame6]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-9
+MaxPos.y=-38
+NormalPos.left=30
+NormalPos.top=32
+NormalPos.right=666
+NormalPos.bottom=289
+Class=CLatexEdit
+Document=generalizacion.tex
+
+[Frame6_Row0]
+cyCur=185
+cyMin=10
+
+[Frame6_Col0]
+cxCur=593
+cxMin=10
+
+[Frame6_View0,0]
 Cursor.row=0
 Cursor.column=0
 TopSubLine=0

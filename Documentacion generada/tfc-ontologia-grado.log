@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.5)  15 DEC 2012 13:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.5)  17 DEC 2012 01:20
 entering extended mode
 **C:/Users/Daniel/Documents/TFC/Documentacion*generada/tfc-ontologia-grado.tex
 ("C:/Users/Daniel/Documents/TFC/Documentacion generada/tfc-ontologia-grado.tex"
@@ -1396,15 +1396,30 @@ Overfull \hbox (19.229pt too wide) in paragraph at lines 150--151
 
 ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
 ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
-Overfull \hbox (3.1461pt too wide) in paragraph at lines 162--167
-\T1/mak/m/n/12 pen-ten-cia_Específica. In-ver-sa: CE_esOtortgadaPor_MA. El cur-
-so de una
+Overfull \hbox (13.26744pt too wide) in paragraph at lines 157--158
+[]\T1/mak/m/n/12 Al igual
  []
 
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms"
 
-Overfull \hbox (66.68497pt too wide) in paragraph at lines 167--172
-[]\T1/mak/m/n/12 MA_constaDe_AS. Do-mi-nio: Ma-te-ria. Ran-go: Asig-na-tu-ra. I
-n-ver-sa: AS_formaParteDe_MA.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]) ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms"
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]) ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+Overfull \hbox (4.5412pt too wide) in paragraph at lines 176--177
+[]\T1/mak/m/n/12 Las ma-te-rias se
  []
 
 
@@ -1413,10 +1428,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37]
-Overfull \hbox (66.68497pt too wide) in paragraph at lines 188--193
-[]\T1/mak/m/n/12 AS_formaParteDe_MA. Do-mi-nio: Asig-na-tu-ra. Ran-go: Ma-te-ri
-a. In-ver-sa: MA_constaDe_AS.
+[39] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+Overfull \hbox (0.86913pt too wide) in paragraph at lines 183--185
+[]\T1/mak/m/n/12 Como ya se ex-pli-
  []
 
 
@@ -1425,75 +1440,105 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]
-Overfull \hbox (49.03935pt too wide) in paragraph at lines 193--198
-\T1/mak/m/n/12 ver-sa: AS_esRequisitoPara_AS. Es la re-la-ción in-ver-sa de AS_
-esRequisitoPara_AS,
- []
-
+[40] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39]
+[41] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms"
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40]
-Overfull \hbox (1.5121pt too wide) in paragraph at lines 254--258
-[]\T1/mak/m/n/12 AF_Créditos Do-mi-nio: Ac-ti-vi-dad_Formativa Ran-go: de-ci-ma
-l[>"0")nteger]
+[42])
+Overfull \hbox (2.59717pt too wide) in paragraph at lines 209--210
+[]\T1/mak/m/n/12 Se utli-za pa-ra sa-ber qué can-ti-dad de cré-di-tos otor-ga a
+l alumno
  []
 
-
-Overfull \hbox (8.89052pt too wide) in paragraph at lines 258--262
-[]\T1/mak/m/n/12 AS_Carácter Do-mi-nio: Asig-na-tu-ra Ran-go: {"Bá-si-ca", "Mix
--ta", .[]bligatoria",
- []
-
-
-Overfull \hbox (44.1674pt too wide) in paragraph at lines 262--266
-[]\T1/mak/m/n/12 AS_Contenidos Do-mi-nio: Asig-na-tu-ra Ran-go: Li-te-ral. La r
-e-la-ción AS_Contenidos,
- []
-
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms"
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41]
+[43]) ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42]
-Overfull \hbox (58.55576pt too wide) in paragraph at lines 306--307
+[44] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+Overfull \hbox (42.64891pt too wide) in paragraph at lines 250--251
+[]\T1/mak/m/n/12 Las asig-na-tu-ras se ubi-can por tri-mes-tres. La pro-pie-dad
+ [][][][][],
+ []
+
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms")
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48]
+Overfull \hbox (58.55576pt too wide) in paragraph at lines 309--310
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.73732pt too wide) in paragraph at lines 315--316
+Overfull \hbox (39.73732pt too wide) in paragraph at lines 318--319
 \T1/mak/m/n/12 y CE-12/16 me-dian-te la re-la-ción OG_seCumpleMedianteLaAdquisi
 cionDe_CO.
  []
 
 
-Overfull \hbox (1.0412pt too wide) in paragraph at lines 316--317
+Overfull \hbox (1.0412pt too wide) in paragraph at lines 319--320
 \T1/mak/m/n/12 cos uti-li-zan-do los prin-ci-pios y me-to-do-lo-gías pro-pios d
 e la ingeniería..[]tá
  []
 
 
-Overfull \hbox (20.485pt too wide) in paragraph at lines 316--317
+Overfull \hbox (20.485pt too wide) in paragraph at lines 319--320
 \T1/mak/m/n/12 CE-22, CE-11, CG-5, CE-19/20, CG-7/8/9/10/16/17 y CG-24/25/16/27
 
  []
@@ -1504,21 +1549,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
-Overfull \hbox (11.65756pt too wide) in paragraph at lines 317--318
+[49]
+Overfull \hbox (11.65756pt too wide) in paragraph at lines 320--321
 \T1/mak/m/n/12 CE-32 me-dian-te la re-la-ción OG_seCumpleMedianteLaAdquisicionD
 e_CO.
  []
 
 
-Overfull \hbox (141.69058pt too wide) in paragraph at lines 320--321
+Overfull \hbox (141.69058pt too wide) in paragraph at lines 323--324
 \T1/mak/m/n/12 CG-1/21, CE-9, CE-32 y CE-21 me-dian-te la re-la-ción OG_seCumpl
 eMedianteLaAdquisicionDe_CO.
- []
-
-
-Overfull \hbox (14.00612pt too wide) in paragraph at lines 321--322
-\T1/mak/m/n/12 CE-26/27, CE-40, CE-19/20, CE-14/15, CG-1/21, CG7/8/9/10/16/17,
  []
 
 
@@ -1527,8 +1567,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44]
-Overfull \hbox (56.58517pt too wide) in paragraph at lines 322--323
+[50]
+Overfull \hbox (14.00612pt too wide) in paragraph at lines 324--325
+\T1/mak/m/n/12 CE-26/27, CE-40, CE-19/20, CE-14/15, CG-1/21, CG7/8/9/10/16/17,
+ []
+
+
+Overfull \hbox (56.58517pt too wide) in paragraph at lines 325--326
 \T1/mak/m/n/12 CG-19 y CE-50 me-dian-te la re-la-ción OG_seCumpleMedianteLaAdqu
 isicionDe_CO.
  []
@@ -1539,8 +1584,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
-Overfull \hbox (6.44022pt too wide) in paragraph at lines 336--341
+[51]
+Overfull \hbox (6.44022pt too wide) in paragraph at lines 339--344
 []\T1/mak/m/n/12 MA_Evaluación: - Prue-bas ob-je-ti-vas (ver-da-de-ro/-fal-so, 
 elec-ción múl-
  []
@@ -1552,17 +1597,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\generalizacion.tex"
+[52] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\generalizacion.tex"
 Cap\'{\i }tulo 3.
-) [47
+) [53
 
 
-] [48
+] [54
 
 ]
 ("C:\Users\Daniel\Documents\TFC\Documentacion generada\aplicaciones.tex"
 Cap\'{\i }tulo 4.
-[49
+[55
 
 ])
 Underfull \vbox (badness 2903) has occurred while \output is active []
@@ -1574,21 +1619,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50]
+[56]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 26.11586pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51] [52
+[57] [58
 
 ]
 ("C:\Users\Daniel\Documents\TFC\Documentacion generada\conclusiones.tex"
 Cap\'{\i }tulo 5.
-) [53
+) [59
 
-] [54
+] [60
 
 ] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\semantica.tex"
 Ap\'{e}ndice A.
@@ -1597,7 +1642,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-[55
+[61
 
 
 ]
@@ -1614,14 +1659,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56]
+[62]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57]
+[63]
 Overfull \hbox (27.99998pt too wide) in alignment at lines 64--71
  [] [] 
  []
@@ -1645,7 +1690,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58]
+[64]
 Overfull \hbox (27.99998pt too wide) in alignment at lines 144--151
  [] [] 
  []
@@ -1671,7 +1716,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59]
+[65]
 Overfull \hbox (27.99998pt too wide) in alignment at lines 361--368
  [] [] 
  []
@@ -1687,7 +1732,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60]
+[66]
 Overfull \hbox (27.99998pt too wide) in alignment at lines 470--477
  [] [] 
  []
@@ -1703,89 +1748,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61]
+[67]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62])
+[68])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63] [64
+[69] [70
 
 
 ] ("C:\Users\Daniel\Documents\TFC\Documentacion generada\tboxms.tex"
 Ap\'{e}ndice B.
-("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms" [65
+("C:\Users\Daniel\Documents\TFC\Documentacion generada\t-box.ms" [71
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[66]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[67]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[69]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[70]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1835,14 +1820,74 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[76]))
+[76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77] [78
+[77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[78]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[79]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[80]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[81]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[82]))
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[83] [84
 
 
 ]
@@ -1903,7 +1948,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--49
  educacion . es /
  []
 
-[79
+[85
 
 ]
 Underfull \hbox (badness 2401) in paragraph at lines 82--84
@@ -1953,7 +1998,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[80])
+[86])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
 
 
@@ -1962,7 +2007,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[81]
+[87]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
 
 ("C:\Users\Daniel\Documents\TFC\Documentacion generada\tfc-ontologia-grado.aux"
@@ -1977,18 +2022,18 @@ Package rerunfilecheck Warning: File `tfc-ontologia-grado.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `tfc-ontologia-grado.out':
-(rerunfilecheck)             Before: 6A0D9613B6E987DA3CCEEF1557AAEA66;2792
-(rerunfilecheck)             After:  7CC1CA95B181C4CFDA0B9061A5C9A587;2792.
+(rerunfilecheck)             Before: A11BACD6A0BA5A30A41103CF8016822D;2711
+(rerunfilecheck)             After:  F7F1B5885E68DC8572D7DB24A42CB730;2877.
  ) 
 Here is how much of TeX's memory you used:
- 20391 strings out of 494045
- 342683 string characters out of 3147579
- 488055 words of memory out of 3000000
- 22214 multiletter control sequences out of 15000+200000
+ 20735 strings out of 494045
+ 350949 string characters out of 3147579
+ 489552 words of memory out of 3000000
+ 22211 multiletter control sequences out of 15000+200000
  66098 words of font info for 141 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  63i,13n,74p,1171b,2111s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{lstnumber.-53.504} has been referenced but does n
+pdfTeX warning (dest): name{lstnumber.-81.504} has been referenced but does n
 ot exist, replaced by a fixed one
 
 {C:/Program Files (x86)/MikTex/fonts/enc/dvips/fontname/8r.enc}{C:/Program File
@@ -2007,9 +2052,9 @@ blic/txfonts/txsy.pfb><C:/Program Files (x86)/MikTex/fonts/type1/public/txfonts
 /MikTex/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files (x86)/MikTex/fon
 ts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MikTex/fonts/type1/urw
 /times/utmr8a.pfb>
-Output written on tfc-ontologia-grado.pdf (95 pages, 445944 bytes).
+Output written on tfc-ontologia-grado.pdf (101 pages, 497734 bytes).
 PDF statistics:
- 1773 PDF objects out of 2073 (max. 8388607)
- 977 named destinations out of 1000 (max. 500000)
- 301 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2137 PDF objects out of 2487 (max. 8388607)
+ 1268 named destinations out of 1440 (max. 500000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 
