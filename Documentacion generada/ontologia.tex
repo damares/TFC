@@ -39,75 +39,119 @@ Primeramente se mostrarán las clases, pero no se hablará de sus relaciones ni de
 Antes de continuar con la definición de cada clase y propiedad, vamos a definir la sintaxis utilizada y la semántica asociada. De entre todas las sintaxis definidas en el estándar W3C, se ha optado por utilizar la sintaxis Manchester, por ser de más fácil comprensión que el resto de las sintaxis definidas en el estándar. Para facilitar la comprensión del lector, se incluye en el apéndice una tabla con la semántica de la sintaxis utilizada.
 
 \subsection{Clases de la ontología}
-  Las clases se pueden definir en protegé como conjuntos que contienen individuos. Las clases se describen utilizando descripciones formales que definen inequívocamente los requisitos de pertenencia a una clase. 
-  Las clases se organizan en conjuntos de superclases y subclases, que forma la taxonomía de nuestro universo en observación. Esta taxonomía puede ser obtenida de manera automática por un razonador, que también puede comprobar su consistencia.
-  Se han definido siete clases para la creación de nuestra ontología.	
 \lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
+  Las clases se pueden definir en protegé como conjuntos que contienen individuos. Las clases se describen utilizando descripciones formales que definen inequívocamente los requisitos de pertenencia a una clase. 
+  Las clases se organizan en conjuntos de superclases y subclases, que forma la taxonomía de nuestro universo en observación. Esta taxonomía puede ser obtenida de manera automática por un razonador, que también puede comprobar su consistencia. Se debe tener en cuenta que todas las clases se han definido como disjuntas entre ellas de modo general, salvo las clases \lstinline{Competencia_Especifica} y \lstinline{Competencia_General} cuya disjunción s define de modo particular por ser subclases de \lstinline{Competencia} y ser su unión disjunta (una competencia puede ser general o específica, pero ninguna otra cosa no definida).
+  \lstinputlisting[language=owlms,literate=,firstnumber=649,firstline=649,lastline=650]{t-box.ms}
+  
+  Se han definido diez clases para la creación de nuestra ontología.	
+
     \begin{description}
+    
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Objetivo_General
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       \item[Objetivo\_General.]
       Con la clase \lstinline{Objetivo_General} queremos definir el conjunto de individuos que componen los objetivos generales del título. Esta clase no cuenta con ninguna definición, ya que los objetivos generales vienen definidos en el título. El único criterio de pertenencia posible a esta clase, es la definición de objetivos en el plan de estudios.
-      
       \lstinputlisting[language=owlms,literate=,linerange=Class:\ Objetivo_General-owl:Thing]{t-box.ms}
       
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Competencia
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       \item[Competencia.]
       La clase \lstinline{Competencia} agrupa a todas las competencias que es preciso adquirir para lograr el cumplimiento de los objetivos generales establecidos. Se definen como compentencias todos aquellos individuos que representan aptitudes y actitudes, cuya adquisición por parte del alumno conlleva la consecución de los objetivos generales propuestos para la obtención del título.
-
-Formalmente, se define como aquellos individuos que están relacionados con individuos de la clase \lstinline{Objetivo_General} mediante la propiedad que defina la adquisición, al menos una vez y que sólo tengan relación con individuos de la clase \lstinline{Objetivo_General}:
-%\begin{lstlisting}
-%CO_seAdquiereParaCumplir_OG $min$ 1 Objetivo_General $\cap$
-%CO_seAdquiereParaCumplir_OG $some$ Objetivo_General
-
-%Competencia $\supseteq$ (Competencia_General $\cup$ Competencia_Específica)
-
-%Competencia_General $\cap$ Compentencia Específica = $\varnothing$
-%\end{lstlisting}
-
-\todo{Corregir números de línea}
-\lstinputlisting[language=owlms,literate=,linerange={441-448}]{t-box.ms}
-
- Dentro de esta clase, podemos definir dos grupos de compentecias, según sean competencias específicas (propias de la rama del conocimiento donde se enmarca la titulación) o generales (comunes a todas las ramas del conocimiento y que suelen referirse a aptitudes y actitudes más que a 
+			
+			Formalmente, se define como aquellos individuos que están relacionados con individuos de la clase \lstinline{Objetivo_General} mediante la propiedad que defina la adquisición, al menos una vez y que sólo tengan relación con individuos de la clase \lstinline{Objetivo_General}:
+			\lstinputlisting[language=owlms,literate=,firstnumber=564,firstline=564,lastline=571]{t-box.ms}
+      
+      Dentro de esta clase, podemos definir dos grupos de compentecias, según sean competencias específicas (propias de la rama del conocimiento donde se enmarca la titulación) o generales (comunes a todas las ramas del conocimiento y que suelen referirse a aptitudes y actitudes más que a 
 conocimientos o metodologías).
-	\item[Competencia\_General.] La clase \lstinline{Competencia_General} engloba todas las competencias que es preciso adquirir para el cumplimiento de los objetivos generales del título, y que son comunes a otras ramas del conocimiento. 
-	
-	En general, están orientadas a la adqusición de aptitudes, actitudes y capacidades enfocadas hacia aspectos humanos, (como el trabajo en equipo, la motivación, o la actualización de conocimientos de manera autónoma, por citar algunos), que serán útiles al alumno en su incorporación al mundo laboral.
-	
-	Son competencias generales todos aquellos individuos que son competencias y que además son otorgadas al alumno al cursar una materia definida. Dicho de otro modo, el hecho de cursar una determinada materia, hace que el alumno adquiera ciertas competencias generales.
-	
-\lstinputlisting[language=owlms,literate=,linerange=Class:\ Competencia_General-Competencia_Especifica]{t-box.ms}	
 
-	\item[Competencia\_Especifica.] La clase \lstinline{Competencia_Especifica} agrupa aquellas competencias que es preciso adquirir para el cumplimiento de los objetivos generales del título, y que son específicos de la rama del conocimiento propia de la titulación.
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Competencia_General
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\item[Competencia\_General.] La clase \lstinline{Competencia_General} engloba todas las competencias que es preciso adquirir para el cumplimiento de los objetivos generales del título, y que son comunes a otras ramas del conocimiento. 
+			
+			En general, están orientadas a la adqusición de aptitudes, actitudes y capacidades enfocadas hacia aspectos humanos, (como el trabajo en equipo, la motivación, o la actualización de conocimientos de manera autónoma, por citar algunos), que serán útiles al alumno en su incorporación al mundo laboral.
+			
+			Son competencias generales todos aquellos individuos que son competencias y que además son otorgadas al alumno al cursar una materia definida. Dicho de otro modo, el hecho de cursar una determinada materia, hace que el alumno adquiera ciertas competencias generales.
+			\lstinputlisting[language=owlms,literate=,linerange=Class:\ Competencia_General-Competencia_Especifica]{t-box.ms}	
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Competencia_Especifica
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\item[Competencia\_Especifica.] La clase \lstinline{Competencia_Especifica} agrupa aquellas competencias que es preciso adquirir para el cumplimiento de los objetivos generales del título, y que son específicos de la rama del conocimiento propia de la titulación.
 	
-	Son competencias muy específicas de la titulación, y que fuera de ese ámbito su aplicación sería poco o nada útil. Suelen estar orientadas más hacia aspectos prácticos de la titulación e incluyen la adquisición de metodologías y rutinas de trabajo y desarrollo eminentemente prácticas. 
+			Son competencias muy específicas de la titulación, y que fuera de ese ámbito su aplicación sería poco o nada útil. Suelen estar orientadas más hacia aspectos prácticos de la titulación e incluyen la adquisición de metodologías y rutinas de trabajo y desarrollo eminentemente prácticas. 
 	
-	Se consideran competecias específicas todos aquellos individuos que son compentecias y que además son otorgadas de forma específica al cursar una materia. Visto de una manera más formal:
+			Se consideran competecias específicas todos aquellos individuos que son competencias y que además son otorgadas de forma específica al cursar una materia. Visto de una manera más formal:
+			\lstinputlisting[language=owlms,literate=,linerange=Class:\ Competencia_Especifica-Competencia_General]{t-box.ms}	
 	
-\lstinputlisting[language=owlms,literate=,linerange=Class:\ Competencia_Especifica-Competencia_General]{t-box.ms}	
-	
+			Como hemos visto, competencias generales y específicas son disjuntas entre sí, pero para la especificación de una \lstinline{Compentencia} dentro de \lstinline{Competencia_General} o \lstinline{Competencia_Específica} es suficiente con que la relación de la \lstinline{Competencia} con la \lstinline{Materia} tenga como dominio uno u otro conjunto de competencias, sin mayor diferenciación.
   
-  Como hemos visto, competencias generales y específicas son disjuntas entre sí, pero para la especificación de una \lstinline{Compentencia} dentro de \lstinline{Competencia_General} o \lstinline{Competencia_Específica} es suficiente con que la relación de la \lstinline{Competencia} con la \lstinline{Materia} tenga como dominio uno u otro conjunto de competencias, sin mayor diferenciación.
+  		Visto de esta forma, se podría haber optado por eliminar las subclases \lstinline{Competencia_General} y \lstinline{Competencia_Específica} y que hubiesen quedado diferenciadas únicamente por una etiqueta (con una Data Property diferente, por ejemplo), pero por cuestiones de diseño, y para facilitar la comprensión del modelo se ha optado por separar en dos clases las competencias específicas y generales. 
   
-  Visto de esta forma, se podría haber optado por eliminar las subclases \lstinline{Competencia_General} y \lstinline{Competencia_Específica} y que hubiesen quedado diferenciadas únicamente por una etiqueta (con una Data Property diferente, por ejemplo), pero por cuestiones de diseño, y para facilitar la comprensión del modelo se ha optado por separar en dos clases las competencias específicas y generales. 
-  
-  ¿Cómo distinguirá protegé entre competencias específicas y generales? Los individuos pertenecientes a cada una de las clases, se relacionarán con las materias mediante dos relaciones distintas, creadas ad hoc para cada una de las clases. De este modo logramos que el razonador, una vez haya clasificado un individuo como perteneciente a la clase competencia, pueda clasificarlo como general o específica en función de la propiedad que lo relacione con las materias, ganando en potencia de cálculo, auqnue para ello la ontología deba de ser algo más compleja.
+  		¿Cómo distinguirá protegé entre competencias específicas y generales? Los individuos pertenecientes a cada una de las clases, se relacionarán con las materias mediante dos relaciones distintas, creadas ad hoc para cada una de las clases. De este modo logramos que el razonador, una vez haya clasificado un individuo como perteneciente a la clase competencia, pueda clasificarlo como general o específica en función de la propiedad que lo relacione con las materias, ganando en potencia de cálculo, auqnue para ello la ontología deba de ser algo más compleja.
+      
+      
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Materia
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       \item[Materia.]
       La clase \lstinline{Materia} aglutina todos los individuos que representan las diferentes materias de que se compone la titulación. Coloquialmente podemos entender las materias como aquellos individuos que permiten al alumno adquirir competencias, de modo que puedan cumplir con las objetivos generales del título. Formalmente hablando, son materias todos aquellos individuos relacionados con algún individuo de la clase Competencia, y al menos una vez con alguna \lstinline{Competencia_General}. Posteriormente se definirá la propiedad que une \lstinline{Materia} con \lstinline{Compentencia} y con \lstinline{Competencia_General}. 
       \lstinputlisting[language=owlms,literate=,linerange=Class:\ Materia-owl:Thing]{t-box.ms}	
       
+      
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Asignatura
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       \item[Asignatura.]
       En la clase \lstinline{Asignatura} se agrupan todos los individuos que representan las diferentes asignaturas de que se compone cada materia. Las definiciones de asignatura y de materia son complementarias: Podemos definir una materia como el conjunto de asignaturas de un mismo ámbito, o bien podemos definir una asignatura como parte integrante de una materia, con quien comparte la naturaleza de los conocimientos contenidos. Dado el carácter más general de la materia, se ha optado en la ontología por que sean las materias a partir de las cuales se definan las asignaturas, y no al contrario. Además, esa decisión simplifica el modelo, ya que como veremos más adelante, también actividades formativas y métodos docentes dependerán para su definición en el modelo de la clase \lstinline{Materia}. Formalmente descrito, podemos definir una asignatura como todo aquel individuo relacionado con algún individuo de la clase \lstinline{Materia} al menos una vez y sólo con Materias, de modo que la asignatura forme parte de dicha Materia.
       \lstinputlisting[language=owlms,literate=,linerange=Class:\ Asignatura-owl:Thing]{t-box.ms}	
       
+      
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Actividad_Formativa
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       \item[Actividad\_Formativa.]
       La clase \lstinline{Actividad_Formativa} define todos aquellos individuos que tienen su correspondencia en el mundo real con las distintas actividades formativas que pueden desarrollarse para el aprendizaje de la asignatura. Una actividad formativa es la actividad a realizar por el profesor y el alumnado a lo largo de un curso, diferenciándose unas de otras en el propósito buscado por la acción didáctica. Por tanto, para una misma materia, concurren variadas actividades formativas, ponderándose su distribución a lo largo del curso de dicha materia en función de los objetivos propuestos en el plan de estudios.
       Por tanto, de cara a nuestra ontología, definiremos la clase actividad formativa como el conjunto de individuos que representa actividades didácticas, que se utilizan  para impartir una o varias materias. En términos formales, serían todos los individuos que están relacionados al menos una vez con al menos un individuo de clase \lstinline{Materia}. 
       \lstinputlisting[language=owlms,literate=,linerange=Class:\ Actividad_Formativa-owl:Thing]{t-box.ms}	
 
-      
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Metodo_Docente
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       \item[Metodo\_Docente.]
       Un método docente es un conjunto de formas, procedimientos, técnicas, actividades, etc, de enseñanza y aprendizaje. Para una misma materia, es por tanto comatible el uso de diversos métodos docentes compaginados con las distintas actividades formativas. Algunas actividades formativas y algunos métodos docentes serán mutuamente excluyentes, pero por regla general pueden conbinarse entre ellos a criterio del docente. 
       En la ontología definimos la clase \lstinline{Método_Docente} como el conjunto de procedimientos y técnicas de enseñanza y aprendizaje utilizados para impartir una materia. Más formalmente, podríamos definir un método docente como aquellos individuos que están relacionados al menos una vez con al menos un individuo de la clase materia. 
       \lstinputlisting[language=owlms,literate=,linerange=Class:\ Metodo_Docente-owl:Thing]{t-box.ms}	
 
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Metodo_Evaluacion
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	\item[Metodo\_Evaluacion.]
+    	Al igual que ocurre con los métodos docentes, existen mñultiples variedades de métodos de evaluación que permiten comprobar si el alumno ha adquirido las competencias necesarias para que se le otorguen los créditos de las materias cursadas. Con el fin de adecuar los métodos de evaluación ópitmos a cada una de las materias del plan, se ha optado por recoger en una clase individual las distintas modalidades de evaluación que se aplicarán para conocer el aprovechamiento de una materia.
+    	\lstinputlisting[language=owlms,literate=,linerange=Class:\ Metodo_Evaluacion-owl:Thing]{t-box.ms}	
+
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Ubicacion_Temporal
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	\item[Ubicacion\_Temporal.]
+    	Cada una de las materias y de las asignaturas que las componen, tienen asignadas una ubicación temporal dentro del itinerario formativo. Así, las materias y asignaturas se reparten a lo largo de los semestres, por lo que resulta útil conocer que carga de trabajo (es decir, el número de créditos ECTS) compone cada trimestre.
+    	Además de las asignaturas, las materias también tienen asigando una ubicación temporal, que dependerá de las ubicaciones de las asignaturas que la compongan. Es decir, si una materia está compuesta de dos asignaturas, y una asignatura está asignada al primer semestre y la otra asignatura lo está al segundo semestre, la materia queda ubicada en el primer y segundo semestre.
+    	\lstinputlisting[language=owlms,literate=,linerange=Class:\ Ubicacion_temporal-owl:Thing]{t-box.ms}	
+    	
+    	
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	%% Caracter
+    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    	\item[Caracter.]
+    	El carácter de una asignatura viene definido por el organismo que impone su estudio para una titulación. Pero al contrario que en el caso de las ubicaciones, no podemos decir que si una materia está compuesta de asignaturas básicas, ella sea de carácter básico, pues en el documento remitido a ANECA, hemos encontrado casos (Materia estadística, pej.) en los que una materia compues de asignaturas básicas y obligatorias es de carácter básico, y no mixto como a priori podría parecer. 
+    	\lstinputlisting[language=owlms,literate=,linerange=Class:\ Caracter-owl:Thing]{t-box.ms}	
+    	
+    	
     \end{description}
 
 \subsection{Propiedades de la ontología}

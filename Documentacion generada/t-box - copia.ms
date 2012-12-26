@@ -1,30 +1,7 @@
-Prefix: : <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#>
-Prefix: owl: <http://www.w3.org/2002/07/owl#>
-Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-Prefix: xml: <http://www.w3.org/XML/1998/namespace>
-Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-Prefix: Seminarios: <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Seminarios/>
-
-
-
-Ontology: <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl>
-
-
-Datatype: xsd:decimal
-
-    
 Datatype: tipoCredito
 
     EquivalentTo: 
         xsd:decimal[> 0]
-    
-    
-Datatype: xsd:integer
-
-    
-Datatype: rdfs:Literal
-
     
 ObjectProperty: CA_agrupa_MA
 
@@ -523,127 +500,19 @@ DataProperty: AF_Creditos
         tipoCredito
     
     
-Class: Competencia_Especifica
-
-    EquivalentTo: 
-        Competencia
-         and ((CE_esOtorgadaPor_MA some Materia)
-         and (CE_esOtorgadaPor_MA only Materia))
-    
-    SubClassOf: 
-        owl:Thing,
-        Competencia
-    
-    DisjointWith: 
-        Competencia_General
-    
-    
-Class: owl:Thing
 
     
-Class: Metodo_Docente
-
-    EquivalentTo: 
-        (ME_utilizadoParaImpartir_MA some Materia)
-         and (ME_utilizadoParaImpartir_MA only Materia)
-    
-    SubClassOf: 
-        owl:Thing
     
     
-Class: Metodo_Evaluacion
-
-    EquivalentTo: 
-        (MV_esUtilizadoEn_MA some Materia)
-         and (MV_esUtilizadoEn_MA only Materia)
-    
-    SubClassOf: 
-        owl:Thing
     
     
-Class: Competencia
-
-    EquivalentTo: 
-        (CO_seAdquiereParaCumplir_OG some Objetivo_General)
-         and (CO_seAdquiereParaCumplir_OG only Objetivo_General)
     
-    SubClassOf: 
-        owl:Thing
+   
+    
+   
     
     
-Class: Competencia_General
-
-    EquivalentTo: 
-        Competencia
-         and ((CG_esOtorgadaPor_MA some Materia)
-         and (CG_esOtorgadaPor_MA only Materia))
     
-    SubClassOf: 
-        owl:Thing,
-        Competencia
-    
-    DisjointWith: 
-        Competencia_Especifica
-    
-    
-Class: Caracter
-
-    EquivalentTo: 
-        ((CA_agrupa_AS some Asignatura)
-         and (CA_agrupa_AS only Asignatura))
-         or ((CA_agrupa_MA some Materia)
-         and (CA_agrupa_MA only Materia))
-    
-    SubClassOf: 
-        owl:Thing
-    
-    
-Class: Asignatura
-
-    EquivalentTo: 
-        (AS_formaParteDe_MA some Materia)
-         and (AS_formaParteDe_MA only Materia)
-    
-    SubClassOf: 
-        owl:Thing
-    
-    
-Class: Objetivo_General
-
-    SubClassOf: 
-        owl:Thing
-    
-    
-Class: Ubicacion_temporal
-
-    EquivalentTo: 
-        ((UT_contiene_AS some Asignatura)
-         and (UT_contiene_AS only Asignatura))
-         or ((UT_contiene_MA some Materia)
-         and (UT_contiene_MA only Materia))
-    
-    SubClassOf: 
-        owl:Thing
-    
-    
-Class: Materia
-
-    EquivalentTo: 
-        (MA_otorgaCompetenciasGenerales_CG some Competencia)
-         and (MA_otorgaCompetenciasGenerales_CG only Competencia)
-    
-    SubClassOf: 
-        owl:Thing
-    
-    
-Class: Actividad_Formativa
-
-    EquivalentTo: 
-        (AF_utilizadaParaImpartir_MA some Materia)
-         and (AF_utilizadaParaImpartir_MA only Materia)
-    
-    SubClassOf: 
-        owl:Thing
     
     
 DisjointClasses: 

@@ -605,7 +605,6 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General"/>
     </owl:Class>
     
 

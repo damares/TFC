@@ -9,6 +9,5 @@
 *.lot
 *.out
 *.db
-*.tps
 auto
 *~
