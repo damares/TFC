@@ -44,15 +44,6 @@ ObjectProperty: CA_agrupa_MA
         MA_tiene_CA
     
     
-ObjectProperty: MA_otorgaCompetencias_CECG
-
-    Domain: 
-        Materia
-    
-    Range: 
-        Competencia
-    
-    
 ObjectProperty: ME_utilizadoParaImpartir_MA
 
     Domain: 
@@ -170,6 +161,18 @@ ObjectProperty: MA_utiliza_MV
         MV_esUtilizadoEn_MA
     
     
+ObjectProperty: CO_esOtorgadaPor_MA
+
+    Domain: 
+        Competencia
+    
+    Range: 
+        Materia
+    
+    InverseOf: 
+        MA_otorgaCompetencias_CO
+    
+    
 ObjectProperty: MA_ubicada_UT
 
     SubPropertyOf: 
@@ -190,6 +193,9 @@ ObjectProperty: MA_ubicada_UT
     
 ObjectProperty: CE_esOtorgadaPor_MA
 
+    SubPropertyOf: 
+        CO_esOtorgadaPor_MA
+    
     Domain: 
         Competencia_Especifica
     
@@ -198,6 +204,18 @@ ObjectProperty: CE_esOtorgadaPor_MA
     
     InverseOf: 
         MA_otorgaCompetenciasEspecificas_CE
+    
+    
+ObjectProperty: MA_otorgaCompetencias_CO
+
+    Domain: 
+        Materia
+    
+    Range: 
+        Competencia
+    
+    InverseOf: 
+        CO_esOtorgadaPor_MA
     
     
 ObjectProperty: owl:topObjectProperty
@@ -266,7 +284,7 @@ ObjectProperty: AS_tieneComoRequisito_AS
 ObjectProperty: MA_otorgaCompetenciasGenerales_CG
 
     SubPropertyOf: 
-        MA_otorgaCompetencias_CECG
+        MA_otorgaCompetencias_CO
     
     Domain: 
         Materia
@@ -342,6 +360,9 @@ ObjectProperty: UT_contiene_ASMA
     
 ObjectProperty: CG_esOtorgadaPor_MA
 
+    SubPropertyOf: 
+        CO_esOtorgadaPor_MA
+    
     Domain: 
         Competencia_General
     
@@ -370,7 +391,7 @@ ObjectProperty: AS_esRequisitoPara_AS
 ObjectProperty: MA_otorgaCompetenciasEspecificas_CE
 
     SubPropertyOf: 
-        MA_otorgaCompetencias_CECG
+        MA_otorgaCompetencias_CO
     
     Domain: 
         Materia
@@ -531,7 +552,6 @@ Class: Competencia_Especifica
          and (CE_esOtorgadaPor_MA only Materia))
     
     SubClassOf: 
-        owl:Thing,
         Competencia
     
     DisjointWith: 
@@ -579,7 +599,6 @@ Class: Competencia_General
          and (CG_esOtorgadaPor_MA only Materia))
     
     SubClassOf: 
-        owl:Thing,
         Competencia
     
     DisjointWith: 

@@ -42,7 +42,7 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 \lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
   Las clases se pueden definir en protegé como conjuntos que contienen individuos. Las clases se describen utilizando descripciones formales que definen inequívocamente los requisitos de pertenencia a una clase. 
   Las clases se organizan en conjuntos de superclases y subclases, que forma la taxonomía de nuestro universo en observación. Esta taxonomía puede ser obtenida de manera automática por un razonador, que también puede comprobar su consistencia. Se debe tener en cuenta que todas las clases se han definido como disjuntas entre ellas de modo general, salvo las clases \lstinline{Competencia_Especifica} y \lstinline{Competencia_General} cuya disjunción s define de modo particular por ser subclases de \lstinline{Competencia} y ser su unión disjunta (una competencia puede ser general o específica, pero ninguna otra cosa no definida).
-  \lstinputlisting[language=owlms,literate=,firstnumber=649,firstline=649,lastline=650]{t-box.ms}
+  \lstinputlisting[language=owlms,literate=,firstnumber=668,firstline=668,lastline=669]{t-box.ms}
   
   Se han definido diez clases para la creación de nuestra ontología.	
 
@@ -62,7 +62,7 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
       La clase \lstinline{Competencia} agrupa a todas las competencias que es preciso adquirir para lograr el cumplimiento de los objetivos generales establecidos. Se definen como compentencias todos aquellos individuos que representan aptitudes y actitudes, cuya adquisición por parte del alumno conlleva la consecución de los objetivos generales propuestos para la obtención del título.
 			
 			Formalmente, se define como aquellos individuos que están relacionados con individuos de la clase \lstinline{Objetivo_General} mediante la propiedad que defina la adquisición, al menos una vez y que sólo tengan relación con individuos de la clase \lstinline{Objetivo_General}:
-			\lstinputlisting[language=owlms,literate=,firstnumber=564,firstline=564,lastline=571]{t-box.ms}
+			\lstinputlisting[language=owlms,literate=,firstnumber=584,firstline=584,lastline=591]{t-box.ms}
       
       Dentro de esta clase, podemos definir dos grupos de compentecias, según sean competencias específicas (propias de la rama del conocimiento donde se enmarca la titulación) o generales (comunes a todas las ramas del conocimiento y que suelen referirse a aptitudes y actitudes más que a 
 conocimientos o metodologías).
@@ -160,75 +160,140 @@ conocimientos o metodologías).
   Es de destacar que las propiedades únicamente se pueden establecer entre dos individuos. No existen propiedades con cardinalidad tres, lo que implicará que en el caso de que que sea preciso establecer una relación a tres, sería preciso modelarlo como la relación binaria entre el producto escalar de dos de ellas sobre la tercera. 
   
   \begin{description}
+
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% OG\_seCumpleMedianteLaAdquisicionDe\_CO y CO\_seAdquiereParaCumplir\_OG
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item [OG\_seCumpleMedianteLaAdquisicionDe\_CO y CO\_seAdquiereParaCumplir\_OG.] Como ya se comentó anteriormente, el objetivo de las titulaciones de grado es lograr que el alumno adquiera unos niveles de destreza mínimos en el manejo de ciertas competencias definidas en el título, de modo que esté capacitado para enfrentarse al mercado laboral. 
     
     Estas competencias se van adquiriendo conforme el alumno avanza por el itinerario formativo, hasta alcanzar los niveles mínimos exigidos en la titulación al finalizar sus estudios. Es por tanto la adquisición de esas competencias lo que permite al alumno cumplir con las objetivos generales establecidos en el título de grado. Dicho de otro modo, la titulación permite el cumplimiento de los objetivos marcados, en la medida que permite al alumno ir adquiriendo las competencias precisas para ello.
     
-    Su función inversa es \lstinline{CO_seAdquiereParaCumplir_OG}.
-    
-    \begin{lstlisting}
-    
-    R = {(a, b): a $\in$ O $\cap$ b $\in$ C $\cap$ R(O,C)=cierto} 
-    donde:
-    	R = OG_seCumpleMedianteLaAdquisicionDe_CO
-    	O = Objetivo_General
-    	C = Competencia
-    	
-    
-    S = {(R{(a, b): a$\in$ O $\cap$ b $\in$ C $\cap$ R(O,C)=cierto}, a): R in C $\cap$ a $\in$ O $\cap$ S(R,O)=cierto)}
-    donde: 	
-    	S = CO_seAdquiereParaCumplir_OG
-    	S = {(b, a): b $\in$ C $\cap$ a $\in$ O $\cap$ S(C,O)=cierto}
-    	O = Objetivo_General
-    	C = Competencia
-    
-    
-    \end{lstlisting}
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ OG_seCumpleMedianteLaAdquisicionDe_CO-CO_seAdquiereParaCumplir_OG]{t-box.ms}	
 
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ CO_seAdquiereParaCumplir_OG-OG_seCumpleMedianteLaAdquisicionDe_CO]{t-box.ms}	
- 
     
-    \item [CG\_esOtorgadaPor\_MA y MA\_otorgaCompetenciasGenerales\_CG.] Los alumnos adquieren las competencias conforme van superando con éxito las materias del plan de estudio, lo que les permite, una vez superadas todas las materias, cumplir con los objetivos generales del título.
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% CO_esOtorgadaPor_MA y MA_otorgaCompetencias_CO
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    \item [CO\_esOtorgadaPor\_MA y MA\_otorgaCompetencias\_CO.] Los alumnos adquieren las competencias conforme van superando con éxito las materias del plan de estudio, lo que les permite, una vez superadas todas las materias, cumplir con los objetivos generales del título.
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ CG_esOtorgadaPor_MA-MA_otorgaCompetenciasGenerales_CG]{t-box.ms}	
+
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_otorgaCompetencias_CO-CO_esOtorgadaPor_MA]{t-box.ms}	
+    
+ 
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% CG\_esOtorgadaPor\_MA y MA\_otorgaCompetenciasGenerales\_CG
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item [CG\_esOtorgadaPor\_MA y MA\_otorgaCompetenciasGenerales\_CG.] Es obligatorio que el alumno, al finalizar la titulación haya adquirido ciertas compentencias que resultan básicas para un profesional en el campo de la titulación. Estas competencias obligatorias reciben el nombre de competencias generales, y son las líneas maestras que definirán el progreso del alumno en la titulación.
 
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ CG_esOtorgadaPor_MA-MA_otorgaCompetenciasGenerales_CG]{t-box.ms}	
 
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_otorgaCompetenciasGenerales_CG-CG_esOtorgadaPor_MA]{t-box.ms}	
     
-
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% CE\_esOtorgadaPor\_MA y MA\_otorgaCompetenciasEspecíficas\_CE
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item [CE\_esOtorgadaPor\_MA y MA\_otorgaCompetenciasEspecíficas\_CE.] Al igual que ocurre con las competencias generales, también es preciso que un alumno adquiera las competencias específicas propias de la titulación para cumplir los objetivos generales de esa titulación. Y al igual que ocurre con las competencias generales, las específicas únicamente se obtienen cuando el alumno supera con éxito las materias de la titulación.
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ CE_esOtorgadaPor_MA-MA_otorgaCompetenciasEspecificas_CE]{t-box.ms}
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_otorgaCompetenciasEspecificas_CE-CE_esOtorgadaPor_MA]{t-box.ms}
 
-    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% MA\_constaDe\_AS y AS\_formaParteDe\_MA
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item [MA\_constaDe\_AS y AS\_formaParteDe\_MA.] Una materia está compuesta por varias asignaturas, que quedan de ese modo agrupadas bajo esa materia. Se podría decird de otro modo: que las asignaturas quedan agrupadas en diversas materias. Es una relación inversamente funcional, es decir, su función inversa es funcional. Dicho coloquialmente, significa que una materia puede constar de una o varias asignaturas, pero una asignatura sólo puede pertenecer a una materia.
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_constaDe_AS-AS_formaParteDe_MA]{t-box.ms}
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AS_formaParteDe_MA-MA_constaDe_AS]{t-box.ms}
     
-    \item [MA\_seImparteMediante\_ME y ME\_utilizadaParaImpartir\_MA.] Las materias se imparten según dictan ciertos métodos docentes considerados adecuados por los docentes de la titulación. Estos métodos docentes pueden ser complementarios entre sí, y en ningún caso son excluyeentes entre ellos. De este modo se logra que la adquisición de competencias por parte del alumno sea optima.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% MA\_seImparteMediante\_ME y ME\_utilizadoParaImpartir\_MA
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    \item [MA\_seImparteMediante\_ME y ME\_utilizadoParaImpartir\_MA.] Las materias se imparten según dictan ciertos métodos docentes considerados adecuados por los docentes de la titulación. Estos métodos docentes pueden ser complementarios entre sí, y en ningún caso son excluyeentes entre ellos. De este modo se logra que la adquisición de competencias por parte del alumno sea optima.
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_seImparteMediante_ME-ME_utilizadoParaImpartir_MA]{t-box.ms}
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ ME_utilizadoParaImpartir_MA-MA_seImparteMediante_ME]{t-box.ms}
     
-    \item [MA\_seImparteSegún\_AF y AF\_utilizadaParaImpartir\_MA.] Las materias se imparten realizando ciertas activides formativas definidas por los docentes de la materia. Los créditos de docencia de esa materia, deben estar por tanto distribuidos entre las distintas actividades formativas. Al igual que ocurre con los métodos docentes, las diferentes actividades formativas no son excluyentes entre sí, sino complementarios. Además se ha considerado importante, de cara al diseño del título, conocer cuántos créditos se dedican a cada actividad formativa. Más adelante, veremos cómo se almacena esa información.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% MA\_seImparteSegún\_AF y AF\_utilizadaParaImpartir\_MA
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+   	\item [MA\_seImparteSegún\_AF y AF\_utilizadaParaImpartir\_MA.] Las materias se imparten realizando ciertas activides formativas definidas por los docentes de la materia. Los créditos de docencia de esa materia, deben estar por tanto distribuidos entre las distintas actividades formativas. Al igual que ocurre con los métodos docentes, las diferentes actividades formativas no son excluyentes entre sí, sino complementarios. Además se ha considerado importante, de cara al diseño del título, conocer cuántos créditos se dedican a cada actividad formativa. Más adelante, veremos cómo se almacena esa información.
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_seImparteSegun_AF-AF_utilizadaParaImpartir_MA]{t-box.ms}
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AF_utilizadaParaImpartir_MA-MA_seImparteSegun_AF]{t-box.ms}
 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% MA_tiene_CA y CA_agrupa_MA
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+		\item[MA\_tiene\_CA y CA\_agrupa\_MA.] Las materias pueden ser básicas, obligatorias, optativas o mixtas. Este carácter de las materias dependerá en gran medida del carácter de las asignaturas que lo compongan.
+		
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_tiene_CA-CA_agrupa_MA]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ CA_agrupa_MA-MA_tiene_CA]{t-box.ms}
 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% MA_ubicada_UT y UT_contiene_MA
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+		\item[MA\_ubicada\_UT y UT\_contiene\_MA.] El desarrollo de la docencia se estructura en trimestres. Estas ubicaciones temporales son útiles a la hora de diseñar el desarrollo de la docencia y adecuarlo a la duración de la misma.
+		
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_ubicada_UT-UT_contiene_MA]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ UT_contiene_MA-MA_ubicada_UT]{t-box.ms}
+    				
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% MA_utiliza_MV y MV_esUtilizadoEn_MA
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+		\item[MA\_utiliza\_MV y MV\_esUtilizadoEn\_MA.] Cada una de las materias tiene pruebas de evaluación idóneas, que seá las utilizadas para comprobar el correcto aprovechamiento del curso de esas materias por parte del alumno.
+		
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MA_utiliza_MV-MV_esUtilizadoEn_MA]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ MV_esUtilizadoEn_MA-MA_utiliza_MV]{t-box.ms}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% AS\_esRequisitoPara\_AS y AS\_tieneComoRequisito\_AS
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
     \item [AS\_esRequisitoPara\_AS y AS\_tieneComoRequisito\_AS.] Como ya se explicó antes, el hecho de que una asignatura tenga como requisito en la guía de la titulación el haber cursado una asignatura anteriormente, no implica que obligatoriamente se haya de cursar esa asignatura con anterioridad. Es decir, se trata de una mera recomendación de cara al itinerio a seguir en la titulación, y en ningñun caso de obligado cumplimiento. Se ha tenido en cuenta a la hora de elaborar la ontología, ya que el fín último de esta es proporcionar una herramienta para un diseño de la titulación correcto, lo que incluye el trayecto curricular del alumno, y no para el control del desarrollo del alumno. Por tanto, dado que lo que estamos haciendo es ayudar a diseñar el título, vamos a incluir los requisitos para el curso de asignaturas, como si de cumplimiento obligatorio se tratase.
     Es una relación transitiva, es decir, que si la asignatura ``A'' es requisito de la asignatura ``B'' y a su vez ``B'' es requisito de la asignatura ``C'', entonces la asignatura ``A'' es un requisito de la asignatura ``C''.
 
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AS_esRequisitoPara_AS-AS_tieneComoRequisito_AS]{t-box.ms}
     
     \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AS_tieneComoRequisito_AS-AS_esRequisitoPara_AS]{t-box.ms}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% AS_tiene_CA y CA_agrupa_AS
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+    \item [AS\_tiene\_CA y CA\_agrupa\_AS.] Las asignaturas también tienen diferentes carácteres, lo que a su vez permite dotar de carácter a las materias que las engloban.
+
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AS_tiene_CA-CA_agrupa_AS]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ CA_agrupa_AS-AS_tiene_CA]{t-box.ms}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% AS_ubicada_UT y UT_contiene_AS
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+    \item [AS\_ubicada\_UT y UT\_contiene\_AS.] Las asignaturas se programan para que se desarrollen en trimestres, de modo que el alumno pueda cursar las asignaturas de un modo ordenado, lo que hará que el itinerario formativo sea estructurado y esté bien diseñado.
+
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ AS_ubicada_UT-UT_contiene_AS]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ UT_contiene_AS-AS_ubicada_UT]{t-box.ms}
+    
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% CA_agrupa_ASMA y UT_contiene_ASMA
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+    \item [CA\_agrupa\_ASMA y UT\_contiene\_ASMA.] Es interesante, como herramienta para poder realizar un diseño coherente del itinerario formativo, conocer la estructuración temporal y de carácter de las diferentes asignaturas y materias de consta la titulación, pues de este modo se pueden distribuir adecuadamente las asignaturas a lo largo del itinerario formativo, así como conocer la composición de asignaturas y materias
+
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ CA_agrupa_ASMA-or\ Materia]{t-box.ms}
+    
+    \lstinputlisting[language=owlms,literate=,linerange=ObjectProperty:\ UT_contiene_ASMA-or\ Materia]{t-box.ms}
+    
+        
     
   \end{description}
   

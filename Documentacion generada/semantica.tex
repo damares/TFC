@@ -165,6 +165,38 @@ DisjointClasses: $CE_1,\dotsc,CE_n$
 		\hline
 		\endhead
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% SubPropertyOf %%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE_1$
+	SubPropertyOf: $OPE_2$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  (OPE_1)^{op} \subseteq (OPE_2)^{op}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+   	%% SubPropertyChain %%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\begin{lstlisting}
+ObjectProperty: $OPE$
+	SubPropertyChain: $OPE_1, \dotsc, OPE_n$
+    \end{lstlisting}
+    &
+    \begin{displaymath}
+    	\begin{array}{l}
+   		  \forall y_0 \ldots Y_n:(y_0,y_1) \in (OPE_1)^{op} \\
+   		  	\text{ and } \ldots \text{ and } \\
+   		  	(y_{n-1}, y_n) \in (OPE_n)^{op} \Rightarrow (y_0, y_n) \in (OPE)^{op}\\
+   		\end{array}
+   	\end{displaymath}
+   	\\ 
+   	\hline
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
    	%% ObjectProperty: A Domain B %%%%%%%%%%%%%
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\begin{lstlisting}
