@@ -1,10 +1,10 @@
 Prefix: : <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-Prefix: Seminarios: <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Seminarios/>
 
 
 
@@ -266,21 +266,6 @@ ObjectProperty: UT_contiene_AS
         AS_ubicada_UT
     
     
-ObjectProperty: AS_tieneComoRequisito_AS
-
-    Characteristics: 
-        Transitive
-    
-    Domain: 
-        Asignatura
-    
-    Range: 
-        Asignatura
-    
-    InverseOf: 
-        AS_esRequisitoPara_AS
-    
-    
 ObjectProperty: MA_otorgaCompetenciasGenerales_CG
 
     SubPropertyOf: 
@@ -294,6 +279,21 @@ ObjectProperty: MA_otorgaCompetenciasGenerales_CG
     
     InverseOf: 
         CG_esOtorgadaPor_MA
+    
+    
+ObjectProperty: AS_tieneComoRequisito_AS
+
+    Characteristics: 
+        Transitive
+    
+    Domain: 
+        Asignatura
+    
+    Range: 
+        Asignatura
+    
+    InverseOf: 
+        AS_esRequisitoPara_AS
     
     
 ObjectProperty: CA_agrupa_ASMA
@@ -478,18 +478,6 @@ DataProperty: ME_Descripcion
         rdfs:Literal
     
     
-DataProperty: OG_Descripcion
-
-    Characteristics: 
-        Functional
-    
-    Domain: 
-        Objetivo_General
-    
-    Range: 
-        rdfs:Literal
-    
-    
 DataProperty: CO_Descripcion
 
     Characteristics: 
@@ -502,6 +490,18 @@ DataProperty: CO_Descripcion
         rdfs:Literal
     
     
+DataProperty: OG_Descripcion
+
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        Objetivo_General
+    
+    Range: 
+        rdfs:Literal
+    
+    
 DataProperty: MV_Descripcion
 
     Domain: 
@@ -509,6 +509,18 @@ DataProperty: MV_Descripcion
     
     Range: 
         rdfs:Literal
+    
+    
+DataProperty: AF_Creditos
+
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        Actividad_Formativa
+    
+    Range: 
+        tipoCredito
     
     
 DataProperty: MA_Creditos
@@ -530,18 +542,6 @@ DataProperty: AS_Contenidos
     
     Range: 
         rdfs:Literal
-    
-    
-DataProperty: AF_Creditos
-
-    Characteristics: 
-        Functional
-    
-    Domain: 
-        Actividad_Formativa
-    
-    Range: 
-        tipoCredito
     
     
 Class: Competencia_Especifica

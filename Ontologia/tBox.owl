@@ -1,10 +1,10 @@
 Prefix: : <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-Prefix: Seminarios: <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Seminarios/>
 
 
 
@@ -89,6 +89,18 @@ ObjectProperty: UT_contiene_MA
         MA_ubicada_UT
     
     
+ObjectProperty: OG_seCumpleMedianteLaAdquisicionDe_CO
+
+    Domain: 
+        Objetivo_General
+    
+    Range: 
+        Competencia
+    
+    InverseOf: 
+        CO_seAdquiereParaCumplir_OG
+    
+    
 ObjectProperty: AS_tiene_CA
 
     Characteristics: 
@@ -102,18 +114,6 @@ ObjectProperty: AS_tiene_CA
     
     InverseOf: 
         CA_agrupa_AS
-    
-    
-ObjectProperty: OG_seCumpleMedianteLaAdquisicionDe_CO
-
-    Domain: 
-        Objetivo_General
-    
-    Range: 
-        Competencia
-    
-    InverseOf: 
-        CO_seAdquiereParaCumplir_OG
     
     
 ObjectProperty: CA_agrupa_AS
@@ -161,18 +161,6 @@ ObjectProperty: MA_utiliza_MV
         MV_esUtilizadoEn_MA
     
     
-ObjectProperty: CO_esOtorgadaPor_MA
-
-    Domain: 
-        Competencia
-    
-    Range: 
-        Materia
-    
-    InverseOf: 
-        MA_otorgaCompetencias_CO
-    
-    
 ObjectProperty: MA_ubicada_UT
 
     SubPropertyOf: 
@@ -189,6 +177,18 @@ ObjectProperty: MA_ubicada_UT
     
     InverseOf: 
         UT_contiene_MA
+    
+    
+ObjectProperty: CO_esOtorgadaPor_MA
+
+    Domain: 
+        Competencia
+    
+    Range: 
+        Materia
+    
+    InverseOf: 
+        MA_otorgaCompetencias_CO
     
     
 ObjectProperty: CE_esOtorgadaPor_MA
@@ -221,18 +221,6 @@ ObjectProperty: MA_otorgaCompetencias_CO
 ObjectProperty: owl:topObjectProperty
 
     
-ObjectProperty: MA_seImparteMediante_ME
-
-    Domain: 
-        Materia
-    
-    Range: 
-        Metodo_Docente
-    
-    InverseOf: 
-        ME_utilizadoParaImpartir_MA
-    
-    
 ObjectProperty: MA_seImparteSegun_AF
 
     Characteristics: 
@@ -246,6 +234,18 @@ ObjectProperty: MA_seImparteSegun_AF
     
     InverseOf: 
         AF_utilizadaParaImpartir_MA
+    
+    
+ObjectProperty: MA_seImparteMediante_ME
+
+    Domain: 
+        Materia
+    
+    Range: 
+        Metodo_Docente
+    
+    InverseOf: 
+        ME_utilizadoParaImpartir_MA
     
     
 ObjectProperty: UT_contiene_AS
@@ -266,21 +266,6 @@ ObjectProperty: UT_contiene_AS
         AS_ubicada_UT
     
     
-ObjectProperty: AS_tieneComoRequisito_AS
-
-    Characteristics: 
-        Transitive
-    
-    Domain: 
-        Asignatura
-    
-    Range: 
-        Asignatura
-    
-    InverseOf: 
-        AS_esRequisitoPara_AS
-    
-    
 ObjectProperty: MA_otorgaCompetenciasGenerales_CG
 
     SubPropertyOf: 
@@ -294,6 +279,21 @@ ObjectProperty: MA_otorgaCompetenciasGenerales_CG
     
     InverseOf: 
         CG_esOtorgadaPor_MA
+    
+    
+ObjectProperty: AS_tieneComoRequisito_AS
+
+    Characteristics: 
+        Transitive
+    
+    Domain: 
+        Asignatura
+    
+    Range: 
+        Asignatura
+    
+    InverseOf: 
+        AS_esRequisitoPara_AS
     
     
 ObjectProperty: CA_agrupa_ASMA
@@ -358,21 +358,6 @@ ObjectProperty: UT_contiene_ASMA
          or Materia
     
     
-ObjectProperty: CG_esOtorgadaPor_MA
-
-    SubPropertyOf: 
-        CO_esOtorgadaPor_MA
-    
-    Domain: 
-        Competencia_General
-    
-    Range: 
-        Materia
-    
-    InverseOf: 
-        MA_otorgaCompetenciasGenerales_CG
-    
-    
 ObjectProperty: AS_esRequisitoPara_AS
 
     Characteristics: 
@@ -386,6 +371,21 @@ ObjectProperty: AS_esRequisitoPara_AS
     
     InverseOf: 
         AS_tieneComoRequisito_AS
+    
+    
+ObjectProperty: CG_esOtorgadaPor_MA
+
+    SubPropertyOf: 
+        CO_esOtorgadaPor_MA
+    
+    Domain: 
+        Competencia_General
+    
+    Range: 
+        Materia
+    
+    InverseOf: 
+        MA_otorgaCompetenciasGenerales_CG
     
     
 ObjectProperty: MA_otorgaCompetenciasEspecificas_CE
@@ -502,15 +502,6 @@ DataProperty: CO_Descripcion
         rdfs:Literal
     
     
-DataProperty: MV_Descripcion
-
-    Domain: 
-        Metodo_Evaluacion
-    
-    Range: 
-        rdfs:Literal
-    
-    
 DataProperty: MA_Creditos
 
     Characteristics: 
@@ -527,6 +518,15 @@ DataProperty: AS_Contenidos
 
     Domain: 
         Asignatura
+    
+    Range: 
+        rdfs:Literal
+    
+    
+DataProperty: MV_Descripcion
+
+    Domain: 
+        Metodo_Evaluacion
     
     Range: 
         rdfs:Literal
