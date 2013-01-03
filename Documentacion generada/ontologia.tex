@@ -394,14 +394,11 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
 
 \subsection{Individuos de la ontología}
   Los individuos representan objetos de la ontología en el dominio que estamos estudiando. Protegé no hace uso del Unique Name Assumption, es decir, para protegé dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontologías OWL: todo lo que no sea dicho de forma explícita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo, para ese dominio. 
-  En nuestra ontología todos los individuos que componen la ontología (11 \lstinline{Objetivo_General}, 12 \lstinline{Competencia_General}, 47 \lstinline{Competencia_Especifica}, 12 \lstinline{Materia}, 43 \lstinline{Asignaturas}, 66 \lstinline{Actividades_Formativas}, 6 \lstinline{Metodos_Docentes}, 4 \lstinline{Caracter}, 9 \lstinline{Metodo_Evaluacion}, 7 \lstinline{Ubicacion_Temporal}) son distintos. Dado el gran número de individuos que componen la ontología, se ha optado por no poner la declaración de todos y cada uno de ellos, si no tan sólo de algunos de ellos, a modo de ejemplo.
+  En nuestra ontología todos los individuos que componen la ontología (11 \textit{Objetivo\_General}, 12 \textit{Competencia\_General}, 47 \textit{Competencia\_Especifica}, 12 \textit{Materia}, 43 \textit{Asignaturas}, 66 \textit{Actividades\_Formativas}, 6 \textit{Metodos\_Docentes}, 4 \textit{Caracter}, 9 \textit{Metodo\_Evaluacion}, 7 \textit{Ubicacion\_Temporal}) son distintos. Dado el gran número de individuos que componen la ontología, se ha optado por no poner la declaración de todos y cada uno de ellos, si no tan sólo de algunos de ellos, a modo de ejemplo.
   
   %\lstinputlisting[language=owlms,literate=,linerange=DifferentIndividuals:-UT_7o_semestre]{a-box.ms}
   
    %\todo{decir que son distintos, y que no se pone para no extendernos se nombran algunos y punto. decir cuántos son}
-  
-  Las referencias IRI tiene ciertos carácteres reservados por lo que no puedens er utilizados en los nombres de individuos, Por ello, se han evitado los caracteres "/", así como vocales acentuadas y eñes con el fin de evitar que las referencias IRI de los diferentes individuos hagan la misma ilegible y que las descripciones de los mismos, cuando estén presentes, sean más claras.
-  
   
   
 \begin{description}
@@ -420,7 +417,7 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
 	 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Competencias Generales
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
- \item [Competencias Generales]. Estos son todos los individuos pertenecientes a la clase \lstinline{Competencia_General}, que representan las competencias generales que el alumno adquiere durante el itinerario formativo. A modo de ejemplo se incluyen:
+ \item [Competencias Generales.] Estos son todos los individuos pertenecientes a la clase \lstinline{Competencia_General}, que representan las competencias generales que el alumno adquiere durante el itinerario formativo. Son las siguientes: \textit{CG-1-21}, \textit{CG-2-CE45}, \textit{CG-3-4}, \textit{CG-5}, \textit{CG-6}, \textit{CG-7-8-9-10-16-17}, \textit{CG-11-12-20}, \textit{CG-13-CE55}, \textit{CG-14-15-18-23}, \textit{CG-19}, \textit{CG-22} y \textit{CG-24-25-26-27}. A modo de ejemplo se incluyen:
  
  	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CG\-1\-21-xsd:string]{a-box.ms}
  	
@@ -432,10 +429,8 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Competencias Específicas
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
- \item [Competencias Específicas]. Estos individuos pertentecientes a la clase \lstinline{Competencia_Especifica}, representan las diferentes competencias específicas que el alumno debe poseer al finalizar el ciclo formativo.
+ \item [Competencias Específicas]. Estos individuos pertentecientes a la clase \lstinline{Competencia_Especifica}, representan las diferentes competencias específicas que el alumno debe poseer al finalizar el ciclo formativo. En la titulación que estamos definiendo son: \lstinline{CE-1}, \textit{CE-2}, \textit{CE-3-4}, \textit{CE-5}, \textit{CE-6}, \textit{CE-7}, \textit{CE-8}, \textit{CE-9}, \textit{CE-10}, \textit{CE-12-16}, \textit{CE-13-18}, \textit{CE-14-15}, \textit{CE-17}, \textit{CE-19-20}, \textit{CE-21}, \textit{CE-22}, \textit{CE-23}, \textit{CE-24}, \textit{CE-25}, \textit{CE-26-27}, \textit{CE-28}, \textit{CE-29}, \textit{CE-30}, \textit{CE-31}, \textit{CE-32}, \textit{CE-33}, \textit{CE-34}, \textit{CE-35}, \textit{CE-36}, \textit{CE-37}, \textit{CE-38}, \textit{CE-39}, \textit{CE-40}, \textit{CE-41}, \textit{CE-42}, \textit{CE-43}, \textit{CE-44}, \textit{CE-46}, \textit{CE-47}, \textit{CE-48}, \textit{CE-49}, \textit{CE-50}, \textit{CE-51}, \textit{CE-52}, \textit{CE-53-54} y \textit{CE-56}.
  
-	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CE\-1-xsd:string]{a-box.ms}
-	
 	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CE\-19\-20-xsd:string]{a-box.ms}
 	
 	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CE\-33-xsd:string]{a-box.ms}
@@ -444,22 +439,18 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
  		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Materias
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
- \item [Materias]. Estos individuos representan las diferentes materias de la titulación que estamos modelando Son: \textit{MA-Empresa}, \textit{MA-English\_for\_professional\_and\_academic\_communication}, . De igual modo, sólo se incluyen algunas, a modo de ejemplo ilustrativo.
+ \item [Materias]. Estos individuos representan las diferentes materias de la titulación que estamos modelando Son: \textit{MA-Empresa}, \textit{MA-English\_for\_professional\_and\_academic\_communication}, \textit{MA-Estadística}, \textit{MA-Física}, \textit{MA-Informática}, \textit{MA-Ingeniería\_de\_computadores}, \textit{MA-Ingeniería\_del\_software\_sistemas\_de\_información\_y\_sistemas\_inteligentes}, \textit{MA-Matemáticas}, \textit{MA-Optatividad}, \textit{MA-Programación}, \textit{MA-Sistemas\_operativos,\_sistemas\_distribuidos\_y\_redes} y \textit{MA-Trabajo\_fin\_de\_grado}. De igual modo, sólo se incluyen algunas, a modo de ejemplo ilustrativo.
  
-	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ MA\-Empresa-ensenanzas.\"\^\^xsd:string]{a-box.ms} 
+	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ MA\-Ingeniería\_del\_software\_sistemas\_de\_información\_y\_sistemas\_inteligentes-xsd:decimal]{a-box.ms} 
 	
-	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ MA\-Ingenieria_del_software_sistemas_de_informacion_y_sistemas_inteligentes-ensenanzas.\"\^\^xsd:string]{a-box.ms} 
-	
-	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ MA\-Trabajo_fin_de_grado-audiovisuales).\"\^\^xsd:string]{a-box.ms} 
-	
-	\todo{dejar sólo una de ellas}
+	%\todo{dejar sólo una de ellas}
 	
  		 
 
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Asignaturas
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     		 
-  \item [Asignaturas]. Estos individuos son la representación de las diferentes asignaturas del plan de estudios.
+  \item [Asignaturas]. Estos individuos son la representación de las diferentes asignaturas del plan de estudios	.
   
   \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Programacion_II-xsd:string]{a-box.ms} 
   

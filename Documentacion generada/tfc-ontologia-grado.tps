@@ -5,17 +5,17 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=5
-ActiveFrame=3
+ActiveFrame=0
 
 [Frame0]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
-MaxPos.x=-8
-MaxPos.y=-30
+MaxPos.x=-9
+MaxPos.y=-38
 NormalPos.left=0
 NormalPos.top=0
 NormalPos.right=1036
@@ -24,17 +24,17 @@ Class=CLatexEdit
 Document=ontologia.tex
 
 [Frame0_Row0]
-cyCur=474
+cyCur=665
 cyMin=10
 
 [Frame0_Col0]
-cxCur=999
+cxCur=1482
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=446
-Cursor.column=190
-TopSubLine=679
+Cursor.row=449
+Cursor.column=16
+TopSubLine=628
 
 [Frame1]
 Columns=1
@@ -53,11 +53,11 @@ Class=CLatexEdit
 Document=t-box.ms
 
 [Frame1_Row0]
-cyCur=474
+cyCur=461
 cyMin=10
 
 [Frame1_Col0]
-cxCur=999
+cxCur=993
 cxMin=10
 
 [Frame1_View0,0]
@@ -82,11 +82,11 @@ Class=CLatexEdit
 Document=generalizacion.tex
 
 [Frame2_Row0]
-cyCur=373
+cyCur=360
 cyMin=10
 
 [Frame2_Col0]
-cxCur=999
+cxCur=993
 cxMin=10
 
 [Frame2_View0,0]
@@ -97,12 +97,12 @@ TopSubLine=0
 [Frame3]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
-MaxPos.x=-8
-MaxPos.y=-30
+MaxPos.x=-9
+MaxPos.y=-38
 NormalPos.left=180
 NormalPos.top=192
 NormalPos.right=1216
@@ -111,17 +111,17 @@ Class=CLatexEdit
 Document=tfc-ontologia-grado.tex
 
 [Frame3_Row0]
-cyCur=262
+cyCur=360
 cyMin=10
 
 [Frame3_Col0]
-cxCur=749
+cxCur=993
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=225
+Cursor.row=222
 Cursor.column=0
-TopSubLine=219
+TopSubLine=208
 
 [Frame4]
 Columns=1
@@ -130,25 +130,25 @@ Flags=0
 ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
-MaxPos.x=-8
-MaxPos.y=-30
-NormalPos.left=25
-NormalPos.top=25
-NormalPos.right=720
-NormalPos.bottom=233
+MaxPos.x=-9
+MaxPos.y=-38
+NormalPos.left=90
+NormalPos.top=96
+NormalPos.right=1387
+NormalPos.bottom=562
 Class=CLatexEdit
-Document=introduccion.tex
+Document=a-box.ms
 
 [Frame4_Row0]
-cyCur=149
+cyCur=394
 cyMin=10
 
 [Frame4_Col0]
-cxCur=658
+cxCur=1254
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=496
-Cursor.column=482
-TopSubLine=1006
+Cursor.row=816
+Cursor.column=29
+TopSubLine=825
 

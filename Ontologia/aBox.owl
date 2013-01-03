@@ -640,13 +640,13 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administracion_y_Gestion_de_Empresas -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administracion_y_Gestion_de_Empresas">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Economia de la empresa.
-- Administracion de empresas.
-- Gestion de los sistemas funcionales de la empresa.
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Economía de la empresa.
+- Administración de empresas.
+- Gestión de los sistemas funcionales de la empresa.
 - Toma de decisiones empresariales.</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Básica"/>
@@ -655,17 +655,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Algoritmos basicos.
-- Diseno de algoritmos.
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Algoritmos básicos.
+- Diseño de algoritmos.
 - Implementacion de tipos de datos.
-- Analisis de terminacion, correccion y complejidad.</TBox:AS_Contenidos>
+- Análisis de terminación, corrección y complejidad.</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-3er_semestre"/>
     </owl:NamedIndividual>
@@ -676,10 +676,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Jerarquia de memoria
-- Maquinas segmentadas y superescalares
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Jerarquía de memoria
+- Máquinas segmentadas y superescalares
 - Multiprocesadores
-- Evaluacion del rendimiento</TBox:AS_Contenidos>
+- Evaluación del rendimiento</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6.0</TBox:AS_Creditos>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Digitales"/>
@@ -690,16 +690,16 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Modelos de datos
-- Diseno logico de bases de datos
-- Manipulacion de bases de datos
+- Diseño lógico de bases de datos
+- Manipulación de bases de datos
 - Modelo relacional</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
@@ -713,12 +713,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Analisis y diseno de sistemas concurrentes
-- Programacion de aplicaciones concurrentes
-- Especificacion de sistemas concurrentes</TBox:AS_Contenidos>
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Análisis y diseño de sistemas concurrentes
+- Programación de aplicaciones concurrentes
+- Especificación de sistemas concurrentes</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">3</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-4o_semestre"/>
     </owl:NamedIndividual>
@@ -760,9 +760,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Arquitectura von Neumann
-- Procesador: Unidad aritmetico-logica, sistema de memoria, unidad de control
+- Procesador: Unidad aritmético-lógica, sistema de memoria, unidad de control
 - Sistema de entrada/salida.
-- Lenguaje maquina y ensamblador</TBox:AS_Contenidos>
+- Lenguaje máquina y ensamblador</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6.0</TBox:AS_Creditos>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
@@ -790,16 +790,16 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestion_de_procesos_de_Tecnologias_de_la_Informacion -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestión_de_procesos_de_Tecnologías_de_la_Información -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestion_de_procesos_de_Tecnologias_de_la_Informacion">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestión_de_procesos_de_Tecnologías_de_la_Información">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Procesos.
 - Mejora de Procesos.
 - Servicios.
-- Certificacion.</TBox:AS_Contenidos>
+- Certificación.</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administracion_y_Gestion_de_Empresas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:AS_formaParteDe_MA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Empresa"/>
         <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-7o_semestre"/>
@@ -807,33 +807,33 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Requisitos.
-- Tecnicas de analisis y diseno software.
-- Criterios de diseno software
+- Técnicas de análisis y diseño software.
+- Criterios de diseño software
 - Arquitecturas software</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-6o_semestre"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_II -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_II -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_II">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_II">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Trabajo en equipo en proyecto practico de desarrollo
-- Gestion de Calidad
-- Gestion de Configuracion
-- Administracion de Proyectos Software</TBox:AS_Contenidos>
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Trabajo en equipo en proyecto práctico de desarrollo
+- Gestión de Calidad
+- Gestión de Configuración
+- Administración de Proyectos Software</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-7o_semestre"/>
     </owl:NamedIndividual>
@@ -844,9 +844,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Inteligencia_Artificial">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Formalizacion de problemas reales
-- Formalismos de representacion del conocimiento y sus sistemas de inferencia asociados
-- Descripcion de una solucion a un problema informatico de forma abstracta
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Formalización de problemas reales
+- Formalismos de representación del conocimiento y sus sistemas de inferencia asociados
+- Descripción de una solución a un problema informático de forma abstracta
 - Algoritmos no convencionales para resolver problemas</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
@@ -860,14 +860,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Ergonomia, usabilidad y diseno centrado en el usuario
-- Accesibilidad y diseno para todos
-- Estilos y dispositivos de interaccion
-- Analisis y evaluacion de la usabilidad y accesibilidad
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Ergonomía, usabilidad y diseño centrado en el usuario
+- Accesibilidad y diseño para todos
+- Estilos y dispositivos de interacción
+- Análisis y evaluación de la usabilidad y accesibilidad
 - Prototipado de bajo coste</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_I"/>
@@ -878,14 +878,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Teoria y diseno de lenguajes formales y gramaticas
-- Teoria y diseno de automatas finitos y automatas con pila
-- Maquinas de Turing y modelos de computo universales
-- Teoria de la computabilidad</TBox:AS_Contenidos>
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Teoría y diseño de lenguajes formales y gramáticas
+- Teoría y diseño de autómatas finitos y autómatas con pila
+- Máquinas de Turing y modelos de cómputo universales
+- Teoría de la computabilidad</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_I"/>
@@ -946,25 +946,25 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Optativa3_3ECTS">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">3</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administracion_y_Gestion_de_Empresas"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Cálculo"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Fundamentos_físicos_y_tecnológicos_de_la_informática"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Digitales"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Operativos"/>
@@ -979,25 +979,25 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Optativa3_6ECTS">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administracion_y_Gestion_de_Empresas"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Cálculo"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Fundamentos_físicos_y_tecnológicos_de_la_informática"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Digitales"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Operativos"/>
@@ -1012,28 +1012,28 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Optativa4_3ECTS">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">3</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administracion_y_Gestion_de_Empresas"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Cálculo"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Fundamentos_físicos_y_tecnológicos_de_la_informática"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Inteligencia_Artificial"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Seguridad_de_las_TI"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Digitales"/>
@@ -1051,28 +1051,28 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Optativa4_6ECTS">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administracion_y_Gestion_de_Empresas"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Cálculo"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Fundamentos_físicos_y_tecnológicos_de_la_informática"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Inteligencia_Artificial"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_I"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Seguridad_de_las_TI"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Digitales"/>
@@ -1090,48 +1090,28 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Plan_de_negocio">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">12</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-English_for_Professional_and_Academic_Communications"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestion_de_procesos_de_Tecnologias_de_la_Informacion"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestión_de_procesos_de_Tecnologías_de_la_Información"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Inteligencia_Artificial"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Seguridad_de_las_TI"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Distribuidos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Operativos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Orientados_a_Servicios"/>
-        <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Optativa"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Practicum_No_TFC -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Practicum_No_TFC">
-        <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Creditos rdf:datatype="&xsd;decimal">18</TBox:AS_Creditos>
-        <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Optativa"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Practicum_TFC -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Practicum_TFC">
-        <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Creditos rdf:datatype="&xsd;decimal">30</TBox:AS_Creditos>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Optativa"/>
     </owl:NamedIndividual>
     
@@ -1175,12 +1155,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Analisis Lexico
-- Analisis Sintactico
-- Analisis Semantico.</TBox:AS_Contenidos>
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Análisis Léxico
+- Análisis Sintáctico
+- Análisis Semántico.</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">3</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-4o_semestre"/>
     </owl:NamedIndividual>
@@ -1197,44 +1177,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Programacion logica y resolucion de restricciones
-- Lenguajes declarativos logicos, ISO-Prolog</TBox:AS_Contenidos>
-        <TBox:AS_Creditos rdf:datatype="&xsd;decimal">3</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
-        <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
-        <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-3er_semestre"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II">
-        <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Programacion orientada a Objetos
-- Concepto de Tipo Abstracto de Datos
-- Manejo de Estructuras de Datos dinamicas 
-- Documentacion de codigo.</TBox:AS_Contenidos>
-        <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_I"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
-        <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Básica"/>
-        <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-2o_semestre"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas">
-        <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Programacion para sistemas operativos
-- Automatizacion de tareas mediante scripts</TBox:AS_Contenidos>
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Programación lógica y resolución de restricciones
+- Lenguajes declarativos lógicos, ISO-Prolog</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">3</TBox:AS_Creditos>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
@@ -1259,28 +1207,60 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II">
+        <rdf:type rdf:resource="&TBox;Asignatura"/>
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Programación orientada a Objetos
+- Concepto de Tipo Abstracto de Datos
+- Manejo de Estructuras de Datos dinámicas
+- Documentación de código.</TBox:AS_Contenidos>
+        <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
+        <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Básica"/>
+        <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-2o_semestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas">
+        <rdf:type rdf:resource="&TBox;Asignatura"/>
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Programación para sistemas operativos
+- Automatización de tareas mediante scripts</TBox:AS_Contenidos>
+        <TBox:AS_Creditos rdf:datatype="&xsd;decimal">3</TBox:AS_Creditos>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
+        <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
+        <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-3er_semestre"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_Software -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_Software">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">12</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-English_for_Professional_and_Academic_Communications"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestion_de_procesos_de_Tecnologias_de_la_Informacion"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestión_de_procesos_de_Tecnologías_de_la_Información"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Inteligencia_Artificial"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Seguridad_de_las_TI"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Distribuidos"/>
@@ -1291,28 +1271,28 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_instalacion_de_infraestructura_informatica -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_instalación_de_infraestructura_informática -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_instalacion_de_infraestructura_informatica">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_instalación_de_infraestructura_informática">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">12</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-English_for_Professional_and_Academic_Communications"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestion_de_procesos_de_Tecnologias_de_la_Informacion"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestión_de_procesos_de_Tecnologías_de_la_Información"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Inteligencia_Artificial"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Seguridad_de_las_TI"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Distribuidos"/>
@@ -1328,23 +1308,23 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_sistema_o_servicio">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">12</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-English_for_Professional_and_Academic_Communications"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestion_de_procesos_de_Tecnologias_de_la_Informacion"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_II"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestión_de_procesos_de_Tecnologías_de_la_Información"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Inteligencia_Artificial"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_II"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Seguridad_de_las_TI"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Distribuidos"/>
@@ -1355,15 +1335,35 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Prácticum_No_TFC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Prácticum_No_TFC">
+        <rdf:type rdf:resource="&TBox;Asignatura"/>
+        <TBox:AS_Creditos rdf:datatype="&xsd;decimal">18</TBox:AS_Creditos>
+        <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Optativa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Prácticum_TFC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Prácticum_TFC">
+        <rdf:type rdf:resource="&TBox;Asignatura"/>
+        <TBox:AS_Creditos rdf:datatype="&xsd;decimal">30</TBox:AS_Creditos>
+        <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Optativa"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Arquitecturas de comunicaciones
-- Tecnologias de red
+- Tecnologías de red
 - Protocolos de comunicaciones
-- Redes de area local
-- Servicios telematicos</TBox:AS_Contenidos>
+- Redes de área local
+- Servicios telemáticos</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-4o_semestre"/>
@@ -1406,9 +1406,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Distribuidos">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Infraestructura y arquitectura de los sistemas distribuidos
-- Mecanismos de comunicacion de bajo nivel
+- Mecanismos de comunicación de bajo nivel
 - Servicios de sistema para entornos distribuidos
-- Diseno de aplicaciones distribuidas</TBox:AS_Contenidos>
+- Diseño de aplicaciones distribuidas</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Operativos"/>
@@ -1424,11 +1424,11 @@
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Estructura interna del Sistema Operativo
 - Servicios del Sistema Operativo
-- Programacion de Sistemas
-- Administracion del Sistema Operativo</TBox:AS_Contenidos>
+- Programación de Sistemas
+- Administración del Sistema Operativo</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-4o_semestre"/>
     </owl:NamedIndividual>
@@ -1439,13 +1439,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Orientados_a_Servicios">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
-        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Fundamentos de la orientacion a servicios software
-- Tecnologias para desarrollo de Servicios
-- Arquitecturas y tecnologias para orientacion a servicios
-- Garantia del nivel de servicio
-- Diseno, composicion y coordinacion de servicios</TBox:AS_Contenidos>
+        <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Fundamentos de la orientación a servicios software
+- Tecnologías para desarrollo de Servicios
+- Arquitecturas y tecnologías para orientación a servicios
+- Garantía del nivel de servicio
+- Diseño, composición y coordinación de servicios</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
-        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:AS_tieneComoRequisito_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
         <TBox:AS_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:AS_ubicada_UT rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#UT-6o_semestre"/>
@@ -1506,7 +1506,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-1">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer profundamente los cimientos esenciales y fundacionales de la informatica, abarcando tanto conceptos y teorias abstractos como los valores y los principios profesionales, subrayando los aspectos esenciales de la disciplina que permanecen inalterables ante el cambio tecnologico.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer profundamente los cimientos esenciales y fundacionales de la informática, abarcando tanto conceptos y teorías abstractos como los valores y los principios profesionales, subrayando los aspectos esenciales de la disciplina que permanecen inalterables ante el cambio tecnológico.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ01"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
     </owl:NamedIndividual>
@@ -1518,7 +1518,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-10">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Concebir y desarrollar sistemas digitales utilizando lenguajes de descripcion hardware.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Concebir y desarrollar sistemas digitales utilizando lenguajes de descripción hardware.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
     
@@ -1529,7 +1529,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-11">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocimientos basicos para estimar y medir el gasto y la productividad.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocimientos básicos para estimar y medir el gasto y la productividad.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ04"/>
     </owl:NamedIndividual>
     
@@ -1540,7 +1540,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-12-16">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer los campos de aplicacion de la informatica, y tener una apreciacion de la necesidad de poseer unos conocimientos tecnicos profundos en ciertas áreas de aplicacion; apreciacion del grado de esta necesidad en, por lo menos, una situacion.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer los campos de aplicación de la informática, y tener una apreciación de la necesidad de poseer unos conocimientos técnicos profundos en ciertas áreas de aplicación; apreciación del grado de esta necesidad en, por lo menos, una situación.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ01"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ03"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
@@ -1553,7 +1553,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-13-18">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender lo que pueden y no pueden conseguir las tecnologias actuales, y las limitaciones de la informatica, que implica distinguir entre lo que, inherentemente, la informatica no es capaz de hacer y lo que puede lograrse a traves de la ciencia y la tecnologia futuras.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender lo que pueden y no pueden conseguir las tecnologías actuales, y las limitaciones de la informática, que implica distinguir entre lo que, inherentemente, la informática no es capaz de hacer y lo que puede lograrse a través de la ciencia y la tecnología futuras.</TBox:CO_Descripcion>
     </owl:NamedIndividual>
     
 
@@ -1563,7 +1563,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-14-15">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer el software, el hardware y las aplicaciones existentes en el mercado, así como el uso de sus elementos, y capacidad para familiarizarse con nuevas aplicaciones informaticas.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer el software, el hardware y las aplicaciones existentes en el mercado, así como el uso de sus elementos, y capacidad para familiarizarse con nuevas aplicaciones informáticas.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ01"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
@@ -1576,7 +1576,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-17">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer los temas informaticos avanzados de modo que permita a los alumnos vislumbrar y entender las fronteras de la disciplina, por medio de la inclusion de experiencias de aprendizaje que dirigen a los alumnos desde los temas elementales a los temas avanzados o los temas de los que se nutren los novisimos desarrollos.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer los temas informáticos avanzados de modo que permita a los alumnos vislumbrar y entender las fronteras de la disciplina, por medio de la inclusión de experiencias de aprendizaje que dirigen a los alumnos desde los temas elementales a los temas avanzados o los temas de los que se nutren los novísimos desarrollos.</TBox:CO_Descripcion>
     </owl:NamedIndividual>
     
 
@@ -1586,7 +1586,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-19-20">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocimiento de los tipos apropiados de soluciones, y comprension de la complejidad de los problemas informaticos y la viabilidad de su solucion.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocimiento de los tipos apropiados de soluciones, y comprensión de la complejidad de los problemas informáticos y la viabilidad de su solución.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ04"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ06"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
@@ -1600,7 +1600,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-2">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Formalizacion y especificacion de problemas reales cuya solucion requiere el uso de la informatica.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Formalización y especificación de problemas reales cuya solución requiere el uso de la informática.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ01"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
     </owl:NamedIndividual>
@@ -1623,7 +1623,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-22">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de aplicar sus conocimientos e intuicion para disenar el hardware/software que cumple unos requisitos especificados.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de aplicar sus conocimientos e intuición para diseñar el hardware/software que cumple unos requisitos especificados.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ04"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
@@ -1635,7 +1635,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-23">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Modelizar y disenar la interaccion humana-ordenador adoptando un enfoque centrado en el usuario, y siendo capaz de disenar, desarrollar, evaluar y asegurar la accesibilidad, ergonomia, usabilidad y seguridad de los mismos.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Modelizar y diseñar la interacción humana-ordenador adoptando un enfoque centrado en el usuario, y siendo capaz de diseñar, desarrollar, evaluar y asegurar la accesibilidad, ergonomía, usabilidad y seguridad de los mismos.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ05"/>
     </owl:NamedIndividual>
     
@@ -1646,7 +1646,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-24">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Elegir y usar los lenguajes de programacion adecuados al tipo de aplicacion a desarrollar.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Elegir y usar los lenguajes de programación adecuados al tipo de aplicación a desarrollar.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
     </owl:NamedIndividual>
     
@@ -1657,7 +1657,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-25">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Concebir y disenar la arquitectura de un sistema software.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Concebir y diseñar la arquitectura de un sistema software.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
@@ -1669,7 +1669,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-26-27">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Definir, evaluar y seleccionar plataformas hardware y software, incluyendo el sistema operativo, y concebir, llevar a cabo, instalar y mantener arquitecturas informaticas centralizadas o distribuidas integrando hardware, software y redes.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Definir, evaluar y seleccionar plataformas hardware y software, incluyendo el sistema operativo, y concebir, llevar a cabo, instalar y mantener arquitecturas informáticas centralizadas o distribuidas integrando hardware, software y redes.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ06"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
@@ -1681,7 +1681,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-28">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Evaluar y seleccionar adecuadamente sistemas de gestion de bases de datos, y disenar y crear estos sistemas integrandolos con el resto de tecnologias del sistema.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Evaluar y seleccionar adecuadamente sistemas de gestión de bases de datos, y diseñar y crear estos sistemas integrándolos con el resto de tecnologías del sistema.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ05"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
@@ -1693,7 +1693,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-29">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Disenar, desarrollar, y evaluar la seguridad de los sistemas, aplicaciones, servicios informaticos y sistemas operativos sobre los que se ejecutan, asi como de la informacion que proporcionan.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Diseñar, desarrollar, y evaluar la seguridad de los sistemas, aplicaciones, servicios informáticos y sistemas operativos sobre los que se ejecutan, así como de la información que proporcionan.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ05"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
@@ -1705,7 +1705,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-3-4">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de elegir y usar los metodos analiticos y de modelizacion relevantes, y de describir una solucion de forma abstracta.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de elegir y usar los métodos analíticos y de modelización relevantes, y de describir una solución de forma abstracta.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
     </owl:NamedIndividual>
     
@@ -1716,7 +1716,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-30">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Disenar sistemas, creando prototipos hardware y desarrollando software, que se vayan a explotar en entornos industriales y de tiempo real.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Diseñar sistemas, creando prototipos hardware y desarrollando software, que se vayan a explotar en entornos industriales y de tiempo real.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
     
@@ -1727,7 +1727,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-31">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Desarrollar, desplegar, organizar y gestionar servicios informaticos en contextos empresariales para mejorar sus procesos de negocio.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Desarrollar, desplegar, organizar y gestionar servicios informáticos en contextos empresariales para mejorar sus procesos de negocio.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ11"/>
     </owl:NamedIndividual>
     
@@ -1738,7 +1738,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-32">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender el concepto de ciclo de vida, que abarca el significado de sus fases (planificacion, desarrollo, instalacion y evolucion), las consecuencias para el desarrollo de todos los aspectos de los sistemas informaticos (el software, el hardware, y el interfaz humano-maquina), y la relacion entre la calidad y la gestion del ciclo de vida.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender el concepto de ciclo de vida, que abarca el significado de sus fases (planificación, desarrollo, instalación y evolución), las consecuencias para el desarrollo de todos los aspectos de los sistemas informáticos (el software, el hardware, y el interfaz humano-máquina), y la relación entre la calidad y la gestión del ciclo de vida.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ05"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
@@ -1751,7 +1751,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-33">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Aplicar tecnicas y procedimientos de gestion y control de la configuracion.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Aplicar técnicas y procedimientos de gestión y control de la configuración.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
     </owl:NamedIndividual>
     
@@ -1762,7 +1762,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-34">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Crear prototipos, simulaciones o modelos que permitan la validacion del sistema con el cliente.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Crear prototipos, simulaciones o modelos que permitan la validación del sistema con el cliente.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ05"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ06"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
@@ -1775,7 +1775,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-35">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Integrar, instalar, probar y mantener un sistema informatico.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Integrar, instalar, probar y mantener un sistema informático.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
     </owl:NamedIndividual>
     
@@ -1786,7 +1786,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-36">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para disenar, planificar, documentar y presupuestar la instalacion de un sistema hardware y de puestos de trabajo en un espacio fisico.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para diseñar, planificar, documentar y presupuestar la instalación de un sistema hardware y de puestos de trabajo en un espacio físico.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
     </owl:NamedIndividual>
     
@@ -1797,7 +1797,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-37">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Aplicar tecnicas y procedimientos de gestion, control y aseguramiento de la calidad.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Aplicar técnicas y procedimientos de gestión, control y aseguramiento de la calidad.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
     </owl:NamedIndividual>
     
@@ -1808,7 +1808,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-38">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para formular una solucion informatica aceptable a un problema de forma efectiva en terminos del coste y del tiempo.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para formular una solución informática aceptable a un problema de forma efectiva en términos del coste y del tiempo.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ11"/>
     </owl:NamedIndividual>
@@ -1820,7 +1820,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-39">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer y aplicar los principios de la ingenieria del software y de sus tecnologias para garantizar que las implementaciones de software sean robustas, fiables y apropiadas para la audiencia a la que van destinadas.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer y aplicar los principios de la ingeniería del software y de sus tecnologías para garantizar que las implementaciones de software sean robustas, fiables y apropiadas para la audiencia a la que van destinadas.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
     </owl:NamedIndividual>
     
@@ -1831,7 +1831,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-40">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender el concepto esencial de proceso en cuanto a su relacion con la informatica, especialmente la ejecucion de los programas y la operacion del sistema.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender el concepto esencial de proceso en cuanto a su relación con la informática, especialmente la ejecución de los programas y la operación del sistema.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
     
@@ -1842,7 +1842,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-41">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Elegir y usar modelos de proceso y entornos de programacion apropiados para proyectos que implican aplicaciones tradicionales, asi como areas de aplicacion emergentes.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Elegir y usar modelos de proceso y entornos de programación apropiados para proyectos que implican aplicaciones tradicionales, así como áreas de aplicación emergentes.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ06"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
     </owl:NamedIndividual>
@@ -1854,7 +1854,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-42">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Combinar la teoria y la practica para realizar tareas informaticas.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Combinar la teoría y la práctica para realizar tareas informáticas</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
     </owl:NamedIndividual>
@@ -1866,7 +1866,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-43">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de realizar busquedas bibliograficas y de utilizar bases de datos y otras fuentes de informacion.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de realizar búsquedas bibliográficas y de utilizar bases de datos y otras fuentes de información.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ01"/>
     </owl:NamedIndividual>
     
@@ -1877,7 +1877,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-44">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocimiento de tecnologias punteras relevantes y su aplicacion.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocimiento de tecnologías punteras relevantes y su aplicación.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
     
@@ -1888,7 +1888,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-46">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender el concepto esencial de proceso en cuanto a su relacion con la actividad profesional, especialmente la relacion entre la calidad del producto y la creacion de procesos humanos apropiados durante el desarrollo del producto.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender el concepto esencial de proceso en cuanto a su relación con la actividad profesional, especialmente la relación entre la calidad del producto y la creación de procesos humanos apropiados durante el desarrollo del producto.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ11"/>
     </owl:NamedIndividual>
     
@@ -1899,7 +1899,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-47">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer las practicas de gestion de proyectos, sistemas y servicios empresariales, tales como la gestion del riesgo y del cambio, y una comprension de sus limitaciones.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Conocer las prácticas de gestión de proyectos, sistemas y servicios empresariales, tales como la gestión del riesgo y del cambio, y una comprensión de sus limitaciones.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ11"/>
     </owl:NamedIndividual>
@@ -1911,7 +1911,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-48">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Gestionar sistemas y servicios informaticos en contextos empresariales o institucionales para mejorar sus procesos de negocio.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Gestionar sistemas y servicios informáticos en contextos empresariales o institucionales para mejorar sus procesos de negocio.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ11"/>
     </owl:NamedIndividual>
     
@@ -1922,7 +1922,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-49">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Hacer recomendaciones sobre la estrategia de la empresa en materia de diseno y desarrollo de nuevos productos, relaciones en los canales de distribucion y estrategia de comunicacion empresarial.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Hacer recomendaciones sobre la estrategia de la empresa en materia de diseño y desarrollo de nuevos productos, relaciones en los canales de distribución y estrategia de comunicación empresarial.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
     </owl:NamedIndividual>
     
@@ -1933,7 +1933,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-5">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de disenar y realizar experimentos apropiados, interpretar los datos y extraer conclusiones.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de diseñar y realizar experimentos apropiados, interpretar los datos y extraer conclusiones.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
     </owl:NamedIndividual>
     
@@ -1944,7 +1944,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-50">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Lanzar nuevos productos en el mercado tras analizar los programas propuestos para el desarrollo de productos; preparar analisis de rentabilidad de la inversion; realizar un plan de marketing; y elaborar calendarios con ingenieria y produccion.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Lanzar nuevos productos en el mercado tras analizar los programas propuestos para el desarrollo de productos; preparar análisis de rentabilidad de la inversión; realizar un plan de marketing; y elaborar calendarios con ingeniería y producción.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ11"/>
     </owl:NamedIndividual>
@@ -1956,7 +1956,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-51">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de realizar tareas en distintas areas de aplicacion teniendo en cuenta el contexto tecnico, economico y social existente.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de realizar tareas en distintas áreas de aplicación teniendo en cuenta el contexto técnico, económico y social existente.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ11"/>
     </owl:NamedIndividual>
     
@@ -1967,7 +1967,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-52">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Tener en consideracion las condiciones sociales, eticas y legales deseadas en la profesion y practica de la informatica.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Tener en consideración las condiciones sociales, éticas y legales deseadas en la profesión y práctica de la informática.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ03"/>
     </owl:NamedIndividual>
     
@@ -1990,7 +1990,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-56">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Ser capaz de aclarar la relevancia y utilidad de la teoria y las habilidades aprendidas en el contexto academico sobre los acontecimientos del mundo real.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Ser capaz de aclarar la relevancia y utilidad de la teoría y las habilidades aprendidas en el contexto académico sobre los acontecimientos del mundo real.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ02"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
     </owl:NamedIndividual>
@@ -2002,7 +2002,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-6">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender intelectualmente el papel central que tienen los algoritmos y las estructuras de datos, asi como una apreciacion del mismo.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Comprender intelectualmente el papel central que tienen los algoritmos y las estructuras de datos, así como una apreciación del mismo.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
     </owl:NamedIndividual>
     
@@ -2013,7 +2013,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-7">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Entender el soporte fisico (hardware) de los ordenadores desde el punto de vista del soporte logico (software), por ejemplo, el uso del procesador, de la memoria, de los discos, del monitor, etc.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Entender el soporte físico (hardware) de los ordenadores desde el punto de vista del soporte lógico (software), por ejemplo, el uso del procesador, de la memoria, de los discos, del monitor, etc.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ09"/>
     </owl:NamedIndividual>
     
@@ -2024,7 +2024,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-8">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Poseer destrezas fundamentales de la programacion que permitan la implementacion de los algoritmos y las estructuras de datos en el software.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Poseer destrezas fundamentales de la programación que permitan la implementación de los algoritmos y las estructuras de datos en el software.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
     </owl:NamedIndividual>
     
@@ -2035,7 +2035,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-9">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_Especifica"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Poseer las destrezas que se requieren para disenar e implementar unidades estructurales mayores que utilizan los algoritmos y las estructuras de datos, asi como las interfaces por las que se comunican estas unidades.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Poseer las destrezas que se requieren para diseñar e implementar unidades estructurales mayores que utilizan los algoritmos y las estructuras de datos, así como las interfaces por las que se comunican estas unidades.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ08"/>
     </owl:NamedIndividual>
     
@@ -2046,7 +2046,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-1-21">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de resolucion de problemas aplicando conocimientos de matematicas, ciencias e ingenieria.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de resolución de problemas aplicando conocimientos de matemáticas, ciencias e ingeniería.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ01"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ04"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ05"/>
@@ -2065,7 +2065,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-11-12-20">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para tomar iniciativas y espiritu emprendedor, el liderazgo, la direccion, la gestion de equipos y proyectos.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para tomar iniciativas y espíritu emprendedor, el liderazgo, la dirección, la gestión de equipos y proyectos.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ04"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ11"/>
@@ -2078,7 +2078,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-13-CE55">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de comunicarse de forma efectiva con los companeros, usuarios (potenciales) y el publico en general acerca de cuestiones reales y problemas relacionados con la especializacion elegida.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de comunicarse de forma efectiva con los compañeros, usuarios (potenciales) y el público en general acerca de cuestiones reales y problemas relacionados con la especialización elegida.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ02"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
     </owl:NamedIndividual>
@@ -2090,7 +2090,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-14-15-18-23">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de integrarse en la empresa de modo autonomo demostrando conocimientos basicos de la profesion, comprension de la responsabilidad etica y profesional, y motivacion por la calidad y la mejora continua.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de integrarse en la empresa de modo autónomo demostrando conocimientos básicos de la profesión, comprensión de la responsabilidad ética y profesional, y motivación por la calidad y la mejora continua.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ01"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ03"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
@@ -2105,7 +2105,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-19">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para usar las tecnologias de la informacion y la comunicacion.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para usar las tecnologías de la información y la comunicación.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ03"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ10"/>
     </owl:NamedIndividual>
@@ -2117,7 +2117,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-2-CE45">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para el aprendizaje autonomo y la actualizacion de conocimientos, y reconocimiento de su necesidad en el area de la informatica.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para el aprendizaje autónomo y la actualización de conocimientos, y reconocimiento de su necesidad en el área de la informática.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ01"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ03"/>
     </owl:NamedIndividual>
@@ -2129,7 +2129,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-22">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Compromiso con la preservacion del medio ambiente y la sostenibilidad.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Compromiso con la preservación del medio ambiente y la sostenibilidad.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ03"/>
     </owl:NamedIndividual>
     
@@ -2140,7 +2140,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-24-25-26-27">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para trabajar en un contexto internacional, comunicandose en lengua inglesa y adaptandose a un nuevo entorno.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para trabajar en un contexto internacional, comunicándose en lengua inglesa y adaptándose a un nuevo entorno.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ01"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ02"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ04"/>
@@ -2153,7 +2153,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-3-4">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Saber trabajar en situaciones carentes de informacion y bajo presion, teniendo nuevas ideas, siendo creativo.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Saber trabajar en situaciones carentes de información y bajo presión, teniendo nuevas ideas, siendo creativo.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
     </owl:NamedIndividual>
     
@@ -2164,7 +2164,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-5">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de gestion de la informacion.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de gestión de la información.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ04"/>
     </owl:NamedIndividual>
     
@@ -2175,7 +2175,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-6">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de abstraccion, analisis y sintesis.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad de abstracción, análisis y síntesis.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ07"/>
     </owl:NamedIndividual>
     
@@ -2186,7 +2186,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-7-8-9-10-16-17">
         <rdf:type rdf:resource="&TBox;Competencia"/>
         <rdf:type rdf:resource="&TBox;Competencia_General"/>
-        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para trabajar dentro de un equipo, organizando, planificando, tomando decisiones, negociando y resolviendo conflictos, relacionandose, y criticando y haciendo autocrítica.</TBox:CO_Descripcion>
+        <TBox:CO_Descripcion rdf:datatype="&xsd;string">Capacidad para trabajar dentro de un equipo, organizando, planificando, tomando decisiones, negociando y resolviendo conflictos, relacionándose, y criticando y haciendo autocrítica.</TBox:CO_Descripcion>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ02"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ03"/>
         <TBox:CO_seAdquiereParaCumplir_OG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#OBJ04"/>
@@ -2202,22 +2202,23 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Empresa">
         <rdf:type rdf:resource="&TBox;Materia"/>
-        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Identificar y describir las areas funcionales de una empresa y sus responsabilidades.
-- Aplicar tecnicas de presupuestos en el marco de un plan de negocio. - Utilizar tecnicas de analisis de mercados, identificar necesidades de productos y servicios dentro de un marco de innovacion tecnologica y generacion de ideas que permitan la innovacion. 
+        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Identificar y describir las áreas funcionales de una empresa y sus responsabilidades.
+- Aplicar técnicas de presupuestos en el marco de un plan de negocio.
+- Utilizar técnicas de análisis de mercados, identificar necesidades de productos y servicios dentro de un marco de innovación tecnológica y generación de ideas que permitan la innovación.
 - Identificar, planificar, seguir y evaluar las acciones necesarias para definir y alcanzar un objetivo dentro de una estrategia empresarial.
-- Capacidad para la identificacion, analisis y diseno de procesos de negocio en una organizacion.
-- Conocimiento y aplicacion de los principales marcos de procesos aplicables a las TI (Tecnologias de la Informacion).
-- Definir indicadores y metricas en los procesos de negocio y de TI que permitan la mejora continua de los mismos.
-- Conocimiento de las tecnicas que permiten la mejora de procesos en los entornos de desarrollo, adquisicion y servicios de TI.
-- Capacitarse para la realizacion de certificaciones basicas relacionadas con procesos de negocio y TI.</TBox:MA_Resultados>
+- Capacidad para la identificación, análisis y diseño de procesos de negocio en una organización.
+- Conocimiento y aplicación de los principales marcos de procesos aplicables a las TI (Tecnologías de la Información).
+- Definir indicadores y métricas en los procesos de negocio y de TI que permitan la mejora continua de los mismos.
+- Conocimiento de las técnicas que permiten la mejora de procesos en los entornos de desarrollo, adquisición y servicios de TI.
+- Capacitarse para la realización de certificaciones básicas relacionadas con procesos de negocio y TI.</TBox:MA_Resultados>
         <TBox:MA_Creditos rdf:datatype="&xsd;decimal">12.0</TBox:MA_Creditos>
         <TBox:MA_Coordinacion rdf:datatype="&xsd;string">La coordinación en esta materia se va llevar a cabo por medio de la Comisión de Coordinación Vertical establecida para la misma, tal y como se describe en la sección 5. Planificación de las enseñanzas.</TBox:MA_Coordinacion>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Empresa-CP"/>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Empresa-CT"/>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Empresa-ETAI"/>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Empresa-PA"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administracion_y_Gestion_de_Empresas"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestion_de_procesos_de_Tecnologias_de_la_Informacion"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestión_de_procesos_de_Tecnologías_de_la_Información"/>
         <TBox:MA_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Mixta"/>
         <TBox:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-11"/>
         <TBox:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-31"/>
@@ -2252,9 +2253,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-English_for_professional_and_academic_communication">
         <rdf:type rdf:resource="&TBox;Materia"/>
         <TBox:MA_Resultados rdf:datatype="&xsd;string">- Comunicarse de forma eficaz tanto formal como informalmente bien en grupo o de forma individual, mediante el uso de las TIC.
--  Exponer temas profesionales de modo claro, preciso y coherente, teniendo en cuenta el tipo de audiencia.
--  Recopilar y sintetizar coherentemente informacion de fuentes bibliograficas.
--  Redactar distintos tipos de textos segun las convenciones propias de cada tipo textual.</TBox:MA_Resultados>
+- Exponer temas profesionales de modo claro, preciso y coherente, teniendo en cuenta el tipo de audiencia.
+- Recopilar y sintetizar coherentemente información de fuentes bibliográficas.
+- Redactar distintos tipos de textos según las convenciones propias de cada tipo textual.</TBox:MA_Resultados>
         <TBox:MA_Creditos rdf:datatype="&xsd;decimal">6</TBox:MA_Creditos>
         <TBox:MA_Coordinacion rdf:datatype="&xsd;string">La coordinación en esta materia se va llevar a cabo por medio de la Comisión de Coordinación Vertical establecida para la misma, tal y como se describe en la sección 5. Planificación de las enseñanzas.</TBox:MA_Coordinacion>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-English-CP"/>
@@ -2406,10 +2407,11 @@ refactorización, etc.
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Ingeniería_de_computadores">
         <rdf:type rdf:resource="&TBox;Materia"/>
-        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Utilizar eficientemente los recursos basicos del computador mediante el lenguaje nativo del mismo.
-- Analizar y evaluar la estructura interna del computador: modos de direccionamiento, sistemas de representacion, rutas de datos, sistema de entrada/salida, perifericos y lenguaje ensamblador.
-- Aplicar las mejoras proporcionadas por las modificaciones de la arquitectura von Neumann: algoritmos, caracteristicas y modo de funcionamiento de la jerarquia de memorias, maquinas segmentadas, computadores superescalares, multiprocesadores, etc.
-- Utilizar los conceptos y herramientas de evaluacion de un sistema informatico, caracterizacion de la carga y dimensionamiento del mismo para el ciclo de vida de un sistema informatico.</TBox:MA_Resultados>
+        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Utilizar eficientemente los recursos básicos del computador mediante el lenguaje nativo del mismo.
+- Analizar y evaluar la estructura interna del computador: modos de direccionamiento, sistemas de representación, rutas de datos, sistema de entrada/salida, periféricos y lenguaje ensamblador.
+- Aplicar las mejoras proporcionadas por las modificaciones de la arquitectura von Neumann: algoritmos, características y modo de funcionamiento de la jerarquía de memorias, máquinas segmentadas, computadores superescalares, multiprocesadores,
+etc.
+- Utilizar los conceptos y herramientas de evaluación de un sistema informático, caracterización de la carga y dimensionamiento del mismo para el ciclo de vida de un sistema informático.</TBox:MA_Resultados>
         <TBox:MA_Creditos rdf:datatype="&xsd;decimal">12</TBox:MA_Creditos>
         <TBox:MA_Coordinacion rdf:datatype="&xsd;string">La coordinación en esta materia se va llevar a cabo por medio de la Comisión de Coordinación Vertical establecida para la misma, tal y como se describe en la sección 5. Planificación de las enseñanzas.</TBox:MA_Coordinacion>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Computadores-CP"/>
@@ -2444,28 +2446,28 @@ refactorización, etc.
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Ingeniería_del_software_sistemas_de_informacion_y_sistemas_inteligentes -->
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Ingeniería_del_software_sistemas_de_información_y_sistemas_inteligentes -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Ingeniería_del_software_sistemas_de_informacion_y_sistemas_inteligentes">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Ingeniería_del_software_sistemas_de_información_y_sistemas_inteligentes">
         <rdf:type rdf:resource="&TBox;Materia"/>
-        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Diseno, creacion, consulta y manipulacion de repositorios de datos, e integracion con aplicaciones del sistema.
-- Configuracion, administracion, uso y optimizacion de sistemas gestores de bases de datos relacionales.
-- Aplicar tecnicas para representar conocimientos.
-- Aplicar tecnicas de inferencia.
-- Disenar y construir sistemas informaticos capaces de resolver problemas para los que no se conoce solucion.
-- Capacidad de llevar a cabo la definicion y gestion de requisitos.
-- Capacidad de aplicar tecnicas para el analisis, diseno y desarrollo de un sistema software.
-- Destrezas y criterios para el diseno y desarrollo de software.
-- Aplicacion de los principios, metodos, guias y estandares del diseno centrado en el usuario y del diseno para todos en el diseno de la interaccion persona-ordenador.
-- Comprension de las posibilidades y limitaciones de los distintos estilos y dispositivos de interaccion.
-- Comprension del procesamiento de la informacion y las limitaciones y diversidad de los seres humanos en su interaccion con sistemas informaticos.
-- Analisis y evaluacion de la usabilidad y accesibilidad de sistemas interactivos.
-- Elaboracion de prototipos de bajo coste para evaluacion del diseno de la interaccion persona-ordenador.
-- Tecnicas de trabajo en equipo en proyectos software.
-- Aplicacion de actividades de control y de aseguramiento de la calidad del software, y gestion de la calidad del software.
-- Aplicacion de actividades de estimacion, Planificacion, monitorizacion y control de proyectos software.
-- Aplicacion de actividades de gestion de la configuracion del software.
-- Generacion de productos y artefactos en el contexto de un proyecto software.</TBox:MA_Resultados>
+        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Diseño, creación, consulta y manipulación de repositorios de datos, e integración con aplicaciones del sistema.
+- Configuración, administración, uso y optimización de sistemas gestores de bases de datos relacionales.
+- Aplicar técnicas para representar conocimientos.
+- Aplicar técnicas de inferencia.
+- Diseñar y construir sistemas informáticos capaces de resolver problemas para los que no se conoce solución.
+- Capacidad de llevar a cabo la definición y gestión de requisitos.
+- Capacidad de aplicar técnicas para el análisis, diseño y desarrollo de un sistema software.
+- Destrezas y criterios para el diseño y desarrollo de software.
+- Aplicación de los principios, métodos, guías y estándares del diseño centrado en el usuario y del diseño para todos en el diseño de la interacción persona-ordenador.
+- Comprensión de las posibilidades y limitaciones de los distintos estilos y dispositivos de interacción.
+- Comprensión del procesamiento de la información y las limitaciones y diversidad de los seres humanos en su interacción con sistemas informáticos.
+- Análisis y evaluación de la usabilidad y accesibilidad de sistemas interactivos.
+- Elaboración de prototipos de bajo coste para evaluación del diseño de la interacción persona-ordenador.
+- Técnicas de trabajo en equipo en proyectos software.
+- Aplicación de actividades de control y de aseguramiento de la calidad del software, y gestión de la calidad del software.
+- Aplicación de actividades de estimación, Planificación, monitorización y control de proyectos software.
+- Aplicación de actividades de gestión de la configuración del software.
+- Generación de productos y artefactos en el contexto de un proyecto software.</TBox:MA_Resultados>
         <TBox:MA_Creditos rdf:datatype="&xsd;decimal">30</TBox:MA_Creditos>
         <TBox:MA_Coordinacion rdf:datatype="&xsd;string">La coordinación en esta materia se va llevar a cabo por medio de la Comisión de Coordinación Vertical establecida para la misma, tal y como se describe en la sección 5. Planificación de las enseñanzas.</TBox:MA_Coordinacion>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Ingenieria-CP"/>
@@ -2477,11 +2479,11 @@ refactorización, etc.
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Ingenieria-PO"/>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Ingenieria-ST"/>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Ingenieria-T"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_II"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_II"/>
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Inteligencia_Artificial"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador"/>
         <TBox:MA_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-2"/>
         <TBox:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-21"/>
@@ -2587,16 +2589,15 @@ refactorización, etc.
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Optatividad">
         <rdf:type rdf:resource="&TBox;Materia"/>
-        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Tanto para el Practicum como para la Movilidad Internacional:
--- Obtencion de las competencias linguisticas comunicativas (comprension, expresion, etc.) habladas y escritas en entornos academicos/profesionales nacionales/internacionales.
--- Obtencion de las tecnicas necesarias para la realizacion de un informe o memoria sobre un trabajo realizado en un entorno socio-linguistico nacional/internacional.
--- Adaptacion a nuevos entornos academicos/profesionales nacionales/internacionales.
-
-- Para el Practicum:
--- Experiencia del desempeno profesional del ingeniero y de sus funciones mas habituales en un entorno real de empresa.
--- Capacitacion para disenar las lineas maestras de un proyecto.
--- Capacitacion para formar parte de un equipo de trabajo en los diferentes cargos que se le asignen.
-
+        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Tanto para el Prácticum como para la Movilidad Internacional:
+-- Obtención de las competencias lingüisticas comunicativas (comprensión, expresión, etc.) habladas y escritas en entornos académicos/profesionales nacionales/internacionales.
+-- Obtención de las técnicas necesarias para la realización de un informe o memoria sobre un trabajo realizado en un entorno socio-lingüistico nacional/internacional.
+- Adaptación a nuevos entornos académicos/profesionales
+nacionales/internacionales.
+-Para el Practicum:
+-- Experiencia del desempeño profesional del ingeniero y de sus funciones más habituales en un entorno real de empresa.
+-- Capacitación para diseñar las líneas maestras de un proyecto.
+-- Capacitación para formar parte de un equipo de trabajo en los diferentes cargos que se le asignen.
 - Para la Movilidad Internacional:
 -- Experiencia de estudio y trabajo en un contexto internacional.</TBox:MA_Resultados>
         <TBox:MA_Creditos rdf:datatype="&xsd;decimal">54</TBox:MA_Creditos>
@@ -2605,9 +2606,9 @@ refactorización, etc.
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Optativa3_6ECTS"/>
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Optativa4_3ECTS"/>
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Optativa4_6ECTS"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Practicum_No_TFC"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Practicum_TFC"/>
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programa_Movilidad_Internacional"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Prácticum_No_TFC"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Prácticum_TFC"/>
         <TBox:MA_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Optativa"/>
         <TBox:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-12-16"/>
         <TBox:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-13-18"/>
@@ -2635,25 +2636,26 @@ refactorización, etc.
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Programación">
         <rdf:type rdf:resource="&TBox;Materia"/>
         <TBox:MA_Resultados rdf:datatype="&xsd;string">- Traducir especificaciones de tipos abstractos de datos (TADs) a implementaciones.
-- Programar aplicaciones mediante librerias existentes de TADs, iteradores, etc,.
-- Documentar clases y bibliotecas, tanto de manera publica (hacia el cliente).
-- Realizar pruebas para asegurar el correcto funcionamiento de un TAD asi como Programar aplicaciones, en al menos un lenguaje procedimental ampliamente utilizado, como puede ser C, que le permiten la comunicacion con el sistema.
+- Programar aplicaciones mediante librerías existentes de TADs, iteradores, etc,.
+- Documentar clases y bibliotecas, tanto de manera pública (hacia el cliente).
+- Realizar pruebas para asegurar el correcto funcionamiento de un TAD así como
+- Programar aplicaciones, en al menos un lenguaje procedimental ampliamente utilizado, como puede ser C, que le permiten la comunicación con el sistema.
 - Programar scripts que automaticen determinadas tareas o faciliten llevar a cabo pruebas funcionales de programas.
-- Resolver problemas algoritmicos no triviales.
-- Razonar sobre la complejidad algoritmica.
-- Razonar sobre la terminacion. 
+- Resolver problemas algorítmicos no triviales.
+- Razonar sobre la complejidad algorítmica.
+- Razonar sobre la terminación.
 - Usar y definir estructuras de datos eficientes y adecuadas a cada problema.
-- Conocer los fundamentos de la programacion logica y sus campos de aplicacion.
-- Modelar declarativamente la solucion a un problema y expresarlo elegantemente con un programa logico eficiente.
+- Conocer los fundamentos de la programación lógica y sus campos de aplicación.
+- Modelar declarativamente la solución a un problema y expresarlo elegantemente con un programa lógico eficiente.
 - Modelar mediante procedimientos finitos conjuntos y lenguajes infinitos.
-- Adquirir destreza en la aplicacion de los diferentes metodos de demostracion.
-- Distinguir y reconocer las distintas clases de lenguajes y sus automatas asociados segun la jerarquía de Chomsky.
-- Conocer modelos de computo universales asi como los limites de lo que puede o no ser computado mediante un algoritmo.
-- Ser capaz de disenar y construir un sistema para analizar lexica, sintactica y semanticamente un codigo escrito en un determinado formato.
+- Adquirir destreza en la aplicación de los diferentes métodos de demostración.
+- Distinguir y reconocer las distintas clases de lenguajes y sus autómatas asociados según la jerarquía de Chomsky.
+- Conocer modelos de cómputo universales así como los límites de lo que puede o no ser computado mediante un algoritmo.
+- Ser capaz de diseñar y construir un sistema para analizar léxica, sintáctica y semánticamente un código escrito en un determinado formato.
 - Reconocer la concurrencia inherente a un sistema SW.
-- Especificar propiedades relativas a la ejecucion concurrente de un sistema SW.
+- Especificar propiedades relativas a la ejecución concurrente de un sistema SW.
 - Desarrollar aplicaciones concurrentes, en al menos un lenguaje ampliamente utilizado, como puede ser Java.
-- Analizar propiedades y riesgos atribuibles a la ejecucion concurrente de un sistema SW.</TBox:MA_Resultados>
+- Analizar propiedades y riesgos atribuibles a la ejecución concurrente de un sistema SW.</TBox:MA_Resultados>
         <TBox:MA_Creditos rdf:datatype="&xsd;decimal">30</TBox:MA_Creditos>
         <TBox:MA_Coordinacion rdf:datatype="&xsd;string">La coordinación en esta materia se va llevar a cabo por medio de la Comisión de Coordinación Vertical establecida para la misma, tal y como se describe en la sección 5. Planificación de las enseñanzas.</TBox:MA_Coordinacion>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Programacion-CP"/>
@@ -2665,13 +2667,13 @@ refactorización, etc.
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Programacion-PO"/>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Programacion-ST"/>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Programacion-T"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
         <TBox:MA_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Mixta"/>
         <TBox:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-1"/>
         <TBox:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-13-18"/>
@@ -2715,24 +2717,24 @@ refactorización, etc.
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Sistemas_operativos_sistemas_distribuidos_y_redes">
         <rdf:type rdf:resource="&TBox;Materia"/>
-        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Realizar el diseno arquitectonico de aplicaciones utilizando eficientemente los servicios de un sistema operativo.
-- Seleccionar un sistema operativo (nucleo y aplicaciones) y adaptarlo a las necesidades y plataforma del cliente proponiendo soluciones alternativas.
-- Realizar la parametrizacion del sistema operativo para alcanzar objetivos especificos:algoritmos de gestion de sistema de ficheros, algoritmos de planificacion de procesos y algoritmos gestion del sistema de memoria, tanto a nivel local como distribuido.
-- Monitorizar, dimensionar y administrar sistemas informaticos y redes de ordenadores.
+        <TBox:MA_Resultados rdf:datatype="&xsd;string">-  Realizar el diseño arquitectónico de aplicaciones utilizando eficientemente los servicios de un sistema operativo.
+- Seleccionar un sistema operativo (núcleo y aplicaciones) y adaptarlo a las necesidades y plataforma del cliente proponiendo soluciones alternativas.
+- Realizar la parametrización del sistema operativo para alcanzar objetivos específicos: algoritmos de gestión de sistema de ficheros, algoritmos de planificación de procesos y algoritmos gestión del sistema de memoria, tanto a nivel local como distribuido.
+- Monitorizar, dimensionar y administrar sistemas informáticos y redes de ordenadores.
 - Simular, analizar y hacer pruebas de protocolos de comunicaciones mediante prototipos.
-- Desarrollar Arquitecturas de Red para atender los requisitos de los clientes en servicios telematicos.
-- Disenar y configurar soluciones de red que permitan la interconexion de diferentes redes heterogeneas y su dimensionamiento para cumplir con los requisitos de conectividad y capacidad dados por el cliente, utilizando las tecnologias, los protocolos y los componentes de red disponibles.
+- Desarrollar Arquitecturas de Red para atender los requisitos de los clientes en servicios telemáticos.
+- Diseñar y configurar soluciones de red que permitan la interconexión de diferentes redes heterogéneas y su dimensionamiento para cumplir con los requisitos de conectividad y capacidad dados por el cliente, utilizando las tecnologías, los protocolos y los componentes de red disponibles.
 - Monitorizar, dimensionar y administrar redes de ordenadores.
-- Pliego de condiciones tecnicas y el diseno. 
-- Fundamentos, criptografia y criptoanalisis.
-- Seguridad de los Datos de caracter Personal.
+- Pliego de condiciones técnicas y el diseño.
+- Fundamentos, criptografía y criptoanálisis.
+- Seguridad de los Datos de carácter Personal.
 - Arquitectura de Seguridad y de Red frente a incidencias y ataques.
--  Diseno arquitectonico de aplicaciones basadas en servicios y desarrollo de soluciones tecnologicas orientadas a la integracion de servicios (SOA).
+- Diseño arquitectónico de aplicaciones basadas en servicios y desarrollo de soluciones tecnológicas orientadas a la integración de servicios (SOA).
 - Concebir, desplegar, organizar y gestionar servicios en contextos empresariales o institucionales para mejorar sus procesos de negocio.
-- Manejar los estandares de Servicios Web y las tecnologias asociadas.
-- Modelar la organizacion de los servicios en terminos de composicion, coreografias y orquestaciones.
-- Disenar aplicaciones distribuidas con los mecanismos tecnologicos de bajo y alto nivel disponibles.
-- Seleccionar, parametrizar y extender servicios distribuidos para un entorno especifico (servicios de nombrado, de datos, de almacenamiento, de gestion, etc.).</TBox:MA_Resultados>
+- Manejar los estándares de Servicios Web y las tecnologías asociadas
+- Modelar la organización de los servicios en términos de composición, coreografías y orquestaciones.
+- Diseñar aplicaciones distribuidas con los mecanismos tecnológicos de bajo y alto nivel disponibles.
+- Seleccionar, parametrizar y extender servicios distribuidos para un entorno específico (servicios de nombrado, de datos, de almacenamiento, de gestión, etc.).</TBox:MA_Resultados>
         <TBox:MA_Creditos rdf:datatype="&xsd;decimal">30</TBox:MA_Creditos>
         <TBox:MA_Coordinacion rdf:datatype="&xsd;string">La coordinación en esta materia se va llevar a cabo por medio de la Comisión de Coordinación Vertical establecida para la misma, tal y como se describe en la sección 5. Planificación de las enseñanzas.</TBox:MA_Coordinacion>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Sistemas-CP"/>
@@ -2791,27 +2793,29 @@ refactorización, etc.
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Trabajo_fin_de_grado">
         <rdf:type rdf:resource="&TBox;Materia"/>
-        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Disenar, planificar, desarrollar, documentar y presupuestar una aplicacion software en el contexto de un proyecto individual o en equipo.
-- Elaborar el pliego de condiciones tecnicas de una instalacion informatica que cumpla los estandares y normativas vigentes.
-- Disenar, planificar, desarrollar, documentar y presupuestar un sistema o servicios TI en un equipo de trabajo, en un contexto empresarial o institucional para obtener una ventaja competitiva y una mejora de los procesos de negocio y la productividad.
-- Analizar las necesidades de los clientes, los plazos y los medios disponibles, asi como los condicionantes que podrian existir para ofrecer la solucion más beneficiosa para el cliente.
-- Disenar y crear prototipos para su evaluacion con el cliente y otras partes involucradas.
-- Establecer una comunicacion abierta y fluida entre todos los miembros que participen en el proyecto, teniendo en cuenta en todo momento el encargo, las directrices, las especificaciones y la informacion necesaria para la ejecucion del mismo.
+        <TBox:MA_Resultados rdf:datatype="&xsd;string">- Diseñar, planificar, desarrollar, documentar y presupuestar una aplicación software en el contexto de un proyecto individual o en equipo.
+- Elaborar el pliego de condiciones técnicas de una instalación informática que cumpla los estándares y normativas vigentes.
+- Diseñar, planificar, desarrollar, documentar y presupuestar un sistema o servicios TI en un equipo de trabajo, en un contexto empresarial o institucional para obtener una ventaja competitiva y una mejora de los procesos de negocio y la productividad
+- Analizar las necesidades de los clientes, los plazos y los medios disponibles, así como los condicionantes que podrían existir para ofrecer la solución más beneficiosa para el cliente.
+- Diseñar y crear prototipos para su evaluación con el cliente y otras partes involucradas.
+- Establecer una comunicación abierta y fluida entre todos los miembros que participen en el proyecto, teniendo en cuenta en todo momento el encargo, las directrices, las especificaciones y la información necesaria para la ejecución del mismo.
 - Asegurar que los miembros del equipo cumplan los plazos establecidos y administrar adecuadamente el presupuesto asignado al proyecto para conseguir los resultados deseados.
 - Participar en los proyectos de forma activa, aportando ideas, resolviendo problemas y definiendo el contenido de los proyectos.
-- Analizar y responder a los requisitos de los clientes presentandoles propuestas formales que permitan seleccionar los productos mas adecuados.
-- Proporcionar asesoramiento y orientacion respecto al uso, funcionamiento y diseno de sistemas utilizando productos especificos, mediante informes escritos, respondiendo a sus preguntas y realizando presentaciones.
-- Decision de disenar o comprar los componentes necesarios del software.
+- Analizar y responder a los requisitos de los clientes presentándoles propuestas formales que permitan seleccionar los productos más adecuados.
+- Proporcionar asesoramiento y orientación respecto al uso, funcionamiento y diseño de sistemas utilizando productos específicos, mediante informes escritos, respondiendo a sus
+preguntas y realizando presentaciones.
+- Decisión de diseñar o comprar los componentes necesarios del software.
 - Concebir un nuevo producto y planificar su puesta en el mercado.
 - Decidir el posicionamiento del producto.
 - Identificar oportunidades para el desarrollo de nuevos productos de Internet.
-- Aplicar tecnicas de mercadeo y de promocion de productos y servicios y su distribucion a traves de distintos canales de TI (Internet, automatas, telefonia movil, y medios audiovisuales).</TBox:MA_Resultados>
+- Aplicar técnicas de mercadeo y de promoción de productos y servicios y su distribución a través de distintos canales de TI (Internet, autómatas, telefonía móvil, y medios
+audiovisuales).</TBox:MA_Resultados>
         <TBox:MA_Creditos rdf:datatype="&xsd;decimal">12</TBox:MA_Creditos>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Proyecto-CT"/>
         <TBox:MA_seImparteSegun_AF rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Proyecto-PO"/>
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Plan_de_negocio"/>
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_Software"/>
-        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_instalacion_de_infraestructura_informatica"/>
+        <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_instalación_de_infraestructura_informática"/>
         <TBox:MA_constaDe_AS rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_sistema_o_servicio"/>
         <TBox:MA_tiene_CA rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CA-Obligatoria"/>
         <TBox:MA_otorgaCompetenciasEspecificas_CE rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CE-31"/>
@@ -3333,21 +3337,21 @@ Para los participantes en Programas de Movilidad Internacional:
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Sistemas-PO"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Sistemas-ST"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AF-Sistemas-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administracion_y_Gestion_de_Empresas"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructura_de_Datos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Administración_y_Gestión_de_Empresas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algoritmos_y_Estructuras_de_Datos"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Arquitectura_de_Computadores"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Base_de_Datos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Bases_de_Datos"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Concurrencia"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Cálculo"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-English_for_Professional_and_Academic_Communications"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Estructura_de_Computadores"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Fundamentos_físicos_y_tecnológicos_de_la_informática"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestion_de_procesos_de_Tecnologias_de_la_Informacion"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_I"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingenieria_del_Software_II"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Gestión_de_procesos_de_Tecnologías_de_la_Información"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_I"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Ingeniería_del_Software_II"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Inteligencia_Artificial"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interaccion_Persona-Ordenador"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Automatas_y_Computabilidad"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Interacción_Persona-Ordenador"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lenguajes_Formales_Autómatas_y_Computabilidad"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Lógica"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_I"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Matemática_Discreta_II"/>
@@ -3356,19 +3360,19 @@ Para los participantes en Programas de Movilidad Internacional:
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Optativa4_3ECTS"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Optativa4_6ECTS"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Plan_de_negocio"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Practicum_No_TFC"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Practicum_TFC"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_I"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Probabilidades_y_Estadística_II"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Procesadores_de_Lenguajes"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programa_Movilidad_Internacional"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_Declarativa_Logica_y_Restricciones"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_II"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programacion_para_sistemas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_Declarativa_Lógica_y_Restricciones"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_I"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_II"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Programación_para_sistemas"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_Software"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_instalacion_de_infraestructura_informatica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_instalación_de_infraestructura_informática"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Proyecto_de_sistema_o_servicio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Prácticum_No_TFC"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Prácticum_TFC"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Redes_de_Computadores"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Seguridad_de_las_TI"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Sistemas_Digitales"/>
@@ -3445,7 +3449,7 @@ Para los participantes en Programas de Movilidad Internacional:
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Física"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Informática"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Ingeniería_de_computadores"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Ingeniería_del_software_sistemas_de_informacion_y_sistemas_inteligentes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Ingeniería_del_software_sistemas_de_información_y_sistemas_inteligentes"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Matemáticas"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Optatividad"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MA-Programación"/>
