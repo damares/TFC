@@ -660,7 +660,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#AS-Algebra_Lineal">
         <rdf:type rdf:resource="&TBox;Asignatura"/>
         <TBox:AS_Contenidos rdf:datatype="&xsd;string">- Sistemas de ecuaciones lineales
-- Calculo matricial
+- Cálculo matricial
 - Espacios vectoriales
 - Geometria del plano y del espacio</TBox:AS_Contenidos>
         <TBox:AS_Creditos rdf:datatype="&xsd;decimal">6</TBox:AS_Creditos>
