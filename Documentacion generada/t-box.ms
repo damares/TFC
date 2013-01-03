@@ -20,6 +20,9 @@ Datatype: tipoCredito
         xsd:decimal[> 0]
     
     
+Datatype: xsd:string
+
+    
 Datatype: xsd:integer
 
     
@@ -439,7 +442,7 @@ DataProperty: MA_Resultados
         Materia
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: AS_Creditos
@@ -463,7 +466,7 @@ DataProperty: MA_Coordinacion
         Materia
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: ME_Descripcion
@@ -475,7 +478,7 @@ DataProperty: ME_Descripcion
         Metodo_Docente
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: CO_Descripcion
@@ -487,7 +490,7 @@ DataProperty: CO_Descripcion
         Competencia
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: OG_Descripcion
@@ -499,7 +502,7 @@ DataProperty: OG_Descripcion
         Objetivo_General
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: MV_Descripcion
@@ -508,7 +511,7 @@ DataProperty: MV_Descripcion
         Metodo_Evaluacion
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: AF_Creditos
@@ -541,7 +544,7 @@ DataProperty: AS_Contenidos
         Asignatura
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 Class: Competencia_Especifica

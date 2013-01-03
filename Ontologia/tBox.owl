@@ -20,6 +20,9 @@ Datatype: tipoCredito
         xsd:decimal[> 0]
     
     
+Datatype: xsd:string
+
+    
 Datatype: xsd:integer
 
     
@@ -89,18 +92,6 @@ ObjectProperty: UT_contiene_MA
         MA_ubicada_UT
     
     
-ObjectProperty: OG_seCumpleMedianteLaAdquisicionDe_CO
-
-    Domain: 
-        Objetivo_General
-    
-    Range: 
-        Competencia
-    
-    InverseOf: 
-        CO_seAdquiereParaCumplir_OG
-    
-    
 ObjectProperty: AS_tiene_CA
 
     Characteristics: 
@@ -114,6 +105,18 @@ ObjectProperty: AS_tiene_CA
     
     InverseOf: 
         CA_agrupa_AS
+    
+    
+ObjectProperty: OG_seCumpleMedianteLaAdquisicionDe_CO
+
+    Domain: 
+        Objetivo_General
+    
+    Range: 
+        Competencia
+    
+    InverseOf: 
+        CO_seAdquiereParaCumplir_OG
     
     
 ObjectProperty: CA_agrupa_AS
@@ -161,6 +164,18 @@ ObjectProperty: MA_utiliza_MV
         MV_esUtilizadoEn_MA
     
     
+ObjectProperty: CO_esOtorgadaPor_MA
+
+    Domain: 
+        Competencia
+    
+    Range: 
+        Materia
+    
+    InverseOf: 
+        MA_otorgaCompetencias_CO
+    
+    
 ObjectProperty: MA_ubicada_UT
 
     SubPropertyOf: 
@@ -177,18 +192,6 @@ ObjectProperty: MA_ubicada_UT
     
     InverseOf: 
         UT_contiene_MA
-    
-    
-ObjectProperty: CO_esOtorgadaPor_MA
-
-    Domain: 
-        Competencia
-    
-    Range: 
-        Materia
-    
-    InverseOf: 
-        MA_otorgaCompetencias_CO
     
     
 ObjectProperty: CE_esOtorgadaPor_MA
@@ -221,6 +224,18 @@ ObjectProperty: MA_otorgaCompetencias_CO
 ObjectProperty: owl:topObjectProperty
 
     
+ObjectProperty: MA_seImparteMediante_ME
+
+    Domain: 
+        Materia
+    
+    Range: 
+        Metodo_Docente
+    
+    InverseOf: 
+        ME_utilizadoParaImpartir_MA
+    
+    
 ObjectProperty: MA_seImparteSegun_AF
 
     Characteristics: 
@@ -234,18 +249,6 @@ ObjectProperty: MA_seImparteSegun_AF
     
     InverseOf: 
         AF_utilizadaParaImpartir_MA
-    
-    
-ObjectProperty: MA_seImparteMediante_ME
-
-    Domain: 
-        Materia
-    
-    Range: 
-        Metodo_Docente
-    
-    InverseOf: 
-        ME_utilizadoParaImpartir_MA
     
     
 ObjectProperty: UT_contiene_AS
@@ -358,21 +361,6 @@ ObjectProperty: UT_contiene_ASMA
          or Materia
     
     
-ObjectProperty: AS_esRequisitoPara_AS
-
-    Characteristics: 
-        Transitive
-    
-    Domain: 
-        Asignatura
-    
-    Range: 
-        Asignatura
-    
-    InverseOf: 
-        AS_tieneComoRequisito_AS
-    
-    
 ObjectProperty: CG_esOtorgadaPor_MA
 
     SubPropertyOf: 
@@ -386,6 +374,21 @@ ObjectProperty: CG_esOtorgadaPor_MA
     
     InverseOf: 
         MA_otorgaCompetenciasGenerales_CG
+    
+    
+ObjectProperty: AS_esRequisitoPara_AS
+
+    Characteristics: 
+        Transitive
+    
+    Domain: 
+        Asignatura
+    
+    Range: 
+        Asignatura
+    
+    InverseOf: 
+        AS_tieneComoRequisito_AS
     
     
 ObjectProperty: MA_otorgaCompetenciasEspecificas_CE
@@ -439,7 +442,7 @@ DataProperty: MA_Resultados
         Materia
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: AS_Creditos
@@ -463,7 +466,7 @@ DataProperty: MA_Coordinacion
         Materia
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: ME_Descripcion
@@ -475,19 +478,7 @@ DataProperty: ME_Descripcion
         Metodo_Docente
     
     Range: 
-        rdfs:Literal
-    
-    
-DataProperty: OG_Descripcion
-
-    Characteristics: 
-        Functional
-    
-    Domain: 
-        Objetivo_General
-    
-    Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: CO_Descripcion
@@ -499,7 +490,40 @@ DataProperty: CO_Descripcion
         Competencia
     
     Range: 
-        rdfs:Literal
+        xsd:string
+    
+    
+DataProperty: OG_Descripcion
+
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        Objetivo_General
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: MV_Descripcion
+
+    Domain: 
+        Metodo_Evaluacion
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: AF_Creditos
+
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        Actividad_Formativa
+    
+    Range: 
+        tipoCredito
     
     
 DataProperty: MA_Creditos
@@ -520,28 +544,7 @@ DataProperty: AS_Contenidos
         Asignatura
     
     Range: 
-        rdfs:Literal
-    
-    
-DataProperty: MV_Descripcion
-
-    Domain: 
-        Metodo_Evaluacion
-    
-    Range: 
-        rdfs:Literal
-    
-    
-DataProperty: AF_Creditos
-
-    Characteristics: 
-        Functional
-    
-    Domain: 
-        Actividad_Formativa
-    
-    Range: 
-        tipoCredito
+        xsd:string
     
     
 Class: Competencia_Especifica

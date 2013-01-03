@@ -298,20 +298,21 @@ conocimientos o metodologías).
   \end{description}
   
 \subsection{Propiedades sobre tipos de datos}
-  Las propiedaddes sobre tipos de datos son relaciones entre individuos y tipos de datos, de modo que se puede asociar a los individuos implicados en la relación ciertas características de tipos definidos, concretas y especificas. 
+  Las propiedaddes sobre tipos de datos son relaciones entre individuos y tipos de datos, de modo que se puede asociar a los individuos implicados en la relación ciertas características de tipos definidos, concretas y especificas.
+  
   \begin{description}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% OG_Descripcion
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
    \item [OG\_Descripcion.] Se trata de una relación entre un individuo de la clase \lstinline{Objetivo\_General} y un dato de tipo literal. Esta relación funcional (un objetivo sólo puede tener una descripción) es util para guardar la descripción del objetivo descrito, y poder identificarlo por algo menos formal y más útil que la numeración del objetivo.
-   		\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ OG_Descripcion-rdfs:Literal]{t-box.ms}
+   		\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ OG_Descripcion-xsd:string]{t-box.ms}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% CO_Descripcion
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
    \item [CO\_Descripcion.] Esta propiedad relaciona una competencia con un literal. También es una propiedad funcional, y al igual que el resto de propiedades dedicadas a almacenar información acerca de descripciones de individuos, es útil para poder identificar los mismos por algo más que el código descriptivo.
    
-			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ CO_Descripcion-rdfs:Literal]{t-box.ms}
+			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ CO_Descripcion-xsd:string]{t-box.ms}
   
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% MA_Creditos
@@ -325,14 +326,14 @@ conocimientos o metodologías).
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
    \item [MA\_Coordinacion.] Esta type property se utiliza como un campo libre donde se define de manera informal los agentes que coordinarán la materia, y cuando se defina, las herramentas que utilizarán en su cometido.
    
-			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Coordinacion-rdfs:Literal]{t-box.ms} 
+			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Coordinacion-xsd:string]{t-box.ms} 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% MA_Resultados
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
    \item [MA\_Resultados.] Esta relación sólo enumerará a título informativo,los resultados del aprendizaje obtenidos, o dicho de otro modo, el nivel de adquisicion de competencias una vez finalizado el curso de la materia objeto de estudio.  
    
-			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Resultados-rdfs:Literal]{t-box.ms}
+			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MA_Resultados-xsd:string]{t-box.ms}
 			
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% AS_Creditos
@@ -346,7 +347,7 @@ conocimientos o metodologías).
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
    \item [AS\_Contenidos.] La relación \lstinline{AS\_Contenidos}, permite relacionar un individuo de la clase asignatura con un dato literal, de modo que nos permite almacenar una descripción algo más extensa, que ayude en su identificación.  
    
-			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ AS_Contenidos-rdfs:Literal]{t-box.ms}   
+			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ AS_Contenidos-xsd:string]{t-box.ms}   
 
 
 
@@ -355,7 +356,7 @@ conocimientos o metodologías).
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    \item [ME\_Descripcion.] Se trata de una relación entre un individuo de la clase \lstinline{Método\_Docente} y un dato de tipo literal. Esta relación funcional (un método docente sólo puede tener una descripción) es util para guardar la descripción del método descrito.
    
-			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ ME_Descripcion-rdfs:Literal]{t-box.ms}   
+			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ ME_Descripcion-xsd:string]{t-box.ms}   
 			
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% AF_Creditos
@@ -369,7 +370,7 @@ conocimientos o metodologías).
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
    \item [MV\_Descripcion.] Recoge una pequeña descripción informal del método de evaluación con el que está relacionado, de modo que sea fácil comprobar las pruebas y técnicas de evaluación que el docente utilizará a la hora de verificar el nivel de adquisición de competencias por parte de los alumnos.
    
-			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MV_Descripcion-rdfs:Literal]{t-box.ms} 
+			\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ MV_Descripcion-xsd:string]{t-box.ms} 
   \end{description}
   
 \subsection{Definiciones de tipos de datos}
@@ -387,58 +388,126 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
 
 
 \subsection{Individuos de la ontología}
-  Los individuos representan objetos de la ontología en el dominio que estamos estudiando. Protegé no hace uso del Unique Name Assumption, es decir, para protegé dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontologías OWL: todo lo que no sea dicho de forma explícita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo, para ese dominio. En nuestra ontología todos los individuos que componen la ontología son distintos, lo que se especificara correctamente en la definición de los individuos.
+  Los individuos representan objetos de la ontología en el dominio que estamos estudiando. Protegé no hace uso del Unique Name Assumption, es decir, para protegé dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontologías OWL: todo lo que no sea dicho de forma explícita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo, para ese dominio. En nuestra ontología todos los individuos que componen la ontología son distintos, lo que se especifica en las siguientes lineas:
   
-  Las referencias IRI tiene ciertos carácteres reservados por lo que no puedens er utilizados en los nombres de individuos, Por ello, se han evitado los caracteres "/", así como vocales acentuadas, con el fin de evitar que las referencias IRI de los diferentes individuos hagan la misma ilegible.
+  \lstinputlisting[language=owlms,literate=,linerange=DifferentIndividuals:-UT_7o_semestre]{a-box.ms}
+  
+  Las referencias IRI tiene ciertos carácteres reservados por lo que no puedens er utilizados en los nombres de individuos, Por ello, se han evitado los caracteres "/", así como vocales acentuadas y eñes con el fin de evitar que las referencias IRI de los diferentes individuos hagan la misma ilegible y que las descripciones de los mismos, cuando estén presentes, sean más claras.
   
   
   
 \begin{description}
 
- \item [OBJ01 - OBJ11]. Son individuos pertenecientes a la clase \lstinline{Objetivo_General}, que representan los objetivos generales del título, desde el número 1 al 11.
- 			 
- 		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ01-rdfs:Literal]{a-box.ms}
 
- 		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ02-rdfs:Literal]{a-box.ms}
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Objetivos Generales
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+ \item [Objetivos Generales]. Son individuos pertenecientes a la clase \lstinline{Objetivo_General}, que representan los objetivos generales del título, desde el número 1 al 11. A modo de ejemplo:
+ 			 
+ 	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ01-xsd:string]{a-box.ms}
+
+	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ02-xsd:string]{a-box.ms}
  		
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ03-rdfs:Literal]{a-box.ms}	
- 		 
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ04-rdfs:Literal]{a-box.ms}
- 		 
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ05-rdfs:Literal]{a-box.ms}
- 		 
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ06-rdfs:Literal]{a-box.ms}
- 		 
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ07-rdfs:Literal]{a-box.ms}
- 		 
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ08-rdfs:Literal]{a-box.ms}
- 		 
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ09-rdfs:Literal]{a-box.ms}
- 		 
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ10-rdfs:Literal]{a-box.ms}
- 		 
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ OBJ11-rdfs:Literal]{a-box.ms}
- 		 
- \item [Competencias Generales]
- 		 
- \item [Competencias Específicas]
+	 
+	 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Competencias Generales
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+ \item [Competencias Generales]. Estos son todos los individuos pertenecientes a la clase \lstinline{Competencia_General}, que representan las competencias generales que el alumno adquiere durante el itinerario formativo. A modo de ejemplo se incluyen:
  
- \item [Materias]. Estos individuos representan las diferentes materias de la titulación que estamos modelando.
+ 	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CG\-1\-21-xsd:string]{a-box.ms}
+ 	
+ 	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CG\-11\-12\-20-xsd:string]{a-box.ms}
+ 	
+ 	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CG\-13\-CE55-xsd:string]{a-box.ms}
+ 	
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Competencias Específicas
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+ \item [Competencias Específicas]. Estos individuos pertentecientes a la clase \lstinline{Competencia_Especifica}, representan las diferentes competencias específicas que el alumno debe poseer al finalizar el ciclo formativo.
+ 
+	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CE\-1-xsd:string]{a-box.ms}
+	
+	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CE\-19\-20-xsd:string]{a-box.ms}
+	
+	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CE\-33-xsd:string]{a-box.ms}
  
  
- 		 \lstinputlisting[language=owlms,literate=,linerange=Individual:\ MA\-Empresa-rdfs:Literal]{a-box.ms} 
+ 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Materias
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+ \item [Materias]. Estos individuos representan las diferentes materias de la titulación que estamos modelando. De igual modo, sólo se incluyen algunas, a modo de ejemplo ilustrativo.
+ 
+	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ MA\-Empresa-ensenanzas.\"\^\^xsd:string]{a-box.ms} 
+	
+	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ MA\-Ingenieria_del_software_sistemas_de_informacion_y_sistemas_inteligentes-ensenanzas.\"\^\^xsd:string]{a-box.ms} 
+	
+	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ MA\-Trabajo_fin_de_grado-audiovisuales).\"\^\^xsd:string]{a-box.ms} 
+	
  		 
-  \item [Asignaturas]
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Asignaturas
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     		 
+  \item [Asignaturas]. Estos individuos son la representación de las diferentes asignaturas del plan de estudios.
   
-  \item [Métodos Docentes]
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Programacion_II-xsd:string]{a-box.ms} 
   
-  \item [Actividades Formativas]
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Matematica_Discreta_II-xsd:string]{a-box.ms} 
   
-  \item [Métodos de Evaluacion]
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Proyecto_de_Software-xsd:decimal]{a-box.ms} 
   
-  \item [Carácter]
   
-  \item [Ubicaciones temporales]
+  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Métodos Docentes
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+  \item [Métodos Docentes]. Aquí se agrupan los diferentes métodos docentes utilizados para la enseñanza de las materias.
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ ME\-Leccion_magistral-xsd:string]{a-box.ms} 
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ ME\-Aprendizaje_orientado_a_proyectos-xsd:string]{a-box.ms} 
+  
+  
+  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Actividades Formativas
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+  \item [Actividades Formativas]. Como ya se dijo anteriormente, con el fin de poder almacenar la información relativa a los créditos otorgados por cada actividad formativa, se ha optado por crear un individuo por cada relación \lstinline{AF_utilizadaParaImpartir_MA}. A modo de ejemplo:
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AF\-Proyecto\-PO-xsd:decimal]{a-box.ms} 
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AF\-Fisica\-L-xsd:decimal]{a-box.ms} 
+  
+  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Métodos de Evaluación
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+  \item [Métodos de Evaluacion]. Estos son algunos de los métodos de evaluación utilizados a la hora de comprobar la asquisición de competencias por parte de los alumnos al finalizar el curso de las asignaturas.
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ MV\-Pruebas_de_ejecucion-xsd:string]{a-box.ms} 
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ MV\-Sistemas_de_Autoevaluacion-xsd:string]{a-box.ms} 
+  
+  
+  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Carácter
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+  \item [Carácter]. Aquí quedan recogidos los diferentes carácteres que asignaturas y materias pueden tener.
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Basica-TBox:Caracter]{a-box.ms} 
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Mixta-TBox:Caracter]{a-box.ms} 
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Obligatoria-TBox:Caracter]{a-box.ms} 
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Optativa-TBox:Caracter]{a-box.ms} 
+  
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   	%% Ubicaciones Temporales
+   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+  \item [Ubicaciones temporales]. Aqui se agrupan, con el fin de poder lograr un correcto reparto de las asiganturas entre los trimestres que componen la titulación, los trimestres en los que se divide el título. A modo enunciativo:
+
+	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ UT\-3er_semestre-TBox:Ubicacion_temporal]{a-box.ms} 
+  
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ UT\-5o_semestre-TBox:Ubicacion_temporal]{a-box.ms} 
 
 \end{description}
 
