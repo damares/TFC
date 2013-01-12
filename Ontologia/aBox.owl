@@ -2626,6 +2626,7 @@ nacionales/internacionales.
         <TBox:MA_otorgaCompetenciasGenerales_CG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-5"/>
         <TBox:MA_otorgaCompetenciasGenerales_CG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-6"/>
         <TBox:MA_otorgaCompetenciasGenerales_CG rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#CG-7-8-9-10-16-17"/>
+        <TBox:MA_utiliza_MV rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MV-Evaluación_Movilidad"/>
         <TBox:MA_utiliza_MV rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MV-Evaluación_Prácticum"/>
     </owl:NamedIndividual>
     
@@ -2906,6 +2907,23 @@ audiovisuales).</TBox:MA_Resultados>
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MV-Evaluación_Movilidad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MV-Evaluación_Movilidad">
+        <rdf:type rdf:resource="&TBox;Metodo_Evaluacion"/>
+        <TBox:MV_Descripcion rdf:datatype="&xsd;string">Para los participantes en Programas de Movilidad Internacional:
+- Por parte del tutor academico:
+** Informe sobre la conveniencia y adecuacion del programa elegido para su realizacion en el centro partner.
+- Por parte del tutor externo:
+** Aceptacion del contrato de estudios (learning agreement) presentado por el alumno con el visto bueno del tutor academico.
+- Por parte del alumno:
+** Justificacion previa de las asignaturas/programas seleccionados.
+** Calificaciones obtenidas en el centro partner.
+** Memoria escrita sobre la estancia de movilidad y defensa oral de la misma.</TBox:MV_Descripcion>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MV-Evaluación_Prácticum -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/0/Ontology1325932256384.owl#MV-Evaluación_Prácticum">
@@ -2921,17 +2939,7 @@ audiovisuales).</TBox:MA_Resultados>
 ** Encuesta sobre la satisfaccion del trabajo realizado y los logros obtenidos.
 - Por parte del alumno:
 ** Informe sobre las tareas realizadas y la temporalizacion.
-** Defensa oral del trabajo realizado (proceso y resultados).
-
-Para los participantes en Programas de Movilidad Internacional:
-- Por parte del tutor academico:
-** Informe sobre la conveniencia y adecuacion del programa elegido para su realizacion en el centro partner.
-- Por parte del tutor externo:
-** Aceptacion del contrato de estudios (learning agreement) presentado por el alumno con el visto bueno del tutor academico.
-- Por parte del alumno:
-** Justificacion previa de las asignaturas/programas seleccionados.
-** Calificaciones obtenidas en el centro partner.
-** Memoria escrita sobre la estancia de movilidad y defensa oral de la misma.</TBox:MV_Descripcion>
+** Defensa oral del trabajo realizado (proceso y resultados).</TBox:MV_Descripcion>
     </owl:NamedIndividual>
     
 

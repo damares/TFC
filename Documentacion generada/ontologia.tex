@@ -394,6 +394,7 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
 
 \subsection{Individuos de la ontología}
   Los individuos representan objetos de la ontología en el dominio que estamos estudiando. Protegé no hace uso del Unique Name Assumption, es decir, para protegé dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontologías OWL: todo lo que no sea dicho de forma explícita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo, para ese dominio. 
+  
   En nuestra ontología todos los individuos que componen la ontología (11 \textit{Objetivo\_General}, 12 \textit{Competencia\_General}, 47 \textit{Competencia\_Especifica}, 12 \textit{Materia}, 43 \textit{Asignaturas}, 66 \textit{Actividades\_Formativas}, 6 \textit{Metodos\_Docentes}, 4 \textit{Caracter}, 9 \textit{Metodo\_Evaluacion}, 7 \textit{Ubicacion\_Temporal}) son distintos. Dado el gran número de individuos que componen la ontología, se ha optado por no poner la declaración de todos y cada uno de ellos, si no tan sólo de algunos de ellos, a modo de ejemplo.
   
   %\lstinputlisting[language=owlms,literate=,linerange=DifferentIndividuals:-UT_7o_semestre]{a-box.ms}
@@ -439,7 +440,7 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
  		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Materias
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
- \item [Materias]. Estos individuos representan las diferentes materias de la titulación que estamos modelando Son: \textit{MA-Empresa}, \textit{MA-English\_for\_professional\_and\_academic\_communication}, \textit{MA-Estadística}, \textit{MA-Física}, \textit{MA-Informática}, \textit{MA-Ingeniería\_de\_computadores}, \textit{MA-Ingeniería\_del\_software\_sistemas\_de\_información\_y\_sistemas\_inteligentes}, \textit{MA-Matemáticas}, \textit{MA-Optatividad}, \textit{MA-Programación}, \textit{MA-Sistemas\_operativos,\_sistemas\_distribuidos\_y\_redes} y \textit{MA-Trabajo\_fin\_de\_grado}. De igual modo, sólo se incluyen algunas, a modo de ejemplo ilustrativo.
+ \item [Materias]. Estos individuos representan las diferentes materias de la titulación que estamos modelando Son: \textit{MA-Empresa}, \textit{MA-English\_for\_professional\_and\_academic\_communication}, \textit{MA-Estadística}, \textit{MA-Física}, \textit{MA-Informática}, \textit{MA-Ingeniería\_de\_computadores}, \textit{MA-Ingeniería\_del\_software\_sistemas\_de\_información\_y\_sistemas\_inteligentes}, \textit{MA-Matemáticas}, \textit{MA-Optatividad}, \textit{MA-Programación}, \textit{MA-Sistemas\_operativos,\_sistemas\_distribuidos\_y\_redes} y \textit{MA-Trabajo\_fin\_de\_grado}. De igual modo, sólo se incluye una, a modo de ejemplo ilustrativo.
  
 	\lstinputlisting[language=owlms,literate=,linerange=Individual:\ MA\-Ingeniería\_del\_software\_sistemas\_de\_información\_y\_sistemas\_inteligentes-xsd:decimal]{a-box.ms} 
 	
@@ -452,9 +453,9 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     		 
   \item [Asignaturas]. Estos individuos (43 en total) son la representación de las diferentes asignaturas del plan de estudios. A modo de ejemplo, detallamos los siguientes.
   
-  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Programacion_II-xsd:string]{a-box.ms} 
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Programación_II-xsd:string]{a-box.ms} 
   
-  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Matematica_Discreta_II-xsd:string]{a-box.ms} 
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Matemática_Discreta_II-xsd:string]{a-box.ms} 
   
   \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Proyecto_de_Software-xsd:decimal]{a-box.ms} 
   
@@ -489,8 +490,15 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
   En este plan de estudios se utilizan nueve activiades formativas:
   
 \begin{enumerate}
-	\item Clases Prácticas. En las clases prácticas se desarrollan habiliades de aplicación de los conocimientos a situaciones concretas y adquisición de habilidades y procedimientos relacionados con la materia objeto de estudio. Pueden desarrollarse en recintos cerrados como aulas o laboratorios y al aire libre, lo que da lugar a los tres tipos de modalidades de clases prácticas: aula, laboratorio y campo. Todas ellas se organizan en grupos de tamaño medio o pequeño, exigen la presencia de profesor y alumnos y están vinculadas a una materia.
-	\item Clases Teóricas. Básicamente son aquellas actividades que se centran en la exposición verbal de los contenidos por parte del profesor, de forma unidireccional, y sin que los alumnos intervengan en la selección de los contenidos. 
+	\item Clases Prácticas. En las clases prácticas se desarrollan habiliades de aplicación de los conocimientos a situaciones concretas y adquisición de habilidades y procedimientos relacionados con la materia objeto de estudio. Se desarrolla en recintos en aulas y se organizan en grupos de tamaño medio o pequeño. Exigen la presencia de profesor y alumnos.
+	\item Clases Teóricas. Básicamente son aquellas actividades que se centran en la exposición verbal de los contenidos por parte del profesor, de forma unidireccional, y sin que los alumnos intervengan en la selección de los contenidos.
+	\item Estudio y trabajo en grupo. Es u enfoque cooperativo en el que cada alumno aprende de los demás, así como de su profesor y de su entorno. El éxito individual de cada alumno depende de que el conjunto de los compañeros alcancen las metas fijadas, y este éxito del grupo depende a su vez del desaroolo y despliegue de competencias sociales, claves en el desempeño profesional.
+	\item Estudio y trabajo autónomo individual. Se trata de una actividad formativa en la que el estudiante se responsabiliza de la organización del trabajo y de la adquisición de las diferetnes competencias según su propio ritmo. Implica que el alumno debe asumir la responsabilidad y el control sobre su propio proceso de aprendizaje, tomando las decisiones sobre planificación, ejecución y evaluación del aprendizaje.
+	\item Clase de laboratorio. Muy similar a las clases prácticas, con las misma metas y desarrollos, pero en lugar de desarrollarse en un aula común, se suceden en aulas de laboratorio, especialmente acondicionadas para la clase práctica. Al igual que el resto de clases prácticas, exigen la presencia de alumno y profesor.
+	\item Prácticas individuales o en grupo. Son trabajos llevados a cabo de manera individual o en grupo, en los que el alumno debe resolver un problema planteado por el profesor, o bien diseñar y realizar una serie de actividades con el fin de poder realizar una tarea, analizando los resultados obtenidos.
+	\item Proyectos. Realización y presentación de proyectos software o de instalaciones. Implica la realización de cálculos, recogida de datos, realización de pruebas, ensayos, demostraciones... que concluye en una demostración de las competencias adquiridas mediante la ejecución y demostración de tareas reales o simuladas.
+	\item Seminarios y Talleres. Se llama así al espacio donde se construye con profundidad una parte del conocimiento a través de intercambios personales entre sus asistentes, cuyo número deberá ser reducido. Esta participación activa de todos los integrantes supone la elaboración previa de materiales y el acuerdo de unas normas para el desarrollo de la actividad. 
+	\item Tutorías. En las tutorías se establece una relación personalizada de ayuda entre el profesor o tutor y el alumno. El tutor facilita y orienta al alumno en su aprendizaje. En una tutoría cabe tratar cualquier faceta del proceso de aprendizaje, como aspectos académicos, actitudinales, u otros.
 \end{enumerate}
     
   \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AF\-Proyecto\-PO-xsd:decimal]{a-box.ms} 
@@ -500,7 +508,20 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Métodos de Evaluación
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-  \item [Métodos de Evaluacion]. Estos son algunos de los métodos de evaluación utilizados a la hora de comprobar la asquisición de competencias por parte de los alumnos al finalizar el curso de las asignaturas.
+  \item [Métodos de Evaluacion]. Estos son algunos de los métodos de evaluación utilizados a la hora de comprobar la asquisición de competencias por parte de los alumnos al finalizar el curso de las asignaturas. En el plan de estudios que nos ocupa, se han definido los siguientes:
+  
+\begin{enumerate}
+	\item Escalas de actitudes. Útiles para recoger opiniones, valores, habilidades sociales y directivas y conductas de interacción.
+	\item Presentación de informes.
+	\item Presentación de trabajos. 
+	\item Pruebas de ejecución. Indisitantemente se pueden usar tareas reales o simuladas.
+	\item Pruebas de respuesta corta. 
+	\item Pruebas de respuesta larga, en las que el alumno debera argumentar y desarrollar una respuesta a la pregunta planteada por el profesor.
+	\item Pruebas orales, bien en grupo, bien de forma individual, y donde se incluye la presentación de temas-trabajos.
+	\item Sistemas de autoevaluación (oral, escrita o en grupo).
+	\item Evaluación para el Prácticum. Recogida de informes/encuestas y defensa oral del trabajo realizado.
+	\item Evaluación para los programas de movilidad. Recogida de informes, justificantes, calificaciones, realización de memoria y defensa oral.
+\end{enumerate}
   
   \lstinputlisting[language=owlms,literate=,linerange=Individual:\ MV\-Pruebas_de_ejecucion-xsd:string]{a-box.ms} 
   
@@ -510,9 +531,9 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Carácter
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-  \item [Carácter]. Aquí quedan recogidos los diferentes carácteres que asignaturas y materias pueden tener.
+  \item [Carácter]. Aquí quedan recogidos los diferentes carácteres que asignaturas y materias pueden tener. Una asignatura puede ser básica, obligatoria u optativa, mientras que una materia puede ser, además, de carácter mixto.
   
-  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Basica-TBox:Caracter]{a-box.ms} 
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Básica-TBox:Caracter]{a-box.ms} 
   
   \lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Mixta-TBox:Caracter]{a-box.ms} 
   

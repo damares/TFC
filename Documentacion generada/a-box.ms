@@ -748,8 +748,8 @@ Individual: MA-Ingeniería_del_software_sistemas_de_información_y_sistemas_inteli
      TBox:MA_constaDe_AS  AS-Bases_de_Datos,
      TBox:MA_utiliza_MV  MV-Pruebas_orales,
      TBox:MA_otorgaCompetenciasEspecificas_CE  CE-21,
-     TBox:MA_otorgaCompetenciasEspecificas_CE  CE-2,
      TBox:MA_otorgaCompetenciasEspecificas_CE  CE-33,
+     TBox:MA_otorgaCompetenciasEspecificas_CE  CE-2,
      TBox:MA_utiliza_MV  MV-Presentación_de_informes,
      TBox:MA_otorgaCompetenciasGenerales_CG  CG-11-12-20,
      TBox:MA_utiliza_MV  MV-Presentación_de_trabajos,
@@ -762,8 +762,8 @@ Individual: MA-Ingeniería_del_software_sistemas_de_información_y_sistemas_inteli
      TBox:MA_otorgaCompetenciasEspecificas_CE  CE-37,
      TBox:MA_seImparteMediante_ME  ME-Lección_magistral,
      TBox:MA_constaDe_AS  AS-Ingeniería_del_Software_II,
-     TBox:MA_otorgaCompetenciasEspecificas_CE  CE-53-54,
      TBox:MA_seImparteSegun_AF  AF-Ingenieria-CT,
+     TBox:MA_otorgaCompetenciasEspecificas_CE  CE-53-54,
      TBox:MA_otorgaCompetenciasEspecificas_CE  CE-34,
      TBox:MA_otorgaCompetenciasEspecificas_CE  CE-22,
      TBox:MA_utiliza_MV  MV-Pruebas_de_respuesta_corta,
@@ -878,6 +878,23 @@ Individual: AS-Proyecto_de_Software
      TBox:AS_tieneComoRequisito_AS  AS-Sistemas_Distribuidos,
      TBox:AS_tieneComoRequisito_AS  AS-Lenguajes_Formales_Autómatas_y_Computabilidad,
      TBox:AS_Creditos  "12"^^xsd:decimal
+    
+    
+Individual: MV-Evaluación_Movilidad
+
+    Types: 
+        TBox:Metodo_Evaluacion
+    
+    Facts:  
+     TBox:MV_Descripcion  "Para los participantes en Programas de Movilidad Internacional:
+- Por parte del tutor academico:
+** Informe sobre la conveniencia y adecuacion del programa elegido para su realizacion en el centro partner.
+- Por parte del tutor externo:
+** Aceptacion del contrato de estudios (learning agreement) presentado por el alumno con el visto bueno del tutor academico.
+- Por parte del alumno:
+** Justificacion previa de las asignaturas/programas seleccionados.
+** Calificaciones obtenidas en el centro partner.
+** Memoria escrita sobre la estancia de movilidad y defensa oral de la misma."^^xsd:string
     
     
 Individual: CE-44
@@ -1113,17 +1130,7 @@ Individual: MV-Evaluación_Prácticum
 ** Encuesta sobre la satisfaccion del trabajo realizado y los logros obtenidos.
 - Por parte del alumno:
 ** Informe sobre las tareas realizadas y la temporalizacion.
-** Defensa oral del trabajo realizado (proceso y resultados).
-
-Para los participantes en Programas de Movilidad Internacional:
-- Por parte del tutor academico:
-** Informe sobre la conveniencia y adecuacion del programa elegido para su realizacion en el centro partner.
-- Por parte del tutor externo:
-** Aceptacion del contrato de estudios (learning agreement) presentado por el alumno con el visto bueno del tutor academico.
-- Por parte del alumno:
-** Justificacion previa de las asignaturas/programas seleccionados.
-** Calificaciones obtenidas en el centro partner.
-** Memoria escrita sobre la estancia de movilidad y defensa oral de la misma."^^xsd:string
+** Defensa oral del trabajo realizado (proceso y resultados)."^^xsd:string
     
     
 Individual: CE-56
@@ -2617,6 +2624,7 @@ Individual: MA-Optatividad
      TBox:MA_utiliza_MV  MV-Evaluación_Prácticum,
      TBox:MA_constaDe_AS  AS-Optativa3_3ECTS,
      TBox:MA_otorgaCompetenciasEspecificas_CE  CE-14-15,
+     TBox:MA_utiliza_MV  MV-Evaluación_Movilidad,
      TBox:MA_Creditos  "54"^^xsd:decimal,
      TBox:MA_Coordinacion  "La coordinación en esta materia se va llevar a cabo por medio de la Comisión de Coordinación Vertical establecida para la misma, tal y como se describe en la sección 5. Planificación de las enseñanzas."^^xsd:string,
      TBox:MA_Resultados  "- Tanto para el Prácticum como para la Movilidad Internacional:
