@@ -450,7 +450,7 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Asignaturas
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     		 
-  \item [Asignaturas]. Estos individuos son la representación de las diferentes asignaturas del plan de estudios	.
+  \item [Asignaturas]. Estos individuos (43 en total) son la representación de las diferentes asignaturas del plan de estudios. A modo de ejemplo, detallamos los siguientes.
   
   \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Programacion_II-xsd:string]{a-box.ms} 
   
@@ -462,11 +462,20 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Métodos Docentes
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-  \item [Métodos Docentes]. Aquí se agrupan los diferentes métodos docentes utilizados para la enseñanza de las materias.
+  \item [Métodos Docentes]. Aquí se agrupan los diferentes métodos docentes utilizados para la enseñanza de las materias. Se han instanciado los seis métodos docentes utilizados en el plan de estudios, que son: 
   
-  \todo{Habla de los metodos docentes de esta titulacion}
-  
-  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ ME\-Leccion_magistral-xsd:string]{a-box.ms} 
+\begin{enumerate}
+	\item Aprendizaje basado en problemas. El punto de partida de este método docente es el diseño de un problema por parte del profesor que el estudiante ha de resolver, para desarrollar unas competencias previamente definidas. El aprendizaje resulta más estimulante ya que requiere un mayor esfuerzo intelectual, y le permite al alumno experimentar e indagar sobre situaciones concretas del mundo real.
+	\item Aprendizaje Cooperativo. Se trata de hacer que los alumnos sean responsables de su aprendizaje y del de sus compañeros que mediante estrategias de cooperatividad, permitan alcanzar metas e incentivos grupales. Prioriza la cooperación frente a la competición, y permite la adquisción de competencias para la interacción entre iguales y la adquisición de actitudes y valores.
+	\item Aprendizaje orientado a proyectos. En este método los estudiantes llevan a cabo la realización de un proyecto en un tiempo determinado con el fin de resolver un problema o abordar una tarea mediante el diseño y realización de una serie de actividades, aplicando para ello los conocimientos adquiridos y utilizando los recursos disponibles de una manera efectiva.
+	\item Estudio de Casos. Se trata de analizar de manera intensivaun problema o suceso real con la finalidad de conocerlo y poder generar hipótesis, resolverlo, intrepertarlo...  y con ello adquirir entrenamiento en los procedimientos de tratamiento y resolución.
+	\item Lección magistral. En la lección magistral el profesor expone verbalmente el contenido de la materia a sus alumnos.
+	\item Resolución de ejercicios y problemas. La base de estos métodos consiste el desarrollo por parte de los alumnos de soluciones adecuadas o correctas mediante la ejecución de rutinas y la apliación de procedimientos y una posterior interpretación de resultados.
+\end{enumerate}
+
+  A modo de ejemplo, mostramos un par de ellos.
+    
+  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ ME\-Lección_magistral-xsd:string]{a-box.ms} 
   
   \lstinputlisting[language=owlms,literate=,linerange=Individual:\ ME\-Aprendizaje_orientado_a_proyectos-xsd:string]{a-box.ms} 
   
@@ -474,10 +483,15 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    	%% Actividades Formativas
    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-  \item [Actividades Formativas]. Como ya se dijo anteriormente, con el fin de poder almacenar la información relativa a los créditos otorgados por cada actividad formativa, se ha optado por crear un individuo por cada relación
-  \todo{Habla de las actividades formativas de esta titulacion}
-   \lstinline{AF_utilizadaParaImpartir_MA}. A modo de ejemplo:
+  \item [Actividades Formativas]. Estas son las diferentes actividades formativas definidas en el plan de estudios. Como ya se dijo anteriormente, con el fin de poder almacenar la información relativa a los créditos otorgados por cada actividad formativa, se ha definido un individuo 'actividad formativa' por cada por cada actividad formativa utilizada en cada materia. Esto hace que el número de individuos sea bastante elevado ($\#Actividades\_Formativas=\#Actividades \text{ } \times \text{ } \#Materias$), incluso después de eliminar aquellas actividades formativas que no se emplean en la docencia de una asignatura.
   
+  %\todo{Habla de las actividades formativas de esta titulacion}
+  En este plan de estudios se utilizan nueve activiades formativas:
+  
+\begin{enumerate}
+	\item 
+\end{enumerate}
+    
   \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AF\-Proyecto\-PO-xsd:decimal]{a-box.ms} 
   
   \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AF\-Fisica\-L-xsd:decimal]{a-box.ms} 

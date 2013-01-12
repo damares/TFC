@@ -4,7 +4,7 @@ Version=2
 
 [SessionInfo]
 ActiveTab=0
-FrameCount=5
+FrameCount=7
 ActiveFrame=0
 
 [Frame0]
@@ -32,9 +32,9 @@ cxCur=1482
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=449
-Cursor.column=16
-TopSubLine=628
+Cursor.row=493
+Cursor.column=2
+TopSubLine=684
 
 [Frame1]
 Columns=1
@@ -121,7 +121,7 @@ cxMin=10
 [Frame3_View0,0]
 Cursor.row=222
 Cursor.column=0
-TopSubLine=208
+TopSubLine=210
 
 [Frame4]
 Columns=1
@@ -148,7 +148,65 @@ cxCur=1254
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=816
-Cursor.column=29
-TopSubLine=825
+Cursor.row=1476
+Cursor.column=12
+TopSubLine=1513
+
+[Frame5]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-9
+MaxPos.y=-38
+NormalPos.left=150
+NormalPos.top=160
+NormalPos.right=1447
+NormalPos.bottom=626
+Class=CLatexEdit
+Document=tboxms.tex
+
+[Frame5_Row0]
+cyCur=394
+cyMin=10
+
+[Frame5_Col0]
+cxCur=1254
+cxMin=10
+
+[Frame5_View0,0]
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
+
+[Frame6]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-9
+MaxPos.y=-38
+NormalPos.left=180
+NormalPos.top=192
+NormalPos.right=1477
+NormalPos.bottom=658
+Class=CLatexEdit
+Document=semantica.tex
+
+[Frame6_Row0]
+cyCur=394
+cyMin=10
+
+[Frame6_Col0]
+cxCur=1254
+cxMin=10
+
+[Frame6_View0,0]
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
