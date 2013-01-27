@@ -15,7 +15,7 @@ ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-9
-MaxPos.y=-38
+MaxPos.y=-36
 NormalPos.left=0
 NormalPos.top=0
 NormalPos.right=691
@@ -24,7 +24,7 @@ Class=CLatexEdit
 Document=aplicaciones.tex
 
 [Frame0_Row0]
-cyCur=665
+cyCur=671
 cyMin=10
 
 [Frame0_Col0]
@@ -32,7 +32,7 @@ cxCur=1482
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=116
-Cursor.column=195
-TopSubLine=127
+Cursor.row=126
+Cursor.column=140
+TopSubLine=155
 

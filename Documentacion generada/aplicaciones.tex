@@ -1,5 +1,4 @@
 \chapter{Automatización}
-\todo{Habla con Ángel. Muchos plugins no se pueden utilizar sin poner todas las relaciones. Cuando dejamos que el raazonador complete las propiedades de los individuos y las relaciones, ocurre que los plugins no capturan todo el conocimiento, o al menos no son capaces de utilizar el conocimiento inferido para los plugins.}
 
 La ontología mostrada se ha desarrollado utilizando el framework Protegè\cite{Stanford-Protege:WEB}. Protegè es un editor de ontologías libre, con una filosofía "`open source"' que además soporta varios formatos, entre los que destaca OWL\cite{W3C-OWL:WEB}. Protegè ha sido desarrollado por el centro de investigación informática y biomédica\cite{Stanford-BMIR:WEB} de la Escuela Universitaria de Medicina de la universidad de  Standford\cite{Stanford-MED:WEB}, con la colaboración de DARPA, eBay, National Cancer Institute, National Institute of Standards and Technology, National Library of Medicine y National Science Foundation, entre otros.
 
@@ -65,7 +64,7 @@ A modo de ejemplo, se muestra una parte de la ontología:
 		Everything AS-ubicada-UTs at most 1 thing.
 		Everything that is UT-contiene-ASed by something is an Asignatura.
 		If X MA-constaDe-ASes something that AS-ubicada-UTs Y then X MA-ubicada-UTs Y.
-		Everything that MV-esUtilizadoEn-MAs something is a Metodo-Evaluacion.
+		Everything that MV-esUtilizadoEn-MAs something is a Me-Evaluacion.
 		Everything is MA-constaDe-ASed by at most 1 thing.
 		Everything that is MA-otorgaCompetenciasGenerales-CGed by something is a Competencia-General.
 \end{verbatim}
@@ -122,8 +121,10 @@ Admite las relaciones de subclases, individuos, dominio y rango de las propiedad
 	\label{OntoGraf}
 \end{figure}
 
-
-
+\subsection{Bugs de aplicaciones y cosas que hecho en falta}
+%\todo{Habla con Ángel. Muchos plugins no se pueden utilizar sin poner todas las relaciones. Cuando dejamos que el raazonador complete las propiedades de los individuos y las relaciones, ocurre que los plugins no capturan todo el conocimiento, o al menos no son capaces de utilizar el conocimiento inferido para los plugins.}
+\todo{Consideramos SPARQL útil? par apoder utilizarlo}
+\todo{Muchos plugins más, únicamente están disponibles para la versión 3 de protegé o para protegé frames. Debo mencionarlos? seguor que si.}
 
 %%% Local Variables: 
 %%% mode: latex
