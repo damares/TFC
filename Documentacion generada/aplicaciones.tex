@@ -121,6 +121,38 @@ Admite las relaciones de subclases, individuos, dominio y rango de las propiedad
 	\label{OntoGraf}
 \end{figure}
 
+
+\subsubsection{OWLGrEd} OWLGrEd es un editor gráfico para ontologías OWL. Permite visualizar ontologías existentes en diagramas UML y la creación y desarrollo de ontologías desde el entorno gráfico. Las ontologías creadas pueden ser exportadas a Protegé para comprobar su consistencia, realizar una clasificación, etc, o también importadas desde protegé a la herramienta.
+
+Es un modo de ver la estrucutra de la ontología muy rápidamente, pero cuenta con el inconveniente de que, en ontologías grandes con muchos individuos, el tiempo de carga la hacen inviable.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLGrEd.png}
+	\label{OntoGraf}
+\end{figure}
+
+\subsubsection{SOVA} SOVA es un plugin de protegé que permite la visualización de ontologías al completo. Gracias a SOVA, podemos tener en un mismo esquema clases, individuos y relaciones. 
+SOVA tiene dos modos de trabajo. En el primer modo podemos ver la información tal y como está especificada en el fichero OWL. En el segundo modo la herramienta nos presenta una visión del fichero jerarquizada, pero con la limitación de sólo poder comprobar las relaciones entre individuos y clases, sin poder llegar a más detalle.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-SOVA hie.png}
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-SOVA vis.png}
+	\label{OntoGraf}
+\end{figure}
+
+\subsubsection{DL-Query}. Se trata de un plugin de protegé que nos permite, mediante el uso de un razonador, realizar preguntas al razonador, utilizando para ello sintaxis Manchester. DL-QUery es capaz de contestar preguntas sobre cualquier aspecto de la ontología. 
+
+Además, permite que una consulta que ea realizada a menudo, sea almacenada en la ontología como una clase definida, o bien como una clase anónima. Si el usuario de la ontología está familiariazado con la sintaxis Manchester, o bien incluimos las consultas a realizar a la ontología como clases definidas, dotaremos al usuario de las herramientas precisas para poder realizar preguntas sobre la ontología que lleven a un mejor diseño de la ontología.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-DLQuery1.png}
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-DLQUery2.png}
+	\label{OntoGraf}
+\end{figure}
+
 \subsection{Bugs de aplicaciones y cosas que hecho en falta}
 %\todo{Habla con Ángel. Muchos plugins no se pueden utilizar sin poner todas las relaciones. Cuando dejamos que el raazonador complete las propiedades de los individuos y las relaciones, ocurre que los plugins no capturan todo el conocimiento, o al menos no son capaces de utilizar el conocimiento inferido para los plugins.}
 \todo{Consideramos SPARQL útil? par apoder utilizarlo}
