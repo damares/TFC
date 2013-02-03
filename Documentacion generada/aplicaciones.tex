@@ -72,13 +72,12 @@ A modo de ejemplo, se muestra una parte de la ontología:
 
 \subsubsection{ChangeView} Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView} Plugin resulta muy útil durante el desarrollo de la ontología, ya que nos permite tener un control de cambios realizados desde la apertura de la ontología. El listado de cambios sigue un orden cronológico, por lo que siempre sabemos cuál a sido el último cambio realizado en la ontología, lo que nos permite desahcer los cambios deseados.
 
-\begin{figure}[hp]
-	\centering
+\begin{center}
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-changeview.png}
-	\label{fig:Changeview}
-\end{figure}
+\end{center}
 
-
+\subsubsection{OWL Lint}
+\todo{Permite ejecutar test contra un conjunto de ontologías OWl para control de calidad, debug, etc.}
 
 \subsection{Visores}
 
@@ -88,69 +87,90 @@ Los visores nos permiten visualizar la información de manera más sencilla, de mo
 
 Permite exportar los resultados a formato html que luego pueden visualizarse en un navegador web y que al pinchar sobre ellos nos permitiría abrir en una nueva página la documentación del tag.
 
-\begin{figure}[htbp]
-	\centering
+\begin{center}
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-cloudview.png}
-	\label{fig:CloudView}
-\end{figure}
+\end{center}
 
 \subsubsection{Matrix} El plugin Matrix\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/MatrixViews} nos permite tener una visión de la ontología en forma de tabla, seleccionando aquella información que de las diferentes clases, propiedades e individuos nos interesa. Incluso es posible, desde la propia tabla, incluir información en la ontología, lo que la convierte en muy útil para completar información.
 
-\begin{figure}[htbp]
-	\centering
+\begin{center}
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-matrix.png}
+\end{center}
+\begin{center}
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-matrix2.png}
-	\label{fig:Matrix}
-\end{figure}
+\end{center}
 
 \subsubsection{NavigOWL} NavigOWL\footnote{http://klatif.seecs.nust.edu.pk/navigowl/index.html} es una herramienta de visualización especialmente diseñada para explorar ontologías y permitir una mejor comprensión de su estructura. Los gráficos pueden mostrarse en pantalla según diferentes técnicas de modo que sea más fácil comprender la importancia de cada nodo, al aparecer este de mayor tamaño. También es posible mostrar u ocultar las etiquetas de los diferentes nodos o redistribuirlos en el lienzo. La herramienta incorpora una función de búsqueda que permite localizar en el grafo cualquier nodo de la ontología, lo que también facilita el examen de la misma.
 
-\begin{figure}[htbp]
-	\centering
+\begin{center}
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-NavigOwl.png}
-	\label{fig:NavigOWL}
-\end{figure}
+\end{center}
 
 \subsubsection{Ontograf} Ontograf\footnote{http://protegewiki.stanford.edu/wiki/OntoGraf} es otro visor de ontologías. A diferencia de NavigOWL, todos los nodos tienen la misma representación, sin poder establecer a priori una clasificación en función de su importancia, pero a cambio resulta mucho más ágil de manejar que NavigOWL, ya que en ontologías grandes como la nuestra, no resulta una aplicación tan pesada de mover. Se puede elegir si deseamos que nos muestre individuos o clases e incluso podemos ocultar clases o individuos que estén relacionados mediante una propiedad en particular.
 
 Admite las relaciones de subclases, individuos, dominio y rango de las propiedades y equivalencias. También se pueden personalizar, para cada tipo de nodo, la información que queremos visualizar.
 
-\begin{figure}
-	\centering
+\begin{center}
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OntoGraf.png}
-	\label{fig:OntoGraf}
-\end{figure}
-
+\end{center}
 
 \subsubsection{OWLGrEd} OWLGrEd es un editor gráfico para ontologías OWL. Permite visualizar ontologías existentes en diagramas UML y la creación y desarrollo de ontologías desde el entorno gráfico. Las ontologías creadas pueden ser exportadas a Protegé para comprobar su consistencia, realizar una clasificación, etc, o también importadas desde protegé a la herramienta.
 
 Es un modo de ver la estrucutra de la ontología muy rápidamente, pero cuenta con el inconveniente de que, en ontologías grandes con muchos individuos, el tiempo de carga la hacen inviable.
 
 \begin{center}
-	\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLGrEd.png}
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLGrEd.png}
 \end{center}
-
 
 \subsubsection{SOVA} SOVA es un plugin de protegé que permite la visualización de ontologías al completo. Gracias a SOVA, podemos tener en un mismo esquema clases, individuos y relaciones. 
 SOVA tiene dos modos de trabajo. En el primer modo podemos ver la información tal y como está especificada en el fichero OWL. En el segundo modo la herramienta nos presenta una visión del fichero jerarquizada, pero con la limitación de sólo poder comprobar las relaciones entre individuos y clases, sin poder llegar a más detalle.
 
-\begin{figure}
-	\centering
+\begin{center}
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-SOVA hie.png}
+\end{center}
+\begin{center}
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-SOVA vis.png}
-	\label{fig:SOVA}
 \end{figure}
+
 
 \subsubsection{DL-Query}. Se trata de un plugin de protegé que nos permite, mediante el uso de un razonador, realizar preguntas al razonador, utilizando para ello sintaxis Manchester. DL-QUery es capaz de contestar preguntas sobre cualquier aspecto de la ontología. 
 
 Además, permite que una consulta que ea realizada a menudo, sea almacenada en la ontología como una clase definida, o bien como una clase anónima. Si el usuario de la ontología está familiariazado con la sintaxis Manchester, o bien incluimos las consultas a realizar a la ontología como clases definidas, dotaremos al usuario de las herramientas precisas para poder realizar preguntas sobre la ontología que lleven a un mejor diseño de la ontología.
 
-\begin{figure}
-	\centering
+\begin{center}
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-DLQuery1.png}
-		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-DLQUery2.png}
-	\label{fi:DlQuery}
 \end{figure}
+\begin{center}
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-DLQuery2.png}
+\end{figure}
+
+\subsubsection{Jambalaya}
+\todo{Jambalaya es un plugin que hace uso de Shrimp para visualizar ontolgías.}
+
+\subsubsection{MetaAnalysis}
+\todo{Calculo de metadatos para ontologías, que después se pueden exportar a un vocabulario}
+
+\subsubsection{NaturalOWL}
+\todo{Genera descripciones de individuos y clases a partir de ontologías OWL que son anotadas con descripciones y recursos en RDF. Inglés.}
+
+\subsubsection{OntoViz}
+\todo{Permite visualizar las ontologías con el software GraphViz de AT&T. Ver cuestiones de licencia}
+
+\subsubsection{OWLPropViz}
+\todo{Permite representar gráficamente OWL Object properties. EL usuario puede seleccionar qué propiedad ver en el gráfico, e incluso qué axiomas mostrar}
+
+\subsubsection{OWLViz}
+\todo{muestra la jerarquía de clases de una ontología, y permite navegar por ella de manera incremental, así como comparar la ontología inferida de la introducida.}
+
+\subsubsection{PromptViz}
+\todo{Crea una representación visual de las diferencias entre dos versiones de una ontología.}
+
+\subsubsection{String search tab}
+\todo{Busca string en una onotlogía. La búsqueda se realiza en clases, propiedades e instancias.}
+
+\subsection{Transformación de datos}
+\subsubsection{OntoBase}
+\todo{Plugin para acceder a bases de datos relacionales, al parecer sin necesidad de tener mucho conocimiento sobre programación de bases de datos.}
 
 \subsection{Bugs de aplicaciones y cosas que hecho en falta}
 %\todo{Habla con Ángel. Muchos plugins no se pueden utilizar sin poner todas las relaciones. Cuando dejamos que el raazonador complete las propiedades de los individuos y las relaciones, ocurre que los plugins no capturan todo el conocimiento, o al menos no son capaces de utilizar el conocimiento inferido para los plugins.}
