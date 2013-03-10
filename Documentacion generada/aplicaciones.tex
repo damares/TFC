@@ -2,7 +2,7 @@
 
 La ontología mostrada se ha desarrollado utilizando el framework Protegè\cite{Stanford-Protege:WEB}. Protegè es un editor de ontologías libre, con una filosofía "`open source"' que además soporta varios formatos, entre los que destaca OWL\cite{W3C-OWL:WEB}. Protegè ha sido desarrollado por el centro de investigación informática y biomédica\cite{Stanford-BMIR:WEB} de la Escuela Universitaria de Medicina de la universidad de  Standford\cite{Stanford-MED:WEB}, con la colaboración de DARPA, eBay, National Cancer Institute, National Institute of Standards and Technology, National Library of Medicine y National Science Foundation, entre otros.
 
-Gracias al formato OWL soportado por Protegè, a su filosofía de software libre, y a los apoyos recibidos por parte de diversas instituciones como las arriba mencionadas, existen multitud de herramientas disponibles para trabajar demanera automática con las ontologías creadas por Protegè, ya sea en forma de plug-in's o en forma de herramientas que trabajan directamente sobre la ontología en formato OWL.
+Gracias al formato OWL soportado por Protegè, a su filosofía de software libre, y a los apoyos recibidos por parte de diversas instituciones como las arriba mencionadas, existen multitud de herramientas disponibles para trabajar demanera automática con las ontologías creadas por Protegè, ya sea en forma de plug-in's o en forma de herramientas que trabajan directamente sobre la ontología en formato OWL. Además, en versiones de Protegè posteriores a la 3.x, es posible exportar directamente desde la herramienta, métodos en lenguaje java (gracias a OWL2API) que permiten trabajar con esa ontología desde un programa java.
 
 
 \section{Aplicaciones}
@@ -159,7 +159,26 @@ Además, permite que una consulta que ea realizada a menudo, sea almacenada en la
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-CardinalityView.png}
 \end{center}
 
+\subsubsection{Outline and Existential Tree Views} nos permite visualizar las relaciones existenciales de la ontología en forma de arbol, a partir de cualquier nodo, y pudiendo colgar en él las propiedades de objetos y datos. De este modo, podemos obtener una visión de la ontología desde la parte dela misma que en cada momento nos resulte de interés, facilitando la comprensión y el acceso a la información.
+
+\begin{center}
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-ExistentialTree.png}
+\end{center}
+
+\subsubsection{OWLDoc} es un plugin de protegè que permite exportar la información contenida en la ontología a HTML, de modo que la visualización de la información puede sere más amena y flexible. OWLDoc exporta toda la información. En la documentación que genera encontramos todo lo relativo a clases, propiedades sobre objetos, propiedades sobre datos, y además, sobre los individuos de la ontología e incluso sobre los tipos de datos que hemos utilizado en la misma.
+
+\begin{center}
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLDoc.png}
+\end{center}
+
+\subsubsection{OWLViz} Plugin de Protegè, muy básico, que permite navegar únicamente sobre las clases de la ontología. No permite acceder a información contenida en las clases, o a las relaciones entre ellas, limitándose´a mostrar relaciones del tipo "es un". 
+
+\subsubsection{OWLPropViz} Plugin basado en OWLViz, que además de mostrar relaciones del tipo "es-un", nos enseña relaciones de equivalencia, clases disjuntas, y otras propiedades sobre objetos definidas en la ontología. 
+Por desgracia, no he sido capaz de lograr que funcione. El plugin figura como compatible únicamente con la versión 4.0 de protegé, y no se ha logrado que funcione en versiones superiores como 4.1 y 4.2 rc1. Para más inri, no se encuentra la versión 4.0 de protegé disponible para la descarga, por lo que no podemos comprobar la verdadera utilidad de este plugin.
+
 \subsection{Transformación de datos}
+
+\subsubsection{OWL2RDB} es un plugin para protegé que permite transformar ontologías OWL2 en bases de datos relacionales. Por desgracia, el plugin no funciona correctamente con versiones actuales de java y no se distribuye ningún tipo de documentación ni existe página web del autor u otras donde se mencione la aplicación, a donde podamos dirigirnos para obtener más información acerca del error. Nos parecía muy interesante el poder exportar la ontología a una base de datos y trabajar con herramientas especializadas sobre ella.
 
 \subsection{Otros}
 
@@ -175,6 +194,8 @@ http://attempto.ifi.uzh.ch/acewiki/
 
 \subsection{Bugs de aplicaciones y cosas que hecho en falta}
 %\todo{Habla con Ángel. Muchos plugins no se pueden utilizar sin poner todas las relaciones. Cuando dejamos que el raazonador complete las propiedades de los individuos y las relaciones, ocurre que los plugins no capturan todo el conocimiento, o al menos no son capaces de utilizar el conocimiento inferido para los plugins.}
+- Los plugins carecen en muchos casos de documentación, y al no ser mantenidos por nadie, resulta imposible, si no es a base de prueba-error durante bastante tiempo, lograr que los plugins fucionen correctamente. Por ejemplo, el plugin OWLViz lanzaba una excepción por un error léxico al invocar la herramienta GraphViz. Resulta que las nuevas versiones de GraphViz no son compatibles con las antiguas, y protegè no ha ido actualizando los métodos al invocar GraphViz. Como resultado, las nuevas versiones de Protegè (desde la 4.0 en adelante) no pueden trabajar con versiones de GraphViz de nuevo desarrollo, al menos en plataformas windows. En nuestro caso, nos hemos visto obligados a realizar un "downgrade" de GraphViz hasta la versión 2.20.3.1 para conseguir que OWLViz y todos los demás plugins que de él dependen, funcionen correctamente.
+
 \todo{Consideramos SPARQL útil? par apoder utilizarlo}
 
 %%% Local Variables: 
