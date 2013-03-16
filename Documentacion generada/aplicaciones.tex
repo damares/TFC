@@ -1,5 +1,7 @@
 \chapter{Automatización}
 
+\todo{explicar la forma de dividir los plugins y su conveniencia frente a otras}
+
 La ontología mostrada se ha desarrollado utilizando el framework Protegè\cite{Stanford-Protege:WEB}. Protegè es un editor de ontologías libre, con una filosofía "`open source"' que además soporta varios formatos, entre los que destaca OWL\cite{W3C-OWL:WEB}. Protegè ha sido desarrollado por el centro de investigación informática y biomédica\cite{Stanford-BMIR:WEB} de la Escuela Universitaria de Medicina de la universidad de  Standford\cite{Stanford-MED:WEB}, con la colaboración de DARPA, eBay, National Cancer Institute, National Institute of Standards and Technology, National Library of Medicine y National Science Foundation, entre otros.
 
 Gracias al formato OWL soportado por Protegè, a su filosofía de software libre, y a los apoyos recibidos por parte de diversas instituciones como las arriba mencionadas, existen multitud de herramientas disponibles para trabajar demanera automática con las ontologías creadas por Protegè, ya sea en forma de plug-in's o en forma de herramientas que trabajan directamente sobre la ontología en formato OWL. Además, en versiones de Protegè posteriores a la 3.x, es posible exportar directamente desde la herramienta, métodos en lenguaje java (gracias a OWL2API) que permiten trabajar con esa ontología desde un programa java.
@@ -197,6 +199,7 @@ http://attempto.ifi.uzh.ch/acewiki/
 - Los plugins carecen en muchos casos de documentación, y al no ser mantenidos por nadie, resulta imposible, si no es a base de prueba-error durante bastante tiempo, lograr que los plugins fucionen correctamente. Por ejemplo, el plugin OWLViz lanzaba una excepción por un error léxico al invocar la herramienta GraphViz. Resulta que las nuevas versiones de GraphViz no son compatibles con las antiguas, y protegè no ha ido actualizando los métodos al invocar GraphViz. Como resultado, las nuevas versiones de Protegè (desde la 4.0 en adelante) no pueden trabajar con versiones de GraphViz de nuevo desarrollo, al menos en plataformas windows. En nuestro caso, nos hemos visto obligados a realizar un "downgrade" de GraphViz hasta la versión 2.20.3.1 para conseguir que OWLViz y todos los demás plugins que de él dependen, funcionen correctamente.
 
 \todo{Consideramos SPARQL útil? par apoder utilizarlo}
+\todo{las otras herramientas como tabajo a futro/mejoras}
 
 %%% Local Variables: 
 %%% mode: latex
