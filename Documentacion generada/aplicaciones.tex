@@ -178,6 +178,14 @@ Además, permite que una consulta que ea realizada a menudo, sea almacenada en la
 \subsubsection{OWLPropViz} Plugin basado en OWLViz, que además de mostrar relaciones del tipo "es-un", nos enseña relaciones de equivalencia, clases disjuntas, y otras propiedades sobre objetos definidas en la ontología. 
 Por desgracia, no he sido capaz de lograr que funcione. El plugin figura como compatible únicamente con la versión 4.0 de protegé, y no se ha logrado que funcione en versiones superiores como 4.1 y 4.2 rc1. Para más inri, no se encuentra la versión 4.0 de protegé disponible para la descarga, por lo que no podemos comprobar la verdadera utilidad de este plugin.
 
+\subsubsection{OWLDiff} Herramienta disponible para uso denteo de protegé en forma de plugin o como un programa individual que nos permite comparar dos ontologías, mostrándonos las diferencias y similitudes entre ellas, unirlas en una única ontología, y realizar inferencias sobre ellas utilizando el razonador Pellet. Podemos ver el resultado de la comparativa en forma de axiomas o inserciones de la ontología y cada uno de ellos en sintaxis DL o Manchester.
+Además tiene la posibilidad de integrarse en varios sistemas de control de versiones, como Subversion, lo que facilita el trabajo sobre la ontología por un amplio grupo de gente.
+
+\begin{center}
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLdiff.png}
+\end{center}
+
+
 \subsection{Transformación de datos}
 
 \subsubsection{OWL2RDB} es un plugin para protegé que permite transformar ontologías OWL2 en bases de datos relacionales. Por desgracia, el plugin no funciona correctamente con versiones actuales de java y no se distribuye ningún tipo de documentación ni existe página web del autor u otras donde se mencione la aplicación, a donde podamos dirigirnos para obtener más información acerca del error. Nos parecía muy interesante el poder exportar la ontología a una base de datos y trabajar con herramientas especializadas sobre ella.
