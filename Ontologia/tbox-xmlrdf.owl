@@ -1,0 +1,824 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="&xsd;integer">0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Literal -->
+
+    <rdfs:Datatype rdf:about="&rdfs;Literal"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#decimal -->
+
+    <rdfs:Datatype rdf:about="&xsd;decimal"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <rdfs:Datatype rdf:about="&xsd;integer"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdfs:Datatype rdf:about="&xsd;string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AF_utilizadaParaImpartir_MA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AF_utilizadaParaImpartir_MA">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_seImparteSegun_AF"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_esRequisitoPara_AS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_esRequisitoPara_AS">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_formaParteDe_MA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_formaParteDe_MA">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_constaDe_AS"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_tieneComoRequisito_AS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_tieneComoRequisito_AS">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_esRequisitoPara_AS"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_tiene_CA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_tiene_CA">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_AS"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_ubicada_UT -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_ubicada_UT">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_AS"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_AS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_AS">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_ASMA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_ASMA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_ASMA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_MA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_MA">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_ASMA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_tiene_CA"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CE_esOtorgadaPor_MA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CE_esOtorgadaPor_MA">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_esOtorgadaPor_MA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_Especifica"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetenciasEspecificas_CE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CG_esOtorgadaPor_MA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CG_esOtorgadaPor_MA">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_esOtorgadaPor_MA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_esOtorgadaPor_MA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_esOtorgadaPor_MA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetencias_CO"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_seAdquiereParaCumplir_OG -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_seAdquiereParaCumplir_OG">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_constaDe_AS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_constaDe_AS">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetenciasEspecificas_CE -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetenciasEspecificas_CE">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_Especifica"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetencias_CO"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetenciasGenerales_CG -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetenciasGenerales_CG">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CG_esOtorgadaPor_MA"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetencias_CO"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetencias_CO -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetencias_CO">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_seImparteMediante_ME -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_seImparteMediante_ME">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_seImparteSegun_AF -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_seImparteSegun_AF">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_tiene_CA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_tiene_CA">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_ubicada_UT -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_ubicada_UT">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_constaDe_AS"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_ubicada_UT"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_utiliza_MV -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_utiliza_MV">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MV_esUtilizadoEn_MA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#ME_utilizadoParaImpartir_MA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#ME_utilizadoParaImpartir_MA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_seImparteMediante_ME"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MV_esUtilizadoEn_MA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MV_esUtilizadoEn_MA">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#OG_seCumpleMedianteLaAdquisicionDe_CO -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#OG_seCumpleMedianteLaAdquisicionDe_CO">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_seAdquiereParaCumplir_OG"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_AS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_AS">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_ASMA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_ASMA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_ASMA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_MA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_MA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_ubicada_UT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_ASMA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AF_Creditos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AF_Creditos">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_Contenidos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_Contenidos">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_Creditos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_Creditos">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_Descripcion">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_Coordinacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_Coordinacion">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_Creditos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_Creditos">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_Resultados -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_Resultados">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#ME_Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#ME_Descripcion">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MV_Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MV_Descripcion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#OG_Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#OG_Descripcion">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AF_utilizadaParaImpartir_MA"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AF_utilizadaParaImpartir_MA"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_formaParteDe_MA"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_formaParteDe_MA"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_AS"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_AS"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_MA"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_MA"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_seAdquiereParaCumplir_OG"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_seAdquiereParaCumplir_OG"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_Especifica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_Especifica">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CE_esOtorgadaPor_MA"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CE_esOtorgadaPor_MA"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CG_esOtorgadaPor_MA"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CG_esOtorgadaPor_MA"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetenciasGenerales_CG"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetenciasGenerales_CG"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#ME_utilizadoParaImpartir_MA"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#ME_utilizadoParaImpartir_MA"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MV_esUtilizadoEn_MA"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MV_esUtilizadoEn_MA"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_AS"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_AS"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_MA"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_MA"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

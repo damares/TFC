@@ -1,0 +1,866 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl">
+    <Prefix name="" IRI="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Actividad_Formativa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asignatura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Caracter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Competencia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Competencia_Especifica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Competencia_General"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Materia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metodo_Docente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metodo_Evaluacion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Objetivo_General"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ubicacion_temporal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AF_utilizadaParaImpartir_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AS_esRequisitoPara_AS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AS_formaParteDe_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AS_tieneComoRequisito_AS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AS_tiene_CA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AS_ubicada_UT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CA_agrupa_AS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CA_agrupa_ASMA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CA_agrupa_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CE_esOtorgadaPor_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CG_esOtorgadaPor_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CO_esOtorgadaPor_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CO_seAdquiereParaCumplir_OG"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_constaDe_AS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasEspecificas_CE"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasGenerales_CG"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_otorgaCompetencias_CO"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_seImparteMediante_ME"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_seImparteSegun_AF"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_tiene_CA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_ubicada_UT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_utiliza_MV"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ME_utilizadoParaImpartir_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MV_esUtilizadoEn_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OG_seCumpleMedianteLaAdquisicionDe_CO"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#UT_contiene_AS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#UT_contiene_ASMA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#UT_contiene_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#tipoCredito"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Actividad_Formativa"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#AF_utilizadaParaImpartir_MA"/>
+                <Class IRI="#Materia"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#AF_utilizadaParaImpartir_MA"/>
+                <Class IRI="#Materia"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Asignatura"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#AS_formaParteDe_MA"/>
+                <Class IRI="#Materia"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#AS_formaParteDe_MA"/>
+                <Class IRI="#Materia"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Caracter"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#CA_agrupa_AS"/>
+                    <Class IRI="#Asignatura"/>
+                </ObjectSomeValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#CA_agrupa_AS"/>
+                    <Class IRI="#Asignatura"/>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#CA_agrupa_MA"/>
+                    <Class IRI="#Materia"/>
+                </ObjectSomeValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#CA_agrupa_MA"/>
+                    <Class IRI="#Materia"/>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Competencia"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#CO_seAdquiereParaCumplir_OG"/>
+                <Class IRI="#Objetivo_General"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#CO_seAdquiereParaCumplir_OG"/>
+                <Class IRI="#Objetivo_General"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Competencia_Especifica"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Competencia"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#CE_esOtorgadaPor_MA"/>
+                    <Class IRI="#Materia"/>
+                </ObjectSomeValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#CE_esOtorgadaPor_MA"/>
+                    <Class IRI="#Materia"/>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Competencia_General"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Competencia"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#CG_esOtorgadaPor_MA"/>
+                    <Class IRI="#Materia"/>
+                </ObjectSomeValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#CG_esOtorgadaPor_MA"/>
+                    <Class IRI="#Materia"/>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Materia"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#MA_otorgaCompetenciasGenerales_CG"/>
+                <Class IRI="#Competencia"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#MA_otorgaCompetenciasGenerales_CG"/>
+                <Class IRI="#Competencia"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Metodo_Docente"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#ME_utilizadoParaImpartir_MA"/>
+                <Class IRI="#Materia"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#ME_utilizadoParaImpartir_MA"/>
+                <Class IRI="#Materia"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Metodo_Evaluacion"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#MV_esUtilizadoEn_MA"/>
+                <Class IRI="#Materia"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#MV_esUtilizadoEn_MA"/>
+                <Class IRI="#Materia"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Ubicacion_temporal"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#UT_contiene_AS"/>
+                    <Class IRI="#Asignatura"/>
+                </ObjectSomeValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#UT_contiene_AS"/>
+                    <Class IRI="#Asignatura"/>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#UT_contiene_MA"/>
+                    <Class IRI="#Materia"/>
+                </ObjectSomeValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#UT_contiene_MA"/>
+                    <Class IRI="#Materia"/>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Actividad_Formativa"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asignatura"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Caracter"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Competencia"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Competencia_Especifica"/>
+        <Class IRI="#Competencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Competencia_General"/>
+        <Class IRI="#Competencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Materia"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Metodo_Docente"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Metodo_Evaluacion"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Objetivo_General"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ubicacion_temporal"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Actividad_Formativa"/>
+        <Class IRI="#Asignatura"/>
+        <Class IRI="#Caracter"/>
+        <Class IRI="#Competencia"/>
+        <Class IRI="#Materia"/>
+        <Class IRI="#Metodo_Docente"/>
+        <Class IRI="#Metodo_Evaluacion"/>
+        <Class IRI="#Objetivo_General"/>
+        <Class IRI="#Ubicacion_temporal"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Competencia_Especifica"/>
+        <Class IRI="#Competencia_General"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#AS_ubicada_UT"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#CA_agrupa_AS"/>
+        <ObjectProperty IRI="#CA_agrupa_ASMA"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#CA_agrupa_MA"/>
+        <ObjectProperty IRI="#CA_agrupa_ASMA"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#CE_esOtorgadaPor_MA"/>
+        <ObjectProperty IRI="#CO_esOtorgadaPor_MA"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#CG_esOtorgadaPor_MA"/>
+        <ObjectProperty IRI="#CO_esOtorgadaPor_MA"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasEspecificas_CE"/>
+        <ObjectProperty IRI="#MA_otorgaCompetencias_CO"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasGenerales_CG"/>
+        <ObjectProperty IRI="#MA_otorgaCompetencias_CO"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MA_ubicada_UT"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#UT_contiene_AS"/>
+        <ObjectProperty IRI="#UT_contiene_ASMA"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#UT_contiene_MA"/>
+        <ObjectProperty IRI="#UT_contiene_ASMA"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#AF_utilizadaParaImpartir_MA"/>
+        <ObjectProperty IRI="#MA_seImparteSegun_AF"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#AS_tieneComoRequisito_AS"/>
+        <ObjectProperty IRI="#AS_esRequisitoPara_AS"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#AS_formaParteDe_MA"/>
+        <ObjectProperty IRI="#MA_constaDe_AS"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#AS_tiene_CA"/>
+        <ObjectProperty IRI="#CA_agrupa_AS"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#AS_ubicada_UT"/>
+        <ObjectProperty IRI="#UT_contiene_AS"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#CA_agrupa_MA"/>
+        <ObjectProperty IRI="#MA_tiene_CA"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#CE_esOtorgadaPor_MA"/>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasEspecificas_CE"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasGenerales_CG"/>
+        <ObjectProperty IRI="#CG_esOtorgadaPor_MA"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#CO_esOtorgadaPor_MA"/>
+        <ObjectProperty IRI="#MA_otorgaCompetencias_CO"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#OG_seCumpleMedianteLaAdquisicionDe_CO"/>
+        <ObjectProperty IRI="#CO_seAdquiereParaCumplir_OG"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ME_utilizadoParaImpartir_MA"/>
+        <ObjectProperty IRI="#MA_seImparteMediante_ME"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#UT_contiene_MA"/>
+        <ObjectProperty IRI="#MA_ubicada_UT"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#MA_utiliza_MV"/>
+        <ObjectProperty IRI="#MV_esUtilizadoEn_MA"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#AF_utilizadaParaImpartir_MA"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#AS_formaParteDe_MA"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#AS_tiene_CA"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#AS_ubicada_UT"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#MA_tiene_CA"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#CA_agrupa_AS"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#CA_agrupa_MA"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#MA_constaDe_AS"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#MA_seImparteSegun_AF"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#UT_contiene_AS"/>
+    </InverseFunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#AS_esRequisitoPara_AS"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#AS_tieneComoRequisito_AS"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AF_utilizadaParaImpartir_MA"/>
+        <Class IRI="#Actividad_Formativa"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AS_esRequisitoPara_AS"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AS_formaParteDe_MA"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AS_tieneComoRequisito_AS"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AS_tiene_CA"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AS_ubicada_UT"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CA_agrupa_AS"/>
+        <Class IRI="#Caracter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CA_agrupa_ASMA"/>
+        <Class IRI="#Caracter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CA_agrupa_MA"/>
+        <Class IRI="#Caracter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CE_esOtorgadaPor_MA"/>
+        <Class IRI="#Competencia_Especifica"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CG_esOtorgadaPor_MA"/>
+        <Class IRI="#Competencia_General"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CO_esOtorgadaPor_MA"/>
+        <Class IRI="#Competencia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CO_seAdquiereParaCumplir_OG"/>
+        <Class IRI="#Competencia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_constaDe_AS"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasEspecificas_CE"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasGenerales_CG"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_otorgaCompetencias_CO"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_seImparteMediante_ME"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_seImparteSegun_AF"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_tiene_CA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_ubicada_UT"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_utiliza_MV"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ME_utilizadoParaImpartir_MA"/>
+        <Class IRI="#Metodo_Docente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MV_esUtilizadoEn_MA"/>
+        <Class IRI="#Metodo_Evaluacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OG_seCumpleMedianteLaAdquisicionDe_CO"/>
+        <Class IRI="#Objetivo_General"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UT_contiene_AS"/>
+        <Class IRI="#Ubicacion_temporal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UT_contiene_ASMA"/>
+        <Class IRI="#Ubicacion_temporal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UT_contiene_MA"/>
+        <Class IRI="#Ubicacion_temporal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AF_utilizadaParaImpartir_MA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AS_esRequisitoPara_AS"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AS_formaParteDe_MA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AS_tieneComoRequisito_AS"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AS_tiene_CA"/>
+        <Class IRI="#Caracter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AS_ubicada_UT"/>
+        <Class IRI="#Ubicacion_temporal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CA_agrupa_AS"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CA_agrupa_ASMA"/>
+        <ObjectUnionOf>
+            <Class IRI="#Asignatura"/>
+            <Class IRI="#Materia"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CA_agrupa_MA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CE_esOtorgadaPor_MA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CG_esOtorgadaPor_MA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CO_esOtorgadaPor_MA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CO_seAdquiereParaCumplir_OG"/>
+        <Class IRI="#Objetivo_General"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_constaDe_AS"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasEspecificas_CE"/>
+        <Class IRI="#Competencia_Especifica"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_otorgaCompetenciasGenerales_CG"/>
+        <Class IRI="#Competencia_General"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_otorgaCompetencias_CO"/>
+        <Class IRI="#Competencia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_seImparteMediante_ME"/>
+        <Class IRI="#Metodo_Docente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_seImparteSegun_AF"/>
+        <Class IRI="#Actividad_Formativa"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_tiene_CA"/>
+        <Class IRI="#Caracter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_ubicada_UT"/>
+        <Class IRI="#Ubicacion_temporal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_utiliza_MV"/>
+        <Class IRI="#Metodo_Evaluacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ME_utilizadoParaImpartir_MA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MV_esUtilizadoEn_MA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OG_seCumpleMedianteLaAdquisicionDe_CO"/>
+        <Class IRI="#Competencia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UT_contiene_AS"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UT_contiene_ASMA"/>
+        <ObjectUnionOf>
+            <Class IRI="#Asignatura"/>
+            <Class IRI="#Materia"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UT_contiene_MA"/>
+        <Class IRI="#Materia"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#MA_constaDe_AS"/>
+            <ObjectProperty IRI="#AS_ubicada_UT"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#MA_ubicada_UT"/>
+    </SubObjectPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#AF_Creditos"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#AS_Creditos"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#CO_Descripcion"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#MA_Coordinacion"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#MA_Creditos"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#MA_Resultados"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#ME_Descripcion"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#OG_Descripcion"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AF_Creditos"/>
+        <Class IRI="#Actividad_Formativa"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AS_Contenidos"/>
+        <Class IRI="#Asignatura"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AS_Creditos"/>
+        <Class IRI="#Asignatura"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CO_Descripcion"/>
+        <Class IRI="#Competencia"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MA_Coordinacion"/>
+        <Class IRI="#Materia"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MA_Creditos"/>
+        <Class IRI="#Materia"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MA_Resultados"/>
+        <Class IRI="#Materia"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ME_Descripcion"/>
+        <Class IRI="#Metodo_Docente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MV_Descripcion"/>
+        <Class IRI="#Metodo_Evaluacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#OG_Descripcion"/>
+        <Class IRI="#Objetivo_General"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#AF_Creditos"/>
+        <Datatype IRI="#tipoCredito"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#AS_Contenidos"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#AS_Creditos"/>
+        <Datatype IRI="#tipoCredito"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CO_Descripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MA_Coordinacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MA_Creditos"/>
+        <Datatype IRI="#tipoCredito"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MA_Resultados"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ME_Descripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MV_Descripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#OG_Descripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DatatypeDefinition>
+        <Datatype IRI="#tipoCredito"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+            <FacetRestriction facet="&xsd;minExclusive">
+                <Literal datatypeIRI="&xsd;integer">0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DatatypeDefinition>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
