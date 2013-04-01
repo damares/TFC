@@ -9,5 +9,10 @@
 *.lot
 *.out
 *.db
+*.gz
+*.tcp
+*.tps
+*.db
+*.xml
 auto
 *~
