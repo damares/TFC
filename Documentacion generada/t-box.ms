@@ -1,20 +1,19 @@
-Prefix: : <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#>
-Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: ects: <http://www.semanticweb.org/daniel/Plan_Estudios#>
 
 
 
-Ontology: <http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl>
+Ontology: <http://www.semanticweb.org/daniel/Plan_Estudios>
 
 
 Datatype: xsd:decimal
 
     
-Datatype: tipoCredito
+Datatype: ects:tipoCredito
 
     EquivalentTo: 
         xsd:decimal[> 0]
@@ -29,37 +28,37 @@ Datatype: xsd:integer
 Datatype: rdfs:Literal
 
     
-ObjectProperty: CA_agrupa_MA
+ObjectProperty: ects:CA_agrupa_MA
 
     SubPropertyOf: 
-        CA_agrupa_ASMA
+        ects:CA_agrupa_ASMA
     
     Characteristics: 
         InverseFunctional
     
     Domain: 
-        Caracter
+        ects:Caracter
     
     Range: 
-        Materia
+        ects:Materia
     
     InverseOf: 
-        MA_tiene_CA
+        ects:MA_tiene_CA
     
     
-ObjectProperty: ME_utilizadoParaImpartir_MA
+ObjectProperty: ects:ME_utilizadoParaImpartir_MA
 
     Domain: 
-        Metodo_Docente
+        ects:Metodo_Docente
     
     Range: 
-        Materia
+        ects:Materia
     
     InverseOf: 
-        MA_seImparteMediante_ME
+        ects:MA_seImparteMediante_ME
     
     
-ObjectProperty: AS_ubicada_UT
+ObjectProperty: ects:AS_ubicada_UT
 
     SubPropertyOf: 
         owl:topObjectProperty
@@ -68,606 +67,670 @@ ObjectProperty: AS_ubicada_UT
         Functional
     
     Domain: 
-        Asignatura
+        ects:Asignatura
     
     Range: 
-        Ubicacion_temporal
+        ects:Ubicacion_temporal
     
     InverseOf: 
-        UT_contiene_AS
+        ects:UT_contiene_AS
     
     
-ObjectProperty: UT_contiene_MA
+ObjectProperty: ects:UT_contiene_MA
 
     SubPropertyOf: 
-        UT_contiene_ASMA
+        ects:UT_contiene_ASMA
     
     Domain: 
-        Ubicacion_temporal
+        ects:Ubicacion_temporal
     
     Range: 
-        Materia
+        ects:Materia
     
     InverseOf: 
-        MA_ubicada_UT
+        ects:MA_ubicada_UT
     
     
-ObjectProperty: AS_tiene_CA
+ObjectProperty: ects:OG_seCumpleMedianteLaAdquisicionDe_CO
+
+    Domain: 
+        ects:Objetivo_General
+    
+    Range: 
+        ects:Competencia
+    
+    InverseOf: 
+        ects:CO_seAdquiereParaCumplir_OG
+    
+    
+ObjectProperty: ects:AS_tiene_CA
 
     Characteristics: 
         Functional
     
     Domain: 
-        Asignatura
+        ects:Asignatura
     
     Range: 
-        Caracter
+        ects:Caracter
     
     InverseOf: 
-        CA_agrupa_AS
+        ects:CA_agrupa_AS
     
     
-ObjectProperty: OG_seCumpleMedianteLaAdquisicionDe_CO
-
-    Domain: 
-        Objetivo_General
-    
-    Range: 
-        Competencia
-    
-    InverseOf: 
-        CO_seAdquiereParaCumplir_OG
-    
-    
-ObjectProperty: CA_agrupa_AS
+ObjectProperty: ects:CA_agrupa_AS
 
     SubPropertyOf: 
-        CA_agrupa_ASMA
+        ects:CA_agrupa_ASMA
     
     Characteristics: 
         InverseFunctional
     
     Domain: 
-        Caracter
+        ects:Caracter
     
     Range: 
-        Asignatura
+        ects:Asignatura
     
     InverseOf: 
-        AS_tiene_CA
+        ects:AS_tiene_CA
     
     
-ObjectProperty: AF_utilizadaParaImpartir_MA
+ObjectProperty: ects:AF_utilizadaParaImpartir_MA
 
     Characteristics: 
         Functional
     
     Domain: 
-        Actividad_Formativa
+        ects:Actividad_Formativa
     
     Range: 
-        Materia
+        ects:Materia
     
     InverseOf: 
-        MA_seImparteSegun_AF
+        ects:MA_seImparteSegun_AF
     
     
-ObjectProperty: MA_utiliza_MV
+ObjectProperty: ects:MA_utiliza_MV
 
     Domain: 
-        Materia
+        ects:Materia
     
     Range: 
-        Metodo_Evaluacion
+        ects:Metodo_Evaluacion
     
     InverseOf: 
-        MV_esUtilizadoEn_MA
+        ects:MV_esUtilizadoEn_MA
     
     
-ObjectProperty: CO_esOtorgadaPor_MA
+ObjectProperty: ects:CO_esOtorgadaPor_MA
 
     Domain: 
-        Competencia
+        ects:Competencia
     
     Range: 
-        Materia
+        ects:Materia
     
     InverseOf: 
-        MA_otorgaCompetencias_CO
+        ects:MA_otorgaCompetencias_CO
     
     
-ObjectProperty: MA_ubicada_UT
+ObjectProperty: ects:MA_ubicada_UT
 
     SubPropertyOf: 
         owl:topObjectProperty
     
     SubPropertyChain: 
-        MA_constaDe_AS o AS_ubicada_UT
+        ects:MA_constaDe_AS o ects:AS_ubicada_UT
     
     Domain: 
-        Materia
+        ects:Materia
     
     Range: 
-        Ubicacion_temporal
+        ects:Ubicacion_temporal
     
     InverseOf: 
-        UT_contiene_MA
+        ects:UT_contiene_MA
     
     
-ObjectProperty: CE_esOtorgadaPor_MA
+ObjectProperty: ects:CE_esOtorgadaPor_MA
 
     SubPropertyOf: 
-        CO_esOtorgadaPor_MA
+        ects:CO_esOtorgadaPor_MA
     
     Domain: 
-        Competencia_Especifica
+        ects:Competencia_Especifica
     
     Range: 
-        Materia
+        ects:Materia
     
     InverseOf: 
-        MA_otorgaCompetenciasEspecificas_CE
+        ects:MA_otorgaCompetenciasEspecificas_CE
     
     
-ObjectProperty: MA_otorgaCompetencias_CO
+ObjectProperty: ects:MA_otorgaCompetencias_CO
 
     Domain: 
-        Materia
+        ects:Materia
     
     Range: 
-        Competencia
+        ects:Competencia
     
     InverseOf: 
-        CO_esOtorgadaPor_MA
+        ects:CO_esOtorgadaPor_MA
     
     
 ObjectProperty: owl:topObjectProperty
 
     
-ObjectProperty: MA_seImparteMediante_ME
+ObjectProperty: ects:MA_seImparteMediante_ME
 
     Domain: 
-        Materia
+        ects:Materia
     
     Range: 
-        Metodo_Docente
+        ects:Metodo_Docente
     
     InverseOf: 
-        ME_utilizadoParaImpartir_MA
+        ects:ME_utilizadoParaImpartir_MA
     
     
-ObjectProperty: MA_seImparteSegun_AF
+ObjectProperty: ects:MA_seImparteSegun_AF
 
     Characteristics: 
         InverseFunctional
     
     Domain: 
-        Materia
+        ects:Materia
     
     Range: 
-        Actividad_Formativa
+        ects:Actividad_Formativa
     
     InverseOf: 
-        AF_utilizadaParaImpartir_MA
+        ects:AF_utilizadaParaImpartir_MA
     
     
-ObjectProperty: UT_contiene_AS
+ObjectProperty: ects:UT_contiene_AS
 
     SubPropertyOf: 
-        UT_contiene_ASMA
+        ects:UT_contiene_ASMA
     
     Characteristics: 
         InverseFunctional
     
     Domain: 
-        Ubicacion_temporal
+        ects:Ubicacion_temporal
     
     Range: 
-        Asignatura
+        ects:Asignatura
     
     InverseOf: 
-        AS_ubicada_UT
+        ects:AS_ubicada_UT
     
     
-ObjectProperty: MA_otorgaCompetenciasGenerales_CG
-
-    SubPropertyOf: 
-        MA_otorgaCompetencias_CO
-    
-    Domain: 
-        Materia
-    
-    Range: 
-        Competencia_General
-    
-    InverseOf: 
-        CG_esOtorgadaPor_MA
-    
-    
-ObjectProperty: AS_tieneComoRequisito_AS
+ObjectProperty: ects:AS_tieneComoRequisito_AS
 
     Characteristics: 
         Transitive
     
     Domain: 
-        Asignatura
+        ects:Asignatura
     
     Range: 
-        Asignatura
+        ects:Asignatura
     
     InverseOf: 
-        AS_esRequisitoPara_AS
+        ects:AS_esRequisitoPara_AS
     
     
-ObjectProperty: CA_agrupa_ASMA
-
-    Domain: 
-        Caracter
-    
-    Range: 
-        Asignatura
-         or Materia
-    
-    
-ObjectProperty: MA_tiene_CA
-
-    Characteristics: 
-        Functional
-    
-    Domain: 
-        Materia
-    
-    Range: 
-        Caracter
-    
-    InverseOf: 
-        CA_agrupa_MA
-    
-    
-ObjectProperty: AS_formaParteDe_MA
-
-    Characteristics: 
-        Functional
-    
-    Domain: 
-        Asignatura
-    
-    Range: 
-        Materia
-    
-    InverseOf: 
-        MA_constaDe_AS
-    
-    
-ObjectProperty: MV_esUtilizadoEn_MA
-
-    Domain: 
-        Metodo_Evaluacion
-    
-    Range: 
-        Materia
-    
-    InverseOf: 
-        MA_utiliza_MV
-    
-    
-ObjectProperty: UT_contiene_ASMA
-
-    Domain: 
-        Ubicacion_temporal
-    
-    Range: 
-        Asignatura
-         or Materia
-    
-    
-ObjectProperty: CG_esOtorgadaPor_MA
+ObjectProperty: ects:MA_otorgaCompetenciasGenerales_CG
 
     SubPropertyOf: 
-        CO_esOtorgadaPor_MA
+        ects:MA_otorgaCompetencias_CO
     
     Domain: 
-        Competencia_General
+        ects:Materia
     
     Range: 
-        Materia
+        ects:Competencia_General
     
     InverseOf: 
-        MA_otorgaCompetenciasGenerales_CG
+        ects:CG_esOtorgadaPor_MA
     
     
-ObjectProperty: AS_esRequisitoPara_AS
+ObjectProperty: ects:CA_agrupa_ASMA
+
+    Domain: 
+        ects:Caracter
+    
+    Range: 
+        ects:Asignatura
+         or ects:Materia
+    
+    
+ObjectProperty: ects:MA_tiene_CA
+
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        ects:Materia
+    
+    Range: 
+        ects:Caracter
+    
+    InverseOf: 
+        ects:CA_agrupa_MA
+    
+    
+ObjectProperty: ects:AS_formaParteDe_MA
+
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        ects:Asignatura
+    
+    Range: 
+        ects:Materia
+    
+    InverseOf: 
+        ects:MA_constaDe_AS
+    
+    
+ObjectProperty: ects:MV_esUtilizadoEn_MA
+
+    Domain: 
+        ects:Metodo_Evaluacion
+    
+    Range: 
+        ects:Materia
+    
+    InverseOf: 
+        ects:MA_utiliza_MV
+    
+    
+ObjectProperty: ects:UT_contiene_ASMA
+
+    Domain: 
+        ects:Ubicacion_temporal
+    
+    Range: 
+        ects:Asignatura
+         or ects:Materia
+    
+    
+ObjectProperty: ects:CG_esOtorgadaPor_MA
+
+    SubPropertyOf: 
+        ects:CO_esOtorgadaPor_MA
+    
+    Domain: 
+        ects:Competencia_General
+    
+    Range: 
+        ects:Materia
+    
+    InverseOf: 
+        ects:MA_otorgaCompetenciasGenerales_CG
+    
+    
+ObjectProperty: ects:AS_esRequisitoPara_AS
 
     Characteristics: 
         Transitive
     
     Domain: 
-        Asignatura
+        ects:Asignatura
     
     Range: 
-        Asignatura
+        ects:Asignatura
     
     InverseOf: 
-        AS_tieneComoRequisito_AS
+        ects:AS_tieneComoRequisito_AS
     
     
-ObjectProperty: MA_otorgaCompetenciasEspecificas_CE
+ObjectProperty: ects:MA_otorgaCompetenciasEspecificas_CE
 
     SubPropertyOf: 
-        MA_otorgaCompetencias_CO
+        ects:MA_otorgaCompetencias_CO
     
     Domain: 
-        Materia
+        ects:Materia
     
     Range: 
-        Competencia_Especifica
+        ects:Competencia_Especifica
     
     InverseOf: 
-        CE_esOtorgadaPor_MA
+        ects:CE_esOtorgadaPor_MA
     
     
-ObjectProperty: MA_constaDe_AS
+ObjectProperty: ects:MA_constaDe_AS
 
     Characteristics: 
         InverseFunctional
     
     Domain: 
-        Materia
+        ects:Materia
     
     Range: 
-        Asignatura
+        ects:Asignatura
     
     InverseOf: 
-        AS_formaParteDe_MA
+        ects:AS_formaParteDe_MA
     
     
-ObjectProperty: CO_seAdquiereParaCumplir_OG
+ObjectProperty: ects:CO_seAdquiereParaCumplir_OG
 
     Domain: 
-        Competencia
+        ects:Competencia
     
     Range: 
-        Objetivo_General
+        ects:Objetivo_General
     
     InverseOf: 
-        OG_seCumpleMedianteLaAdquisicionDe_CO
+        ects:OG_seCumpleMedianteLaAdquisicionDe_CO
     
     
-DataProperty: MA_Resultados
+DataProperty: ects:MA_Resultados
 
     Characteristics: 
         Functional
     
     Domain: 
-        Materia
+        ects:Materia
     
     Range: 
         xsd:string
     
     
-DataProperty: AS_Creditos
+DataProperty: ects:AS_Creditos
 
     Characteristics: 
         Functional
     
     Domain: 
-        Asignatura
+        ects:Asignatura
     
     Range: 
-        tipoCredito
+        ects:tipoCredito
     
     
-DataProperty: MA_Coordinacion
+DataProperty: ects:MA_Coordinacion
 
     Characteristics: 
         Functional
     
     Domain: 
-        Materia
+        ects:Materia
     
     Range: 
         xsd:string
     
     
-DataProperty: ME_Descripcion
+DataProperty: ects:ME_Descripcion
 
     Characteristics: 
         Functional
     
     Domain: 
-        Metodo_Docente
+        ects:Metodo_Docente
     
     Range: 
         xsd:string
     
     
-DataProperty: CO_Descripcion
+DataProperty: ects:OG_Descripcion
 
     Characteristics: 
         Functional
     
     Domain: 
-        Competencia
+        ects:Objetivo_General
     
     Range: 
         xsd:string
     
     
-DataProperty: OG_Descripcion
+DataProperty: ects:CO_Descripcion
 
     Characteristics: 
         Functional
     
     Domain: 
-        Objetivo_General
+        ects:Competencia
     
     Range: 
         xsd:string
     
     
-DataProperty: MV_Descripcion
+DataProperty: ects:MV_Descripcion
 
     Domain: 
-        Metodo_Evaluacion
+        ects:Metodo_Evaluacion
     
     Range: 
         xsd:string
     
     
-DataProperty: AF_Creditos
+DataProperty: ects:MA_Creditos
 
     Characteristics: 
         Functional
     
     Domain: 
-        Actividad_Formativa
+        ects:Materia
     
     Range: 
-        tipoCredito
+        ects:tipoCredito
     
     
-DataProperty: MA_Creditos
-
-    Characteristics: 
-        Functional
-    
-    Domain: 
-        Materia
-    
-    Range: 
-        tipoCredito
-    
-    
-DataProperty: AS_Contenidos
+DataProperty: ects:AS_Contenidos
 
     Domain: 
-        Asignatura
+        ects:Asignatura
     
     Range: 
         xsd:string
     
     
-Class: Competencia_Especifica
+DataProperty: ects:AF_Creditos
+
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        ects:Actividad_Formativa
+    
+    Range: 
+        ects:tipoCredito
+    
+    
+Class: ects:Competencia_Especifica
 
     EquivalentTo: 
-        Competencia
-         and ((CE_esOtorgadaPor_MA some Materia)
-         and (CE_esOtorgadaPor_MA only Materia))
+        ects:Competencia
+         and ((ects:CE_esOtorgadaPor_MA some ects:Materia)
+         and (ects:CE_esOtorgadaPor_MA only ects:Materia))
     
     SubClassOf: 
-        Competencia
+        ects:Competencia,
+        ects:CE_esOtorgadaPor_MA some ects:Materia
     
     DisjointWith: 
-        Competencia_General
+        ects:Competencia_General
     
     
 Class: owl:Thing
 
     
-Class: Metodo_Docente
+Class: ects:Metodo_Docente
 
     EquivalentTo: 
-        (ME_utilizadoParaImpartir_MA some Materia)
-         and (ME_utilizadoParaImpartir_MA only Materia)
+        (ects:ME_utilizadoParaImpartir_MA some ects:Materia)
+         and (ects:ME_utilizadoParaImpartir_MA only ects:Materia)
     
     SubClassOf: 
-        owl:Thing
+        owl:Thing,
+        ects:ME_Descripcion some xsd:string,
+        ects:ME_utilizadoParaImpartir_MA only ects:Materia,
+        ects:ME_utilizadoParaImpartir_MA some ects:Materia,
+        ects:ME_Descripcion max 1 xsd:string
     
     
-Class: Metodo_Evaluacion
+Class: ects:Metodo_Evaluacion
 
     EquivalentTo: 
-        (MV_esUtilizadoEn_MA some Materia)
-         and (MV_esUtilizadoEn_MA only Materia)
+        (ects:MV_esUtilizadoEn_MA some ects:Materia)
+         and (ects:MV_esUtilizadoEn_MA only ects:Materia)
     
     SubClassOf: 
-        owl:Thing
+        owl:Thing,
+        ects:MV_Descripcion some xsd:string,
+        ects:MV_esUtilizadoEn_MA only ects:Materia,
+        ects:MV_esUtilizadoEn_MA some ects:Materia,
+        ects:MV_Descripcion max 1 xsd:string
     
     
-Class: Competencia
+Class: ects:Competencia
 
     EquivalentTo: 
-        (CO_seAdquiereParaCumplir_OG some Objetivo_General)
-         and (CO_seAdquiereParaCumplir_OG only Objetivo_General)
+        (ects:CO_seAdquiereParaCumplir_OG some ects:Objetivo_General)
+         and (ects:CO_seAdquiereParaCumplir_OG only ects:Objetivo_General)
     
     SubClassOf: 
-        owl:Thing
+        owl:Thing,
+        ects:CO_Descripcion some xsd:string,
+        ects:CO_esOtorgadaPor_MA some ects:Materia,
+        ects:CO_seAdquiereParaCumplir_OG only ects:Objetivo_General,
+        ects:CO_seAdquiereParaCumplir_OG some ects:Objetivo_General,
+        ects:CO_Descripcion max 1 xsd:string,
+        ects:CO_esOtorgadaPor_MA only ects:Materia
     
     
-Class: Competencia_General
+Class: ects:Competencia_General
 
     EquivalentTo: 
-        Competencia
-         and ((CG_esOtorgadaPor_MA some Materia)
-         and (CG_esOtorgadaPor_MA only Materia))
+        ects:Competencia
+         and ((ects:CG_esOtorgadaPor_MA some ects:Materia)
+         and (ects:CG_esOtorgadaPor_MA only ects:Materia))
     
     SubClassOf: 
-        Competencia
+        ects:Competencia,
+        ects:CG_esOtorgadaPor_MA some ects:Materia
     
     DisjointWith: 
-        Competencia_Especifica
+        ects:Competencia_Especifica
     
     
-Class: Caracter
+Class: ects:Caracter
 
     EquivalentTo: 
-        ((CA_agrupa_AS some Asignatura)
-         and (CA_agrupa_AS only Asignatura))
-         or ((CA_agrupa_MA some Materia)
-         and (CA_agrupa_MA only Materia))
+        ((ects:CA_agrupa_AS some ects:Asignatura)
+         and (ects:CA_agrupa_AS only ects:Asignatura))
+         or ((ects:CA_agrupa_MA some ects:Materia)
+         and (ects:CA_agrupa_MA only ects:Materia))
     
     SubClassOf: 
-        owl:Thing
+        owl:Thing,
+        ects:CA_agrupa_ASMA some ects:Asignatura,
+        ects:CA_agrupa_AS only ects:Asignatura,
+        ects:CA_agrupa_AS some ects:Asignatura,
+        ects:CA_agrupa_MA only ects:Materia,
+        ects:CA_agrupa_MA some ects:Materia
     
     
-Class: Asignatura
+Class: ects:Asignatura
 
     EquivalentTo: 
-        (AS_formaParteDe_MA some Materia)
-         and (AS_formaParteDe_MA only Materia)
+        (ects:AS_formaParteDe_MA some ects:Materia)
+         and (ects:AS_formaParteDe_MA only ects:Materia)
     
     SubClassOf: 
-        owl:Thing
+        ects:AS_formaParteDe_MA only ects:Materia,
+        owl:Thing,
+        ects:AS_Contenidos max 1 xsd:string,
+        ects:AS_Contenidos some xsd:string,
+        ects:AS_formaParteDe_MA max 1 ects:Materia,
+        ects:AS_formaParteDe_MA some ects:Materia,
+        ects:AS_ubicada_UT only ects:Ubicacion_temporal,
+        ects:AS_ubicada_UT some ects:Ubicacion_temporal,
+        ects:AS_tiene_CA some ects:Caracter,
+        ects:AS_Creditos some ects:tipoCredito,
+        ects:AS_Creditos max 1 ects:tipoCredito,
+        ects:AS_tiene_CA only ects:Caracter
     
     
-Class: Objetivo_General
+Class: ects:Objetivo_General
 
     SubClassOf: 
-        owl:Thing
+        owl:Thing,
+        ects:OG_Descripcion some xsd:string,
+        ects:OG_seCumpleMedianteLaAdquisicionDe_CO some ects:Competencia,
+        ects:OG_seCumpleMedianteLaAdquisicionDe_CO only ects:Competencia,
+        ects:OG_Descripcion max 1 xsd:string
     
     
-Class: Ubicacion_temporal
-
-    EquivalentTo: 
-        ((UT_contiene_AS some Asignatura)
-         and (UT_contiene_AS only Asignatura))
-         or ((UT_contiene_MA some Materia)
-         and (UT_contiene_MA only Materia))
-    
-    SubClassOf: 
-        owl:Thing
-    
-    
-Class: Materia
-
-    EquivalentTo: 
-        (MA_otorgaCompetenciasGenerales_CG some Competencia)
-         and (MA_otorgaCompetenciasGenerales_CG only Competencia)
-    
-    SubClassOf: 
-        owl:Thing
-    
-    
-Class: Actividad_Formativa
+Class: ects:Ubicacion_temporal
 
     EquivalentTo: 
-        (AF_utilizadaParaImpartir_MA some Materia)
-         and (AF_utilizadaParaImpartir_MA only Materia)
+        ((ects:UT_contiene_AS some ects:Asignatura)
+         and (ects:UT_contiene_AS only ects:Asignatura))
+         or ((ects:UT_contiene_MA some ects:Materia)
+         and (ects:UT_contiene_MA only ects:Materia))
     
     SubClassOf: 
-        owl:Thing
+        owl:Thing,
+        ects:UT_contiene_MA only ects:Materia,
+        ects:UT_contiene_AS only ects:Asignatura,
+        ects:UT_contiene_ASMA some ects:Materia,
+        ects:UT_contiene_MA some ects:Materia,
+        ects:UT_contiene_AS some ects:Asignatura
+    
+    
+Class: ects:Materia
+
+    EquivalentTo: 
+        (ects:MA_otorgaCompetenciasGenerales_CG some ects:Competencia)
+         and (ects:MA_otorgaCompetenciasGenerales_CG only ects:Competencia)
+    
+    SubClassOf: 
+        owl:Thing,
+        ects:MA_Creditos some ects:tipoCredito,
+        ects:MA_tiene_CA some ects:Caracter,
+        ects:MA_tiene_CA only ects:Caracter,
+        ects:MA_tiene_CA max 1 ects:Caracter,
+        ects:MA_Creditos max 1 ects:tipoCredito,
+        ects:MA_Coordinacion some xsd:string,
+        ects:MA_Resultados max 1 xsd:string,
+        ects:MA_constaDe_AS some ects:Asignatura,
+        ects:MA_Resultados some xsd:string,
+        ects:MA_seImparteSegun_AF some ects:Actividad_Formativa,
+        ects:MA_ubicada_UT only ects:Ubicacion_temporal,
+        ects:MA_seImparteSegun_AF only ects:Actividad_Formativa,
+        ects:MA_constaDe_AS only ects:Asignatura,
+        ects:MA_seImparteMediante_ME some ects:Metodo_Docente,
+        ects:MA_ubicada_UT some ects:Ubicacion_temporal,
+        ects:MA_utiliza_MV only ects:Metodo_Evaluacion,
+        ects:MA_otorgaCompetencias_CO some ects:Competencia,
+        ects:MA_utiliza_MV some ects:Metodo_Evaluacion,
+        ects:MA_seImparteMediante_ME only ects:Metodo_Docente
+    
+    
+Class: ects:Actividad_Formativa
+
+    EquivalentTo: 
+        (ects:AF_utilizadaParaImpartir_MA some ects:Materia)
+         and (ects:AF_utilizadaParaImpartir_MA only ects:Materia)
+    
+    SubClassOf: 
+        ects:AF_Creditos max 1 ects:tipoCredito,
+        owl:Thing,
+        ects:AF_Creditos some ects:tipoCredito,
+        ects:AF_utilizadaParaImpartir_MA some ects:Materia,
+        ects:AF_utilizadaParaImpartir_MA only ects:Materia
     
     
 DisjointClasses: 
-    Actividad_Formativa,Asignatura,Caracter,Competencia,Materia,Metodo_Docente,Metodo_Evaluacion,Objetivo_General,Ubicacion_temporal
+    ects:Actividad_Formativa,ects:Asignatura,ects:Caracter,ects:Competencia,ects:Materia,ects:Metodo_Docente,ects:Metodo_Evaluacion,ects:Objetivo_General,ects:Ubicacion_temporal
 
