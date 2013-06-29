@@ -14,5 +14,7 @@
 *.tps
 *.db
 *.xml
+*.nav
+*.vrb
 auto
 *~

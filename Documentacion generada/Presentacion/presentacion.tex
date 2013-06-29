@@ -1,15 +1,15 @@
 % prueba.tex
-\documentclass{beamer}
-%\usepackage[latin1]{inputenc}
-\usepackage[spanish,english]{babel}
+%\documentclass[notes=showlyslideswithnotes,19 pt]{beamer}
+\documentclass[notes=show,19 pt]{beamer}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,english]{babel}
 \usepackage{listings}
 \usetheme{Boadilla}
 \setbeamertemplate{navigation symbols}{}
 \title[Ontologías y EEES]{Uso de ontologías para la implantación del Espacio Europeo de Educación Superior en las titulaciones de grado}
 \subtitle[Diseño y aplicación]{Diseño y aplicación}
-\author{Daniel Martínez Esteban}
-\newcommand{\tutor}{Ángel Herranz Nieva}
+\author[Daniel]{Daniel Martínez Esteban\\Ángel Herranz}
 \institute[FI-UPM]{
 	Facultad de Informática\\
 	Universidad Politécnica de Madrid\\
@@ -17,31 +17,30 @@
 \date[Junio 2013]{3 de Junio de 2013}
 
 \selectlanguage{spanish}
-
 \begin{document}
-%\lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
 %--- Título -------------------------%
 \begin{frame}[plain]
-	\begin{center}
-		\includegraphics[scale=0.9]{logofi.png}
-	\end{center}
-	\titlepage
+		\titlepage
 \end{frame}
 
-%--- Diapositivas -------------------%
+%--- Índice -------------------%
 \begin{frame}{Índice}
 \begin{LARGE}
 	\begin{enumerate}
 		\item Motivación del trabajo.
-		\item Modelización del universo.
-		\item Aplicaciones del diseño.
+		\note{Mostrar la importancia del trabjo, vender el proyecto. Hay que identificar el problema bien, y luego ser capaz de mostrar porqué resulta interesante invertir tiempo en resolver el problema. Hay que ver la utilidad del proyecto. además de resolver, ayuda a lacomprensión.\\}
+		\item Modelización del universo. 
+		\note{Proponer soliución al problema propuesto. Vender la solución\\}
+		\item Aplicaciones del diseño. 
+		\note{Implicaciones de la solución. Quizás puedas cambiar el orden, mostrando la solución final después del problema, para enseñar cuál es el final de todo el desarrollo.\\}
 		\item Trabajo a futuro.
 	\end{enumerate}
 \end{LARGE}
 \end{frame}
 
 %--- EEES y ECTS --------------------%
-\begin{frame}{Motivación del trabajo}
+\begin{frame}[c]{Motivación del trabajo}
+	\begin{center}
 	\begin{huge}
 		Espacio	Europeo de Educación Superior
 	\end{huge}
@@ -53,6 +52,8 @@
 	\begin{huge}
 		European Credit Transfer System
 	\end{huge}
+	\end{center}
+	\note{Con motivo de la creación del Espacio europeo de educación superior, es preciso comenzar a utilizar el nuevo sistema de cŕeditos ECTS. este nuevo sistema otorga créditos en función del trabajo que debe realizar el alumno para superar cada asignatura (adquiriendo las competencias definidas en esa asignatura). Y da igual que el alumno realice ese trabajo en el aula o en casa, sólo o acompañado, atendiendo en una clase magistral, o realizando un trabajo de campo. Y el cambio desde un paradigma centrado en el profesor hacia un paradigma centrado en el alumno puede ser muy complicado si no nos apoyamos en las herramientas adecuadas.}
 \end{frame}
 
 %--- Hojas de cálculo ---------------%
@@ -67,12 +68,15 @@
 %--- procesos automáticos -----------%
 \begin{frame}{Motivación del trabajo}
 	\begin{LARGE}
-		Unificación del conocimiento.
+	\begin{enumerate}
 	
-		Formalización del conocimiento.
+		\item Unificación del conocimiento.
 	
-		Procesos automatizados
+		\item Formalización del conocimiento.
 	
+		\item Procesos automatizados
+	
+	\end{enumerate}
 	\end{LARGE}
 \end{frame}
 
@@ -80,7 +84,7 @@
 \begin{frame}{Modelización del universo}
 \begin{LARGE}
 	Herramientas utilizadas:
-	
+	\note{cambiar esto\. el centro del trabajo es la ontología, que luego utilice uno u otro lenguaje es debido únicamente a limitaciones autoimpuestas\. Utilizamos owldl porque porque owl full no nos permite razonamiento automático (y queremos tenerlo) y owl lite no es lo suficientemente expresivo\. Vuélvelo a expresar en otros términos y cambia esta diapositiva\. Y de paso mira el trabajo}
 	OWL
 	\pause	
 	
@@ -111,6 +115,7 @@
 
 %--- Diagrama UML de la ontologia ---%
 \begin{frame}{Modelización del universo}
+	\note{Mejor, en lugar de mostrar un diagrama UML de la ontología, muestra las clases y relaciones claves en la ontología. El diagrama queda muy sucio y pequeño, y no aporta nada del trabajo que he realizado.}
 	Diagrama UML de la ontología creada:
 	\begin{center}
 		\includegraphics[width=1\textwidth]{Herramientas-OWLGrEd.png}
@@ -118,11 +123,11 @@
 \end{frame}
 
 %--- Instancia del plan de estudios -%
-\begin{frame}{Aplicaciones del diseño}
+\lstset{inputencoding=latin1}
+\lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
+\begin{frame}[fragile]{Aplicaciones del diseño}
 %Quiero que aparezca la definición del individuo para que contraste con el batiburillo de las hosjas de cálculo.
-%\lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
-%  \lstinputlisting[language=owlms,literate=,linerange=Individual:\ AS\-Concurrencia-xsd:string]{../Texto/a-box.ms} 	
-%	\lstinputlisting[linerange={485-498}]{a-box.ms}
+\lstinputlisting[breaklines,language=protege,literate=,linerange=Individual:\ AS\-Concurrencia-xsd:string]{../Texto/a-box.ms} 	
 %	\begin{center}
 %		\includegraphics[width=1\textwidth]{Herramientas-NavigOwl.png}
 %	\end{center}
@@ -139,7 +144,7 @@
 \begin{center}
 	{\Huge ¡¡Wiki semántica!!}
 \end{center}
-
+\note{quédate con la idea de las dos vueltas, de cómo se ha llegado hasta la wiki (que no era el destino inicialmente), de porqué, de lo que hay y lo queda por hacer. Y porqué es útil e importante.}
 \end{frame}
 
 %\begin{frame}{Aplicaciones del diseño}
@@ -156,6 +161,7 @@
 		\item Seguimiento de los planes docentes.
 		\item Orientación al alumno en la elección de centro y estudios.
 	\end{enumerate}
+	\note{Incluye un punto de vista más personal. habla de la evolución que ha habia desde el comienzo del tfc hasta el fnal, de cómo también ha evolucionado el trabajo, de los tropiezos que hemos tenido y dificultades que tendría su implantación, y cómo se ha solucionado. Debe de ser unas conclusiones con algo de contenido personal.}
 \end{LARGE}
 \end{frame}
 
@@ -170,9 +176,11 @@
 \end{frame}
 
 \begin{frame}[c]{}
+	\begin{Huge}
 	\begin{center}
 		Gracias por su atención.
 	\end{center}
+	\end{Huge}
 \end{frame}
 
 \end{document}
