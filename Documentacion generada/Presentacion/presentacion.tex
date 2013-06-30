@@ -28,15 +28,15 @@
 \begin{LARGE}
 	\begin{enumerate}
 		\item Motivación del trabajo.
-		\note{Mostrar la importancia del trabjo, vender el proyecto. Hay que identificar el problema bien, y luego ser capaz de mostrar porqué resulta interesante invertir tiempo en resolver el problema. Hay que ver la utilidad del proyecto. además de resolver, ayuda a lacomprensión.\\}
 		\item Modelización del universo. 
-		\note{Proponer soliución al problema propuesto. Vender la solución\\}
 		\item Aplicaciones del diseño. 
-		\note{Implicaciones de la solución. Quizás puedas cambiar el orden, mostrando la solución final después del problema, para enseñar cuál es el final de todo el desarrollo.\\}
 		\item Trabajo a futuro.
 	\end{enumerate}
 \end{LARGE}
 \end{frame}
+\note{Mostrar la importancia del trabjo, vender el proyecto. Hay que identificar el problema bien, y luego ser capaz de mostrar porqué resulta interesante invertir tiempo en resolver el problema. Hay que ver la utilidad del proyecto. además de resolver, ayuda a lacomprensión.\\ 
+Proponer soliución al problema propuesto. Vender la solución.\\ 
+Implicaciones de la solución. Quizás puedas cambiar el orden, mostrando la solución final después del problema, para enseñar cuál es el final de todo el desarrollo.\\}
 
 %--- EEES y ECTS --------------------%
 \begin{frame}[c]{Motivación del trabajo}
@@ -53,8 +53,8 @@
 		European Credit Transfer System
 	\end{huge}
 	\end{center}
-	\note{Con motivo de la creación del Espacio europeo de educación superior, es preciso comenzar a utilizar el nuevo sistema de cŕeditos ECTS. este nuevo sistema otorga créditos en función del trabajo que debe realizar el alumno para superar cada asignatura (adquiriendo las competencias definidas en esa asignatura). Y da igual que el alumno realice ese trabajo en el aula o en casa, sólo o acompañado, atendiendo en una clase magistral, o realizando un trabajo de campo. Y el cambio desde un paradigma centrado en el profesor hacia un paradigma centrado en el alumno puede ser muy complicado si no nos apoyamos en las herramientas adecuadas.}
 \end{frame}
+\note{Con motivo de la creación del Espacio europeo de educación superior, es preciso comenzar a utilizar el nuevo sistema de cŕeditos ECTS. este nuevo sistema otorga créditos en función del trabajo que debe realizar el alumno para superar cada asignatura (adquiriendo las competencias definidas en esa asignatura). Y da igual que el alumno realice ese trabajo en el aula o en casa, sólo o acompañado, atendiendo en una clase magistral, o realizando un trabajo de campo. El cambio desde un paradigma centrado en el profesor hacia un paradigma centrado en el alumno puede ser muy complicado si no nos apoyamos en las herramientas adecuadas.}
 
 %--- Hojas de cálculo ---------------%
 \begin{frame}{Motivación del trabajo}
@@ -63,39 +63,44 @@
 		\includegraphics[width=1\textwidth]{collage.png}
 	\end{center}
 \end{frame}
+\note{La primera aproximación al problema por parte de los docentes consistió en la elaboración de complejísimas hojas de cálculo - hasta 7 por asignatura- en las que era preciso trasladar información entre ellas mediante corta-pega. \\ Además de la frecuencia de los errores durante el alta manual de la información en las hojas, también podían ocurrir errores durante el copia-pega. Y aunque no se cometiese ningún error, comprender la información relativa a una asignatura era realmente complicado para la persona que había introducido la información, no digamos ya para una persona ajena a la misma, para quien los conceptos utilizados pueden tener significados totalmente distintos al real.}
+\note{En resumen, la información contenida en las hojas de cálculo es muy proclive a padecer errores - léxicos, sintácticos y semánticos-, poco práctica - 7 hojas de cálculo para una única asignatura, una materia con 9 asignaturas ocuparía 63 hojas de cálculo, lo difícil sería no equivocarse en su interpretación- y además, la utilización de la información contenida en ellas es difícilmente aprovechable por otras aplicaciones, al carecer de sintaxis y semántica.}
 
 %--- Unificación, formalización y ---%
 %--- procesos automáticos -----------%
 \begin{frame}{Motivación del trabajo}
 	\begin{LARGE}
 	\begin{enumerate}
-	
-		\item Unificación del conocimiento.
-	
 		\item Formalización del conocimiento.
-	
+		\item Unificación del conocimiento.
 		\item Procesos automatizados
-	
 	\end{enumerate}
 	\end{LARGE}
 \end{frame}
+\note{Los objetivos del presente trabajo es cubrir las deficiencias observadas en el modelo de las hojas de cálculo, proporcionando un método o herramienta que facilite el paso desde el paradigma que proporcionaba el antiguo sistema de créditos hacie el nuevo ECTS. \\
+Unificación del conocimiento: Resulta imprescindible que todos los actores involucrados en este cambio de paradigma tengan una visión única del universo. El conocimiento del mismo ha de ser unificado para lograr homogeneidad en los conceptos. El lograr un conocimiento único resulta básico para poder continuar trabajando en el problema. \\
+Formalización del conocimiento: Es necesario formalizar ese conocimiento unificado utilizando algún lenguaje que sea lo suficientemente expresivo para el conocimiento que queremos modelar. \\}
+\note{Procesos automatizados: La formalización del conocimiento nos permitirá construir o utilizar alguna herramienta que facilite el trabajo y logre minimizar la ocurrencia de fallos humanos - como el copiapega o la introducción manual de la información en las hojas de cálculo. Y si es posible, que lo haga de forma automática.}
 
 %--- OWL, ontologías y protegé ------%
 \begin{frame}{Modelización del universo}
 \begin{LARGE}
-	Herramientas utilizadas:
-	\note{cambiar esto\. el centro del trabajo es la ontología, que luego utilice uno u otro lenguaje es debido únicamente a limitaciones autoimpuestas\. Utilizamos owldl porque porque owl full no nos permite razonamiento automático (y queremos tenerlo) y owl lite no es lo suficientemente expresivo\. Vuélvelo a expresar en otros términos y cambia esta diapositiva\. Y de paso mira el trabajo}
-	OWL
+	\begin{enumerate}
+	\item Esquema conceptual: Ontologías.
 	\pause	
-	
-	Ontologías
+	\item Lenguaje utilizado: OWL-DL.
 	\pause
-	
-	Protegé
-	
+	\item Herramienta utilizada: Protegé.
+	\end{enumerate}
 \end{LARGE}
 \end{frame}
-
+\note{Las ontologías nos permiten describir algún subconjunto del universo en función de sus propiedades y de la forma en que éstas se interrelacionan. Implica la definición de un vocabulario - Unificación del conocimiento - y reglas gramaticales - formalización del conocimiento. Este vocabulario y esta gramática otorgan a las ontologías las siguientes propiedades:\\
+- Intercambio de datos entre diferentes sistemas\\
+- Creación de servicios de consulta\\
+- Crear bases de conocimiento reusables\\
+- Ofrecer servicios de interoperabilidad entre diversos sistemas.\\
+Las ontologías se expresan en lenguajes basados en conceptos lógicos, de modo que se puedan distinguir de manera inequívoca las diferentes clases, propiedades y relaciones.}
+	\note{cambiar esto\. el centro del trabajo es la ontología, que luego utilice uno u otro lenguaje es debido únicamente a limitaciones autoimpuestas\. Utilizamos owldl porque porque owl full no nos permite razonamiento automático (y queremos tenerlo) y owl lite no es lo suficientemente expresivo\. Vuélvelo a expresar en otros términos y cambia esta diapositiva\. Y de paso mira el trabajo}
 %--- Clases y propiedades -----------%
 \begin{frame}{Modelización del universo}
 \begin{LARGE}
