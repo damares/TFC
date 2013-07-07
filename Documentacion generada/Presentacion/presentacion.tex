@@ -90,7 +90,7 @@ Formalización del conocimiento: Es necesario formalizar ese conocimiento unific
 	\pause	
 	\item Lenguaje utilizado: OWL-DL.
 	\pause
-	\item Herramienta utilizada: Protegé.
+	\item Herramienta utilizada: Protegé.	
 	\end{enumerate}
 \end{LARGE}
 \end{frame}
@@ -100,11 +100,15 @@ Formalización del conocimiento: Es necesario formalizar ese conocimiento unific
 - Crear bases de conocimiento reusables\\
 - Ofrecer servicios de interoperabilidad entre diversos sistemas.\\
 Las ontologías se expresan en lenguajes basados en conceptos lógicos, de modo que se puedan distinguir de manera inequívoca las diferentes clases, propiedades y relaciones.}
-	\note{cambiar esto\. el centro del trabajo es la ontología, que luego utilice uno u otro lenguaje es debido únicamente a limitaciones autoimpuestas\. Utilizamos owldl porque porque owl full no nos permite razonamiento automático (y queremos tenerlo) y owl lite no es lo suficientemente expresivo\. Vuélvelo a expresar en otros términos y cambia esta diapositiva\. Y de paso mira el trabajo}
+\note{Es preciso entonces utilzar un lenguaje de descripción que permita almacenar información sintáctica y semántica, para que podamos utilizar el concepto de ontología de la manera más provechosa. Existen multitudes de lenguajes semánticos. De entreo todos ellos hemos elegido OWL por ser un estándar desarrollado por W3C que permite la descripción de tipos de datos, clases, propiedades y relaciones entre ellos, propiedades de esas relaciones y clases enumeradas. Existen tres sublenguajes dentro de OWL, todos ellos desarrollados desde RDF. El más sencillo, OWL lite, no resulta lo sufientemente expresivo, y principalmente está enfocado al desarrollo de tesauros, taxonomías y otras jerarquías de clases y constantes muy simples.\\
+En el lado contrario tenemos OWL-Full que por permitir la máxima expresividad y libertad sintáctica, no aporta garantías sobre su decidibilidad o completud.}
+\note{Por ello hemos elegido el sulenguaje OWL-DL, que como término medio, ofrece todos los constructores de OWL pero con pequeñas condiciones, lo que le permite tener una mayor expresividad que OWL-Lite, así como las propiedades de decidibiliadd y completud a las ontologías construidas con este sub-lenguaje, lo que nos permitirá más adelante el uso de herramientas automáticas.}
+\note{Protegé es un framework libre de código abierto, desarrollado conjuntamente por las universidades de Standford y Manchester. Se ha escogido sobre otras herramientas para el desarrollo de ontologías por admitir el uso de extensiones en forma de plugins - facilitando la incorporación de herramientas que faciliten el desarrollo de la ontología-, y por su interfaz clara y fácil de utilizar, lo que le convierte en una excelente base para el desarrollo de aplicaciones o prototipos.}
+	%\note{cambiar esto\. el centro del trabajo es la ontología, que luego utilice uno u otro lenguaje es debido únicamente a limitaciones autoimpuestas\. Utilizamos owldl porque porque owl full no nos permite razonamiento automático (y queremos tenerlo) y owl lite no es lo suficientemente expresivo\. Vuélvelo a expresar en otros términos y cambia esta diapositiva\. Y de paso mira el trabajo}
 %--- Clases y propiedades -----------%
 \begin{frame}{Modelización del universo}
 \begin{LARGE}
-
+	Componentes de la ontología:
 	\begin{itemize}
 		\item Clases.
 		\item Propiedades.
@@ -117,6 +121,8 @@ Las ontologías se expresan en lenguajes basados en conceptos lógicos, de modo 
 	
 \end{LARGE}
 \end{frame}
+
+\note{}
 
 %--- Diagrama UML de la ontologia ---%
 \begin{frame}{Modelización del universo}
