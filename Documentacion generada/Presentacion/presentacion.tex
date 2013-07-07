@@ -103,8 +103,7 @@ Las ontologías se expresan en lenguajes basados en conceptos lógicos, de modo 
 \note{Es preciso entonces utilzar un lenguaje de descripción que permita almacenar información sintáctica y semántica, para que podamos utilizar el concepto de ontología de la manera más provechosa. Existen multitudes de lenguajes semánticos. De entreo todos ellos hemos elegido OWL por ser un estándar desarrollado por W3C que permite la descripción de tipos de datos, clases, propiedades y relaciones entre ellos, propiedades de esas relaciones y clases enumeradas. Existen tres sublenguajes dentro de OWL, todos ellos desarrollados desde RDF. El más sencillo, OWL lite, no resulta lo sufientemente expresivo, y principalmente está enfocado al desarrollo de tesauros, taxonomías y otras jerarquías de clases y constantes muy simples.\\
 En el lado contrario tenemos OWL-Full que por permitir la máxima expresividad y libertad sintáctica, no aporta garantías sobre su decidibilidad o completud.}
 \note{Por ello hemos elegido el sulenguaje OWL-DL, que como término medio, ofrece todos los constructores de OWL pero con pequeñas condiciones, lo que le permite tener una mayor expresividad que OWL-Lite, así como las propiedades de decidibiliadd y completud a las ontologías construidas con este sub-lenguaje, lo que nos permitirá más adelante el uso de herramientas automáticas.}
-\note{Protegé es un framework libre de código abierto, desarrollado conjuntamente por las universidades de Standford y Manchester. Se ha escogido sobre otras herramientas para el desarrollo de ontologías por admitir el uso de extensiones en forma de plugins - facilitando la incorporación de herramientas que faciliten el desarrollo de la ontología-, y por su interfaz clara y fácil de utilizar, lo que le convierte en una excelente base para el desarrollo de aplicaciones o prototipos.}
-	%\note{cambiar esto\. el centro del trabajo es la ontología, que luego utilice uno u otro lenguaje es debido únicamente a limitaciones autoimpuestas\. Utilizamos owldl porque porque owl full no nos permite razonamiento automático (y queremos tenerlo) y owl lite no es lo suficientemente expresivo\. Vuélvelo a expresar en otros términos y cambia esta diapositiva\. Y de paso mira el trabajo}
+\note{Protegé es un framework libre de código abierto, desarrollado conjuntamente por las universidades de Standford y Manchester (creadora de la sintaxis que lleva su nombre, válida para la construcción de ontologías en lenguaje OWL-DL.) Se ha escogido sobre otras herramientas para el desarrollo de ontologías por admitir el uso de extensiones en forma de plugins - facilitando la incorporación de herramientas que faciliten el desarrollo de la ontología-, y por su interfaz clara y fácil de utilizar, lo que le convierte en una excelente base para el desarrollo de aplicaciones o prototipos.}
 %--- Clases y propiedades -----------%
 \begin{frame}{Modelización del universo}
 \begin{LARGE}
@@ -116,34 +115,70 @@ En el lado contrario tenemos OWL-Full que por permitir la máxima expresividad y
 			\item Objetos
 			\item Tipos de datos
 		\end{itemize}
-		\item Definiciones
+		\item Definiciones.
+		\item Individuos.
 	\end{itemize}		
 	
 \end{LARGE}
 \end{frame}
 
-\note{}
+\note{Las clases se pueden definir en protegé como conjuntos que contienen individuos. Las clases se describen utilizando descripciones formales que definen inequívocamente los requisitos de pertenencia a una clase. Las clases se organizan en conjuntos de superclases y subclases, que forma la taxonomía de nuestro universo en observación. Esta taxonomía puede serobtenida de manera automática por un razonador, que también puede comprobar su consistencia. Se debe tener en cuenta que todas las clases se han definido como disjuntas entre ellas de modo general, salvo las clases Competencia Especifica y Competencia General cuya disjunción se define de modo particular por ser subclases de Competencia y ser su unión disjunta.}
+\note{Las propiedades son relaciones binarias entre individuos, es decir, una propiedad une dos individuos entre sí. Las propiedades pueden tener inversas, pueden ser funcionales, transitivas, simétricas. . . Estas relaciones se pueden dar tanto entre individuos de la misma clase, como entre individuos de distintas clases. Un razonador automático puede computar si una relación entre dos individuos es consistente con el resto de la ontología. Es de destacar que las propiedades únicamente se pueden establecer entre dos individuos. No existen propiedades con cardinalidad tres, lo que implicará que en el caso de que sea preciso establecer una relación a tres, sería preciso modelarlo como la relación binaria entre el producto escalar de dos de ellas sobre la tercera.}
+\note{Las propiedaddes sobre tipos de datos son relaciones entre individuos y tipos de datos, de modo que se puede asociar a los individuos implicados en la relación ciertas características de tipos definidos, concretas y especificas.}
+\note{Por comodidad se ha definido un tipo de datos, más por comodidad a la hora de definir las clases y propiedades, que por que sea realmente necesario a la hora del desarrollo de la ontología. En el caso de que definiésemos un tipo de datos cuya primitiva no fuese alguno de los tipos de datos definidos en el estándar de OWL2, el lenguaje de la ontología pasaría a ser OWL-Full, con lo que no podríamos realizar razonamiento alguno sobre dicha ontología, perdiendo una cualidad básica de las que buscamos con el desarrollo del
+presente trabajo. El tipo de datos tipoCredito nos es útil para poder almacenar los créditos de materias y asignaturas, y si bien puede ser prescindible, me ha parecido útil restringir el rango de los datos únicamente al conjunto de los decimales positivos como una forma de evitar que el usuario de la ontología pueda completarla con datos erróneos.}
+\note{Los individuos representan objetos de la ontología en el dominio que estamos estudiando. Son instancias de objetos pertenecientes a alguna de las clases definidas en la ontología. Protegé no hace uso del Unique Name Assumption, es decir, para protegé dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontologías OWL: todo lo que no sea dicho de forma explícita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo, para ese dominio.}
 
-%--- Diagrama UML de la ontologia ---%
+%--- Definición de Asignatura en sintaxis Manchester ---%
+\lstset{inputencoding=latin1}
+\lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
 \begin{frame}{Modelización del universo}
-	\note{Mejor, en lugar de mostrar un diagrama UML de la ontología, muestra las clases y relaciones claves en la ontología. El diagrama queda muy sucio y pequeño, y no aporta nada del trabajo que he realizado.}
-	Diagrama UML de la ontología creada:
-	\begin{center}
-		\includegraphics[width=1\textwidth]{Herramientas-OWLGrEd.png}
-	\end{center}
+	\begin{LARGE}
+		Definición de Asignatura en sintaxis Manchester:
+	\end{LARGE}
+	\begin{scriptsize}
+\lstinputlisting[breaklines,language=protege,literate=,linerange=Class:\ ects:Asignatura-only\ ects:Caracter]{../Texto/t-box.ms} 	
+	\end{scriptsize}
 \end{frame}
+\note{Esta es la descripción de la clase asignatura realizada en sintaxis Manchester. Más allá del proceso automático que después podamos realizar utilizando ontologías, destaca a primer golpe de vista la claridad y sencillez de la descripción de una asignatura utilizando un lenguaje formal, contra lo complicado de comprender qué es una asignatura utilizando una herramiento no apropiada como puedan ser las hojas de cálculo presentadas al inicio de esta exposición.}
+
+
+%--- Definición de una propiedad y un tipo de datos en Manchester ---%
+\lstset{inputencoding=latin1}
+\lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
+\begin{frame}{Modelización del universo}
+	\begin{LARGE}
+		Ejemplo de Propiedades y tipo de datos
+	\end{LARGE}
+	\begin{scriptsize}
+		\begin{columns}[t]
+			\column{0.5\textwidth}
+\lstinputlisting[breaklines,language=protege,literate=,linerange=ObjectProperty:\ ects:AS\_formaParteDe\_MA-ects:MA\_constaDe\_AS]{../Texto/t-box.ms} 	
+			\column{0.5\textwidth}
+\lstinputlisting[breaklines,language=protege,literate=,linerange=DataProperty:\ ects:AS\_Creditos-ects:tipoCredito]{../Texto/t-box.ms}
+		\end{columns}
+		\begin{center}
+		\lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape=false}
+		\lstinputlisting[breaklines,language=protege,literate=,firstline=16,lastline=19]{../Texto/t-box.ms}
+		\end{center}
+	\end{scriptsize}
+\end{frame}
+\note{Habla con ángelsobre si elimino o no esta diapositiva}
+\note{Y este es un ejemplo de la modelización de propiedades y tipos de datos, mucho más claro, conciso y legible que las tablas incluidas en los ficheros de excel antes mencionados.}
 
 %--- Instancia del plan de estudios -%
 \lstset{inputencoding=latin1}
 \lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
 \begin{frame}[fragile]{Aplicaciones del diseño}
-%Quiero que aparezca la definición del individuo para que contraste con el batiburillo de las hosjas de cálculo.
+	\begin{LARGE}
+		Instancia de una asignatura:
+	\end{LARGE}
+	\begin{footnotesize}
 \lstinputlisting[breaklines,language=protege,literate=,linerange=Individual:\ AS\-Concurrencia-xsd:string]{../Texto/a-box.ms} 	
-%	\begin{center}
-%		\includegraphics[width=1\textwidth]{Herramientas-NavigOwl.png}
-%	\end{center}
-	
+	\end{footnotesize}
 \end{frame}
+\note{Como vemos hemos cumplido algunos de los primeros objetivos del trabajo. Hemos logrado, a través de la descripción de una ontología a través de un lenguaje formal (OWL-DL), crear un marco de conocimiento único, sin ambigüedades, y con una expresividad superior a la facilitada por las hojas de cálculo utilizadas en un principio. Ahora veremos cómo incrementar la aplicabilidad del trabajo incorporando herramientas automáticas a la ontología.}
+
 
 \begin{frame}{Aplicaciones del diseño}
 \begin{LARGE}
