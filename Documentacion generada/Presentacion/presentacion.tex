@@ -1,5 +1,6 @@
 % prueba.tex
 %\documentclass[notes=showlyslideswithnotes,19 pt]{beamer}
+%\documentclass[notes=hide,19 pt]{beamer}
 \documentclass[notes=show,19 pt]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -186,12 +187,28 @@ presente trabajo. El tipo de datos tipoCredito nos es útil para poder almacenar
 	
 	Razonadores (FaCT++, HermiT), editores (ACE View, ChangeView, Hypergraph DB), visores (CloudViews, Matrix, NavigOWL, Ontograf, OWLGrEd, SOVA, DL-Query, Cardinality view, Tree views, OWLDoc, OWLViz, OWLPropViz, OWLDiff), transformacion (OWL2RDB).
 \end{LARGE}
-	
+\pause
 \begin{center}
-	{\Huge ¡¡Wiki semántica!!}
+	{\Huge ¡¡Web semántica!!}
 \end{center}
-\note{quédate con la idea de las dos vueltas, de cómo se ha llegado hasta la wiki (que no era el destino inicialmente), de porqué, de lo que hay y lo queda por hacer. Y porqué es útil e importante.}
+%\note{quédate con la idea de las dos vueltas, de cómo se ha llegado hasta la wiki (que no era el destino inicialmente), de porqué, de lo que hay y lo queda por hacer. Y porqué es útil e importante.}
 \end{frame}
+
+\note{Y hasta aqui lo que daba de si el proyecto. Habíamos logrado, trabajando con ontologías, crear un marco único y formal de conocimiento que permitiese especificar de un modo formal el nuevo plan de estudios de modo que fuese más sencilla su comprensión. Se había logrado erradicar el trabajo con herramientas no eficientes como las hojas de cálculo, y se había conseguido con una herramienta que además permitia el trabajo con aplicaciones automáticas. Los itinerarios formativos podían ahora ser especificados de una manera formal, y su adpatación a nuevos criterios normativas mucho más ágil.}
+\note{Llegados a este punto la ontología se encontraba lista y terminada, pero ocurría que para cualquier persona que no estiviese familiariazada con las ontologías y sus lenguajes descriptivos, resultaba igualmente de complejo y farragoso el trabajo con hojas de cálculo y ontologías. Y así el punto y final del trabajo se convirtió en el punto incial de una pequeña ampliación. ¿Porqué no aprovechar la web semántica para lograr mayor aplicabilidad a la ontología diseñada?}
+
+\begin{frame}{Aplicaciones del diseño}
+	\begin{LARGE}
+	\begin{itemize}
+		\item Web Semántica
+		\item Wiki Semántica
+	\end{itemize}
+	\end{LARGE}
+\end{frame}
+\note{La web semántica es una web extendida dotada de un mayor significado (semántica) gracias a la cual se pueden obtener soluciones a problemas habituales en la búsqueda de información mediante la compartición, proceso y transferencia de información de forma sencilla. Estas soluciones se apoyan en el uso de lenguajes universales (como OWL) que resuelven los problemas ocasionados por una web carente de semántica. La web semántica permite a los usuarios delegar tareas en software que es capaz de procesar su contenido, razonar sobre éste, combinarlo y realizar deducciones lógicas para resolver problemas cotidianos de manera automática. La web semántica aporta una infraestructura apoyada en metadatos que crea una ruta para el razonamiento, extendiendo así sus capacidades.}
+\note{ No es una inteligencia artificial que comprenda por sí sola la información y a los usuarios, sino la capacidad de una máquina para resolver problemas bien definidos, a través de operaciones bien definidas que se llevarán a cabo sobre datos existentes bien definidos. Esta definición adecuada se logra mediante el uso de RDF (proporciona información descriptiva simple sobre los recursos de la web, sobre todo en catálogos), SPARQL (lenguaje de consulta sobre RDF que permite hacer búsquedas sobre los recursos web), y OWL.}
+\note{La wiki semántica es una wiki regular que tiene un modelo de conocimiento subayacente que permite capturar e identificar información acerca de los datos contenidos en sus páginas y las relaciones entre éstas. Uno de los motores más conocidos es Semantic Media Wiki (una extensión de Media Wiki) que permite añadir más funcionalidades mediante la aplicación de addons. Se han probado varias extensiones de Mediawiki y SMW que permiten subir una ontología en formato RDF/XML a la wiki, como Ontology Editor o RDFIO, pero dada la complejidad de la ontología, muchas de las restricciones impuestas causaban que la extensión fallase, o en el mejor de los casos, simplemente ignorasen esas restricciones, provocando comportamientos no deseados en la ontología. }
+\note{Finalmente, se ha optado por crear la wiki de forma manual (utilizando plantillas creadas con el addon "forms"), al no contar con herramientas fiables que permitan el volcado de información de forma fiable, y con el fin de poder mostrar la idoneidad de trabajar con herramientas semánticas, como ontologías y wikis semánticas, cuando se trata de proyectos o trabajo cuyo principal objetivo es el de capturar conocimiento.}
 
 %\begin{frame}{Aplicaciones del diseño}
 %	{\Huge ¡Wiki semántica¡}
@@ -207,9 +224,10 @@ presente trabajo. El tipo de datos tipoCredito nos es útil para poder almacenar
 		\item Seguimiento de los planes docentes.
 		\item Orientación al alumno en la elección de centro y estudios.
 	\end{enumerate}
-	\note{Incluye un punto de vista más personal. habla de la evolución que ha habia desde el comienzo del tfc hasta el fnal, de cómo también ha evolucionado el trabajo, de los tropiezos que hemos tenido y dificultades que tendría su implantación, y cómo se ha solucionado. Debe de ser unas conclusiones con algo de contenido personal.}
 \end{LARGE}
 \end{frame}
+\note{Finalmente, hemos cumplido con los objetivos incialmente marcados: Hemos logrado crear un marco de conocimiento único y formal que solventase los problemas planteados por el cambio de paradigma educativo como consecuencia del cambio normativo y que permitise la aplicación de herramientas automáticas sobre el mismo que facilitasen el razonamiento, análisis y transformación de los datos. Y adicionalmente se ha ido un paso más allá, creando e incorporando al trabajo el uso de la wiki semántica, de forma que la ontología fuese útil a personas sin experiencia previa en el trabajo con ontologías incrementando de manera drástica su aplicacibilidad. Personas sin formación académica específica como alumos, personal docente y administrativo y el público en general (incluyendo a administraciones públicas, empresas privadas y personas físicas) pueden ahora, gracias a la wiki semántica, profundizar en los diferentes planes de estudio, sus definiciones y alcance.}
+	\note{Incluye un punto de vista más personal. habla de la evolución que ha habia desde el comienzo del tfc hasta el fnal, de cómo también ha evolucionado el trabajo, de los tropiezos que hemos tenido y dificultades que tendría su implantación, y cómo se ha solucionado. Debe de ser unas conclusiones con algo de contenido personal.}
 
 \begin{frame}{Trabajo a futuro}
 \begin{LARGE}
@@ -220,6 +238,8 @@ presente trabajo. El tipo de datos tipoCredito nos es útil para poder almacenar
 	\end{itemize}
 \end{LARGE}
 \end{frame}
+\note{A partir de aqui se abren diferentes caminos como trabajo a futuro. En primer lugar siempre cabe la posiblidad de mejorar la ontología diseñada, haciendo ésta más eficiente, o ampliando el universo descrito en caso de cambios normativos o por necesidades de la aplicabilidad. En segundo lugar sería interesante lograr una mayor integración entre la ontología y la wiki semántica de forma que, por ejemplo, cambios sobre la ontología tuviesen su reflejo automático sobre la wiki. De este modo sería posible adaptar una wiki ya en fincionamiento a las modificaciones que pudiese sufrir la ontología subyacente, sin necesidad de tener que traspasar de forma manual el concimiento capturado, ahorrándonos la posibilidad de incurrir en errores debidos al tratamiento manual de esos datos.}
+\note{Y por último, y lo que me ha parecido más importante, la posiblidad de ejecutar razonadores automáticos directamente sobre la wiki semántica. Dado que el mayor logro obtenido es hacer que el uso de ontologías sea universal gracias al uso de wikis semánticas, sería muy interesante, tal y como se ha mencionado antes, lograr que las modificiaciones en la wiki tuviesen su reflejo inmediato ne la ontología. Cualquier usuario autorizado podría de este modo incluir información no recogida previamente en la wiki, o modificar alugna ya existente. Pero el hecho de poderla incluir no nos asegura que dicha información sea sintáctica y semánticamente correcta. Para asegurarnos de ello, resulta imprescindible que algún razonador automático nos confirmase que la ontología subuacente resultante es decidible, coherente y completa.}
 
 \begin{frame}[c]{}
 	\begin{Huge}
