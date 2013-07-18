@@ -13,46 +13,17 @@ Por último, gracias al carácter completo y decidible del lenguaje utilizado, res
 
 Es por ello que se ha optado por realizar una enumeración de las diferentes herramientas que es posible utilizar, atendiendo al tipo de tarea que dicha herramienta automatiza. Así tendremos herramientas que llevan a cabo algún tipo de razonamiento sobre la ontología, herramientas que permiten la transformación de la ontología en diversos tipos de datos para ampliar su aplicabilidad, editores que permiten manipular la ontología y las diversas instancias creadas sobre ella, visores que nos presentan la información contenida en la ontología en las más diversas formas, y otras herramientas que automatizan las más diversas tareas, como veremos más adelante.
 
-%\begin{itemize}
-%\item Se supone que la \emph{Description Logic} permite el
-%  razonamiento sobre la ontología para así descubrir errores en su
-%  concepción (TBox) o en sus datos (ABox).
-%\item Presentación de la información contenida en la ontología para
-%  diferentes perfiles: profesores, alumnos, secretaría, legos,
-%  etc. Vía exportación a html o a herramientas visuales (grafos,
-%  etc.).
-%\item La ontología es en sí misma un modelo de datos por lo que se
-%  puede generar a partir de ella diferentes modelos de datos: UML,
-%  relacional, no-sql, etc. (Daniel tiene algunas cosas apuntadas de un
-%  antiguo org).
-%\end{itemize}
+\section{Razonadores}
+
+\subsection{FaCT++} Es una mejora sobre el anterior razonador FaCT, que hace uso de los mismos algoritmos que éste, pero con una implementación mejorada. Además está creado utilizando el lenguaje C++ lo que ha incrementado su eficacia y su portabilidad. Ha sido desarrollado por la Universidad de Manchester y se instala de forma predeterminada junto con Protégé.
+
+http://protegewiki.stanford.edu/wiki/RacerProTG
+
+\subsection{HermiT} es un razonador para ontologías OWL. HermiT es capaz de determinar si una ontología es o no consistente, identifica relaciones del tipo "es un" y más. Hace uso de un nuevo algoritmo que lo hace más eficaz que cualquier otro utilizado anteriormente, y cumple con los estándares OWL2. La versión utilizada es la 1.3.6. Es un razonador de código abierto bajo licencia LGPL.
+
+\subsection{RacerPro} RacerPro\footnote{http://protegewiki.stanford.edu/wiki/RacerProTG} Es el nombre comercial de un razonador para OWL. Existe un plugin para Protégé llamado RacerProTG que trabaja de forma automática con la última versión disponible del razonador RacerPro (existe una licencia gratuita y permanente para el uso del plugin junto con Protégé). 
 
 
-%      Entre la legión de herramientas encontradas, destacamos:
-%      \begin{itemize}
-%	\item OWL-Lint\cite{Stanford-OWL_Lint:WEB}. Herramienta para el test automático
-%	de ontologías para depuración, control de calidad, etc.
-%	\item Outline and Existential Tree Views\cite{Stanford-OETV:WEB}. Herramienta
-%	que nos permite la navegación a través de una ontología, no sólo mediante el uso
-%	de la relación existencial es-un.
-%	\item Cloud Views \cite{Stanford-CV:WEB}. Herramienta que permite visualizar la
-%	ontología como una nube de tags, cada uno con su correspondiente peso basado en
-%	distintos criterios (profundidad, uso, ...).
-%	\item Ontology browser\cite{UniManchester-OB:WEB}. Herramienta que permite la
-%	navegación a través de la ontología, y que construye los documentos html de
-%	manera dinámica.
-%	\item OWLDoc\cite{Stanford-OWLDoc:WEB}. Herramienta que genera un conjunto de
-%	páginas html (la mayoría estáticas) para su publicación en web.
-%	\item OWL2UML\cite{Stanford-OWL2UML:WEB}. Herramienta que crea un diagrama UML
-%	que representa la ontología activa.
-%      \end{itemize}
-
-
-\subsection{Razonadores}
-
-\subsubsection{FaCT++} es una mejora sobre el anterior razonador FaCT, que hace uso de los mismos algoritmos que éste, pero con una implementación mejorada. Además está creado utilizando el lenguaje C++ lo que ha incrementado su eficacia y su portabilidad. Ha sido desarrollado por la Universidad de Manchester y se instala de forma predeterminada junto con Protégé.
-
-\subsubsection{HermiT} es un razonador para ontologías OWL. HermiT es capaz de determinar si una ontología es o no consistente, identifica relaciones del tipo "es un" y más. Hace uso de un nuevo algoritmo que lo hace más eficaz que cualquier otro utilizado anteriormente, y cumple con los estándares OWL2. La versión utilizada es la 1.3.6. Es un razonador de código abierto bajo licencia LGPL.
 
 \subsection{Editores}
 
