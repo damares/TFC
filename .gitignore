@@ -16,5 +16,6 @@
 *.xml
 *.nav
 *.vrb
+*.bak
 auto
 *~
