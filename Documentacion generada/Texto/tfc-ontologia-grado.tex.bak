@@ -30,6 +30,7 @@ marginpar=25mm]{geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Codificación de caracteres
 \usepackage[latin1]{inputenc}
+\usepackage[?]{?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Selección del lenguaje
@@ -198,7 +199,7 @@ marginpar=25mm]{geometry}
 \cleardoublepage
 \input{aplicaciones}
 \cleardoublepage
-%\input{wikisem}
+\input{wikisem}
 \cleardoublepage
 \input{generalizacion}
 \cleardoublepage

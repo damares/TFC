@@ -2,17 +2,17 @@
 %% - Paginas: DIN A4, a doble cara
 %% - Portada: en breve se publicara un ejemplo
 %% - Letra: Times Roman 12 puntos o equivalente en negro
-%% - M·rgenes: superior e inferior 3,5 cm, izquierdo y derecho 3 cm.
+%% - M√°rgenes: superior e inferior 3,5 cm, izquierdo y derecho 3 cm.
 %% - Superficie del texto: 22,5 cm. de alto (aproximadamente 40
-%%   lÌneas) y 15 cm. de ancho
+%%   l√≠neas) y 15 cm. de ancho
 %% - Cabecera y pies: fuera de la superficie del texto
-%% - Secciones y subsecciones: reseÒadas con numeraciÛn decimal a
-%%   continuaciÛn del n˙mero del capÌtulo. Ej.: subsecciones 2.3.1.
-%% - TÌtulos de capÌtulos: en letra may˙scula
-%% - N˙meros de p·gina: siempre centrado en margen inferior, p·gina 1
-%%   comienza en capÌtulo 1, todas la secciones precedentes al
-%%   capÌtulo 1 en n˙mero romano (en min˙scula)
-%% - BibliografÌa: seg˙n las recomendaciones de la IEEE
+%% - Secciones y subsecciones: rese√±adas con numeraci√≥n decimal a
+%%   continuaci√≥n del n√∫mero del cap√≠tulo. Ej.: subsecciones 2.3.1.
+%% - T√≠tulos de cap√≠tulos: en letra may√∫scula
+%% - N√∫meros de p√°gina: siempre centrado en margen inferior, p√°gina 1
+%%   comienza en cap√≠tulo 1, todas la secciones precedentes al
+%%   cap√≠tulo 1 en n√∫mero romano (en min√∫scula)
+%% - Bibliograf√≠a: seg√∫n las recomendaciones de la IEEE
 %%   (http://www.fi.upm.es/docs/estudios/grado/1475_ieeecitationref.pdf)
 
 \documentclass[twoside,12pt]{book}
@@ -24,15 +24,16 @@ vmargin=35mm,
 textwidth=150mm,
 textheight=225mm,
 marginpar=25mm]{geometry}
-\linespread{1.1} % Para forzar unas 40 lÌneas
+\linespread{1.1} % Para forzar unas 40 l√≠neas
 \setlength{\parskip}{1.5ex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CodificaciÛn de caracteres
-\usepackage[latin1]{inputenc}
+% Codificaci√≥n de caracteres
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SelecciÛn del lenguaje
+% Selecci√≥n del lenguaje
 \usepackage[spanish,english]{babel}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -40,7 +41,7 @@ marginpar=25mm]{geometry}
 \usepackage{fancyhdr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Gr·ficos
+%% Gr√°ficos
 \usepackage[final]{graphicx}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,9 +101,9 @@ marginpar=25mm]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Macros para este TFC
-\newcommand{\titulo}{Uso de ontologÌas para la implantaciÛn del Espacio Europeo de EducaciÛn Superior en las titulaciones de grado}
-\newcommand{\autor}{Daniel MartÌnez Esteban}
-\newcommand{\tutor}{¡ngel Herranz Nieva}
+\newcommand{\titulo}{Uso de ontolog√≠as para la implantaci√≥n del Espacio Europeo de Educaci√≥n Superior en las titulaciones de grado}
+\newcommand{\autor}{Daniel Mart√≠nez Esteban}
+\newcommand{\tutor}{√Ångel Herranz Nieva}
 \newcommand{\fecha}{Julio 2012}
 
 % Cleardoublepage
@@ -136,14 +137,14 @@ marginpar=25mm]{geometry}
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% SELECCI”N DEL IDIOMA
-%% (NO TOCAR: S”LO SE ADMITE ESPA—OL)
-%% (VER summary.tex para activar otro idioma, ej. inglÈs)
+%% SELECCI√ìN DEL IDIOMA
+%% (NO TOCAR: S√ìLO SE ADMITE ESPA√ëOL)
+%% (VER summary.tex para activar otro idioma, ej. ingl√©s)
 \selectlanguage{spanish}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Portada, dedicatoria, Ìndices, agradecimientos y res˙menes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Portada, dedicatoria, √≠ndices, agradecimientos y res√∫menes
 \pagestyle{empty}
 
 \input{portada}
@@ -169,7 +170,7 @@ marginpar=25mm]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% CapÌtulos
+%% Cap√≠tulos
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Cabeceras
@@ -188,9 +189,9 @@ marginpar=25mm]{geometry}
 \pagenumbering{arabic}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% CAPÕTULOS:
-%%  * PONER CADA CAPÕTULO EN UN FICHERO
-%%  * A—ADIR \cleardoublepage DESPU…S DE CADA input
+%% CAP√çTULOS:
+%%  * PONER CADA CAP√çTULO EN UN FICHERO
+%%  * A√ëADIR \cleardoublepage DESPU√âS DE CADA input
 
 \input{introduccion}
 \cleardoublepage
@@ -199,47 +200,47 @@ marginpar=25mm]{geometry}
 \input{aplicaciones}
 \cleardoublepage
 %\input{wikisem}
-\cleardoublepage
-\input{generalizacion}
-\cleardoublepage
-\input{conclusiones}
-\cleardoublepage
+%\cleardoublepage
+%\input{generalizacion}
+%\cleardoublepage
+%\input{conclusiones}
+%\cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% COMIENZO DE LOS AP…NDICES
+%% COMIENZO DE LOS AP√âNDICES
 %% (NO TOCAR)
 \appendix
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% AP…NDICES:
-%%  * PONER CADA AP…NDICE EN UN FICHERO COMO SI FUERAN CAPÕTULOS
+%% AP√âNDICES:
+%%  * PONER CADA AP√âNDICE EN UN FICHERO COMO SI FUERAN CAP√çTULOS
 %%  * HACER UN include POR CADA FICHERO E INCLUIRLO EN includeonly
-%%  * A—ADIR \clearemptydoublepage DESPU…S DE CADA include
+%%  * A√ëADIR \clearemptydoublepage DESPU√âS DE CADA include
 %%
 %%
-%% Sem·ntica de Manchester
-\include{semantica}
-\cleardoublepage
-%% TBox en Manchester
-\include{tboxms}
-\cleardoublepage
+%% Sem√°ntica de Manchester
+%\include{semantica}
+%\cleardoublepage
+%%% TBox en Manchester
+%\include{tboxms}
+%\cleardoublepage
 %% ABox en Manchester
 %\include{aboxms}
 %\cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% COMIENZO DE LA BIBLIOGRAFÕA
+%% COMIENZO DE LA BIBLIOGRAF√çA
 %% (NO TOCAR)
 \bibliographystyle{plain}
-\addcontentsline{toc}{chapter}{BibliografÌa}
+\addcontentsline{toc}{chapter}{Bibliograf√≠a}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% BIBLIOGRAFÕA
-%% (A—ADIR FICHEROS .bib CON LA BIBLIOGRAFÕA USADA EN EL TFC)
+%% BIBLIOGRAF√çA
+%% (A√ëADIR FICHEROS .bib CON LA BIBLIOGRAF√çA USADA EN EL TFC)
 \bibliography{bib}
 \nocite{*}
 
-\end{document}
+\end{document}	
 
 %%% Local Variables: 
 %%% mode: latex

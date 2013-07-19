@@ -1,0 +1,65 @@
+\chapter{Wiki Semánticas}
+
+\todo{motivación}
+
+\section{Conclusión del trabajo}
+A lo largo del desarrollo del proyecto, hemos visto los problemas que una solución parcial, en la que se utilizan herramientas no óptimas o inadecuadas, y donde los conceptos no están definidos previamente a su utilización, presenta a la hora de lidiar con un problema complejo, que incluye estructuras y conocimientos no tratados con anterioridad.
+
+%Es un error com�n el ponerse a trabajar en algo ``empezando la casa por el tejado'', es decir, sin haber sopesado las distintas opciones que tenemos a nuestro alcance, sin definir una estrategia para abordar y resolver con éxito el problema, sin utilizar herramientas adecuadas\ldots Estos pasos previos, aunque puedan suponer un coste en un primer momento, supondr�n un ahorro a la larga, puesto que estaremos eliminando desde la concepci�n de la soluci�n muchos problemas que m�s adelante supondr�n un contratiempo para el desarrollo y la implantaci�n de la soluci�n.
+%
+%Hemos mencionado en los primeros cap�tulos los problemas de los que adolece la soluci�n ``de las hojas de c�lculo'', y hemos establecido como metas de este trabajo, principalmente, la soluci�n de esos mismos problemas. Hemos utilizado ontolog�as para definir aquellos conceptos que la reforma de la educaci�n superior ha introducido, y para fijar aquellos ya conocidos pero que por la distinta experiencia o percepci�n de cada actor \todo{Cuando hables de métodos docentes y actividades formativas o cualquier otro concepto, aseg�rate de nombrar la fuente, hay que cambiarlo en los cap�tulos 2 y 3} presentaban matices que pueden ser objeto de controversia por su distinta interpretaci�n.
+%
+%Se ha escogido un lenguaje con la expresividad suficiente como para permitir superar con éxito otro de los problemas de las hojas de c�lculo: la aplicaci�n autom�tica de aplicaciones que automaticen algunas de las tareas de inserci�n y mantenimiento del marco de conocimiento. Ahora tenemos un lenguaje computable y decidible lo que ampl�a enormemente las capacidades de la ontolog�a. Ésta se ha dise�ado utilizando herramientas como Protégé, o HermiT, que nos han permitido asegurar la consistencia de la ontolog�a y de las instancias que de ésta se realicen, aportando la posibilidad de aplicar razonadores sobre la misma. Esta capacidad de razonamiento e inferencia nos otorga la posibilidad de realizar preguntas a la ontolog�a sobre conceptos, relaciones e individuos, de modo que una herramienta pasiva como era la hoja de c�lculo (en la que a lo sumo se podr�an hacer b�squedas, pero nada m�s complejo) se convierte en algo activo, que reacciona a nustras preguntas y que gracias a esas capacidades de inferencia y razonamiento, es capaz de mostrarnos informaci�n que no hemos introducido en la ontolog�a de manera espec�fica.
+%
+%Y como colof�n, todas esas herramientas autom�ticas permiten que la ontolog�a se nos muestre de las m�s diversas formas: tabular, grafos dirigidos, nubes de tags, diagramas UML, una p�gina web, texto en varias sintaxis (RDF, Manchester,\ldots), documento java, etc \ldots 
+%
+%Pero después de eso, sigue existiendo el problema de la usabilidad. Un usuario conocedor de la materia no tendr� problemas en trabajar con grafos, o sintaxis Manchester o un diagrama UML, pero quiz�s no todo el mundo que vaya a utilizar la ontolog�a sea un experto en el manejo de Protégé, o sea lo suficientemente ducho en la sintaxis RDF como para lanzar consultas a la ontolog�a. Esta es una cuesti�n que deja el trabajo realizado cojo de unos de los objetivos (el m�s importante, pues si un dise�o no es usable, no habr� usuarios que trabajen con él, y cualquier esfuerzo invertido en su desarrollo habr� sido en vano) y por ello he decidido buscar una soluci�n al problema de la usabilidad.
+%
+%\section{Wikis}
+%
+%\section{Wikis sem�nticas}
+%Las wikis sem�nticas permiten incorporar a una wiki ordinaria, un modelo de datos que permite capturar e identificar relaciones entre los diversos conceptos, de modo que es posible realizar consutas sobre el contenido y sus relaciones.
+%
+%
+%
+%El software de wiki sem�ntica m�s extendido son Freebase, OntoWiki y Semantic Media Wiki.
+%
+%
+%Freebase consta de una colecci�n de datos estrucutrados en linea, obtenidos a partir de muy diversas fuentes, con el objetivo de crear un recurso global online que permite a los usuarios un acceso a la informaci�n eficaz y equitativo. Metaweb fue adquirida por Google en 2010. Un usuario puede realizar aportaciones a freebase, pero el esquema de datos de su aportaci�n no se adapta al com�n de la aplicaci�n hasta que un empleado de la compa�ia le da su visto bueno.
+%
+%Ontowiki es una herramienta que permite la visualizaci�n de la informaci�n contenida en en una base del conocimiento, con varios puntos de vista sobre cada dato. permite la edici�n de la informaci�n de un modo simple,  y la discusi�n acerca de cada cambio realizado gracias a su control de cambios.
+%
+%Semantic MediaWiki es una extensi�n de MediaWiki (herramienta para la realizaci�n de wikis sint�cticas) que permite transformar una wiki sint�ctica en una wiki sem�ntica. La principal ventaja de de SMW es la cantidad de extensiones disponibles para personalizar la wiki y a�adir nuevas utilidades.
+% La principal ventaja de SMW sobre MediaWiki sobre los otros gestores de wikis es la cantidad de funcionalidades que, en forma de a�adido, se pueden utilizar para ampliar las capacidades de las wikis creadas.
+% 
+%
+%A modo de ejemplo, se ha construido una wiki con la ontolog�a del ejemplo. Como inconveniente destacamos el hecho de que algunas estructuras sem�nticas no se puedan incorporar a la wiki (como una limitaci�n en el n�mero - al menos una- de asinaturas que componen una materia), la imposibilidad de utilizar un razonador directamente sobre la misma, y las actuaciones sobre la ontolog�a deben ser luego trasladadas a mano sobre la wiki, ya que por el momento no se ha encontrado una herramienta que realice este trasvase de informaci�n de manera autom�tica \footnote{las limitaciones sobre las estructuras sem�nticas soportadas por la wiki, hace que en ontolog�as complejas como la que estamos abordando existan construcciones que no son traducibles directamente a la wiki}, al menos con las herramientas encontradas en el directorio de extensiones de MediaWiki y Semantic MediaWiki.
+%
+%
+%Como punto a su favor, las wikis son extremadamente f�ciles de crear y mantener, y adem�s, cuentan con extensiones que facilitan la interacci�n con el usuario y protegen a la wiki de cambios que destruyan la coherencia de la informaci�n almacenada.
+%
+%
+%	\paragraph{Puesta en marcha de la wiki}
+%	Para poner en marcha la wiki, es preciso instalar un servidor web, php y un gestor de bases de datos. En la wiki creada al efecto hemos utilizado el software apache 2.2.22, php 5.4.6-1 y mysql 5.5.29. Sobre ello hemos puesto en marcha la versi�n 1.20 de Mediawiki y hemos instalado las extensiones SemanticMediaWiki 1.8 y Semantic Forms 2.1 para crear formularios para la introducci�n de la informaci�n por parte de los usuarios y disminuir, si no evitar, errores sem�nticos. Adicionalmente se recomienda permitir la edici�n de art�culos �nicamente a los usuarios editores y administradores.
+%
+%Se han probado varias extensiones de Mediawiki y SMW que permiten subir una ontolog�a en formato RDF/XML a la wiki, como Ontology Editor o RDFIO, pero dada la complejidad de la ontolog�a, muchas de las restricciones impuestas causaban que la extensi�n fallase, o en el mejor de los casos, simplemente ignorasen esas restricciones, provocando comportamientos no deseados en la ontolog�a. Finalmente, se ha optado por crear la wiki de forma manual, al no contar con herramientas fiables que permitan el volcado de informaci�n de forma fiable, y con el fin de poder mostrar la idoneidad de trabajar con herramientas sem�nticas, como ontolog�as y wikis sem�nticas, cuando se trata de proyectos o trabajo cuyo principal objetivo es el de capturar conocimiento.
+%	
+%	
+%\todo{Adjuntar algunas capturas de pantalla de la wiki en el documento}
+%%\todo{Consideramos SPARQL �til? par apoder utilizarlo - si, inc�uyelo entre las capacidades de la wiki}
+%
+%%\todo{las otras herramientas como tabajo a futro/mejoras}
+%
+%
+%
+%%%% Local Variables: 
+%
+%%%% mode: latex
+%
+%%%% TeX-master: "tfc-ontologia-grado"
+%
+%%%% TeX-PDF-mode: t
+%
+%%%% ispell-local-dictionary: "castellano"
+%
+%%%% End:
