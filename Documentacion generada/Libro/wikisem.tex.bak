@@ -15,13 +15,15 @@ Pero después de eso, sigue existiendo el problema de la usabilidad. Un usuario c
 
 \section{Wikis}
 
-Las wikis\footnote{del hawaiano \textit{wiki}, `rápido'} fueron diseñadas e implentadas por primera vez por Ward Cunningham para el repositorio de patrone
+Las wikis\footnote{del hawaiano \textit{wiki}, `rápido'} fueron diseñadas e implentadas por primera vez por Ward Cunningham para el Portland Pattern Repository\footnote{http://www.c2.com/cgi/wiki?} en el año de 1995. 
 
-Una wiki es una aplicación web que permite a los visitantes añadir, modificar o eliminar contenido de forma colaborativa con otros usuarios. Las wikis permiten a las diferentes comunidades escribir documentos utilizando un lenguaje muy simple y un navegador web. Esos documentos creados por los usuarios forman parte de una base de datos de información, almacenada en la wiki, a disposición de todos los usuarios. El modo colaborativo a la hora de añadir contenidos a la wiki las permite evolucionar de un modo no lineal gracias a los debates e interacciones entre los usuarios.
+Una wiki es una aplicación web que permite a los visitantes añadir, modificar o eliminar contenido de forma colaborativa con otros usuarios. Las wikis permiten a las diferentes comunidades escribir documentos utilizando un lenguaje muy simple y un navegador web. Esos documentos creados por los usuarios forman parte de una base de datos de información, almacenada en la wiki, a disposición de todos los usuarios. El modo colaborativo a la hora de añadir contenidos a la wiki las permite evolucionar de un modo no lineal gracias a los debates e interacciones entre los usuarios. Es por ello que, si bien no es obligatorio, si que resulta recomendable fijar unos criterios sobre la validez de las fuentes de información citadas y sobre los métodos de validación de los contenidos.
 
+Una wiki es, según una de las definiciones dadas por el autor en \cite{thewikiway} ``la base de datos en línea más simple que puede funcionar. Los usuarios que realizan los cambios en la wiki son identificados, y el software de la wiki permite recuperar los datos modificados y volver a un estado anterior. Y aunque no es necesario que los cambios realizados no precisan de revisión para ser aceptados, si que es posible instalar controles de edición, incluso de acceso si el administrador lo creyese necesario.
 
+La wiki más grande actualmente es la versión en inglés de Wikipedia\footnote{http://en.wikipedia.org/wiki/Main_Page}, con más de cuatro millones de artículos (en Julio de 2013), creada en el año 2001 por los creadores de la enciclopedia Nupedia\footnote{http://es.wikipedia.org/wiki/Nupedia}. En la wikipedia original se utilizaba el software UseMod\footnote{http://www.usemod.com/} como motor de la wiki, pero en el año 2002 se desarrolló Mediawiki\footnote{http://www.mediawiki.org/wiki/MediaWiki} que actualmente es el motor de muchos otros wikis.
 
-Una wiki\footnote{del hawaiano \textit{wiki}, `rápido'}, según la definición dada en \cite{thewikiway}
+Actualmente se utilizan wikis en todo tipo de campos. Las empresas privadas, por poner un ejemplo, suelen utilizar wikis en las intranets para que los empleados puedan compartir sus conocimientos y métodos con el fin de favorecer la innovación en la empresa. 
 
 \section{Wikis semánticas}
 Las wikis semánticas permiten incorporar a una wiki ordinaria, un modelo de datos que permite capturar e identificar relaciones entre los diversos conceptos, de modo que es posible realizar consutas sobre el contenido y sus relaciones.
