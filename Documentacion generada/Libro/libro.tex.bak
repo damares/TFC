@@ -236,8 +236,9 @@ marginpar=25mm]{geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% BIBLIOGRAFÍA
 %% (AÑADIR FICHEROS .bib CON LA BIBLIOGRAFÍA USADA EN EL TFC)
-\bibliography{bib}
-\nocite{*}
+\bibliography{bib}{}
+%\addcontentsline{toc}{chapter}{Bibliografía}
+%\nocite{*}
 
 \end{document}
 

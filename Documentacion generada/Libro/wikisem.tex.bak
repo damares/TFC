@@ -1,9 +1,9 @@
 \chapter{Wiki Semánticas}
-\todo{motivación}
-\section{Conclusión del trabajo}
-A lo largo del desarrollo del proyecto, hemos visto los problemas que una solución parcial, en la que se utilizan herramientas no óptimas o inadecuadas, y donde los conceptos no están definidos previamente a su utilización, presenta a la hora de lidiar con un problema complejo, que incluye estructuras y conocimientos no tratados con anterioridad.
 
 Es un error común el ponerse a trabajar en algo ``empezando la casa por el tejado'', es decir, sin haber sopesado las distintas opciones que tenemos a nuestro alcance, sin definir una estrategia para abordar y resolver con éxito el problema, sin utilizar herramientas adecuadas\ldots Estos pasos previos, aunque puedan suponer un coste en un primer momento, supondrán un ahorro a la larga, puesto que estaremos eliminando desde la concepción de la solución muchos problemas que más adelante supondrán un contratiempo para el desarrollo y la implantación de la solución.
+
+\section{Conclusión del trabajo}
+A lo largo del desarrollo del proyecto, hemos visto los problemas que una solución parcial, en la que se utilizan herramientas no óptimas o inadecuadas, y donde los conceptos no están definidos previamente a su utilización, presenta a la hora de lidiar con un problema complejo, que incluye estructuras y conocimientos no tratados con anterioridad.
 
 Hemos mencionado en los primeros capítulos los problemas de los que adolece la solución ``de las hojas de cálculo'', y hemos establecido como metas de este trabajo, principalmente, la solución de esos mismos problemas. Hemos utilizado ontologías para definir aquellos conceptos que la reforma de la educación superior ha introducido, y para fijar aquellos ya conocidos pero que por la distinta experiencia o percepción de cada actor \todo{Cuando hables de métodos docentes y actividades formativas o cualquier otro concepto, asegúrate de nombrar la fuente, hay que cambiarlo en los capítulos 2 y 3} presentaban matices que pueden ser objeto de controversia por su distinta interpretación.
 
@@ -14,6 +14,14 @@ Y como colofón, todas esas herramientas automáticas permiten que la ontología se
 Pero después de eso, sigue existiendo el problema de la usabilidad. Un usuario conocedor de la materia no tendrá problemas en trabajar con grafos, o sintaxis Manchester o un diagrama UML, pero quizás no todo el mundo que vaya a utilizar la ontología sea un experto en el manejo de Protégé, o sea lo suficientemente ducho en la sintaxis RDF como para lanzar consultas a la ontología. Esta es una cuestión que deja el trabajo realizado cojo de unos de los objetivos (el más importante, pues si un diseño no es usable, no habrá usuarios que trabajen con él, y cualquier esfuerzo invertido en su desarrollo habrá sido en vano) y por ello he decidido buscar una solución al problema de la usabilidad.
 
 \section{Wikis}
+
+Las wikis\footnote{del hawaiano \textit{wiki}, `rápido'} fueron diseñadas e implentadas por primera vez por Ward Cunningham para el repositorio de patrone
+
+Una wiki es una aplicación web que permite a los visitantes añadir, modificar o eliminar contenido de forma colaborativa con otros usuarios. Las wikis permiten a las diferentes comunidades escribir documentos utilizando un lenguaje muy simple y un navegador web. Esos documentos creados por los usuarios forman parte de una base de datos de información, almacenada en la wiki, a disposición de todos los usuarios. El modo colaborativo a la hora de añadir contenidos a la wiki las permite evolucionar de un modo no lineal gracias a los debates e interacciones entre los usuarios.
+
+
+
+Una wiki\footnote{del hawaiano \textit{wiki}, `rápido'}, según la definición dada en \cite{thewikiway}
 
 \section{Wikis semánticas}
 Las wikis semánticas permiten incorporar a una wiki ordinaria, un modelo de datos que permite capturar e identificar relaciones entre los diversos conceptos, de modo que es posible realizar consutas sobre el contenido y sus relaciones.
