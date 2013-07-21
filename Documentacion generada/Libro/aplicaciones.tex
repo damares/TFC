@@ -5,15 +5,19 @@
 
 La ontología mostrada se ha desarrollado utilizando el framework Protégé\cite{Stanford-Protégé:WEB}. Protégé\todo{Instalar Protégé en /opt - mirar LHS Linux Hierarchy system en google} es un editor de ontologías libre, con una filosofía ´´open source'' que además soporta varios formatos, entre los que destaca OWL\cite{W3C-OWL:WEB}. Protégé ha sido desarrollado por el centro de investigación informática y biomédica\cite{Stanford-BMIR:WEB} de la Escuela Universitaria de Medicina de la universidad de  Standford\cite{Stanford-MED:WEB}, con la colaboración de DARPA, eBay, National Cancer Institute, National Institute of Standards and Technology, National Library of Medicine y National Science Foundation, entre otros.
 
-Gracias al formato OWL soportado por Protégé, a su filosofía de software libre, y a los apoyos recibidos por parte de diversas instituciones como las arriba mencionadas, existen multitud de herramientas disponibles para trabajar demanera automática con las ontologías creadas por Protégé, ya sea en forma de plug-in's o en forma de herramientas que trabajan directamente sobre la ontología en formato OWL. Además, en versiones de Protégé posteriores a la 3.x, es posible exportar directamente desde la herramienta, métodos en lenguaje java (gracias a OWL2API) que permiten trabajar con esa ontología desde un programa java.
+Gracias al lenguaje OWL soportado por Protégé, a su filosofía de software libre, y a los apoyos recibidos por parte de diversas instituciones como las arriba mencionadas, existen multitud de herramientas disponibles para trabajar de manera automática con las ontologías creadas por Protégé, ya sea en forma de plug-in's o en forma de herramientas que trabajan directamente sobre la ontología en formato OWL. Además, en versiones de Protégé posteriores a la 3.x, es posible exportar directamente desde la herramienta, métodos en lenguaje java (gracias a OWL2API) que permiten trabajar con esa ontología desde un programa java.
 
-Gracias al uso de un lenguaje estructurado como OWL-DL, es posible la utilización de herramientas automáticas que facilitan la presentación y el manejo de la información, de modo que pueda resultar más usable para los diversos actores que utilizarán la ontología: profesores, alumnos, administraciones públicas y privadas... Estas personas y/o entidades podrán trabajar con documentos html, grafos y diagramas más comprensibles que la mera expresión de la ontología en sintaxis manchester (o cualquier otra sintaxis a la que quisiéramos exportar la información). Además, dado que las ontologías son en sí mismas un modelo de datos, también es posible generar a partir de ella diferentes modelos de datos, como el modelo UML o el relacional.
+El uso de un lenguaje estructurado como OWL-DL, hace posible la utilización de herramientas automáticas que facilitan la presentación y el manejo de la información, de modo que pueda resultar más usable para los diversos actores que utilizarán la ontología: profesores, alumnos, administraciones públicas y privadas... Estas personas y/o entidades podrán trabajar con documentos html, grafos y diagramas más comprensibles que la mera expresión de la ontología en sintaxis manchester (o cualquier otra sintaxis a la que quisiéramos exportar la información). Además, dado que las ontologías son en sí mismas un modelo de datos, también es posible generar a partir de ella diferentes modelos de datos, como el modelo UML o el relacional.
 
 Por último, gracias al carácter completo y decidible del lenguaje utilizado, resulta posible (y muy útil) utilizar herramientas capaces de llevar a cabo labores de razonamiento sobre la ontología creada, de modo que nos sea posible descubrir errores o inconsistencias en su diseño (insatisfactibilidad de un concepto, subsunción de conceptos, \ldots) y en las instancias del mismo (consistencia de ABox y TBox). 
 
-Es por ello que se ha optado por realizar una enumeración de las diferentes herramientas que es posible utilizar, atendiendo al tipo de tarea que dicha herramienta automatiza. Así tendremos herramientas que llevan a cabo algún tipo de razonamiento sobre la ontología, herramientas que permiten la transformación de la ontología en diversos tipos de datos para ampliar su aplicabilidad, editores que permiten manipular la ontología y las diversas instancias creadas sobre ella, visores que nos presentan la información contenida en la ontología en las más diversas formas, y otras herramientas que automatizan las más diversas tareas, como veremos más adelante.
+Es por ello que se ha optado por realizar una enumeración de las diferentes herramientas que es posible utilizar, atendiendo al tipo de tarea que dicha herramienta automatiza. Así tendremos herramientas que llevan a cabo algún tipo de razonamiento sobre la ontología, herramientas que permiten la transformación de la ontología en diversos tipos de datos para ampliar su aplicabilidad, editores que permiten manipular la ontología y las diversas instancias creadas sobre ella, visores que nos presentan la información contenida en la ontología en las más diversas formas, y otras herramientas que realizan las más diversas tareas, como veremos más adelante. Todas estas herramientas en forma plugins se pueden encontrar en \textit{http://protege.stanford.edu/download/plugins.html}.
 
-Destacamos el amplísimo conjunto de herramientas existentes, de las que las aquí comentadas son tan sólo una pequeña parte. Es posible que existan aplicaciones o plugins con más funcionalidades de las aquí descritas, o bien que parte de la información acerca de las herramientas se haya quedado des actualizada con motivo del lanzamiento de nuevas versiones. \todo{incluir las fuentes de las aplicaciones como ontologyweb, u otras.}
+De todo el amplísimo conjunto de herramientas existentes, las aquí comentadas son tan sólo una pequeña parte. Es posible que existan aplicaciones o plugins con más funcionalidades de las aquí descritas, o bien que parte de la información acerca de las herramientas se haya quedado des actualizada con motivo del lanzamiento de nuevas versiones. \todo{incluir las fuentes de las aplicaciones como ontologyweb, u otras.}
+
+Por último, todas las herramientas que vamos a ver a continuación son plugins escritos en java. Es posible utilizarlos de manera aislada de Protégé, pero por comodididad, y dada la potencia de Protégé, se mostrarán todos en su forma de plugin. 
+
+Debemos mencionar que existen otras muchas herramientas para el trabajo con web semántica, y que resulta inadecuado incluir en estas páginas un compendio de todas las herramientas. Podemos encontrar páginas como \textit{http://semanticweb.org/wiki/Tools}, \textit{http://www.mkbergman.com/sweet-tools/} o \textit{http://www.w3.org/2001/sw/wiki/Tools} donde existen cientos de aplicaciones clasificadas por tipos.
 
 
 
@@ -72,7 +76,6 @@ A modo de ejemplo, se muestra una parte de la ontología:
 \todo{Comprueba que la página sigue caída.}
 
 \section{Visores}
-
 Los visores nos permiten visualizar la información de manera más sencilla, de modo que aumenta la comprensión de la información y la claridad de la misma. De este modo resulta más fluido el intercambio de información entre los usuarios de la ontología.
 
 \subsection{CloudViews}. Este plugin\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/CloudViews} nos permite ver la ontología como una nube de tags. Podemos selecionar ver las clases, propiedades e individuos y representarlos en una nube de tags. Estos tags pueden ordenar los conceptos en función del uso, de su profundidad y en función otras características.
@@ -177,15 +180,26 @@ Además tiene la posibilidad de integrarse en varios sistemas de control de versi
 
 \section{Transformación de datos}
 
-\subsection{OWL2RDB} es un plugin para Protégé que permite transformar ontologías OWL2 en bases de datos relacionales. Por desgracia, el plugin no funciona correctamente con versiones actuales de java y no se distribuye ningún tipo de documentación ni existe página web del autor u otras donde se mencione la aplicación, a donde podamos dirigirnos para obtener más información acerca del error. Nos parecía muy interesante el poder exportar la ontología a una base de datos y trabajar con herramientas especializadas sobre ella.
+\subsection{OWL2RDB} es un plugin para Protégé que permite transformar ontologías OWL2 en bases de datos relacionales. Por desgracia, el plugin no funciona correctamente con versiones actuales de java y no se distribuye ningún tipo de documentación ni existe página web del autor u otras donde se mencione la aplicación, a donde podamos dirigirnos para obtener más información acerca del error. Nos parecía muy interesante el poder exportar la ontología a una base de datos y trabajar con herramientas especializadas sobre ella. Nos obstante, existen métodos más ``manuales'' para la creación de bases de datos relacionales a partir de ontologías OWL.
 
-%\subsection{Otros}
-%
-%\subsubsection{AceWIKI}. Potente herramienta que nos permite construir una wiki semántica utilizando el lenguaje ACE, lo que permite que cualquier usuario, sin tener que lidiar con RDF o OWL, pueda construir y mantener el wiki, además manteniendo siempre la coherencia del contenido. 
-%
-%Si bien resulta perfecta para crear cualquier ontología desde cero utilizando únicamente el lenguaje natural, no es posible la creación de una wiki desde una ontología dada, ya que las los individuos, clases y propiedades están contenidas en el propio artículo, y no en anotaciones sobre la ontología, como en otros constructores.
-%
-%http://attempto.ifi.uzh.ch/acewiki/
+\section{Otros}
+
+\subsection{AceWIKI} AceWIKI\footnote{http://attempto.ifi.uzh.ch/acewiki/} Es una potente herramienta que nos permite construir una wiki semántica utilizando el lenguaje ACE, lo que permite que cualquier usuario, sin tener que lidiar con RDF o OWL, pueda construir y mantener una wiki, además manteniendo siempre la coherencia del contenido. 
+
+Si bien resulta perfecta para crear cualquier ontología desde cero utilizando únicamente el lenguaje natural, no es posible la creación de una wiki desde una ontología dada, ya que las los individuos, clases y propiedades están contenidas en el propio artículo, y no en anotaciones sobre la ontología, como en otros constructores.
+
+\subsection{BeanshellView}
+BeanshellView\footnote{https://code.google.com/p/co-ode-owl-plugins/wiki/BeanshellView} es un script que permite al usuario realizar consultar o manipular la ontología através del API de Protégé sin necesidad instalar un entorno de desarrollo java.
+
+\subsection{Watson}
+Watson Semantic Web Search\footnote{http://watson.kmi.open.ac.uk/WatsonWUI/} es un proyecto que nos permite realizar búsquedas en ontologías y documentos semánticos donde la cadena de la búsqueda aparece en identificadores, clases, propiedades, e individuos. Además, permite el uso de comodines, restringir la búsqueda a ciertos tipos de entidades o a ciertos elementos de esas entidades. 
+Se trata de un plugin que muestra resultados de una búsqueda en Watson Semantic Web Search y nos permite, desde el propio plugin, incorporar esos resultados a la ontología.
+
+\subsection{SWRL Tab}
+SWRL Tab\footnote{http://protegewiki.stanford.edu/wiki/SWRLTab} es un plugin que nos permite la creación y ejecución de sentencias SWRL, tanto desde el plugin, como a través de un API. 
+
+\subsection{Fuzzy OWL 2}
+Fuzzy OWL\footnote{http://nmis.isti.cnr.it/~straccia/software/FuzzyOWL/index.html} es un plaguin para Protégé que permite representar ontologías difusas, mediante el uso de anotaciones. Gracias a ello, es posible utilizar cualquier editor OWL2 (como Protégé) para la representación de ontologías difusas y utilizar el razonador \textit{fuzzyDL} para responder a preguntas sobre la ontología realizdas desde el propio plugin.
 %
 %\subsubsection{Wikis Semánticas} Las wikis semánticas permiten incorporar a una wiki ordinaria, un modelo de datos que permite capturar e identificar relaciones entre los diversos conceptos, de modo que es posible realizar consutas sobre el contenido y sus relaciones.
 %

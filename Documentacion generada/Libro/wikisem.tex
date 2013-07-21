@@ -2,7 +2,7 @@
 
 Es un error común el ponerse a trabajar en algo ``empezando la casa por el tejado'', es decir, sin haber sopesado las distintas opciones que tenemos a nuestro alcance, sin definir una estrategia para abordar y resolver con éxito el problema, sin utilizar herramientas adecuadas\ldots Estos pasos previos, aunque puedan suponer un coste en un primer momento, supondrán un ahorro a la larga, puesto que estaremos eliminando desde la concepción de la solución muchos problemas que más adelante supondrán un contratiempo para el desarrollo y la implantación de la solución.
 
-\section{Conclusión del trabajo}
+\section{Finalización del trabajo}
 A lo largo del desarrollo del proyecto, hemos visto los problemas que una solución parcial, en la que se utilizan herramientas no óptimas o inadecuadas, y donde los conceptos no están definidos previamente a su utilización, presenta a la hora de lidiar con un problema complejo, que incluye estructuras y conocimientos no tratados con anterioridad.
 
 Hemos mencionado en los primeros capítulos los problemas de los que adolece la solución ``de las hojas de cálculo'', y hemos establecido como metas de este trabajo, principalmente, la solución de esos mismos problemas. Hemos utilizado ontologías para definir aquellos conceptos que la reforma de la educación superior ha introducido, y para fijar aquellos ya conocidos pero que por la distinta experiencia o percepción de cada actor \todo{Cuando hables de métodos docentes y actividades formativas o cualquier otro concepto, asegúrate de nombrar la fuente, hay que cambiarlo en los capítulos 2 y 3} presentaban matices que pueden ser objeto de controversia por su distinta interpretación.
@@ -24,39 +24,58 @@ Una wiki es, según una de las definiciones dadas por el autor en \cite{thewikiwa
 La wiki más grande actualmente es la versión en inglés de Wikipedia\footnote{http://en.wikipedia.org/wiki/Main\_Page}, con más de cuatro millones de artículos (en Julio de 2013), creada en el año 2001 por los creadores de la enciclopedia Nupedia\footnote{http://es.wikipedia.org/wiki/Nupedia}. En la wikipedia original se utilizaba el software UseMod\footnote{http://www.usemod.com/} como motor de la wiki, pero en el año 2002 se desarrolló Mediawiki\footnote{http://www.mediawiki.org/wiki/MediaWiki} que actualmente es el motor de muchos otros wikis.
 
 Actualmente se utilizan wikis en todo tipo de campos. Las empresas privadas, por poner un ejemplo, suelen utilizar wikis en las intranets para que los empleados puedan compartir sus conocimientos y métodos con el fin de favorecer la innovación en la empresa. En cuanto a las wikis públicas, las hay de los más variados conceptos (sólo en wikiindex\footnote{http://wikiindex.org/Category:Wiki\_Spanish} hay registradas más de dos mil en español y cerca de veinte mil en total).
-
+	
 \section{Wikis semánticas}
-Las wikis semánticas permiten incorporar a una wiki ordinaria, un modelo de datos que permite capturar e identificar relaciones entre los diversos conceptos, de modo que es posible realizar consutas sobre el contenido y sus relaciones.
+Las wikis semánticas permiten incorporar a una wiki ordinaria, un modelo de datos que permite capturar información del contenido de las páginas e identificar relaciones entre las mismas, de modo que es posible realizar consultas sobre el contenido y sus relaciones, de manera parecida a como se hace con las bases de datos. 
 
+Si por ejemplo quisiéramos conocer cuáles son las cien ciudades del mundo más grandes cuyo alcalde es mujer, la respuesta estaría en la wikipedia, que contiene información de todas las grandes ciudades y de su alcalde. Pero que la información esté disponible, no significa que sea utilizable. Aún tendriamos que leernos cada artículo de cada ciudad para comprobar el sexo de su alcalde, y eso suponiendo que ni se celebrasen elecciones en alguna ciudad mientras realizamos esta tarea y nos modificase el resultado. Las wikis semánticas permiten crear contenidos que son fácilmente tratados por software específico, automatizando estas tareas y haciéndolas más sencillas. 
 
+Existen diversos motores para la puesta en marcha de una wiki semántica:
+\begin{description}
+	\item [Freebase]\footnote{http://www.freebase.com/} consta de una colección de datos estrucutrados en linea, obtenidos a partir de muy diversas fuentes, con el objetivo de crear un recurso global online que permite a los usuarios un acceso a la información eficaz y equitativo. Metaweb fue adquirida por Google en 2010. Un usuario puede realizar aportaciones a Freebase, pero el esquema de datos de su aportación no se adapta al común de la aplicación hasta que un empleado de la compañia le da su visto bueno.
 
-El software de wiki semántica más extendido son Freebase, OntoWiki y Semantic Media Wiki.
+	\item [Ontowiki]\footnote{http://ontowiki.eu/Welcome} es una herramienta que permite la visualización de la información contenida en en una base del conocimiento, con varios puntos de vista sobre cada dato. Permite la edición de la información de un modo simple,  y la discusión acerca de cada cambio realizado gracias a su control de cambios.
 
+	\item [Semantic MediaWiki]\footnote{http://semantic-mediawiki.org/} es una extensión de MediaWiki (herramienta para la realización de wikis sintácticas) que permite transformar una wiki sintáctica en una wiki semántica. La principal ventaja de de SMW es la cantidad de extensiones disponibles en forma de plugins para personalizar la wiki y añadir nuevas capacidades. 
+\end{description}
 
-Freebase consta de una colección de datos estrucutrados en linea, obtenidos a partir de muy diversas fuentes, con el objetivo de crear un recurso global online que permite a los usuarios un acceso a la información eficaz y equitativo. Metaweb fue adquirida por Google en 2010. Un usuario puede realizar aportaciones a freebase, pero el esquema de datos de su aportación no se adapta al común de la aplicación hasta que un empleado de la compañia le da su visto bueno.
+De entre todos ellos, hemos optado\todo{esto me ocurre a lo largo de todo el documento: escribo en primera persona del singular o del plural¿?} por utilizar SemanticMediaWiki, por las razones que se dirán.
 
-Ontowiki es una herramienta que permite la visualización de la información contenida en en una base del conocimiento, con varios puntos de vista sobre cada dato. permite la edición de la información de un modo simple,  y la discusión acerca de cada cambio realizado gracias a su control de cambios.
-
-Semantic MediaWiki es una extensión de MediaWiki (herramienta para la realización de wikis sintácticas) que permite transformar una wiki sintáctica en una wiki semántica. La principal ventaja de de SMW es la cantidad de extensiones disponibles para personalizar la wiki y añadir nuevas utilidades.
- La principal ventaja de SMW sobre MediaWiki sobre los otros gestores de wikis es la cantidad de funcionalidades que, en forma de añadido, se pueden utilizar para ampliar las capacidades de las wikis creadas.
- 
-
-A modo de ejemplo, se ha construido una wiki con la ontología del ejemplo. Como inconveniente destacamos el hecho de que algunas estructuras semánticas no se puedan incorporar a la wiki (como una limitación en el número - al menos una- de asinaturas que componen una materia), la imposibilidad de utilizar un razonador directamente sobre la misma, y las actuaciones sobre la ontología deben ser luego trasladadas a mano sobre la wiki, ya que por el momento no se ha encontrado una herramienta que realice este trasvase de información de manera automática \footnote{las limitaciones sobre las estructuras semánticas soportadas por la wiki, hace que en ontologías complejas como la que estamos abordando existan construcciones que no son traducibles directamente a la wiki}, al menos con las herramientas encontradas en el directorio de extensiones de MediaWiki y Semantic MediaWiki.
-
-
-Como punto a su favor, las wikis son extremadamente fáciles de crear y mantener, y además, cuentan con extensiones que facilitan la interacción con el usuario y protegen a la wiki de cambios que destruyan la coherencia de la información almacenada.
-
-
-	\paragraph{Puesta en marcha de la wiki}
-	Para poner en marcha la wiki, es preciso instalar un servidor web, php y un gestor de bases de datos. En la wiki creada al efecto hemos utilizado el software apache 2.2.22, php 5.4.6-1 y mysql 5.5.29. Sobre ello hemos puesto en marcha la versión 1.20 de Mediawiki y hemos instalado las extensiones SemanticMediaWiki 1.8 y Semantic Forms 2.1 para crear formularios para la introducción de la información por parte de los usuarios y disminuir, si no evitar, errores semánticos. Adicionalmente se recomienda permitir la edición de artículos únicamente a los usuarios editores y administradores.
-
-Se han probado varias extensiones de Mediawiki y SMW que permiten subir una ontología en formato RDF/XML a la wiki, como Ontology Editor o RDFIO, pero dada la complejidad de la ontología, muchas de las restricciones impuestas causaban que la extensión fallase, o en el mejor de los casos, simplemente ignorasen esas restricciones, provocando comportamientos no deseados en la ontología. Finalmente, se ha optado por crear la wiki de forma manual, al no contar con herramientas fiables que permitan el volcado de información de forma fiable, y con el fin de poder mostrar la idoneidad de trabajar con herramientas semánticas, como ontologías y wikis semánticas, cuando se trata de proyectos o trabajo cuyo principal objetivo es el de capturar conocimiento.
+	\subsection{Semantic MediaWiki}
 	
+	Semantic MediaWiki(SMW) introduce algunos marcadores adicionales en el texto de los artículos que añaden anotaciones semánticas al contenido. De este modo, aunque en un principio la creación de contenido pueda ser algo más compleja que en otros motores, simplifica enormemente la estrucutra interna de la wiki, ayuda a los usuarios a realizar búsquedas más precisas en menos tiempo, y en general aporta un grado adcional de consistencia a la wiki:
+	\begin{description}
+		\item[Generación de listas automáticas] Las wikis suelen contener muchas listas agregadas de elementos, como por ejemplo ``las 100 ciudades más pobladas del mundo''. Si estas listas tienen que ser mantenidas de forma manual, ello dará lugar a errores, y dado el número de posible listas que se pueden elaborar, no tiene mucho sentido tener que realizar ese mantenimiento a mano, y sobre todo, resulta imposible ofrecer esa información con un mínimo de calidad. SMW permite la generación de listas de forma automática, que además de estar siempre elaboradas con la última información disponible, se pueden refinar para obtener más información.
+		\item[Información visual] SMW es capaz, mediante el uso de plugins, mostrar la información en los más diversos formatos. Puede mostrar la información en calendarios, líneas del tiempo, gráficos, mapas, etc\ldots, ofreciendo una visión más rica del mundo que la ofrecida por listas o tablas.
+		\item[Estructura de datos mejorada] Las wikis sintácticas ordianrias hacen un uso muy intenso de las categorías para intentar clasificar todo su contenido. En cambio, SMW puede reemplazar esas categorías únicmanete mediante la adición un valores semánticos que eliminan o reducen la necesidad de crear categorías para clasificar el contenido de la wiki. Además, existen plugins como \textit{Semantic Forms} que permite crear formularios para que la creación de contenido sea más heterogénea y regular que en los articulos de otras wikis semánticas.
+		\item[Búsquedas mejoradas] Con SMW los usuarios peuden realizar búsquedas de información utilizando sus propias consultas, gracias a extensiones como \textit{Halo} o \textit{Semantic Drilldown}
+		\item[Reutilización de la información] Una vez creado el contenido y almacenada la información en la wiki, es posible exportarla utilizando varios formatos como CSV, JSON y RDF, lo que permite a la wiki servir como fuente de datos a otras aplicaciones e incluso realizar funciones de base de datos. Utilizando los plugins \textit{External Data}, \textit{SPARQL}, SMW puede utilizar la información contenida en otras wikis (que utilicen el mismo motor), eliminando la redundancia entre wikis, o servir como base de conocimiento a la que se puede interrogar desde fuera de la wiki, utilizando el plugin \textit{RDF triplestore} o a través del API.
+		\item[Integración de información] Además, gracias al uso de plugins como \textit{Data Import}, \textit{Data Transfer} y \textit{External Data} es posible integrar datos externos provinientes de otros sistemas, servicios web o tecnologías como ``linked data''
+	\end{description}		
+
+	\subsubsection{Nuestro servidor}
+	El servidor de nuestra wiki es un equipo modesto (Intel Atom N450 con 2GB de RAM), donde ya se encontraba instalado un sistema LAMP, por lo que para proceden a realizar una instalación inocua se decidió crear una máquina virtual sobre la que realizar una instalación en limpio.
 	
-\todo{Adjuntar algunas capturas de pantalla de la wiki en el documento}
+	Sobre esa máquina virtual se instaló Lubuntu 12.10, y sobre ello el servidor web Apache en su versión 2.2.22\footnote{http://httpd.apache.org/download.cgi}, el intérprete de PHP 5.4.6-1\footnote{http://php.net/downloads.php} y el servidor mysql 5.5.29\footnote{http://dev.mysql.com/downloads/mysql/}.
+	
+	Una vez instalado el entorno LAMP, hemos puesto en marcha la versión 1.20 de Mediawiki y hemos instalado las extensiones SemanticMediaWiki 1.8 y Semantic Forms 2.1 para crear formularios para la introducción de la información por parte de los usuarios y disminuir, si no evitar, errores semánticos. Adicionalmente se recomienda permitir la edición de artículos únicamente a los usuarios editores y administradores.
+
+	\todo{Comrpueba qué extensiones has instalado y coméntalas}	
+	Se han probado varias extensiones de Mediawiki y SMW que permiten subir una ontología en formato RDF/XML a la wiki, como Ontology Editor o RDFIO, pero dada la complejidad de la ontología, muchas de las restricciones impuestas causaban que la extensión fallase, o en el mejor de los casos, simplemente ignorasen esas restricciones, provocando comportamientos no deseados en la ontología. Finalmente, se ha optado por crear la wiki de forma manual, al no contar con herramientas que permitan el volcado de información de forma fiable, y con el fin de poder mostrar la idoneidad de trabajar con herramientas semánticas, como ontologías y wikis semánticas, cuando se trata de proyectos o trabajo cuyo principal objetivo es el de capturar conocimiento.
+	
+	\subsubsection{Experiencia con la wiki}
+	\todo{Adjuntar algunas capturas de pantalla de la wiki en el documento}
 %\todo{Consideramos SPARQL útil? par apoder utilizarlo - si, incñuyelo entre las capacidades de la wiki}
-
 %\todo{las otras herramientas como tabajo a futro/mejoras}
+	A modo de ejemplo, se ha construido una wiki con la ontología creada, y sobre esa ontología se ha comenzado a añadir las instancias presentes en la ABox, hasta que se ha completado la ontología. Existen estructuras semánticas en OWL que no se pueden incorporar directamente a la wiki (como una limitación en el número - al menos una- de asinaturas que componen una materia) lo que supone el dejar abierta la puerta a errores humanos. 
+	
+	Sería por tanto deseable que hubiese alguna forma de correr un razonador (cualquiera de los mencionados en el capítulo 3) sobre la base de conocimiento de la ontología con el fin de detectar y corregir inconsistencias introducidas junto con la información. Una forma de sortear este obstáculo es utilizar el plugin \textit{Semantic Forms}\footnote{http://www.mediawiki.org/wiki/Extension:Semantic\_Forms/es} para la creación de un formulario que obligase al usuario a crear materias compuestas de al menos una materia.
+
+	Por otro lado, en el caso de que aconteciese un cambio normativo que obligue a realizar un cambio en la ontología, nos obligaría a, una vez modificada la ontología, volver a volcar el modelo en la wiki, con la posibilidad de que los modelos no sean compatibles, de que existan conceptos que hayan cambiado de significado o relaciones que hayan dejado de existir. La wiki trabaja, muy alejada de la representación formal del conocimiento que modela y sería deseable poder trasladar directamente las modificaciones de la ontología al modelo subyacente en la ontología. Existen herramientas que permiten el traslado de información desde y hacia la wiki, pero en ontologías extensas y complejas como la que estamos abordando existen construcciones que no son traducibles directamente a la wiki, al menos con la extensiones que existen actualmente.
+	
+	Dejando de lado estos inconvenientes, el trabajo con una wiki es, sobre todo, eficaz. Permite encontrar cualquier información rápidamente, conocer el significado de cualquier concepto y cómo se relaciona con el resto del universo. Puede utilizarse como servidor de información, e incluso como backend para otras aplicaciones. También es posible realizar consultas mediante SPARQL directamente sobre la wiki, utilizando el plugin adecuado, por lo que solventando los inconvenientes citados anteriormente, podría utlizarse para sustituir a la ontología.
+	
+	Además, las wikis son extremadamente fáciles de crear y mantener, y además, cuentan con extensiones que facilitan la interacción con el usuario y protegen a la wiki de cambios que destruyan la coherencia de la información almacenada. Es posible exportar su contenido e incluso crear nuevas wikis que trabajen con conocimiento ya almacenado en otras. Son herramientas muy potentes que acercan la versatilidad de la web semántica al público en general.
 
 
 
