@@ -3,6 +3,8 @@ El proceso de construcción del espacio europeo de educacion superior ha llevado 
 
 Dada la magnitud del cambio que se debe afrontar, hemos visto a lo largo del trabajo que no resulta eficaz intentar modelar el universo con herramientas que no son capaces de capturar la semántica del modelo.
 
+\section{Objetivos cumplidos}
+
 \paragraph{Coherencia con el marco legislativo}
 Al existir un marco normativo único para todo el espacio europeo de educación superior, todos los centros de enseñanza superior deben estar acogidos a lo establecido en la norma. Todas las enseñanzas, de cualquier rama y campo del conocimiento, están obligadas a cumplir con los mismos criterios y a facilitar a los alumnos, y al público en general, la misma información.
 El marco legislativo que da amparo al espacio europeo de educación superior está en constante evolución, dado que la integración europea no ha finalizado. Constantemente aparecen nuevos reglamentos europeos, o recomendaciones, que obligan a los países miembros a modificar su marco normativo para poder seguir desarrollando su actividad docente dentro del marco europeo. 
@@ -42,29 +44,17 @@ En caso de cambio normativo que afecte al plan de estudios, o de algún elemento 
 
 Además, la wiki semántica puede seguir creciendo con las aportaciones de cada usuario lo que hace de ella una herramienta con un potencial enorme. Si además le añadimos la posibilidad de hacer que la wiki se apoye en una ontología para temas de razonamiento, consistencia e inferencia, logramos que ese creciemiento sea sólido y coherente, permitiéndonos tener concentrado en una única herramienta las herramientas y la panorámica precisas en cada momento, permitiéndonos todo ello una gran libertad a la hora de navegar por el modelo del conocimiento capturado.
 
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%\section{Principales usuaIntro: ¿quién puede usar esta ontología? ¿La UCM? Sí, no, pq, etc.}
 \section{Usos directos del trabajo desarrollado}
 Hasta aquí el desarrollo teórico pero, ¿Es realmente útil y aplicable en el día a día? El resultado del presente documento es eminentemente práctico, y como tal ha de tener traslado al mundo real. Ha de resultar útil a un público objetivo, y sólo le será útil si presenta alguna ventaja competitiva frente a la situación actual del estado del arte.
+
 \paragraph{Universidades}
 Como resultado del desarrollo del trabajo aqui contenido, se abren varias vías para la aplicación en el día a día de personas y organismos. Por un lado tenemos a las universades, directamente involucradas en el proceso de Bolonia, que deben, no sólo adaptar el catálogo de titulaciones existentes a la nueva estructura educativa, si no que además, ser capaces de implementar nuevos planes de estudio para las nuevas titulaciones que vayan creando. Y además, deben hacerlo de modo que en el proceso, la definición y desarrollo de la titulación mantengan su coherencia y cumplan con los objetivos establecidos.
 Las universidades, como principal exponente del desarrollo humano y tecnológico de la sociedad a la que sirven, deben ser ejemplo para las demás instituciones de enseñanza. Debe abandonar técnicas obsoletas e ineficaces y entregarse al desarrollo de nuevos métodos y aplicaciones que mejoren la eficacia de sus recursos. El uso de herramientas poco adecuadas (p.ej: una hoja de cálculo) no parece ser algo propio de una universidad.
 Además, es posible utilizar la wiki como servidor de información para el público en general, e incluso podría utilizarse como backend para otras herramientas que necesiten apoyarse en información del plan de estudios (como por ejemplo la página web de la facultad, de los departamentos o de las asignaturas, o algún software que distribuya las aulas en función de los alumnos matriculados y los créditos que se dediquen a cada actividad formativa).
+
 \paragraph{Docentes}
 Por otro lado, los profesores. Ellos son quienes de forma más directa se encargan de diseñar las asignaturas y materias y de ese modo configurar el plan de estudios ideado por la universidad. Su trabajo debería estar más centrado en la docencia y en la investigación, y la ineficacia en la definición del plan ejecutivo de la modalidad de estudios, quita recursos a la docencia e investigación. La utilización de herramientas más adecuadas libera a los docentes de carga de trabajo, lo que les permite centrarse en la docencia y en la investigación.
+
 \paragraph{Alumnos}
 Por último está la parte más importante del proceso educativo. Los alumnos han de ser el fin último de los planes de estudios, puesto que sin ellos la docencia no tendría sentido. El alumno que va a decidir sobre su futuro académico, debe tener en su mano toda la información necesaria, de modo que pueda tomar una determinación sobre qué materia cursar. 
 El plan Bolonia obliga a las instituciones docentes a tener disponible para los alumnos información acerca de los títulos ofertados, la llamada guía docente. Resulta vital no sólo tener la información disponible, para cumplir con el plan de convergencia, sino que la información sea accesible, veraz y fácilmente comprensible. Además, en caso de haber cambios sobre la titulación, es preciso que la guía los refleje lo más inmediatamente posible.
@@ -72,26 +62,26 @@ El plan Bolonia obliga a las instituciones docentes a tener disponible para los 
 La administración pública debe ser el último garante de la calidad de la educación impartida, y no sólo en los centros públicos, sino también en los privados, pues al fin y al cabo los centros universitarios están formando a los profesionales que contribuirán al desarrollo de la sociedad en el futuro.
 La administración no puede ejercer esta tutela si no es con la ayuda de herramientas automáticas, dada la cantidad, dispersión y variedad de centros docentes. Cada centro docente, ofreciendo información acerca de cada plan educativo ofertado y poniéndolo a disposición del publico, supone que la administración pueda supervisar cómo se ha diseñado y cómo se está ejecutando el plan de estudios.
 
-\subsection{Desarrollo futuro}
-El desarrollo del trabajo no pretende ser cerrado y hermético. Está sujeto a revisiones y mejoras que amplíen el ámbito del mismo, su utilidad, usabilidad... Estas mejoras pueden aplicarse tanto sobre la ontología, como sobre las herramientas o plugins que se han utilizado, o sobre otros que puedan desarrollarse ad hoc.
+\section{Desarrollo futuro}
+El desarrollo del trabajo no pretende ser cerrado y hermético. Está sujeto a revisiones y mejoras que amplíen el ámbito del mismo, su utilidad, usabilidad\ldots Estas mejoras pueden aplicarse tanto sobre la ontología, como sobre las herramientas o plugins que se han utilizado, o sobre otros que puedan desarrollarse ad hoc.
 
-\subsubsection{Trabajo sobre la ontología} La ontología es susceptible de varias mejoras. La estructura básica está ya definida, pero aún cabe mejora si queremos que sea capaz de manejar más información.
-Es posible almacenar información sobre los alumnos añadiendo una nueva clase, "Alumno", lo cual puede ser útil para docentes y universidades para almacenar información relativa al alumno y su trayectoria curricular. También se podría añadir una clase "Plan\_De\_Estudios" de modo que administraciones y centros docentes puedan almacenar información sobre los diversos planes que componen su oferta educativa.
-Y también es posible incluir nuevas propiedades y relaciones que, si bien no aportarán más información, si que enriquecerán el conjunto al aportar información semántica nueva a la ontología.
+\subsection{Trabajo sobre la ontología} La ontología es susceptible de varias mejoras. La estructura básica está ya definida, pero aún cabe mejora si queremos que sea capaz de manejar más información.
+
+Podemos incluir nuevas clases, propiedads y relaciones, o bien modificar alguna de las ya existentes. Por ejemplo, es posible almacenar información sobre los alumnos añadiendo una nueva clase, \lstinline!Alumno!, lo cual puede ser útil para docentes y universidades para almacenar información relativa al alumno y su trayectoria curricular. También se podría añadir una clase \lstinline!Plan\_De\_Estudios! de modo que administraciones y centros docentes puedan almacenar información sobre los diversos planes que componen su oferta educativa.
 
 %\todo{Herramienta para exportación de info y semántica desde/hacia wikis y ontologías}
-\subsubsection{Ontología y Wiki Semántica}
+\subsection{Ontología y Wiki Semántica}
 Existen herramientas automáticas para exportar la información contenida en la ontología hacía una wiki semántica, como RDFIO. Pero la ontología posee restricciones que no pueden ser traducidas de forma automática hacia la wiki semántica. Por ejemplo, aquellas restricciones que son el producto de la unión o intersección de varios elementos, del tipo 
 \begin{lstlisting}
 <owl:equivalentClass>
 	<owl:Class>
 		<owl:intersectionOf rdf:parseType="Collection">
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&Ontology1322242361907;AF_utilizadaParaImpartir_MA"/>
-				<owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+				<owl:onProperty rdf:resource="&TBox;AF_utilizadaParaImpartir_MA"/>
+				<owl:someValuesFrom rdf:resource="&TBox;Materia"/>
 			</owl:Restriction>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&Ontology1322242361907;AF_utilizadaParaImpartir_MA"/>
+				<owl:onProperty rdf:resource="&TBox;AF_utilizadaParaImpartir_MA"/>
 				<owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
 			</owl:Restriction>
 		</owl:intersectionOf>
@@ -99,16 +89,30 @@ Existen herramientas automáticas para exportar la información contenida en la on
 </owl:equivalentClass>
 \end{lstlisting}
 provocan que el plugin falle y finalice con una excepción no tratada. 
-En lugar de eso, el plugin debería tratar el caso informando al usuario, e incluso buscar algún método para modelar esa restricción.
-De igual modo debería ser posible traducir la información contenida en la wiki a una ontología con el fin de que el flujo de información entre wiki y ontología fuese bidireccional. Esto permitirá que los usuarios que editen la ontología y los editores que trabajen sobre la wiki realicen modificaciones sobre el mismo modelo. El hecho de que se puedan realizar modificaciones directamente sobre la wiki, incrementa la usabilidad de la misma permitiendo que usuarios no familiarizados con las ontologías puedan trabajar sobre ella.
+En lugar de eso, el plugin debería tratar el caso informando al usuario, e incluso buscar algún método para modelar esa restricción. 
 
-\subsubsection{Control de cambios}
-Una vez que la información contenida en la wiki y en la ontología pueda fluir desde una hacia la otra y viceversa, resulta interesante disponer de un razonador que pueda trabajar directamente sobre la wiki, para cerciorarnos que la información introducida en la wiki es coherente con el resto del modelo y decidible.
-De este modo evitaremos tener que realizar dos traducciones de la ontología para conseguir inferir axiomas o comprobar la completud de la misma cuando se está editando desde la wiki.
+De igual modo debería ser posible traducir la información contenida en la wiki a una ontología con el fin de que el flujo de información entre wiki y ontología fuese bidireccional. Esto permitirá que los usuarios que editen la ontología y los editores que trabajen sobre la wiki realicen modificaciones sobre el mismo modelo. El hecho de que se puedan realizar modificaciones directamente sobre la wiki, incrementa la usabilidad de la misma permitiendo que usuarios no familiarizados con las ontologías puedan trabajar sobre la wiki, obviando el modelo ontológico que subyace por debajo.
 
-%\todo{usa beamer para las transparencias, imporat tema Boadilla}
-%
-%\todo{pantallazos para muchos datos agrupados o para mostrar dificultades. la presentaciónd eberá tener motivación modelización del sistema.Pon nombres a la tbox y a la tbox, si es posible ir de ejemplos concretos hacia los abstractos, de la abox a la tbox Y una última parte de aplicaciones y trabajo futuro}
+\subsection{Consistencia de la wiki}
+Una vez que la información contenida en la wiki y en la ontología pueda fluir desde una hacia la otra y viceversa, resulta interesante disponer de un razonador que pueda trabajar directamente sobre la wiki, para cerciorarnos que la información introducida en la wiki es consistente con el resto del modelo. Algunos plugins como ''Semantic Forms'' permiten definir formularios para introducir información en la wiki, pero no podemos asegurar que el usuario no cometerá fallos sintácticos o semánticos al introducir la información. Si tenemos un razonador que trabajando directamente sobre la wiki sea capaz de decidir si ésta es consistente o no, evitaremos tener que realizar dos traducciones de la ontología para conseguir inferir axiomas o comprobar la completud de la misma cuando se está editando desde la wiki.
+
+\section{Conclusiones}
+Como hemos comprobado una vez más, resulta de vital importancia el sentarse a planear una estrtegia antes de abordar cualquier problema. Hemos comprobado el trabajo perdido que supone el trabajar sin una meta clara al comrpobar dónde nos había conducido la solución de las hojas de cálculo. Pero además de fijarnos una meta y unos objetivos, también es vital echar un vistazo alrededor para hacer un inventario de las herramientas de que disponemos. Muchas veces, la herramienta más a mano no es la más adecuada, y es preferible perder un poco de tiempo en los primeros compases de diseño y planificación con el fin de comprobar si tenemos las herramientas adecuadas (si no, habría que valorar si merece la pena construirlas o no), a ponernos manos a la obra con lo prumero disponible, pues el resultado suele ser bastante mediocre en términos de eficacia, usabilidad, reutilización de contenidos\ldots
+
+Un ejemplo claro lo tenemos en la ontología, pero también en el sistema de control de versiones utilizado. Resulta tedioso el tener que aprender a manejar un sistema de control de versiones (en el proyecto se ha utilizado Git) \todo{Dejo puesto un enlace al proyecto en git?}, que si bien al principio parecía una solución desproporcionada teniendo en cuenta que sólo iba a aportar contenido una persona (parecía que el sistema de andar con copias de seguridad de distintas versiones en un pendrive iba a ser suficiente), luego ha resultado de los más útil, pues uno de los escenarios no contemplados en un primer momento era un único usuario pero aportando contenido desde equipos o ubicaciones diferentes. Y ha sido mucho más cómodo y ```limpio'' que el copia-pega de la carpeta contenida en un pendrive. Además, Git me ha salvado en más de una ocasión de una pérdida de datos.
+
+Mención aparte merece \LaTeX{}, del que no había oído hablar. Igualmente que lo ocurrido con Git, es mucho más complicado definir las variables que marcarán el formato y el estilo del documento en \LaTeX{} que en cualquier editor WYSIWYG\footnote{Del inglés: What you see is what you get} como Microsoft Word\copyright, pero a cambio luego sólo hay que escribir. Es cierto que es preciso escapar carácteres especiales y tener cuidado con carácteres no imprimibles, la codificación del fichero, etc, pero se de antemano e aspecto que tendrá el trabajo y puedo centrarme únicamente en escribir. Además, el hecho de que el texto esté dividido en varios ficheros fuente posibilita el trabajo conjunto con otros usuarios, ya sea con labores de edición o supervisión.
+
+El campo de las ontologías y la web semántica también era algo nuevo para mi. Porque una cosa es saber que existen o qué son, y otra muy distinta es ponerse a trabajar con ellas. Las ontologías ofrecen una potencia asombrosa a la hora de modelar el universo que nos rodea. De hecho, el único límite a las ontologías es el tiempo que las dediquemos. Por ello resulta muy importante, antes de comenzar a modelar un universo, el acotar muy bien cuáles serán los límites del mismo, pues resulta muy sencillo perderse en los detalles y dejar de lado el universo pequeño y sencillo que queríamos modelar en un principio.
+
+Todo el desarrollo del proyecto ha sido paso a paso, y el orden de relación en el índice del trabajo, bien podría ser el orden cronológico en el que se fue creando y añadiendo todo el trabajo. El trabajo realizado sobre las wikis semánticas no estaba programado en un principio, pero no me pareció correcto dejar el tema de la usabilidad de lado, cuando una de las críticas que había lanzado contra el sistema de las hojas de cálculo era, precisamente, su falta de usabilidad. Y ha resultado ser muy gratificante el ser capaz de dar un paso más de lo previsto para conseguir algo que no existía. Salvando las distancias, la sensación ha sido la de un niño que da sus primeros pasos soltándose de la mano de su padre.
+
+Pero también ha habido muchos problemas por el camino. Ha sido preciso leer mucha documentación de normas europeas, del Espacio Europeo de Educación Superior, de Protégé y sus plugins (cuando la había), de \LaTeX{}, de las wikis, del software sobre el que se levanta la wiki\ldots Realmente es asombroso el tener al alcance de unos pocos golpes de ratón tanta información y tan variada (y tan sesgada cuando son intereses opuestos quienes promueven su publicación).  Ha habido que tomar decisiones importantes en materia de diseño (como la creación de las instancias de ``actividad\_formativa'') e instalar y desinstalar varias veces el editor Protégé (porque cambios de versión en los razonadores o en el editor provocaban fallos en la ejecución de los plugins) y el software de la wiki, hasta que se ha encontrado una combinación correcta que haga al sistema estable.
+
+Sea como fuere, después de tantas horas pegado al ordenador y rebuscando información en internet, me he dado cuenta de que el acceso a la información debe ser libre y gratuito. Parece mentira que hoy en día haya lugares donde no es posible conectarse a internet, o donde sólo se puede acceder a contenidos prefijados por el gobierno o la administración en el poder. El intercambio de información es vital para el hombre. La tradición oral, la tradición esc Libre porque debemos ser nosotros los usuarios los que decidamos qué ifrmación es importante o útil y poder acceder a ella sin restricciones. Y gratuito porque si se excluyese a alguien del acceso a la información entonces no sería libre.
+
+
+
 
 %%% Local Variables: 
 %%% mode: latex
