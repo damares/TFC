@@ -1,4 +1,4 @@
-\chapter{Wiki Semánticas}
+\chapter{Desarrollo adicional}
 
 Es un error común el ponerse a trabajar en algo ``empezando la casa por el tejado'', es decir, sin haber sopesado las distintas opciones que tenemos a nuestro alcance, sin definir una estrategia para abordar y resolver con éxito el problema, sin utilizar herramientas adecuadas\ldots Estos pasos previos, aunque puedan suponer un coste en un primer momento, supondrán un ahorro a la larga, puesto que estaremos eliminando desde la concepción de la solución muchos problemas que más adelante supondrán un contratiempo para el desarrollo y la implantación de la solución.
 
@@ -39,10 +39,10 @@ Existen diversos motores para la puesta en marcha de una wiki semántica:
 	\item [Semantic MediaWiki]\footnote{http://semantic-mediawiki.org/} es una extensión de MediaWiki (herramienta para la realización de wikis sintácticas) que permite transformar una wiki sintáctica en una wiki semántica. La principal ventaja de de SMW es la cantidad de extensiones disponibles en forma de plugins para personalizar la wiki y añadir nuevas capacidades. 
 \end{description}
 
+\section{Impantación de la wiki semántica}
+
 De entre todos ellos, hemos optado\todo{esto me ocurre a lo largo de todo el documento: escribo en primera persona del singular o del plural¿?} por utilizar SemanticMediaWiki, por las razones que se dirán.
 
-	\subsection{Semantic MediaWiki}
-	
 	Semantic MediaWiki(SMW) introduce algunos marcadores adicionales en el texto de los artículos que añaden anotaciones semánticas al contenido. De este modo, aunque en un principio la creación de contenido pueda ser algo más compleja que en otros motores, simplifica enormemente la estrucutra interna de la wiki, ayuda a los usuarios a realizar búsquedas más precisas en menos tiempo, y en general aporta un grado adcional de consistencia a la wiki:
 	\begin{description}
 		\item[Generación de listas automáticas] Las wikis suelen contener muchas listas agregadas de elementos, como por ejemplo ``las 100 ciudades más pobladas del mundo''. Si estas listas tienen que ser mantenidas de forma manual, ello dará lugar a errores, y dado el número de posible listas que se pueden elaborar, no tiene mucho sentido tener que realizar ese mantenimiento a mano, y sobre todo, resulta imposible ofrecer esa información con un mínimo de calidad. SMW permite la generación de listas de forma automática, que además de estar siempre elaboradas con la última información disponible, se pueden refinar para obtener más información.

@@ -4,7 +4,7 @@ Durante la última década del siglo XX el movimiento europeísta fue tomando consi
 	
 %En este capítulo haremos un breve repaso histórico a través de los diferentes acuerdos y tratados firmados, que han llevado a la educación superior en europa desde un estado fragmentado y sin cohesión ninguna, hacia el marco existente en la actualidad - el Espacio Europeo de Educación Superior - que aumenta la compatibilidad y la comparabilidad de los distintos sistemas de educación, respetando siempre su diversidad. 
 
-\section{Espacio europeo}
+\section{El Espacio Europeo de Educación Superior}
 El Espacio Europeo de Educación Superior (EEES en adelante) es un ambicioso proyecto puesto en marcha a nivel europeo para armonizar los diferentes sistemas universitarios europeos, y dotar de una mayor agilidad a unviersidades y alumnos mediante el intercambio de ideas y personas. 
 
 No tiene como objetivo estandarizar los diversos sistemas de educación superior sino aumentar su compatibilidad y comparabilidad. 
@@ -163,11 +163,11 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 				
 		\end{description}
  
-\section{Motivación}
+\section{Motivación del trabajo}
 
 	Como vemos, el proceso de Bolonia introduce cambios sustanciales en la educación superior europea. Estos cambios tan profundos en el paradigma de la educación conllevan la introducción de muchos conceptos, algunos de ellos de nueva creación. Estos conceptos no son siempre conocidos para el personal que debe desarrollar los planes de estudio, e incluso en el caso de que el personal docente conozca el significado de dichos términos, pueden existir diversos matices en cuanto a su interpretación, lo que en la práctica conduce a malentendidos y equívocos. 
   	
-		\subsection{Crítica al sistema de hojas de cálculo}
+		\subsection{Crítica al sistema actual}
 	  	%disgregación de la información, redundancia, incoherencia, etc.)
 		Con la llegada del nuevo plan de estudios, fue necesario redistribuir las horas docentes de cada asignatura, dividiendo las asignaturas en créditos ECTS donde antes estaban divididas en créditos y pasando a adoptar los criterios de Bolonia. Con la finalidad de facilitar esta transción hacia una visión "`alumno"' del grado, se crearon unas hojas de cálculo destinadas a aglutinar toda la información relativa a las asignaturas de un departamento y a distribuir las horas lectivas de cada asignatura. 
       
@@ -217,22 +217,26 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 		Además de estas carencias, poniendo la vista en un medio-largo plazo, resulta a priori muy complicado el cambio de alguna especificación del plan utilizando las hojas de cálculo. Tienen una cohesión muy pequeña entre ellas por lo que cualquier modificación del plan de estudios o del marco normativo resulta muy dificil de trasladar correctamente a las hojas de cálculo. Es preciso construir la plicación de manera que en la ampliación o modificación del sistema resulta una tarea accesible.
       
 		Además, la automatización de tareas resulta casi imposible utilizando hojas de cálculo. Resulta incongruente pensar que, hoy en día, dependamos del tratamiento manual de datos para la correcta definición de cualquier sistema o metodología, habiendo como hay herramientas que nos facilitan su diseño y desarrollo.
+		
+	\subsection{Creación de un marco único y formal}
 
-	\subsection{Ontologías}
-  	
 	Ocurre a menudo que cuando varias personas materializan en la mente un objeto, cada una de ellas lo hace con diferentes cualidades o distinto nivel de detalle. Cuando pensamos en un \textit{vehículo}, algunos imaginarán una moto, otros un coche, un ciclomotor, etc. Todas las representaciones tienen una estructura básica en común (un objeto que permite desplazarse a personas) que es aquello que realmente define el concepto de \textit{vehículo}, aunque como hemos visto cada uno imagina ese vehículo de acuerdo a sus experiencias o preferencias personales. 
-  	
+
   	Y aunque todos imaginásemos el mismo tipo de vehículo, como un \textit{coche}, esta definición puede ser más concreta o abstracta en función de las necesidades del universo que estamos describiendo. Para un recaudador de impuestos municipales, un \textit{coche} se reduce a un vehíclo a motor, con una matrícula, unos caballos fiscales y un obligado tributario. Para la persona que va a comprar un \textit{coche} a un concesionario le importará saber si tiene tres o cinco puertas, consumo, prestaciones, habitabilidad, equipamiento, etc. Y para el dueño de la concesión, un \textit{coche} se reduce a un apunte contable en la cuenta del debe (una vez descontados los costes de adquisición y rotación del \textit{coche}).
   	
 	Es importante por ello acometer una unificación de los conocimientos antes de poner en marcha el diseño del plan de cara a evitar errores de diseño derivados de un error conceptual. Las ontologías son herramientas utilizadas para modelar el universo (una parte al menos) de modo que todos los actores implicados en el desarrollo del plan tengan una visión unificada e inequívoca del mismo.
-  	 
-		\subsubsection{Definición}
-    
-		Una ontología\todo{añade una referencia} no es un vocabulario ni un diccionario donde figuran las definiciones de los conceptos utilizados. Una ontología es un mapa donde conceptos y significados se entrecruzan. Se trata de una forma de representación del conocimiento que permite tener un entendimiento común y compartido de un dominio, de modo que diferentes personas o sistemas puedan compartir una misma visión de ese dominio. 
 
-		Existen varias definiciones formales de Ontología. Varios autores refieren la definición tal y como a la facilita Tom Gruber\cite{GRUBER:93}. Según esa definición, una ontología es una especificación de una conceptualización. Otra definición más concreta es la ofrecida por Weigand\cite{WEIGAND:97}, según el cual una ontología es una base de datos que describe los conceptos del mundo o algún subdominio, algunas de sus propiedades, y como se relacionan cada uno de los conceptos. Para un sistema basado en el conocimiento, podemos asumir que sólo existe aquello que podemos representar, y que todo aquello que no pertenece al dominio de la ontología, no existe. 
+	\subsection{Ontologías}
+	
+	A continuación veremos la herramienta que utilizaremos para el diseño de ese marco único y formal que nos permitirá sentar las bases del trabajo posterior. Esa herramienta, básica para la gestión del conocimiento, es la ontología.
+	
+	\subsubsection{Definición de Ontología}
+  	
+	Una ontología\todo{añade una referencia} no es un vocabulario ni un diccionario donde figuran las definiciones de los conceptos utilizados. Una ontología es un mapa donde conceptos y significados se entrecruzan. Se trata de una forma de representación del conocimiento que permite tener un entendimiento común y compartido de un dominio, de modo que diferentes personas o sistemas puedan compartir una misma visión de ese dominio. 
 
-		El uso de ontologías implica por tanto la definición de un vocabulario y reglas gramaticales que relacionen los vocablos. Estas reglas gramaticales nos permitirán realizar preguntas a la ontología cuyas respuestas deberán ser, forzosamente, coherentes con las definiciones y constantes de la ontología. Todas estas propiedades de las ontologías nos permitirán:
+	Existen varias definiciones formales de Ontología. Varios autores refieren la definición tal y como a la facilita Tom Gruber\cite{GRUBER:93}. Según esa definición, una ontología es una especificación de una conceptualización. Otra definición más concreta es la ofrecida por Weigand\cite{WEIGAND:97}, según el cual una ontología es una base de datos que describe los conceptos del mundo o algún subdominio, algunas de sus propiedades, y como se relacionan cada uno de los conceptos. Para un sistema basado en el conocimiento, podemos asumir que sólo existe aquello que podemos representar, y que todo aquello que no pertenece al dominio de la ontología, no existe. 
+
+	El uso de ontologías implica por tanto la definición de un vocabulario y reglas gramaticales que relacionen los vocablos. Estas reglas gramaticales nos permitirán realizar preguntas a la ontología cuyas respuestas deberán ser, forzosamente, coherentes con las definiciones y constantes de la ontología. Todas estas propiedades de las ontologías nos permitirán:
 
 		\begin{itemize}
 			\item Intercambiar datos entre diferentes sistemas.
@@ -278,7 +282,7 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
      		 
 		\end{enumerate}
       
-	\subsection{Unificar conocimiento en un marco único y formal}
+	\subsection{Lenguaje de la Ontología}
 	
 	El World Wide Web Consortium\todo{referencia} es un organización internacional, en el que participan organizaciones miembro, persoanl a tiempo completo y público en general con el fin de desarrollar estándares web que permitan sacar el máximo potencial de la web. 
 		
@@ -416,7 +420,7 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
     	Mención aparte merecen Protégé y el resto de herramientas utilizadas para la realización del TFC, de los que se hablará más detenidamente en el siguiente capítulo.
 
       
-\section{Objetivos}
+\section{Objetivos del trabajo}
   
   	Habiendo visto las carencias que presenta el sistema de las hojas de cálculo utilizado hasta el momento, es momento de crear un sistema de conocimiento que permita manejar de manera más fluida toda la información relativa a los planes de estudio. 
   	

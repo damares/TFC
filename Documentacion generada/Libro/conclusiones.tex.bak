@@ -1,4 +1,4 @@
-\chapter{Conclusiones}
+\chapter{Trabajo futuro y conclusiones}
 El proceso de construcción del espacio europeo de educacion superior ha llevado a los paises miembros de la union europea a un proceso de adapatacion y convergencia de sus respectivos planes educativos.
 
 Dada la magnitud del cambio que se debe afrontar, hemos visto a lo largo del trabajo que no resulta eficaz intentar modelar el universo con herramientas que no son capaces de capturar la semántica del modelo.
@@ -65,12 +65,12 @@ La administración no puede ejercer esta tutela si no es con la ayuda de herramie
 \section{Desarrollo futuro}
 El desarrollo del trabajo no pretende ser cerrado y hermético. Está sujeto a revisiones y mejoras que amplíen el ámbito del mismo, su utilidad, usabilidad\ldots Estas mejoras pueden aplicarse tanto sobre la ontología, como sobre las herramientas o plugins que se han utilizado, o sobre otros que puedan desarrollarse ad hoc.
 
-\subsection{Trabajo sobre la ontología} La ontología es susceptible de varias mejoras. La estructura básica está ya definida, pero aún cabe mejora si queremos que sea capaz de manejar más información.
+\subsection{Mejoras en la ontología} La ontología es susceptible de varias mejoras. La estructura básica está ya definida, pero aún cabe mejora si queremos que sea capaz de manejar más información.
 
 Podemos incluir nuevas clases, propiedads y relaciones, o bien modificar alguna de las ya existentes. Por ejemplo, es posible almacenar información sobre los alumnos añadiendo una nueva clase, \lstinline!Alumno!, lo cual puede ser útil para docentes y universidades para almacenar información relativa al alumno y su trayectoria curricular. También se podría añadir una clase \lstinline!Plan\_De\_Estudios! de modo que administraciones y centros docentes puedan almacenar información sobre los diversos planes que componen su oferta educativa.
 
 %\todo{Herramienta para exportación de info y semántica desde/hacia wikis y ontologías}
-\subsection{Ontología y Wiki Semántica}
+\subsection{Integrción de ontología y wiki semántica}
 Existen herramientas automáticas para exportar la información contenida en la ontología hacía una wiki semántica, como RDFIO. Pero la ontología posee restricciones que no pueden ser traducidas de forma automática hacia la wiki semántica. Por ejemplo, aquellas restricciones que son el producto de la unión o intersección de varios elementos, del tipo 
 \begin{lstlisting}
 <owl:equivalentClass>
@@ -109,9 +109,7 @@ Todo el desarrollo del proyecto ha sido paso a paso, y el orden de relación en e
 
 Pero también ha habido muchos problemas por el camino. Ha sido preciso leer mucha documentación de normas europeas, del Espacio Europeo de Educación Superior, de Protégé y sus plugins (cuando la había), de \LaTeX{}, de las wikis, del software sobre el que se levanta la wiki\ldots Realmente es asombroso el tener al alcance de unos pocos golpes de ratón tanta información y tan variada (y tan sesgada cuando son intereses opuestos quienes promueven su publicación).  Ha habido que tomar decisiones importantes en materia de diseño (como la creación de las instancias de ``actividad\_formativa'') e instalar y desinstalar varias veces el editor Protégé (porque cambios de versión en los razonadores o en el editor provocaban fallos en la ejecución de los plugins) y el software de la wiki, hasta que se ha encontrado una combinación correcta que haga al sistema estable.
 
-Sea como fuere, después de tantas horas pegado al ordenador y rebuscando información en internet, me he dado cuenta de que el acceso a la información debe ser libre y gratuito. Parece mentira que hoy en día haya lugares donde no es posible conectarse a internet, o donde sólo se puede acceder a contenidos prefijados por el gobierno o la administración en el poder. El intercambio de información es vital para el hombre. La tradición oral, la tradición esc Libre porque debemos ser nosotros los usuarios los que decidamos qué ifrmación es importante o útil y poder acceder a ella sin restricciones. Y gratuito porque si se excluyese a alguien del acceso a la información entonces no sería libre.
-
-
+Sea como fuere, después de tantas horas pegado al ordenador y rebuscando información en internet, me he dado cuenta de que el acceso a la información debe ser libre y gratuito. Parece mentira que hoy en día haya lugares donde no es posible conectarse a internet, o donde sólo se puede acceder a contenidos prefijados por el gobierno o la administración en el poder. El intercambio de información es vital para el hombre. La tradición oral, la tradición escrita, la imprenta y ahora internet, no son sino pasos en la evolución del hombre, hasta lo que se ha venido en llamar la sociedad de la información. Pero para ser una auténtica sociedad, el acceso a la información ha de ser libre y gratuito, sin cortapisas de ningún tipo. Ha de ser libre porque debemos ser nosotros los usuarios los que decidamos qué información es importante o útil y cual no, qué queremos difundir y compartir y qué no, y que nadie pueda interrumpir ese flujo de información que nos ha convertido en sociedad. Y ha de ser gratuito porque si se excluyese a alguien del acceso a la información entonces no sería libre.
 
 
 %%% Local Variables: 
