@@ -70,7 +70,7 @@ El desarrollo del trabajo no pretende ser cerrado y hermético. Está sujeto a rev
 Podemos incluir nuevas clases, propiedads y relaciones, o bien modificar alguna de las ya existentes. Por ejemplo, es posible almacenar información sobre los alumnos añadiendo una nueva clase, \lstinline!Alumno!, lo cual puede ser útil para docentes y universidades para almacenar información relativa al alumno y su trayectoria curricular. También se podría añadir una clase \lstinline!Plan\_De\_Estudios! de modo que administraciones y centros docentes puedan almacenar información sobre los diversos planes que componen su oferta educativa.
 
 %\todo{Herramienta para exportación de info y semántica desde/hacia wikis y ontologías}
-\subsection{Integrción de ontología y wiki semántica}
+\subsection{Integración de ontología y wiki semántica}
 Existen herramientas automáticas para exportar la información contenida en la ontología hacía una wiki semántica, como RDFIO. Pero la ontología posee restricciones que no pueden ser traducidas de forma automática hacia la wiki semántica. Por ejemplo, aquellas restricciones que son el producto de la unión o intersección de varios elementos, del tipo 
 \begin{lstlisting}
 <owl:equivalentClass>
