@@ -17,5 +17,6 @@
 *.nav
 *.vrb
 *.bak
+*.tex.bak
 auto
 *~
