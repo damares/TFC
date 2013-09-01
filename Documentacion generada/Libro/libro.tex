@@ -130,6 +130,21 @@ marginpar=25mm]{geometry}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{light-gray}{rgb}{0.97,0.97,0.97}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cabeceras para la importación de las hojas de cálculo
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+%	\usepackage{lscape}  
+%	\usepackage{adjustbox}                                        
+%	
+	\usepackage{pdfpages}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Comienza en libro
@@ -218,7 +233,7 @@ marginpar=25mm]{geometry}
 %%
 %%
 %%
-\include{hojas xls}
+\include{hojas_xls}
 \cleardoublepage
 %% Semántica de Manchester
 \include{semantica}
