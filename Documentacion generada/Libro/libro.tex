@@ -124,6 +124,26 @@ marginpar=25mm]{geometry}
 \usepackage{hyperref}
 
 \usepackage{listings}
+\lstloadlanguages{owlms,protege,[]Java}
+ 
+\lstset{language=Java,
+     basicstyle=\small\ttfamily,
+     backgroundcolor=\color{light-gray},
+     keywordstyle=\color{blue},
+     commentstyle=\color{gray},
+     stringstyle=\color{dkgreen},
+     numbers=left,
+     numberstyle=\tiny\color{gray},
+     stepnumber=1,
+     numbersep=10pt,
+     tabsize=2,
+     showspaces=false,
+     showstringspaces=false,
+     breaklines=true,                           % wrap text
+     sensitive=true,                            % keywords are case sensitive
+     morecomment=[l][commentstyle]{\#},         % comment format
+     morestring=[b]",                           % string format
+     }
 
 \usepackage{xcolor}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -132,23 +152,14 @@ marginpar=25mm]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Cabeceras para la importación de las hojas de cálculo
-%    \usepackage{color}                                            %%
-%    \usepackage{array}                                            %%
-%    \usepackage{longtable}                                        %%
-%    \usepackage{calc}                                             %%
-%    \usepackage{multirow}                                         %%
-%    \usepackage{hhline}                                           %%
-%    \usepackage{ifthen}                                           %%
-%	\usepackage{lscape}  
-%	\usepackage{adjustbox}                                        
-%	
+
 	\usepackage{pdfpages}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Comienza en libro
-\begin{document}
+	\begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SELECCIÓN DEL IDIOMA

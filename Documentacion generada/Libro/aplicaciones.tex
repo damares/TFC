@@ -25,25 +25,42 @@ Debemos mencionar que existen otras muchas herramientas para el trabajo con web 
 
 Los razonadores son programas software que son capaces de inferir las consecuencias derivadas de un conjunto de hechos o axiomas. Existen multitud de razonadores, cada uno con unas características determinadas. Los distintos razonadores varían en función de la expresividad que soportan, del algoritmo que utilizan, si soportan reglas (con formatos propios o estándares como SWRL\footnote{http://www.w3.org/Submission/SWRL/}), o del tipo de licencia otorgada para su distribución.
 
-\subsection{FaCT++}
+\subsubsection{FaCT++}
 Es una mejora sobre el anterior razonador FaCT, que hace uso de los mismos algoritmos que éste, pero con una implementación mejorada. Además, FACT++\footnote{http://owl.man.ac.uk/factplusplus/} está creado utilizando el lenguaje C++ lo que ha incrementado su eficacia y su portabilidad. Ha sido desarrollado por la Universidad de Manchester y se instala de forma predeterminada junto con Protégé.
 
+FaCT++ no soporta el uso de ``built-in primitive datatypes''\footnote{http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/\#built-in-primitive-datatypes} y existe, en la página del razonador \footnote{http://code.google.com/p/factplusplus/issues/detail?id=9} una cuestión abierta por este asunto, pendiente de encontrar solución.
+
+
 \subsection{HermiT}
-Se trata de un razonador para ontologías OWL. HermiT\footnote{http://www.hermit-reasoner.com/} es capaz de determinar si una ontología es o no consistente, identifica relaciones del tipo "es un" y más. Hace uso de un nuevo algoritmo que lo hace más eficaz que cualquier otro utilizado anteriormente, y cumple con los estándares OWL2. La versión utilizada es la 1.3.6. Es un razonador de código abierto bajo licencia LGPL.
+Se trata de un razonador de código abierto bajo licencia LGPL para ontologías OWL. HermiT\footnote{http://www.hermit-reasoner.com/} es capaz de determinar si una ontología es o no consistente, identifica relaciones del tipo ``es un'', clasifica elementos de la ontología, entre otras capacidades. Hace uso de un nuevo algoritmo que lo hace más eficaz que cualquier otro utilizado anteriormente, y cumple con los estándares OWL2. La versión utilizada en el desarrollo de la ontología es la 1.3.8.
 
-\subsection{RacerPro}
-RacerPro\footnote{http://www.racer-systems.com/products/racerpro/} es el nombre comercial de un razonador para OWL. Existe un plugin para Protégé llamado RacerProTG\footnote{http://protegewiki.stanford.edu/wiki/RacerProTG} que trabaja de forma automática con la última versión disponible del razonador RacerPro (existe una licencia gratuita y permanente para el uso del plugin junto con Protégé). 
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-HermiT.png}
+	\caption[HermiT]{Ejemplo de razonamiento usando HermiT}
+\end{figure}
 
-\subsection{Pellet}
-Pellet\footnote{http://clarkparsia.com/pellet} es un razonador para ontologías OWL, que añade la particularidad de permitir razonamiento incremental, de modo que no es preciso realizar un recálculo de las inconsistencias ni de la clasificación cuando tiene lugar algún cambio en el TBox o en el ABox.
+\subsubsection{RacerPro}
+RacerPro\footnote{http://www.racer-systems.com/products/racerpro/} es el nombre comercial del razonador para OWL llamado RACER (Renamed ABox and Concept Expression Reasoner). El razonador puede usarse para razonamiento sobre lógica descriptiva, desarrollo de ontologías y web semántica basada en OWL, repositorio de información para la web semántica, e incluso para el trabajo con lógica modal.  Existe un plugin para Protégé llamado RacerProTG\footnote{http://protegewiki.stanford.edu/wiki/RacerProTG} que trabaja de forma automática con la última versión disponible del razonador RacerPro (existe una licencia gratuita y permanente para el uso del plugin junto con Protégé). 
+
+\subsubsection{Pellet}
+Pellet\footnote{http://clarkparsia.com/pellet} es un razonador para ontologías OWL DL, con soporte para OWL2 e incluso OWL2 EL, que añade la particularidad de permitir razonamiento incremental (lo que permite, ante cambios realizados en la ontología --- bien en la jerarquía de clases, bien en los individuos --- no tener que realizar todo el proceso de razonamiento desde cero). Pellet se ofrece con dos licencias distintas, en función de la finalidad a la que se destine. 
+Pellet permite el razonamiento con ontologías OWL-Full, e incluso cambiar de manera sencilla el comportamiento del razonador para que trabaje sobre hipótesis de mundo cerrado, o con suposición de nombres únicos. También es posible el razonamiento con reglas SWRL (que no se aplicarán a individuos anónimos de la ontología).
+Sin embargo, su comportamiento resulta mucho más pesado que los otros razonadores, y mientras que HermiT es capaz de clasificar la ontología y encontrar inconsistencias en apenas 28 segundos, tras muchos minutos más Pellet aún no ha logrado concluir la clasificación. 
 
 \section{Editores}
 
 Los editores son herramientas que permiten abrir y modificar ontologías. Algunos editores permiten además la utilización de plugins desde el propio editor, mientras que algunas de las aplicaciones que aquí hemos clasificado como editores son en realidad plugins para otras herramientas más genéricas.
 
-\subsection{Protégé}
+\subsubsection{Protégé}
 
 Protégé\footnote{http://protege.stanford.edu/} ha sido el editor elegido para el desarrollo de la ontología, y sus características y cualidades han sido descritas con detalle ya en el apartado 2.1.
+
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-Protege.png}
+	\caption[Protégé]{Vista general de Protégé.}
+\end{figure}
 
 \subsection{ACE View}
 ACE View\footnote{http://attempto.ifi.uzh.ch/aceview/} es un editor de reglas y ontologías que mediante el uso de Attempto Controlled English\footnote{Attempto Project: http://attempto.ifi.uzh.ch/site/} permite crear, ver, editar, e interrogar ontologías OWL y conjuntos de reglas SWRL. Permite obviar los detalles de OWL y SWRL, ya que el usuario trabaja directamente en ACE, e incluso permite su utilización simultánea con otros editores que trabajen sobre OWL.
@@ -79,10 +96,6 @@ Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView} Plugi
 	\caption[ChangeView]{Vista de la herramienta ChangeView}
 \end{figure}
 
-%\begin{center}
-%		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-changeview.png}
-%\end{center}
-%\captionof{figure}[Herramienta - ChangeView]{Herramienta - ChangeView}
 
 \section{Visores}
 Los visores nos permiten visualizar la información de manera más sencilla, de modo que aumenta la comprensión de la información y la claridad de la misma. De este modo resulta más fluido el intercambio de información entre los usuarios de la ontología.
@@ -201,7 +214,11 @@ Además tiene la posibilidad de integrarse en varios sistemas de control de versi
 
 \section{Transformación de datos}
 
-\subsection{OWL2RDB} es un plugin para Protégé que permite transformar ontologías OWL2 en bases de datos relacionales. Por desgracia, el plugin no funciona correctamente con versiones actuales de java y no se distribuye ningún tipo de documentación ni existe página web del autor u otras donde se mencione la aplicación, a donde podamos dirigirnos para obtener más información acerca del error. Nos parecía muy interesante el poder exportar la ontología a una base de datos y trabajar con herramientas especializadas sobre ella. Nos obstante, existen métodos más ``manuales'' para la creación de bases de datos relacionales a partir de ontologías OWL.
+\subsubsection{OWL2RDB} Es un plugin para Protégé que permite transformar ontologías OWL2 en bases de datos relacionales. Por desgracia, el plugin no funciona correctamente con versiones actuales de java y no se distribuye ningún tipo de documentación ni existe página web del autor u otras donde se mencione la aplicación, a donde podamos dirigirnos para obtener más información acerca del error. Nos parecía muy interesante el poder exportar la ontología a una base de datos y trabajar con herramientas especializadas sobre ella. Nos obstante, existen métodos más ``manuales'' para la creación de bases de datos relacionales a partir de ontologías OWL.
+
+\subsubsection{Protege-OWL Code Generator} Creado por los desarrolladores de Protégé, este plugin busca facilitar el desarrollo de aplicaciones a partir de ontologías. El plugin genera, a partir de una ontología, código en java, con el cual podemos trabajar directamente. A modo de ejemplo, se muestra parte del código generado por la versión 1.0.0 para la clase \lstinline!Materia!
+
+\lstinputlisting[language=Java,mathescape=false,firstline=1, lastline=50]{codigo/Materia.java}
 
 \todo{Busca alguno más}
 

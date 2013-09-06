@@ -50,9 +50,46 @@
 %    morestring=[b]",%
 %    keepspaces=true,%
 % %   literate={and}{$\mathbf{\wedge}$ }2 {or}{$\mathbf{\vee}$ }2,%
-literate={in}{$\mathbf{\in}$ }1 {or}{$\mathbf{\vee}$ }2,%
+%literate={in}{$\mathbf{\in}$ }1 {or}{$\mathbf{\vee}$ }2,%
 %    literate={<-}{{$\boldsymbol\gets$}}2 {=}{{$=$}}1 {~}{{$\boldsymbol\neg$}}2 {(A)}{{$\boldsymbol\forall$}}1 {(E)}{{$\boldsymbol\exists$}}1 {\\/}{{$\boldsymbol\lor$}}1 {/\\}{{$\boldsymbol\land$}}1 {=>}{{$\boldsymbol\Rightarrow$}}2 {<=}{{$\boldsymbol\Leftarrow$}}2 {<=}{{$\boldsymbol\le$}}2 {>=}{{$\boldsymbol\ge$}}2
   }[keywords,comments,strings]%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This file is an OWL Manchester Syntax Code Listing Definition file.
+%%
+%% Created by Akos Szoke (aszoke@mit.bme.hu)
+%% Date: 28 May 2010
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lstdefinelanguage{owlms}
+    {morekeywords={xsd,owl,xml,dc,rdf,skos,description,PlainLiteral,int,float,
+        some,only,value,min,exactly,max,and,or,not,self,
+        Prefix,Ontology,Import,Individual,Facts,Types,Class,
+        DataProperty,ObjectProperty,AnnotationProperty,Annotations,
+        DifferentIndividuals,SubClassOf,EquivalentTo,DisjointWith,DisjointUnionOf,SubPropertyOf,DisjointClasses,DisjointProperties,InverseOf, Symmetric,Asymmetric,Reflexive,Irreflexive,Transitive,Functional,InverseFunctional,
+        Characteristics,Range,Domain,Datatype,SubPropertyChain},
+     basicstyle=\small\ttfamily,
+     backgroundcolor=\color{light-gray},
+     keywordstyle=\color{blue},
+     commentstyle=\color{gray},
+     stringstyle=\color{dkgreen},
+     numbers=left,
+     numberstyle=\tiny\color{gray},
+     stepnumber=1,
+     numbersep=10pt,
+     tabsize=2,
+     showspaces=false,
+     showstringspaces=false,
+     breaklines=true,                           % wrap text
+     sensitive=true,                            % keywords are case sensitive
+     morecomment=[l][commentstyle]{\#},         % comment format
+     morestring=[b]",                           % string format
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%===========================  End of file ===================================================================================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
 
 \endinput
 %%
