@@ -31,7 +31,7 @@ Es una mejora sobre el anterior razonador FaCT, que hace uso de los mismos algor
 FaCT++ no soporta el uso de ``built-in primitive datatypes''\footnote{http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/\#built-in-primitive-datatypes} y existe, en la página del razonador \footnote{http://code.google.com/p/factplusplus/issues/detail?id=9} una cuestión abierta por este asunto, pendiente de encontrar solución.
 
 
-\subsection{HermiT}
+\subsubsection{HermiT}
 Se trata de un razonador de código abierto bajo licencia LGPL para ontologías OWL. HermiT\footnote{http://www.hermit-reasoner.com/} es capaz de determinar si una ontología es o no consistente, identifica relaciones del tipo ``es un'', clasifica elementos de la ontología, entre otras capacidades. Hace uso de un nuevo algoritmo que lo hace más eficaz que cualquier otro utilizado anteriormente, y cumple con los estándares OWL2. La versión utilizada en el desarrollo de la ontología es la 1.3.8.
 
 \begin{figure}[h!]
@@ -62,7 +62,7 @@ Protégé\footnote{http://protege.stanford.edu/} ha sido el editor elegido para el
 	\caption[Protégé]{Vista general de Protégé.}
 \end{figure}
 
-\subsection{ACE View}
+\subsubsection{ACE View}
 ACE View\footnote{http://attempto.ifi.uzh.ch/aceview/} es un editor de reglas y ontologías que mediante el uso de Attempto Controlled English\footnote{Attempto Project: http://attempto.ifi.uzh.ch/site/} permite crear, ver, editar, e interrogar ontologías OWL y conjuntos de reglas SWRL. Permite obviar los detalles de OWL y SWRL, ya que el usuario trabaja directamente en ACE, e incluso permite su utilización simultánea con otros editores que trabajen sobre OWL.
 
 Permite obtener de manera rápida una lectura en lenguaje seminatural (inglés en este caso). Existe el problema de que el visor no es capaz de interpretar reglas inferidas por el razonador, sino únicamente aquellas definidas manualmente. De igual modo, no le es posible trabajar con ontologías importadas, lo cual limita su uso (para este caso en particular) a una lectura de la traducción de la ontología a ACE. Si fuese preciso explotar al máximo esta herramienta, podríamos entonces exportar la ontología a una única fuente autocontenida.
@@ -87,7 +87,7 @@ A modo de ejemplo, se muestra una parte de la ontología:
 \end{lstlisting}
 
 
-\subsection{ChangeView}
+\subsubsection{ChangeView}
 Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView} Plugin resulta muy útil durante el desarrollo de la ontología, ya que nos permite tener un control de cambios realizados desde la apertura de la ontología. El listado de cambios sigue un orden cronológico, por lo que siempre sabemos cuál ha sido el último cambio realizado en la ontología, lo que nos permite desahcer los cambios deseados.
 
 \begin{figure}[h!]
@@ -100,26 +100,31 @@ Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView} Plugi
 \section{Visores}
 Los visores nos permiten visualizar la información de manera más sencilla, de modo que aumenta la comprensión de la información y la claridad de la misma. Gracias a ellos podemos obtener diferentes puntos de vista de la ontología, y crear un ambiente más amigable para el trabajo con las ontologías.
 
-\subsection{CloudViews}
-Este plugin\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/CloudViews} nos permite ver la ontología como una nube de tags. Podemos ver las diferentes clases, propiedades e individuos y representarlos en una nube de tags. Estos tags pueden ordenar los conceptos en función del uso, de su profundidad y en función otras características.
+\subsubsection{CloudViews}
+Este plugin\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/CloudViews} nos permite ver la ontología como una nube de tags. Podemos ver las diferentes clases, propiedades e individuos y representarlos en una nube de tags. Los tags se pueden ordenar en función del uso, de su profundidad, relaciones, restricciones y otras características, de modo que es muy fácil e intuitivo hacerse rápidamente una idea de los elementos más importantes de una ontología.
 
-Permite exportar los resultados a formato html que luego pueden visualizarse en un navegador web y que al pinchar sobre ellos nos permitiría abrir en una nueva página la documentación del tag.
+Además, permite exportar los resultados a formato html que luego pueden visualizarse en un navegador web. Los tagas entonces se convierten en hipervínculos, que usados en conjunción con otras herramientas como OWLDOC nos permitiría llegar desde la ontología hasta las definiciiones de cada uno de sus componentes a través de enlaces html.
 
-\begin{center}
+\begin{figure}[!h]
+	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-cloudview.png}
-\end{center}
+	\caption[CloudViews]{Vista en un navegador a pantalla completa de la nube de tags}
+\end{figure}
 
-\subsection{Matrix}
+\subsubsection{Matrix}
 El plugin Matrix\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/MatrixViews} nos permite tener una visión de la ontología en forma de tabla, seleccionando aquella información que de las diferentes clases, propiedades e individuos nos interesa. Incluso es posible, desde la propia tabla, incluir información en la ontología, lo que la convierte en muy útil para completar información.
 
-\begin{center}
+\begin{figure}[!h]
+	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-matrix.png}
-\end{center}
-\begin{center}
+	\caption[Matrix: Individuos]{Vista de los individuos}
+\end{figure}
+\begin{figure}[!h]
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-matrix2.png}
-\end{center}
+	\caption[Matrix: Propiedades]{Vista de las propiedades}
+\end{figure}
 
-\subsection{NavigOWL}
+\subsubsection{NavigOWL}
 NavigOWL\footnote{http://klatif.seecs.nust.edu.pk/navigowl/index.html} es una herramienta de visualización especialmente diseñada para explorar ontologías y permitir una mejor comprensión de su estructura. Los gráficos pueden mostrarse en pantalla según diferentes técnicas de modo que sea más fácil comprender la importancia de cada nodo, al aparecer este de mayor tamaño. También es posible mostrar u ocultar las etiquetas de los diferentes nodos o redistribuirlos en el lienzo. La herramienta incorpora una función de búsqueda que permite localizar en el grafo cualquier nodo de la ontología, lo que también facilita el examen de la misma.
 
 \begin{center}
