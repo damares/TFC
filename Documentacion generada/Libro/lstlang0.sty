@@ -2,7 +2,7 @@
 %% This is file `lstlang0.sty',
 %% contains the definition of several language styles: slamsl
 %% 
-%% Copyright (C) 2000,2001 Ángel Herranz-Nieva <aherranz _at_ fi.upm.es>
+%% Copyright (C) 2000,2001 ï¿½ngel Herranz-Nieva <aherranz _at_ fi.upm.es>
 %% 
 %% This program is free software; you can redistribute it and/or modify
 %% it under the terms of the GNU General Public License as published by
@@ -90,6 +90,27 @@
 %===========================  End of file ===================================================================================
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
+
+\lstdefinelanguage{ace}
+    {morekeywords={Everything, something, that, is, by, a, an, or, If, then, most, thing},
+     basicstyle=\small\ttfamily,
+     backgroundcolor=\color{light-gray},
+     keywordstyle=\color{blue},
+     commentstyle=\color{gray},
+     stringstyle=\color{dkgreen},
+     numbers=none,
+     numberstyle=\tiny\color{gray},
+     stepnumber=1,
+     numbersep=10pt,
+     tabsize=2,
+     showspaces=false,
+     showstringspaces=false,
+     breaklines=true,                           % wrap text
+     sensitive=true,                            % keywords are case sensitive
+     morecomment=[l][commentstyle]{\/*},         % comment format
+     morestring=[b]",                           % string format
+    emph={X,Y}, emphstyle={\color{red}},
+}
 
 \endinput
 %%

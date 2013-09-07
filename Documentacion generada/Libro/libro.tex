@@ -105,6 +105,7 @@ marginpar=25mm]{geometry}
 \newcommand{\tutor}{Ángel Herranz Nieva}
 \newcommand{\fecha}{Julio 2012}
 
+
 % Cleardoublepage
 \makeatletter
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
@@ -124,7 +125,9 @@ marginpar=25mm]{geometry}
 \usepackage{hyperref}
 
 \usepackage{listings}
-\lstloadlanguages{owlms,protege,[]Java}
+\renewcommand{\lstlistingname}{Fragmento}% Listing -> Fragmento
+\renewcommand{\lstlistlistingname}{Índice de fragmentos}
+\lstloadlanguages{owlms,protege,ace,[]Java}
  
 \lstset{language=Java,
      basicstyle=\small\ttfamily,

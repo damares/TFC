@@ -3,7 +3,7 @@
 \todo{explicar la forma de dividir los plugins y su conveniencia frente a otras}
 \todo{comprobar que en todos sitios figura protégé en lugar de otras locuciones.}
 
-La ontología mostrada se ha desarrollado utilizando el framework Protégé\cite{Stanford-Protégé:WEB}. Protégé\todo{Instalar Protégé en /opt - mirar LHS Linux Hierarchy system en google} es un editor de ontologías libre, con una filosofía ´´open source'' que además soporta varios formatos, entre los que destaca OWL\cite{W3C-OWL:WEB}. Protégé ha sido desarrollado por el centro de investigación informática y biomédica\cite{Stanford-BMIR:WEB} de la Escuela Universitaria de Medicina de la universidad de  Standford\cite{Stanford-MED:WEB}, con la colaboración de DARPA, eBay, National Cancer Institute, National Institute of Standards and Technology, National Library of Medicine y National Science Foundation, entre otros.
+La ontología mostrada se ha desarrollado utilizando el framework Protégé\cite{Stanford-Protégé:WEB}. Protégé es un editor de ontologías libre, con una filosofía ´´open source'' que además soporta varios formatos, entre los que destaca OWL\cite{W3C-OWL:WEB}. Protégé ha sido desarrollado por el centro de investigación informática y biomédica\cite{Stanford-BMIR:WEB} de la Escuela Universitaria de Medicina de la universidad de  Standford\cite{Stanford-MED:WEB}, con la colaboración de DARPA, eBay, National Cancer Institute, National Institute of Standards and Technology, National Library of Medicine y National Science Foundation, entre otros.
 
 Gracias al lenguaje OWL soportado por Protégé, a su filosofía de software libre, y a los apoyos recibidos por parte de diversas instituciones como las arriba mencionadas, existen multitud de herramientas disponibles para trabajar de manera automática con las ontologías creadas por Protégé, ya sea en forma de plug-in's o en forma de herramientas que trabajan directamente sobre la ontología en formato OWL. Además, en versiones de Protégé posteriores a la 3.x, es posible exportar directamente desde la herramienta, métodos en lenguaje java (gracias a OWL2API) que permiten trabajar con esa ontología desde un programa java.
 
@@ -11,7 +11,7 @@ El uso de un lenguaje estructurado como OWL-DL, hace posible la utilización de h
 
 Por último, gracias al carácter completo y decidible del lenguaje utilizado, resulta posible (y muy útil) utilizar herramientas capaces de llevar a cabo labores de razonamiento sobre la ontología creada, de modo que nos sea posible descubrir errores o inconsistencias en su diseño (insatisfactibilidad de un concepto, subsunción de conceptos, \ldots) y en las instancias del mismo (consistencia de ABox y TBox). 
 
-Es por ello que se ha optado por realizar una enumeración de las diferentes herramientas que es posible utilizar, atendiendo al tipo de tarea que dicha herramienta automatiza. Así tendremos herramientas que llevan a cabo algún tipo de razonamiento sobre la ontología, herramientas que permiten la transformación de la ontología en diversos tipos de datos para ampliar su aplicabilidad, editores que permiten manipular la ontología y las diversas instancias creadas sobre ella, visores que nos presentan la información contenida en la ontología en las más diversas formas, y otras herramientas que realizan las más diversas tareas, como veremos más adelante. Todas estas herramientas en forma plugins se pueden encontrar en \textit{http://protege.stanford.edu/download/plugins.html}.
+Es por ello que se ha optado por realizar una enumeración de las diferentes herramientas que es posible utilizar, atendiendo al tipo de tarea que dicha herramienta automatiza. Así tendremos herramientas que llevan a cabo algún tipo de razonamiento sobre la ontología, herramientas que permiten la transformación de la ontología en diversos tipos de datos para ampliar su aplicabilidad, editores que permiten manipular la ontología y las diversas instancias creadas sobre ella, visores que nos presentan la información contenida en la ontología en las más diversas formas, y otras herramientas que realizan las más diversas tareas, como veremos más adelante. Todas estas herramientas en forma plugins se pueden encontrar en \textit{http://protege.stanford.edu/download/plugins.html}. Estas categorías no son atómicas, y como veremos, muchas de las herramientas podrían, por su versatilidad, encajar perfectamente en otras categorías.
 
 De todo el amplísimo conjunto de herramientas existentes, las aquí comentadas son tan sólo una pequeña parte. Es posible que existan aplicaciones o plugins con más funcionalidades de las aquí descritas, o bien que parte de la información acerca de las herramientas se haya quedado des actualizada con motivo del lanzamiento de nuevas versiones. \todo{incluir las fuentes de las aplicaciones como ontologyweb, u otras.}
 
@@ -69,8 +69,8 @@ Permite obtener de manera rápida una lectura en lenguaje seminatural (inglés en 
 
 A modo de ejemplo, se muestra una parte de la ontología:
 
-{\ttfamily\footnotesize
-\begin{verbatim}
+\lstset{language=ace}
+\begin{lstlisting}[caption={Ontología en lenguaje ACE},label=ace,captionpos=b]
 		Everything that is AS-formaParteDe-MAed by something is a Materia.
 		Everything that MA-seImparteMediante-MEs something is a Materia.
 		/* MOS: OG-Descripcion Range: string */
@@ -84,11 +84,11 @@ A modo de ejemplo, se muestra una parte de la ontología:
 		Everything that MV-esUtilizadoEn-MAs something is a Me-Evaluacion.
 		Everything is MA-constaDe-ASed by at most 1 thing.
 		Everything that is MA-otorgaCompetenciasGenerales-CGed by something is a Competencia-General.
-\end{verbatim}
-}
+\end{lstlisting}
+
 
 \subsection{ChangeView}
-Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView} Plugin resulta muy útil durante el desarrollo de la ontología, ya que nos permite tener un control de cambios realizados desde la apertura de la ontología. El listado de cambios sigue un orden cronológico, por lo que siempre sabemos cuál a sido el último cambio realizado en la ontología, lo que nos permite desahcer los cambios deseados.
+Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView} Plugin resulta muy útil durante el desarrollo de la ontología, ya que nos permite tener un control de cambios realizados desde la apertura de la ontología. El listado de cambios sigue un orden cronológico, por lo que siempre sabemos cuál ha sido el último cambio realizado en la ontología, lo que nos permite desahcer los cambios deseados.
 
 \begin{figure}[h!]
 	\centering
@@ -98,10 +98,10 @@ Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView} Plugi
 
 
 \section{Visores}
-Los visores nos permiten visualizar la información de manera más sencilla, de modo que aumenta la comprensión de la información y la claridad de la misma. De este modo resulta más fluido el intercambio de información entre los usuarios de la ontología.
+Los visores nos permiten visualizar la información de manera más sencilla, de modo que aumenta la comprensión de la información y la claridad de la misma. Gracias a ellos podemos obtener diferentes puntos de vista de la ontología, y crear un ambiente más amigable para el trabajo con las ontologías.
 
 \subsection{CloudViews}
-Este plugin\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/CloudViews} nos permite ver la ontología como una nube de tags. Podemos selecionar ver las clases, propiedades e individuos y representarlos en una nube de tags. Estos tags pueden ordenar los conceptos en función del uso, de su profundidad y en función otras características.
+Este plugin\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/CloudViews} nos permite ver la ontología como una nube de tags. Podemos ver las diferentes clases, propiedades e individuos y representarlos en una nube de tags. Estos tags pueden ordenar los conceptos en función del uso, de su profundidad y en función otras características.
 
 Permite exportar los resultados a formato html que luego pueden visualizarse en un navegador web y que al pinchar sobre ellos nos permitiría abrir en una nueva página la documentación del tag.
 
