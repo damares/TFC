@@ -2,48 +2,48 @@
 %\documentclass[notes=showlyslideswithnotes,19 pt]{beamer}
 %\documentclass[notes=hide,19 pt]{beamer}
 \documentclass[notes=show,19 pt]{beamer}
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,english]{babel}
 \usepackage{listings}
 \usetheme{Boadilla}
 \setbeamertemplate{navigation symbols}{}
-\title[Ontolog√≠as y EEES]{Uso de ontolog√≠as para la implantaci√≥n del Espacio Europeo de Educaci√≥n Superior en las titulaciones de grado}
-\subtitle[Dise√±o y aplicaci√≥n]{Dise√±o y aplicaci√≥n}
-\author[Daniel]{Daniel Mart√≠nez Esteban\\√Ångel Herranz}
+\title[OntologÌas y EEES]{Uso de ontologÌas para la implantaciÛn del Espacio Europeo de EducaciÛn Superior en las titulaciones de grado}
+\subtitle[DiseÒo y aplicaciÛn]{DiseÒo y aplicaciÛn}
+\author[Daniel]{Daniel MartÌnez Esteban\\¡ngel Herranz}
 \institute[FI-UPM]{
-	Facultad de Inform√°tica\\
-	Universidad Polit√©cnica de Madrid\\
+	Facultad de Inform·tica\\
+	Universidad PolitÈcnica de Madrid\\
 }
 \date[Junio 2013]{3 de Junio de 2013}
 
 \selectlanguage{spanish}
 \begin{document}
-%--- T√≠tulo -------------------------%
+%--- TÌ≠tulo -------------------------%
 \begin{frame}[plain]
 		\titlepage
 \end{frame}
 
 %--- √çndice -------------------%
-\begin{frame}{√çndice}
+\begin{frame}{Õndice}
 \begin{LARGE}
 	\begin{enumerate}
-		\item Motivaci√≥n del trabajo.
-		\item Modelizaci√≥n del universo. 
-		\item Aplicaciones del dise√±o. 
+		\item MotivaciÛn del trabajo.
+		\item ModelizaciÛn del universo. 
+		\item Aplicaciones del diseÒo. 
 		\item Trabajo a futuro.
 	\end{enumerate}
 \end{LARGE}
 \end{frame}
-\note{Mostrar la importancia del trabjo, vender el proyecto. Hay que identificar el problema bien, y luego ser capaz de mostrar porqu√© resulta interesante invertir tiempo en resolver el problema. Hay que ver la utilidad del proyecto. adem√°s de resolver, ayuda a lacomprensi√≥n.\\ 
-Proponer soliuci√≥n al problema propuesto. Vender la soluci√≥n.\\ 
-Implicaciones de la soluci√≥n. Quiz√°s puedas cambiar el orden, mostrando la soluci√≥n final despu√©s del problema, para ense√±ar cu√°l es el final de todo el desarrollo.\\}
+\note{Mostrar la importancia del trabajo, vender el proyecto. Hay que identificar el problema bien, y luego ser capaz de mostrar porquÈ resulta interesante invertir tiempo en resolver el problema. Hay que ver la utilidad del proyecto. adem·s de resolver, ayuda a la comprensiÛn.\\ 
+Proponer soluciÛn al problema propuesto. Vender la soluciÛn.\\ 
+Implicaciones de la soluciÛn. Quiz·s puedas cambiar el orden, mostrando la soluciÛn final despuÈs del problema, para enseÒar cu·l es el final de todo el desarrollo.\\}
 
 %--- EEES y ECTS --------------------%
-\begin{frame}[c]{Motivaci√≥n del trabajo}
+\begin{frame}[c]{MotivaciÛn del trabajo}
 	\begin{center}
 	\begin{huge}
-		Espacio	Europeo de Educaci√≥n Superior
+		Espacio	Europeo de EducaciÛn Superior
 	\end{huge}
 	\begin{Huge}
 	\[
@@ -55,60 +55,60 @@ Implicaciones de la soluci√≥n. Quiz√°s puedas cambiar el orden, mostrando la sol
 	\end{huge}
 	\end{center}
 \end{frame}
-\note{Con motivo de la creaci√≥n del Espacio europeo de educaci√≥n superior, es preciso comenzar a utilizar el nuevo sistema de c≈ïeditos ECTS. este nuevo sistema otorga cr√©ditos en funci√≥n del trabajo que debe realizar el alumno para superar cada asignatura (adquiriendo las competencias definidas en esa asignatura). Y da igual que el alumno realice ese trabajo en el aula o en casa, s√≥lo o acompa√±ado, atendiendo en una clase magistral, o realizando un trabajo de campo. El cambio desde un paradigma centrado en el profesor hacia un paradigma centrado en el alumno puede ser muy complicado si no nos apoyamos en las herramientas adecuadas.}
+\note{Con motivo de la creaciÛn del Espacio europeo de educaciÛn superior, es preciso comenzar a utilizar el nuevo sistema de crÈditos ECTS. este nuevo sistema otorga crÈditos en funciÛn del trabajo que debe realizar el alumno para superar cada asignatura (adquiriendo las competencias definidas en esa asignatura). Y da igual que el alumno realice ese trabajo en el aula o en casa, sÛlo o acompaÒado, atendiendo en una clase magistral, o realizando un trabajo de campo. El cambio desde un paradigma centrado en el profesor hacia un paradigma centrado en el alumno puede ser muy complicado si no nos apoyamos en las herramientas adecuadas.}
 
-%--- Hojas de c√°lculo ---------------%
-\begin{frame}{Motivaci√≥n del trabajo}
+%--- Hojas de c·lculo ---------------%
+\begin{frame}{MotivaciÛn del trabajo}
 	Estado anterior:
 	\begin{center}
 		\includegraphics[width=1\textwidth]{collage.png}
 	\end{center}
 \end{frame}
-\note{La primera aproximaci√≥n al problema por parte de los docentes consisti√≥ en la elaboraci√≥n de complej√≠simas hojas de c√°lculo - hasta 7 por asignatura- en las que era preciso trasladar informaci√≥n entre ellas mediante corta-pega. \\ Adem√°s de la frecuencia de los errores durante el alta manual de la informaci√≥n en las hojas, tambi√©n pod√≠an ocurrir errores durante el copia-pega. Y aunque no se cometiese ning√∫n error, comprender la informaci√≥n relativa a una asignatura era realmente complicado para la persona que hab√≠a introducido la informaci√≥n, no digamos ya para una persona ajena a la misma, para quien los conceptos utilizados pueden tener significados totalmente distintos al real.}
-\note{En resumen, la informaci√≥n contenida en las hojas de c√°lculo es muy proclive a padecer errores - l√©xicos, sint√°cticos y sem√°nticos-, poco pr√°ctica - 7 hojas de c√°lculo para una √∫nica asignatura, una materia con 9 asignaturas ocupar√≠a 63 hojas de c√°lculo, lo dif√≠cil ser√≠a no equivocarse en su interpretaci√≥n- y adem√°s, la utilizaci√≥n de la informaci√≥n contenida en ellas es dif√≠cilmente aprovechable por otras aplicaciones, al carecer de sintaxis y sem√°ntica.}
+\note{La primera aproximaciÛn al problema por parte de los docentes consistiÛ en la elaboraciÛn de complejÌsimas hojas de c·lculo - hasta 7 por asignatura- en las que era preciso trasladar informaciÛn entre ellas mediante corta-pega. \\ Adem·s de la frecuencia de los errores durante el alta manual de la informaciÛn en las hojas, tambiÈn podrÌan ocurrir errores durante el copia-pega. Y aunque no se cometiese ning˙n error, comprender la informaciÛn relativa a una asignatura era realmente complicado para la persona que habÌa introducido la informaciÛn, no digamos ya para una persona ajena a la misma, para quien los conceptos utilizados pueden tener significados totalmente distintos al real.}
+\note{En resumen, la informaciÛn contenida en las hojas de c·lculo es muy proclive a padecer errores - lÈxicos, sint·cticos y sem·nticos-, poco pr·ctica - 7 hojas de c·lculo para una ˙nica asignatura, una materia con 9 asignaturas ocuparÌa 63 hojas de c·lculo, lo difÌcil serÌa no equivocarse en su interpretaciÛn- y adem·s, la utilizaciÛn de la informaciÛn contenida en ellas es difÌcilmente aprovechable por otras aplicaciones, al carecer de sintaxis y sem·ntica.}
 
-%--- Unificaci√≥n, formalizaci√≥n y ---%
-%--- procesos autom√°ticos -----------%
-\begin{frame}{Motivaci√≥n del trabajo}
+%--- UnificaciÛn, formalizaciÛn y ---%
+%--- procesos autom·ticos -----------%
+\begin{frame}{MotivaciÛn del trabajo}
 	\begin{LARGE}
 	\begin{enumerate}
-		\item Formalizaci√≥n del conocimiento.
-		\item Unificaci√≥n del conocimiento.
+		\item FormalizaciÛn del conocimiento.
+		\item UnificaciÛn del conocimiento.
 		\item Procesos automatizados
 	\end{enumerate}
 	\end{LARGE}
 \end{frame}
-\note{Los objetivos del presente trabajo es cubrir las deficiencias observadas en el modelo de las hojas de c√°lculo, proporcionando un m√©todo o herramienta que facilite el paso desde el paradigma que proporcionaba el antiguo sistema de cr√©ditos hacie el nuevo ECTS. \\
-Unificaci√≥n del conocimiento: Resulta imprescindible que todos los actores involucrados en este cambio de paradigma tengan una visi√≥n √∫nica del universo. El conocimiento del mismo ha de ser unificado para lograr homogeneidad en los conceptos. El lograr un conocimiento √∫nico resulta b√°sico para poder continuar trabajando en el problema. \\
-Formalizaci√≥n del conocimiento: Es necesario formalizar ese conocimiento unificado utilizando alg√∫n lenguaje que sea lo suficientemente expresivo para el conocimiento que queremos modelar. \\}
-\note{Procesos automatizados: La formalizaci√≥n del conocimiento nos permitir√° construir o utilizar alguna herramienta que facilite el trabajo y logre minimizar la ocurrencia de fallos humanos - como el copiapega o la introducci√≥n manual de la informaci√≥n en las hojas de c√°lculo. Y si es posible, que lo haga de forma autom√°tica.}
+\note{Los objetivos del presente trabajo es cubrir las deficiencias observadas en el modelo de las hojas de c·lculo, proporcionando un mÈtodo o herramienta que facilite el paso desde el paradigma que proporcionaba el antiguo sistema de crÈditos hacia el nuevo ECTS. \\
+UnificaciÛn del conocimiento: Resulta imprescindible que todos los actores involucrados en este cambio de paradigma tengan una visiÛn ˙nica del universo. El conocimiento del mismo ha de ser unificado para lograr homogeneidad en los conceptos. El lograr un conocimiento ˙nico resulta b·sico para poder continuar trabajando en el problema. \\
+FormalizaciÛn del conocimiento: Es necesario formalizar ese conocimiento unificado utilizando alg˙n lenguaje que sea lo suficientemente expresivo para el conocimiento que queremos modelar. \\}
+\note{Procesos automatizados: La formalizaciÛn del conocimiento nos permitir· construir o utilizar alguna herramienta que facilite el trabajo y logre minimizar la ocurrencia de fallos humanos - como el copia pega o la introducciÛn manual de la informaciÛn en las hojas de c·lculo. Y si es posible, que lo haga de forma autom·tica.}
 
-%--- OWL, ontolog√≠as y proteg√© ------%
-\begin{frame}{Modelizaci√≥n del universo}
+%--- OWL, ontologÌas y protegÈ ------%
+\begin{frame}{ModelizaciÛn del universo}
 \begin{LARGE}
 	\begin{enumerate}
-	\item Esquema conceptual: Ontolog√≠as.
+	\item Esquema conceptual: OntologÌas.
 	\pause	
 	\item Lenguaje utilizado: OWL-DL.
 	\pause
-	\item Herramienta utilizada: Proteg√©.	
+	\item Herramienta utilizada: ProtÈgÈ.	
 	\end{enumerate}
 \end{LARGE}
 \end{frame}
-\note{Las ontolog√≠as nos permiten describir alg√∫n subconjunto del universo en funci√≥n de sus propiedades y de la forma en que √©stas se interrelacionan. Implica la definici√≥n de un vocabulario - Unificaci√≥n del conocimiento - y reglas gramaticales - formalizaci√≥n del conocimiento. Este vocabulario y esta gram√°tica otorgan a las ontolog√≠as las siguientes propiedades:\\
+\note{Las ontologÌas nos permiten describir alg˙n subconjunto del universo en funciÛn de sus propiedades y de la forma en que Èstas se interrelacionan. Implica la definiciÛn de un vocabulario - UnificaciÛn del conocimiento - y reglas gramaticales - formalizaciÛn del conocimiento. Este vocabulario y esta gram·tica otorgan a las ontologÌas las siguientes propiedades:\\
 - Intercambio de datos entre diferentes sistemas\\
-- Creaci√≥n de servicios de consulta\\
+- CreaciÛn de servicios de consulta\\
 - Crear bases de conocimiento reusables\\
 - Ofrecer servicios de interoperabilidad entre diversos sistemas.\\
-Las ontolog√≠as se expresan en lenguajes basados en conceptos l√≥gicos, de modo que se puedan distinguir de manera inequ√≠voca las diferentes clases, propiedades y relaciones.}
-\note{Es preciso entonces utilzar un lenguaje de descripci√≥n que permita almacenar informaci√≥n sint√°ctica y sem√°ntica, para que podamos utilizar el concepto de ontolog√≠a de la manera m√°s provechosa. Existen multitudes de lenguajes sem√°nticos. De entreo todos ellos hemos elegido OWL por ser un est√°ndar desarrollado por W3C que permite la descripci√≥n de tipos de datos, clases, propiedades y relaciones entre ellos, propiedades de esas relaciones y clases enumeradas. Existen tres sublenguajes dentro de OWL, todos ellos desarrollados desde RDF. El m√°s sencillo, OWL lite, no resulta lo sufientemente expresivo, y principalmente est√° enfocado al desarrollo de tesauros, taxonom√≠as y otras jerarqu√≠as de clases y constantes muy simples.\\
-En el lado contrario tenemos OWL-Full que por permitir la m√°xima expresividad y libertad sint√°ctica, no aporta garant√≠as sobre su decidibilidad o completud.}
-\note{Por ello hemos elegido el sulenguaje OWL-DL, que como t√©rmino medio, ofrece todos los constructores de OWL pero con peque√±as condiciones, lo que le permite tener una mayor expresividad que OWL-Lite, as√≠ como las propiedades de decidibiliadd y completud a las ontolog√≠as construidas con este sub-lenguaje, lo que nos permitir√° m√°s adelante el uso de herramientas autom√°ticas.}
-\note{Proteg√© es un framework libre de c√≥digo abierto, desarrollado conjuntamente por las universidades de Standford y Manchester (creadora de la sintaxis que lleva su nombre, v√°lida para la construcci√≥n de ontolog√≠as en lenguaje OWL-DL.) Se ha escogido sobre otras herramientas para el desarrollo de ontolog√≠as por admitir el uso de extensiones en forma de plugins - facilitando la incorporaci√≥n de herramientas que faciliten el desarrollo de la ontolog√≠a-, y por su interfaz clara y f√°cil de utilizar, lo que le convierte en una excelente base para el desarrollo de aplicaciones o prototipos.}
+Las ontologÌas se expresan en lenguajes basados en conceptos lÛgicos, de modo que se puedan distinguir de manera inequÌvoca las diferentes clases, propiedades y relaciones.}
+\note{Es preciso entonces utilizar un lenguaje de descripciÛn que permita almacenar informaciÛn sint·ctica y sem·ntica, para que podamos utilizar el concepto de ontologÌa de la manera m·s provechosa. Existen multitudes de lenguajes sem·nticos. De entre todos ellos hemos elegido OWL por ser un est·ndar desarrollado por W3C que permite la descripciÛn de tipos de datos, clases, propiedades y relaciones entre ellos, propiedades de esas relaciones y clases enumeradas. Existen tres sublenguajes dentro de OWL, todos ellos desarrollados desde RDF. El m·s sencillo, OWL lite, no resulta lo suficientemente expresivo, y principalmente est· enfocado al desarrollo de tesauros, taxonomÌas y otras jerarquÌas de clases y constantes muy simples.\\
+En el lado contrario tenemos OWL-Full que por permitir la m·xima expresividad y libertad sint·ctica, no aporta garantÌas sobre su decidibilidad o completud.}
+\note{Por ello hemos elegido el sublenguaje OWL-DL, que como tÈrmino medio, ofrece todos los constructores de OWL pero con pequeÒas condiciones, lo que le permite tener una mayor expresividad que OWL-Lite, asÌ como las propiedades de decidibiliadd y completud a las ontologÌas construidas con este sublenguaje, lo que nos permitir· m·s adelante el uso de herramientas autom·ticas.}
+\note{ProtÈgÈ es un framework libre de cÛdigo abierto, desarrollado conjuntamente por las universidades de Standford y Manchester (creadora de la sintaxis que lleva su nombre, v·lida para la construcciÛn de ontologÌas en lenguaje OWL-DL.) Se ha escogido sobre otras herramientas para el desarrollo de ontologÌas por admitir el uso de extensiones en forma de plugins - facilitando la incorporaciÛn de herramientas que faciliten el desarrollo de la ontologÌa-, y por su interfaz clara y f·cil de utilizar, lo que le convierte en una excelente base para el desarrollo de aplicaciones o prototipos.}
 %--- Clases y propiedades -----------%
-\begin{frame}{Modelizaci√≥n del universo}
+\begin{frame}{ModelizaciÛn del universo}
 \begin{LARGE}
-	Componentes de la ontolog√≠a:
+	Componentes de la ontologÌa:
 	\begin{itemize}
 		\item Clases.
 		\item Propiedades.
@@ -123,128 +123,128 @@ En el lado contrario tenemos OWL-Full que por permitir la m√°xima expresividad y
 \end{LARGE}
 \end{frame}
 
-\note{Las clases se pueden definir en proteg√© como conjuntos que contienen individuos. Las clases se describen utilizando descripciones formales que definen inequ√≠vocamente los requisitos de pertenencia a una clase. Las clases se organizan en conjuntos de superclases y subclases, que forma la taxonom√≠a de nuestro universo en observaci√≥n. Esta taxonom√≠a puede serobtenida de manera autom√°tica por un razonador, que tambi√©n puede comprobar su consistencia. Se debe tener en cuenta que todas las clases se han definido como disjuntas entre ellas de modo general, salvo las clases Competencia Especifica y Competencia General cuya disjunci√≥n se define de modo particular por ser subclases de Competencia y ser su uni√≥n disjunta.}
-\note{Las propiedades son relaciones binarias entre individuos, es decir, una propiedad une dos individuos entre s√≠. Las propiedades pueden tener inversas, pueden ser funcionales, transitivas, sim√©tricas. . . Estas relaciones se pueden dar tanto entre individuos de la misma clase, como entre individuos de distintas clases. Un razonador autom√°tico puede computar si una relaci√≥n entre dos individuos es consistente con el resto de la ontolog√≠a. Es de destacar que las propiedades √∫nicamente se pueden establecer entre dos individuos. No existen propiedades con cardinalidad tres, lo que implicar√° que en el caso de que sea preciso establecer una relaci√≥n a tres, ser√≠a preciso modelarlo como la relaci√≥n binaria entre el producto escalar de dos de ellas sobre la tercera.}
-\note{Las propiedaddes sobre tipos de datos son relaciones entre individuos y tipos de datos, de modo que se puede asociar a los individuos implicados en la relaci√≥n ciertas caracter√≠sticas de tipos definidos, concretas y especificas.}
-\note{Por comodidad se ha definido un tipo de datos, m√°s por comodidad a la hora de definir las clases y propiedades, que por que sea realmente necesario a la hora del desarrollo de la ontolog√≠a. En el caso de que defini√©semos un tipo de datos cuya primitiva no fuese alguno de los tipos de datos definidos en el est√°ndar de OWL2, el lenguaje de la ontolog√≠a pasar√≠a a ser OWL-Full, con lo que no podr√≠amos realizar razonamiento alguno sobre dicha ontolog√≠a, perdiendo una cualidad b√°sica de las que buscamos con el desarrollo del
-presente trabajo. El tipo de datos tipoCredito nos es √∫til para poder almacenar los cr√©ditos de materias y asignaturas, y si bien puede ser prescindible, me ha parecido √∫til restringir el rango de los datos √∫nicamente al conjunto de los decimales positivos como una forma de evitar que el usuario de la ontolog√≠a pueda completarla con datos err√≥neos.}
-\note{Los individuos representan objetos de la ontolog√≠a en el dominio que estamos estudiando. Son instancias de objetos pertenecientes a alguna de las clases definidas en la ontolog√≠a. Proteg√© no hace uso del Unique Name Assumption, es decir, para proteg√© dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontolog√≠as OWL: todo lo que no sea dicho de forma expl√≠cita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo, para ese dominio.}
+\note{Las clases se pueden definir en protegÈ como conjuntos que contienen individuos. Las clases se describen utilizando descripciones formales que definen inequÌvocamente los requisitos de pertenencia a una clase. Las clases se organizan en conjuntos de superclases y subclases, que forma la taxonomÌa de nuestro universo en observaciÛn. Esta taxonomÌa puede ser obtenida de manera autom·tica por un razonador, que tambiÈn puede comprobar su consistencia. Se debe tener en cuenta que todas las clases se han definido como disjuntas entre ellas de modo general, salvo las clases Competencia Especifica y Competencia General cuya disyunciÛn se define de modo particular por ser subclases de Competencia y ser su uniÛn disjunta.}
+\note{Las propiedades son relaciones binarias entre individuos, es decir, una propiedad une dos individuos entre sÌ. Las propiedades pueden tener inversas, pueden ser funcionales, transitivas, simÈtricas \ldots Estas relaciones se pueden dar tanto entre individuos de la misma clase, como entre individuos de distintas clases. Un razonador autom·tico puede computar si una relaciÛn entre dos individuos es consistente con el resto de la ontologÌa. Es de destacar que las propiedades ˙nicamente se pueden establecer entre dos individuos. No existen propiedades con cardinalidad tres, lo que implicar· que en el caso de que sea preciso establecer una relaciÛn a tres, serÌa preciso modelarlo como la relaciÛn binaria entre el producto escalar de dos de ellas sobre la tercera.}
+\note{Las propiedades sobre tipos de datos son relaciones entre individuos y tipos de datos, de modo que se puede asociar a los individuos implicados en la relaciÛn ciertas caracterÌsticas de tipos definidos, concretas y especificas.}
+\note{Por comodidad se ha definido un tipo de datos, m·s por comodidad a la hora de definir las clases y propiedades, que por que sea realmente necesario a la hora del desarrollo de la ontologÌa. En el caso de que definiÈsemos un tipo de datos cuya primitiva no fuese alguno de los tipos de datos definidos en el est·ndar de OWL2, el lenguaje de la ontologÌa pasarÌa a ser OWL-Full, con lo que no podrÌamos realizar razonamiento alguno sobre dicha ontologÌa, perdiendo una cualidad b·sica de las que buscamos con el desarrollo del
+presente trabajo. El tipo de datos tipoCredito nos es ˙til para poder almacenar los crÈditos de materias y asignaturas, y si bien puede ser prescindible, me ha parecido ˙til restringir el rango de los datos ˙nicamente al conjunto de los decimales positivos como una forma de evitar que el usuario de la ontologÌa pueda completarla con datos errÛneos.}
+\note{Los individuos representan objetos de la ontologÌa en el dominio que estamos estudiando. Son instancias de objetos pertenecientes a alguna de las clases definidas en la ontologÌa. ProtÈgÈ no hace uso del Unique Name Assumption, es decir, para protegÈ dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontologÌas OWL: todo lo que no sea dicho de forma explÌcita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo, para ese dominio.}
 
-%--- Definici√≥n de Asignatura en sintaxis Manchester ---%
+%--- DefiniciÛn de Asignatura en sintaxis Manchester ---%
 \lstset{inputencoding=latin1}
 \lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
-\begin{frame}{Modelizaci√≥n del universo}
+\begin{frame}{ModelizaciÛn del universo}
 	\begin{LARGE}
-		Definici√≥n de Asignatura en sintaxis Manchester:
+		DefiniciÛn de Asignatura en sintaxis Manchester:
 	\end{LARGE}
 	\begin{scriptsize}
-\lstinputlisting[breaklines,language=protege,literate=,linerange=Class:\ ects:Asignatura-only\ ects:Caracter]{../Texto/t-box.ms} 	
+\lstinputlisting[breaklines,language=protege,literate=,linerange=Class:\ ects:Asignatura-only\ ects:Caracter]{../Libro/t-box.ms} 	
 	\end{scriptsize}
 \end{frame}
-\note{Esta es la descripci√≥n de la clase asignatura realizada en sintaxis Manchester. M√°s all√° del proceso autom√°tico que despu√©s podamos realizar utilizando ontolog√≠as, destaca a primer golpe de vista la claridad y sencillez de la descripci√≥n de una asignatura utilizando un lenguaje formal, contra lo complicado de comprender qu√© es una asignatura utilizando una herramiento no apropiada como puedan ser las hojas de c√°lculo presentadas al inicio de esta exposici√≥n.}
+\note{Esta es la descripciÛn de la clase asignatura realizada en sintaxis Manchester. M·s all· del proceso autom·tico que despuÈs podamos realizar utilizando ontologÌas, destaca a primer golpe de vista la claridad y sencillez de la descripciÛn de una asignatura utilizando un lenguaje formal, contra lo complicado de comprender quÈ es una asignatura utilizando una herramienta no apropiada como puedan ser las hojas de c·lculo presentadas al inicio de esta exposiciÛn.}
 
 
-%--- Definici√≥n de una propiedad y un tipo de datos en Manchester ---%
+%--- DefiniciÛn de una propiedad y un tipo de datos en Manchester ---%
 \lstset{inputencoding=latin1}
 \lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
-\begin{frame}{Modelizaci√≥n del universo}
+\begin{frame}{ModelizaciÛn del universo}
 	\begin{LARGE}
 		Ejemplo de Propiedades y tipo de datos
 	\end{LARGE}
 	\begin{scriptsize}
 		\begin{columns}[t]
 			\column{0.5\textwidth}
-\lstinputlisting[breaklines,language=protege,literate=,linerange=ObjectProperty:\ ects:AS\_formaParteDe\_MA-ects:MA\_constaDe\_AS]{../Texto/t-box.ms} 	
+\lstinputlisting[breaklines,language=protege,literate=,linerange=ObjectProperty:\ ects:AS\_formaParteDe\_MA-ects:MA\_constaDe\_AS]{../Libro/t-box.ms} 	
 			\column{0.5\textwidth}
-\lstinputlisting[breaklines,language=protege,literate=,linerange=DataProperty:\ ects:AS\_Creditos-ects:tipoCredito]{../Texto/t-box.ms}
+\lstinputlisting[breaklines,language=protege,literate=,linerange=DataProperty:\ ects:AS\_Creditos-ects:tipoCredito]{../Libro/t-box.ms}
 		\end{columns}
 		\begin{center}
 		\lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape=false}
-		\lstinputlisting[breaklines,language=protege,literate=,firstline=16,lastline=19]{../Texto/t-box.ms}
+		\lstinputlisting[breaklines,language=protege,literate=,firstline=16,lastline=19]{../Libro/t-box.ms}
 		\end{center}
 	\end{scriptsize}
 \end{frame}
-\note{Habla con √°ngelsobre si elimino o no esta diapositiva}
-\note{Y este es un ejemplo de la modelizaci√≥n de propiedades y tipos de datos, mucho m√°s claro, conciso y legible que las tablas incluidas en los ficheros de excel antes mencionados.}
+\note{Habla con ·ngel sobre si elimino o no esta diapositiva}
+\note{Y este es un ejemplo de la modelizaciÛn de propiedades y tipos de datos, mucho m·s claro, conciso y legible que las tablas incluidas en los ficheros de excel antes mencionados.}
 
 %--- Instancia del plan de estudios -%
 \lstset{inputencoding=latin1}
 \lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
-\begin{frame}[fragile]{Aplicaciones del dise√±o}
+\begin{frame}[fragile]{Aplicaciones del diseÒo}
 	\begin{LARGE}
 		Instancia de una asignatura:
 	\end{LARGE}
 	\begin{footnotesize}
-\lstinputlisting[breaklines,language=protege,literate=,linerange=Individual:\ AS\-Concurrencia-xsd:string]{../Texto/a-box.ms} 	
+\lstinputlisting[breaklines,language=protege,literate=,linerange=Individual:\ AS\-Concurrencia-xsd:string]{../Libro/a-box.ms} 	
 	\end{footnotesize}
 \end{frame}
-\note{Como vemos hemos cumplido algunos de los primeros objetivos del trabajo. Hemos logrado, a trav√©s de la descripci√≥n de una ontolog√≠a a trav√©s de un lenguaje formal (OWL-DL), crear un marco de conocimiento √∫nico, sin ambig√ºedades, y con una expresividad superior a la facilitada por las hojas de c√°lculo utilizadas en un principio. Ahora veremos c√≥mo incrementar la aplicabilidad del trabajo incorporando herramientas autom√°ticas a la ontolog√≠a.}
+\note{Como vemos hemos cumplido algunos de los primeros objetivos del trabajo. Hemos logrado, a travÈs de la descripciÛn de una ontologÌa a travÈs de un lenguaje formal (OWL-DL), crear un marco de conocimiento ˙nico, sin ambig¸edades, y con una expresividad superior a la facilitada por las hojas de c·lculo utilizadas en un principio. Ahora veremos cÛmo incrementar la aplicabilidad del trabajo incorporando herramientas autom·ticas a la ontologÌa.}
 
 
-\begin{frame}{Aplicaciones del dise√±o}
+\begin{frame}{Aplicaciones del diseÒo}
 \begin{LARGE}
-	Aplicaciones autom√°ticas:
+	Aplicaciones autom·ticas:
 	
-	Razonadores (FaCT++, HermiT), editores (ACE View, ChangeView, Hypergraph DB), visores (CloudViews, Matrix, NavigOWL, Ontograf, OWLGrEd, SOVA, DL-Query, Cardinality view, Tree views, OWLDoc, OWLViz, OWLPropViz, OWLDiff), transformacion (OWL2RDB).
+	Razonadores (FaCT++, HermiT), editores (ACE View, ChangeView, Hypergraph DB), visores (CloudViews, Matrix, NavigOWL, Ontograf, OWLGrEd, SOVA, DL-Query, Cardinality view, Tree views, OWLDoc, OWLViz, OWLPropViz, OWLDiff), transformaciÛn (OWL2RDB).
 \end{LARGE}
 \pause
 \begin{center}
-	{\Huge ¬°¬°Web sem√°ntica!!}
+	{\Huge °°Web sem·ntica!!}
 \end{center}
-%\note{qu√©date con la idea de las dos vueltas, de c√≥mo se ha llegado hasta la wiki (que no era el destino inicialmente), de porqu√©, de lo que hay y lo queda por hacer. Y porqu√© es √∫til e importante.}
+%\note{quÈdate con la idea de las dos vueltas, de cÛmo se ha llegado hasta la wiki (que no era el destino inicialmente), de porquÈ, de lo que hay y lo queda por hacer. Y porquÈ es ˙til e importante.}
 \end{frame}
 
-\note{Y hasta aqui lo que daba de si el proyecto. Hab√≠amos logrado, trabajando con ontolog√≠as, crear un marco √∫nico y formal de conocimiento que permitiese especificar de un modo formal el nuevo plan de estudios de modo que fuese m√°s sencilla su comprensi√≥n. Se hab√≠a logrado erradicar el trabajo con herramientas no eficientes como las hojas de c√°lculo, y se hab√≠a conseguido con una herramienta que adem√°s permitia el trabajo con aplicaciones autom√°ticas. Los itinerarios formativos pod√≠an ahora ser especificados de una manera formal, y su adpataci√≥n a nuevos criterios normativas mucho m√°s √°gil.}
-\note{Llegados a este punto la ontolog√≠a se encontraba lista y terminada, pero ocurr√≠a que para cualquier persona que no estiviese familiariazada con las ontolog√≠as y sus lenguajes descriptivos, resultaba igualmente de complejo y farragoso el trabajo con hojas de c√°lculo y ontolog√≠as. Y as√≠ el punto y final del trabajo se convirti√≥ en el punto incial de una peque√±a ampliaci√≥n. ¬øPorqu√© no aprovechar la web sem√°ntica para lograr mayor aplicabilidad a la ontolog√≠a dise√±ada?}
+\note{Y hasta aquÌ lo que daba de si el proyecto. HabÌ≠amos logrado, trabajando con ontologÌas, crear un marco ˙nico y formal de conocimiento que permitiese especificar de un modo formal el nuevo plan de estudios de modo que fuese m·s sencilla su comprensiÛn. Se hab√≠a logrado erradicar el trabajo con herramientas no eficientes como las hojas de c·lculo, y se hab√≠a conseguido con una herramienta que adem·s permitia el trabajo con aplicaciones autom·ticas. Los itinerarios formativos pod√≠an ahora ser especificados de una manera formal, y su adpataciÛn a nuevos criterios normativas mucho m·s ·gil.}
+\note{Llegados a este punto la ontologÌa se encontraba lista y terminada, pero ocurr√≠a que para cualquier persona que no estiviese familiariazada con las ontologÌas y sus lenguajes descriptivos, resultaba igualmente de complejo y farragoso el trabajo con hojas de c·lculo y ontologÌas. Y as√≠ el punto y final del trabajo se convirtiÛ en el punto incial de una pequeÒa ampliaciÛn. ¬øPorquÈ no aprovechar la web sem·ntica para lograr mayor aplicabilidad a la ontologÌa diseÒada?}
 
-\begin{frame}{Aplicaciones del dise√±o}
+\begin{frame}{Aplicaciones del diseÒo}
 	\begin{LARGE}
 	\begin{itemize}
-		\item Web Sem√°ntica
-		\item Wiki Sem√°ntica
+		\item Web Sem·ntica
+		\item Wiki Sem·ntica
 	\end{itemize}
 	\end{LARGE}
 \end{frame}
-\note{La web sem√°ntica es una web extendida dotada de un mayor significado (sem√°ntica) gracias a la cual se pueden obtener soluciones a problemas habituales en la b√∫squeda de informaci√≥n mediante la compartici√≥n, proceso y transferencia de informaci√≥n de forma sencilla. Estas soluciones se apoyan en el uso de lenguajes universales (como OWL) que resuelven los problemas ocasionados por una web carente de sem√°ntica. La web sem√°ntica permite a los usuarios delegar tareas en software que es capaz de procesar su contenido, razonar sobre √©ste, combinarlo y realizar deducciones l√≥gicas para resolver problemas cotidianos de manera autom√°tica. La web sem√°ntica aporta una infraestructura apoyada en metadatos que crea una ruta para el razonamiento, extendiendo as√≠ sus capacidades.}
-\note{ No es una inteligencia artificial que comprenda por s√≠ sola la informaci√≥n y a los usuarios, sino la capacidad de una m√°quina para resolver problemas bien definidos, a trav√©s de operaciones bien definidas que se llevar√°n a cabo sobre datos existentes bien definidos. Esta definici√≥n adecuada se logra mediante el uso de RDF (proporciona informaci√≥n descriptiva simple sobre los recursos de la web, sobre todo en cat√°logos), SPARQL (lenguaje de consulta sobre RDF que permite hacer b√∫squedas sobre los recursos web), y OWL.}
-\note{La wiki sem√°ntica es una wiki regular que tiene un modelo de conocimiento subayacente que permite capturar e identificar informaci√≥n acerca de los datos contenidos en sus p√°ginas y las relaciones entre √©stas. Uno de los motores m√°s conocidos es Semantic Media Wiki (una extensi√≥n de Media Wiki) que permite a√±adir m√°s funcionalidades mediante la aplicaci√≥n de addons. Se han probado varias extensiones de Mediawiki y SMW que permiten subir una ontolog√≠a en formato RDF/XML a la wiki, como Ontology Editor o RDFIO, pero dada la complejidad de la ontolog√≠a, muchas de las restricciones impuestas causaban que la extensi√≥n fallase, o en el mejor de los casos, simplemente ignorasen esas restricciones, provocando comportamientos no deseados en la ontolog√≠a. }
-\note{Finalmente, se ha optado por crear la wiki de forma manual (utilizando plantillas creadas con el addon "forms"), al no contar con herramientas fiables que permitan el volcado de informaci√≥n de forma fiable, y con el fin de poder mostrar la idoneidad de trabajar con herramientas sem√°nticas, como ontolog√≠as y wikis sem√°nticas, cuando se trata de proyectos o trabajo cuyo principal objetivo es el de capturar conocimiento.}
+\note{La web sem·ntica es una web extendida dotada de un mayor significado (sem·ntica) gracias a la cual se pueden obtener soluciones a problemas habituales en la b˙squeda de informaciÛn mediante la comparticiÛn, proceso y transferencia de informaciÛn de forma sencilla. Estas soluciones se apoyan en el uso de lenguajes universales (como OWL) que resuelven los problemas ocasionados por una web carente de sem·ntica. La web sem·ntica permite a los usuarios delegar tareas en software que es capaz de procesar su contenido, razonar sobre Èste, combinarlo y realizar deducciones lÛgicas para resolver problemas cotidianos de manera autom·tica. La web sem·ntica aporta una infraestructura apoyada en metadatos que crea una ruta para el razonamiento, extendiendo as√≠ sus capacidades.}
+\note{ No es una inteligencia artificial que comprenda por s√≠ sola la informaciÛn y a los usuarios, sino la capacidad de una m·quina para resolver problemas bien definidos, a travÈs de operaciones bien definidas que se llevar·n a cabo sobre datos existentes bien definidos. Esta definiciÛn adecuada se logra mediante el uso de RDF (proporciona informaciÛn descriptiva simple sobre los recursos de la web, sobre todo en cat·logos), SPARQL (lenguaje de consulta sobre RDF que permite hacer b˙squedas sobre los recursos web), y OWL.}
+\note{La wiki sem·ntica es una wiki regular que tiene un modelo de conocimiento subayacente que permite capturar e identificar informaciÛn acerca de los datos contenidos en sus p·ginas y las relaciones entre Èstas. Uno de los motores m·s conocidos es Semantic Media Wiki (una extensiÛn de Media Wiki) que permite aÒadir m·s funcionalidades mediante la aplicaciÛn de addons. Se han probado varias extensiones de Mediawiki y SMW que permiten subir una ontologÌa en formato RDF/XML a la wiki, como Ontology Editor o RDFIO, pero dada la complejidad de la ontologÌa, muchas de las restricciones impuestas causaban que la extensiÛn fallase, o en el mejor de los casos, simplemente ignorasen esas restricciones, provocando comportamientos no deseados en la ontologÌa. }
+\note{Finalmente, se ha optado por crear la wiki de forma manual (utilizando plantillas creadas con el addon "forms"), al no contar con herramientas fiables que permitan el volcado de informaciÛn de forma fiable, y con el fin de poder mostrar la idoneidad de trabajar con herramientas sem·nticas, como ontologÌas y wikis sem·nticas, cuando se trata de proyectos o trabajo cuyo principal objetivo es el de capturar conocimiento.}
 
-%\begin{frame}{Aplicaciones del dise√±o}
-%	{\Huge ¬°Wiki sem√°ntica¬°}
+%\begin{frame}{Aplicaciones del diseÒo}
+%	{\Huge ¬°Wiki sem·ntica¬°}
 %\end{frame}
 
-\begin{frame}{Aplicaciones del dise√±o}
+\begin{frame}{Aplicaciones del diseÒo}
 \begin{LARGE}
 	Metas alcanzadas:
 	\begin{enumerate}
 		\item Coherencia con el marco legislativo.
-		\item Ayuda al dise√±o de los itinerarios formativos.
+		\item Ayuda al diseÒo de los itinerarios formativos.
 		\item Aplicabilidad por el personal docente.
 		\item Seguimiento de los planes docentes.
-		\item Orientaci√≥n al alumno en la elecci√≥n de centro y estudios.
+		\item OrientaciÛn al alumno en la elecciÛn de centro y estudios.
 	\end{enumerate}
 \end{LARGE}
 \end{frame}
-\note{Finalmente, hemos cumplido con los objetivos incialmente marcados: Hemos logrado crear un marco de conocimiento √∫nico y formal que solventase los problemas planteados por el cambio de paradigma educativo como consecuencia del cambio normativo y que permitise la aplicaci√≥n de herramientas autom√°ticas sobre el mismo que facilitasen el razonamiento, an√°lisis y transformaci√≥n de los datos. Y adicionalmente se ha ido un paso m√°s all√°, creando e incorporando al trabajo el uso de la wiki sem√°ntica, de forma que la ontolog√≠a fuese √∫til a personas sin experiencia previa en el trabajo con ontolog√≠as incrementando de manera dr√°stica su aplicacibilidad. Personas sin formaci√≥n acad√©mica espec√≠fica como alumos, personal docente y administrativo y el p√∫blico en general (incluyendo a administraciones p√∫blicas, empresas privadas y personas f√≠sicas) pueden ahora, gracias a la wiki sem√°ntica, profundizar en los diferentes planes de estudio, sus definiciones y alcance.}
-	\note{Incluye un punto de vista m√°s personal. habla de la evoluci√≥n que ha habia desde el comienzo del tfc hasta el fnal, de c√≥mo tambi√©n ha evolucionado el trabajo, de los tropiezos que hemos tenido y dificultades que tendr√≠a su implantaci√≥n, y c√≥mo se ha solucionado. Debe de ser unas conclusiones con algo de contenido personal.}
+\note{Finalmente, hemos cumplido con los objetivos incialmente marcados: Hemos logrado crear un marco de conocimiento ˙nico y formal que solventase los problemas planteados por el cambio de paradigma educativo como consecuencia del cambio normativo y que permitise la aplicaciÛn de herramientas autom·ticas sobre el mismo que facilitasen el razonamiento, an·lisis y transformaciÛn de los datos. Y adicionalmente se ha ido un paso m·s all·, creando e incorporando al trabajo el uso de la wiki sem·ntica, de forma que la ontologÌa fuese ˙til a personas sin experiencia previa en el trabajo con ontologÌas incrementando de manera dr·stica su aplicacibilidad. Personas sin formaciÛn acadÈmica espec√≠fica como alumos, personal docente y administrativo y el p˙blico en general (incluyendo a administraciones p˙blicas, empresas privadas y personas f√≠sicas) pueden ahora, gracias a la wiki sem·ntica, profundizar en los diferentes planes de estudio, sus definiciones y alcance.}
+	\note{Incluye un punto de vista m·s personal. habla de la evoluciÛn que ha habia desde el comienzo del tfc hasta el fnal, de cÛmo tambiÈn ha evolucionado el trabajo, de los tropiezos que hemos tenido y dificultades que tendr√≠a su implantaciÛn, y cÛmo se ha solucionado. Debe de ser unas conclusiones con algo de contenido personal.}
 
 \begin{frame}{Trabajo a futuro}
 \begin{LARGE}
 	\begin{itemize}
-		\item Mejoras en la ontolog√≠a.
-		\item Integraci√≥n de OWL y Wiki sem√°ntica.
-		\item Razonadores autom√°ticos sobre la wiki.
+		\item Mejoras en la ontologÌa.
+		\item IntegraciÛn de OWL y Wiki sem·ntica.
+		\item Razonadores autom·ticos sobre la wiki.
 	\end{itemize}
 \end{LARGE}
 \end{frame}
-\note{A partir de aqui se abren diferentes caminos como trabajo a futuro. En primer lugar siempre cabe la posiblidad de mejorar la ontolog√≠a dise√±ada, haciendo √©sta m√°s eficiente, o ampliando el universo descrito en caso de cambios normativos o por necesidades de la aplicabilidad. En segundo lugar ser√≠a interesante lograr una mayor integraci√≥n entre la ontolog√≠a y la wiki sem√°ntica de forma que, por ejemplo, cambios sobre la ontolog√≠a tuviesen su reflejo autom√°tico sobre la wiki. De este modo ser√≠a posible adaptar una wiki ya en fincionamiento a las modificaciones que pudiese sufrir la ontolog√≠a subyacente, sin necesidad de tener que traspasar de forma manual el concimiento capturado, ahorr√°ndonos la posibilidad de incurrir en errores debidos al tratamiento manual de esos datos.}
-\note{Y por √∫ltimo, y lo que me ha parecido m√°s importante, la posiblidad de ejecutar razonadores autom√°ticos directamente sobre la wiki sem√°ntica. Dado que el mayor logro obtenido es hacer que el uso de ontolog√≠as sea universal gracias al uso de wikis sem√°nticas, ser√≠a muy interesante, tal y como se ha mencionado antes, lograr que las modificiaciones en la wiki tuviesen su reflejo inmediato ne la ontolog√≠a. Cualquier usuario autorizado podr√≠a de este modo incluir informaci√≥n no recogida previamente en la wiki, o modificar alugna ya existente. Pero el hecho de poderla incluir no nos asegura que dicha informaci√≥n sea sint√°ctica y sem√°nticamente correcta. Para asegurarnos de ello, resulta imprescindible que alg√∫n razonador autom√°tico nos confirmase que la ontolog√≠a subuacente resultante es decidible, coherente y completa.}
+\note{A partir de aqui se abren diferentes caminos como trabajo a futuro. En primer lugar siempre cabe la posiblidad de mejorar la ontologÌa diseÒada, haciendo Èsta m·s eficiente, o ampliando el universo descrito en caso de cambios normativos o por necesidades de la aplicabilidad. En segundo lugar ser√≠a interesante lograr una mayor integraciÛn entre la ontologÌa y la wiki sem·ntica de forma que, por ejemplo, cambios sobre la ontologÌa tuviesen su reflejo autom·tico sobre la wiki. De este modo ser√≠a posible adaptar una wiki ya en fincionamiento a las modificaciones que pudiese sufrir la ontologÌa subyacente, sin necesidad de tener que traspasar de forma manual el concimiento capturado, ahorr·ndonos la posibilidad de incurrir en errores debidos al tratamiento manual de esos datos.}
+\note{Y por ˙ltimo, y lo que me ha parecido m·s importante, la posiblidad de ejecutar razonadores autom·ticos directamente sobre la wiki sem·ntica. Dado que el mayor logro obtenido es hacer que el uso de ontologÌas sea universal gracias al uso de wikis sem·nticas, ser√≠a muy interesante, tal y como se ha mencionado antes, lograr que las modificiaciones en la wiki tuviesen su reflejo inmediato ne la ontologÌa. Cualquier usuario autorizado podr√≠a de este modo incluir informaciÛn no recogida previamente en la wiki, o modificar alugna ya existente. Pero el hecho de poderla incluir no nos asegura que dicha informaciÛn sea sint·ctica y sem·nticamente correcta. Para asegurarnos de ello, resulta imprescindible que alg˙n razonador autom·tico nos confirmase que la ontologÌa subyacente resultante es decidible, coherente y completa.}
 
 \begin{frame}[c]{}
 	\begin{Huge}
 	\begin{center}
-		Gracias por su atenci√≥n.
+		Gracias por su atenciÛn.
 	\end{center}
 	\end{Huge}
 \end{frame}
