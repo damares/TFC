@@ -18,6 +18,7 @@
 *.vrb
 *.bak
 *.tex.bak
+Wiki/
 !/Documentacion\ generada/Libro/Hojas\ calculo/*.pdf
 auto
 *~
