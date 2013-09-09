@@ -127,6 +127,8 @@ El plugin Matrix\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/Matri
 \subsubsection{NavigOWL}
 NavigOWL\footnote{http://klatif.seecs.nust.edu.pk/navigowl/index.html} es una herramienta de visualización especialmente diseñada para explorar ontologías y permitir una mejor comprensión de su estructura. Los gráficos pueden mostrarse en pantalla según diferentes técnicas de modo que sea más fácil comprender la importancia de cada nodo, al aparecer este de mayor tamaño. También es posible mostrar u ocultar las etiquetas de los diferentes nodos o redistribuirlos en el lienzo. La herramienta incorpora una función de búsqueda que permite localizar en el grafo cualquier nodo de la ontología, lo que también facilita el examen de la misma. 
 
+La herramienta está disponible como archivo java ejecutable y también como un plugin para Protégé.
+
 \begin{figure}[!h]
 	\centering
 			\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-NavigOwl.png}
@@ -134,9 +136,9 @@ NavigOWL\footnote{http://klatif.seecs.nust.edu.pk/navigowl/index.html} es una he
 \end{figure}
 
 \subsubsection{Ontograf}
-Ontograf\footnote{http://protegewiki.stanford.edu/wiki/OntoGraf} es otro visor de ontologías. A diferencia de NavigOWL, todos los nodos tienen la misma representación, sin poder establecer a priori una clasificación en función de su importancia, pero a cambio resulta mucho más ágil de manejar que NavigOWL, ya que en ontologías grandes como la nuestra, no resulta una aplicación tan pesada de mover. Se puede elegir si deseamos que nos muestre individuos o clases e incluso podemos ocultar clases o individuos que estén relacionados mediante una propiedad en particular.
+Ontograf\footnote{http://protegewiki.stanford.edu/wiki/OntoGraf} es otro visor de ontologías. A diferencia de NavigOWL, todos los nodos tienen la misma representación, sin poder establecer a priori una clasificación en función de su importancia, pero a cambio resulta mucho más ágil de manejar que NavigOWL, ya que en ontologías grandes como la nuestra, no resulta una aplicación tan pesada de mover. Se puede elegir si deseamos que nos muestre individuos o clases, cuales nos debe mostrar e incluso podemos ocultar clases o individuos que estén relacionados mediante una propiedad en particular.
 
-Admite las relaciones de subclases, individuos, dominio y rango de las propiedades y equivalencias. También se pueden personalizar, para cada tipo de nodo, la información que queremos visualizar.
+Admite las relaciones de subclases, individuos, dominio, rango, pertenencia, etc de las propiedades y equivalencias. También se pueden personalizar, para cada tipo de nodo, la información que queremos visualizar.
 
 \begin{figure}[!h]
 	\centering
@@ -145,14 +147,15 @@ Admite las relaciones de subclases, individuos, dominio y rango de las propiedad
 \end{figure}
 
 \subsubsection{OWLGrEd}
-OWLGrEd\footnote{http://owlgred.lumii.lv/} es un editor gráfico para ontologías OWL. Permite visualizar ontologías existentes en diagramas UML y la creación y desarrollo de ontologías desde el entorno gráfico. Las ontologías creadas pueden ser exportadas a Protégé para comprobar su consistencia, realizar una clasificación, etc, o también importadas desde Protégé a la herramienta.
+OWLGrEd\footnote{http://owlgred.lumii.lv/} es un editor gráfico para ontologías OWL. Permite visualizar ontologías existentes en diagramas UML y la creación y desarrollo de ontologías desde el propio entorno gráfico, sin necesidad de otros editores o software adicional. Las ontologías creadas pueden ser exportadas a Protégé para comprobar su consistencia, realizar una clasificación, etc, o también importadas desde Protégé a la herramienta. Podemos personalizar que entidades mostrar en el diagrama, cambiar la disposiciónd e los distintos elementos en el mismo, o el estilo gráfico. Además, podemos generar archivos gráficos y documentación en html para poder utilizar como apoyo para otros trabajos.
 
-Es un modo de ver la estructura de la ontología muy rápidamente, pero cuenta con el inconveniente de que, en ontologías grandes con muchos individuos, el tiempo de carga la hacen inviable.
-\todo{captura realizada antes de la unión de abox y tbox}
+Es un modo de ver la estructura de la ontología muy rápidamente, pero cuenta con el inconveniente de que, en ontologías grandes con muchos individuos, el tiempo de carga la hacen inviable. Además, el software lanza excepciones no controladas en tiempo de ejecución al cargar la ontología con todos los individuos, pero solamente muestra un error genérico, con lo cual resulta del todo inviable averiguar el motivo del fallo.
 
-\begin{center}
+\begin{figure}[!h]
+	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLGrEd.png}
-\end{center}
+	\caption[OWLGrEd]{Diagrama UML parcial de la TBox}
+\end{figure}
 
 \subsection{SOVA}
 SOVA\footnote{http://protegewiki.stanford.edu/wiki/SOVA} es un plugin de Protégé desarrollado por la universidad de Gdansk que permite la visualización de ontologías al completo. Gracias a SOVA, podemos tener en un mismo esquema clases, individuos y relaciones. 
