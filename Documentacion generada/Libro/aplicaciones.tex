@@ -157,35 +157,32 @@ Es un modo de ver la estructura de la ontología muy rápidamente, pero cuenta con
 	\caption[OWLGrEd]{Diagrama UML parcial de la TBox}
 \end{figure}
 
-\subsection{SOVA}
+\subsubsection{SOVA}
 SOVA\footnote{http://protegewiki.stanford.edu/wiki/SOVA} es un plugin de Protégé desarrollado por la universidad de Gdansk que permite la visualización de ontologías al completo. Gracias a SOVA, podemos tener en un mismo esquema clases, individuos y relaciones. 
 
-SOVA tiene dos modos de trabajo. En el primer modo podemos ver la información tal y como está especificada en el fichero OWL. En el segundo modo la herramienta nos presenta una visión del fichero jerarquizada, pero con la limitación de sólo poder comprobar las relaciones entre individuos y clases, sin poder llegar a más detalle.
+SOVA tiene dos modos de trabajo. En el primer modo obtener una visualización interactiva de la ontología en disposición radial, con todas sus clases, individuos, propiedades, etc, pero sin ninguna clasificación. Es decir, la visualización se limita a la lectura del fichero OWL, pero no se realiza sobre él ninguna labor de clasificación o razonamiento previo. En el segundo modo, la herramienta realiza una clasificación previa utilizando el razonador HermiT y muestra a continuación una jerarquía de clases y los individuos que las componen, pero sin mostrar las propiedades mediante las cuales los individuos de las diferentes clases se relacionan.
 
-\todo{Captura realizada antes de la unión de abox y tbox}
-
-\begin{center}
-		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-SOVAhie.png}
-\end{center}
-\begin{center}
+\begin{figure}[!h]
+	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-SOVAvis.png}
-\end{center}
+	\caption[SOVA - Interactiva]{Visualización de las relaciones entre Materia y Asignatura}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-SOVAhie.png}
+	\caption[SOVA - Jerarquía]{Visualización jerarquizada de las clases e individuosde la ontología}
+\end{figure}
 
-\subsection{DL-Query}
-Se trata de un plugin de Protégé que nos permite, mediante el uso de un razonador, realizar preguntas al razonador, utilizando para ello sintaxis Manchester. DL-Query\footnote{http://protegewiki.stanford.edu/wiki/DL\_Query} es capaz de contestar preguntas sobre cualquier aspecto de la ontología. 
+\subsubsection{DL-Query}
+Se trata de un plugin de Protégé que nos permite, mediante el uso de un razonador, realizar comprobaciones acerca de la consistencia de la ontología y de las asunciones que el razonador realiza. DL-Query\footnote{http://protegewiki.stanford.edu/wiki/DL\_Query} también es útil para probar la pertenencia a una y otra clase de cualquier descripción arbitraria, sin necesidad de tener que crear una clase definida para ello, y si esa consulta se realiza muy a menudo, es posible almacenar dicha consulta dentro de la propia ontología en forma de clase definida o anónima, con lo que resulta mucho más ágil el poder realizar la misma comprobación sobre la ontología de manera repetida. En general, es capaz de contestar preguntas realizadas acerca de la ontología utilizando el motor de inferencia. DL-Query utiliza sintaxis Manchester para la interacción con la ontología.
 
-Además, permite que una consulta que sea realizada a menudo, quede almacenada en la ontología como una clase definida, o bien como una clase anónima. Si el usuario de la ontología está familiarizado con la sintaxis Manchester, o bien incluimos las consultas a realizar a la ontología como clases definidas, dotaremos al usuario de las herramientas precisas para poder realizar preguntas sobre la ontología que lleven a un mejor diseño de la ontología.
+\begin{figure}[!h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-DLQuery.png}
+	\caption[DL-Query]{``¿Qué valores son requisitos para poder cursar Programación Concurrente?''}
+\end{figure}
 
-\todo{Captura realizada antes de la unión de abox y tbox}
-
-\begin{center}
-		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-DLQuery1.png}
-\end{center}
-\begin{center}
-		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-DLQuery2.png}
-\end{center}
-
-\subsection{Cardinality View}
+\subsubsection{Cardinality View}
 Es un plugin, integrado en Protégé que nos permite visualizar las restricciones de cardinalidad de un modo mas amigable, sobre todo para personas no familiarizadas con la informática. Cardinality View\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/Cardinality} nos permite no sólo visualizar esas restricciones, sino que incluso podemos editar dichas restricciones, añadir unas nuevas, o eliminar las ya existentes. Admite restricciones sobre clases, propiedades de datos, constantes de propiedades de datos e incluso de individuos.
 
 \begin{center}
