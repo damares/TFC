@@ -194,105 +194,78 @@ Es un plugin, integrado en Protégé que nos permite visualizar las restricciones 
 \subsubsection{Outline and Existential Tree Views}
 Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/OutlineView} plugin nos permite visualizar las relaciones existenciales de la ontología en forma de árbol, a partir de cualquier nodo, y pudiendo colgar en él las propiedades de objetos y datos. De este modo, podemos obtener una visión de la ontología desde la parte de la misma que en cada momento nos resulte de interés, facilitando la comprensión y el acceso a la información.
 
-\begin{figure}
+\begin{figure}[!h]
 	\centering
 				\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-ExistentialTree.png}
 	\caption[Outline and existential Tree Views]{Árbol generado a partir de \lstinline!Asignatura!}
 \end{figure}
 
 
-\subsection{OWLDoc}
-OWLDoc\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/OWLDoc} es un plugin de Protégé que permite exportar la información contenida en la ontología a HTML, de modo que la visualización de la información puede sere más amena y flexible. OWLDoc exporta toda la información. En la documentación que genera encontramos todo lo relativo a clases, propiedades sobre objetos, propiedades sobre datos, y además, sobre los individuos de la ontología e incluso sobre los tipos de datos que hemos utilizado en la misma.
+\subsubsection{OWLDoc}
+OWLDoc\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/OWLDoc} es un plugin de Protégé que permite exportar la información contenida en la ontología a HTML, de modo que la visualización de la información es más amena y flexible. OWLDoc exporta toda la información que contiene la ontología. En la documentación que genera y por la que podemos navegar encontramos todo lo relativo a clases, propiedades sobre objetos, propiedades sobre datos, y además, sobre los individuos de la ontología e incluso sobre los tipos de datos que hemos utilizado en la misma. En definitiva, se trata de un salto cualitativo en el modo de explorar la ontología, con respecto a las herramientas vistas hasta ahora.
 
-\begin{center}
+\begin{figure}[!h]
+	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLDoc.png}
-\end{center}
+	\caption[OWLDoc]{Vista del individuo \lstinline!MV-Evaluacion_Movilidad!}
+\end{figure}
 
-\subsection{OWLViz}
-Plugin\footnote{http://protegewiki.stanford.edu/wiki/OWLViz} de Protégé, muy básico, que permite navegar únicamente sobre las clases de la ontología. No permite acceder a información contenida en las clases, o a las relaciones entre ellas, limitándose a mostrar relaciones del tipo ''es un''. 
+\subsubsection{OWLViz}
+Plugin\footnote{http://protegewiki.stanford.edu/wiki/OWLViz} de Protégé, muy básico, que permite navegar únicamente sobre las clases de la ontología. No permite acceder a información contenida en las clases, o a las relaciones entre ellas, limitándose a mostrar relaciones del tipo ``es un''. 
 
-\subsection{OWLPropViz}
+\subsubsection{OWLPropViz}
 Plugin basado en OWLViz, que además de mostrar relaciones del tipo "es-un", nos enseña relaciones de equivalencia, clases disjuntas, y otras propiedades sobre objetos definidas en la ontología. 
-Por desgracia, no he sido capaz de lograr que funcione. OWLPropViz\footnote{http://protegewiki.stanford.edu/wiki/OWLPropViz} figura como compatible únicamente con la versión 4.0 de Protégé, y no se ha logrado que funcione en versiones superiores como 4.1 y 4.2 rc1. Para más inri, no se encuentra la versión 4.0 de Protégé disponible para la descarga, por lo que no podemos comprobar la verdadera utilidad de este plugin.
+Por desgracia, no he sido capaz de lograr que funcione. OWLPropViz\footnote{http://protegewiki.stanford.edu/wiki/OWLPropViz} figura como compatible únicamente con la versión 4.0 de Protégé, y no se ha logrado que funcione en versiones superiores como 4.1 o 4.2. 
 
-\subsection{OWLDiff}
-Herramienta disponible para uso dentro de Protégé en forma de plugin o como un programa individual que nos permite comparar dos ontologías, mostrándonos las diferencias y similitudes entre ellas, unirlas en una única ontología, y realizar inferencias sobre ellas utilizando el razonador Pellet. Con OWLDiff\footnote{http://semanticweb.org/wiki/OWLDiff} podemos ver el resultado de la comparativa en forma de axiomas o inserciones de la ontología y cada uno de ellos en sintaxis DL o Manchester.
-Además tiene la posibilidad de integrarse en varios sistemas de control de versiones, como Subversion, lo que facilita el trabajo sobre la ontología por un amplio grupo de gente.
+\subsubsection{OWLDiff}
+Herramienta disponible para uso dentro de Protégé en forma de plugin o como un programa individual que nos permite comparar dos ontologías, mostrándonos las diferencias y similitudes entre ellas, unirlas en una única ontología, y realizar inferencias sobre ellas utilizando el razonador Pellet. Con OWLDiff\footnote{http://semanticweb.org/wiki/OWLDiff} podemos ver el resultado de la comparativa en forma de axiomas o inserciones de la ontología y cada uno de ellos en sintaxis DL o Manchester. También es posible desde la misma aplicación exportar axiomas desde una ontología hacia la otra.
+Además tiene la posibilidad de integrarse en varios sistemas de control de versiones, como Subversion, lo que facilita el trabajo sobre la ontología por un amplio grupo de gente. 
 
-\begin{center}
+\begin{figure}[!h]
+	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLdiff.png}
-\end{center}
+	\caption[]{Muestra de dos ontologías distintintas analizadas por la herramienta}
+\end{figure}
 
 
 \section{Transformación de datos}
 
-\subsubsection{OWL2RDB} Es un plugin para Protégé que permite transformar ontologías OWL2 en bases de datos relacionales. Por desgracia, el plugin no funciona correctamente con versiones actuales de java y no se distribuye ningún tipo de documentación ni existe página web del autor u otras donde se mencione la aplicación, a donde podamos dirigirnos para obtener más información acerca del error. Nos parecía muy interesante el poder exportar la ontología a una base de datos y trabajar con herramientas especializadas sobre ella. Nos obstante, existen métodos más ``manuales'' para la creación de bases de datos relacionales a partir de ontologías OWL.
+\subsubsection{OWL2ToRDB} Es un plugin para Protégé que permite transformar ontologías OWL2 en bases de datos relacionales. Por desgracia, el plugin no funciona correctamente ni con las versiones de java disponibles junto con Protégé, ni con otras versiones actuales de java y no se distribuye ningún tipo de documentación ni existe página web del autor u otras donde se mencione la aplicación, a donde podamos dirigirnos para obtener más información acerca del error. Nos parecía muy interesante el poder exportar la ontología a una base de datos y trabajar con herramientas especializadas sobre ella. 
 
 \subsubsection{Protege-OWL Code Generator} Creado por los desarrolladores de Protégé, este plugin busca facilitar el desarrollo de aplicaciones a partir de ontologías. El plugin genera, a partir de una ontología, código en java, con el cual podemos trabajar directamente. A modo de ejemplo, se muestra parte del código generado por la versión 1.0.0 para la clase \lstinline!Materia!
 
 \lstinputlisting[language=Java,mathescape=false,firstline=1, lastline=50]{codigo/Materia.java}
 
-\todo{Busca alguno más}
-
 \section{Otros}
 
-\subsection{HypergraphDB}
-Es un software que permite la colaboración de un equipo y realizar el control de versiones desde dentro de Protégé. Este plugin\footnote{http://sharegov.org/\#!../protegehgdb/owltools.html} ha sido desarrollado por el condado de Miami-Dade, para el control de versiones y salvaguarda de la ontología en desarrollo. Haciendo uso de hipergrafos dirigidos, es capaz de realizar el control de versiones a nivel de la ontología, porlo que las operaciones de salvaguarda y restauración trabajan directamente con cambios sobre el conjunto de axiomas.
+\subsubsection{ProtégéHGDB}
+Es un software que permite la colaboración de un equipo y realizar el control de versiones desde dentro de Protégé. Este plugin\footnote{http://sharegov.org/\#!../protegehgdb/owltools.html} ha sido desarrollado por el condado de Miami-Dade, para el control de versiones y salvaguarda de la ontología en desarrollo. Haciendo uso de hipergrafos dirigidos, es capaz de realizar el control de versiones a nivel de la ontología, por lo que las operaciones de salvaguarda y restauración trabajan directamente con cambios sobre el conjunto de axiomas.
 
 Este plugin está basado en el software HypergraphDB\footnote{http://www.hypergraphdb.org/index}, una herramienta libre con varios componentes que la convierten en una herramienta muy potente para el desarrollo de software semántico.
 
-\subsection{AceWIKI}
+Por desgracia, al igual que con muchos otros plugins probados, no nos ha sido posible instalar el software de manera satisfactoria. El arranque de la aplicación finaliza con una excepción no tratada que detiene la ejecución de Protégé.
+
+\subsubsection{AceWIKI}
 AceWIKI\footnote{http://attempto.ifi.uzh.ch/acewiki/} Es una potente herramienta que nos permite construir una wiki semántica utilizando el lenguaje ACE, lo que permite que cualquier usuario, sin tener que lidiar con RDF o OWL, pueda construir y mantener una wiki, además manteniendo siempre la coherencia del contenido. 
 
 Si bien resulta perfecta para crear cualquier ontología desde cero utilizando únicamente el lenguaje natural, no es posible la creación de una wiki desde una ontología dada, ya que las los individuos, clases y propiedades están contenidas en el propio artículo, y no en anotaciones sobre la ontología, como en otros constructores.
 
-\subsection{BeanshellView}
-BeanshellView\footnote{https://code.google.com/p/co-ode-owl-plugins/wiki/BeanshellView} es un script que permite al usuario realizar consultar o manipular la ontología através del API de Protégé sin necesidad instalar un entorno de desarrollo java.
+\subsubsection{BeanshellView}
+BeanshellView\footnote{https://code.google.com/p/co-ode-owl-plugins/wiki/BeanshellView} es un script que permite al usuario realizar consultar o manipular la ontología através del API de Protégé sin necesidad instalar un entorno de desarrollo java, todo ello a través de un shell incrustado en Protégé.
 
-\subsection{Watson}
-Watson Semantic Web Search\footnote{http://watson.kmi.open.ac.uk/WatsonWUI/} es un proyecto que nos permite realizar búsquedas en ontologías y documentos semánticos donde la cadena de la búsqueda aparece en identificadores, clases, propiedades, e individuos. Además, permite el uso de comodines, restringir la búsqueda a ciertos tipos de entidades o a ciertos elementos de esas entidades. 
-Se trata de un plugin que muestra resultados de una búsqueda en Watson Semantic Web Search y nos permite, desde el propio plugin, incorporar esos resultados a la ontología.
+\subsubsection{Watson}
+Watson Semantic Web Search\footnote{http://watson.kmi.open.ac.uk/editor\_plugins.html} es un proyecto que realiza labores de interfaz de acceso a la web semántica. Esto se lleva a cabo recopilando contenido semántico de la web, analizándolo y extrayendo metainformación e implementando métodos eficaces para el acceso a la información recopilada. Todo ello permite al usuario realizar búsquedas en ontologías y documentos semánticos donde la cadena de la búsqueda aparece en identificadores, clases, propiedades, e individuos. Además, permite el uso de comodines, restringir la búsqueda a ciertos tipos de entidades o a ciertos elementos de esas entidades. 
+El plugin realiza la consulta en Watson Semantic Web Search\footnote{http://watson.kmi.open.ac.uk/WatsonWUI/} y nos permite, desde el propio plugin, incorporar esos resultados a la ontología.
 
-\subsection{SWRL Tab}
-SWRL Tab\footnote{http://protegewiki.stanford.edu/wiki/SWRLTab} es un plugin que nos permite la creación y ejecución de sentencias SWRL, tanto desde el plugin, como a través de un API. 
+\subsubsection{SWRL Tab}
+SWRL Tab\footnote{http://protegewiki.stanford.edu/wiki/SWRLTab} es un plugin que nos permite la creación y ejecución de sentencias SWRL desde Protégé. Incluye una librería de para interactuar con documentos HTML, y bibliotecas con operadores matemáticos, de cadenas, y RDF's. También se incluye un lenguaje basado en OWL denominado SQWRL. Por desgracia, el plugin sólo es compatible con las versiones 3.x de Protégé.
 
-\subsection{Fuzzy OWL 2}
-Fuzzy OWL\footnote{http://nmis.isti.cnr.it/~straccia/software/FuzzyOWL/index.html} es un plaguin para Protégé que permite representar ontologías difusas, mediante el uso de anotaciones. Gracias a ello, es posible utilizar cualquier editor OWL2 (como Protégé) para la representación de ontologías difusas y utilizar el razonador \textit{fuzzyDL} para responder a preguntas sobre la ontología realizdas desde el propio plugin.
+\subsubsection{Fuzzy OWL 2}
+Fuzzy OWL\footnote{http://nmis.isti.cnr.it/~straccia/software/FuzzyOWL/index.html} es un plugin para Protégé que permite representar ontologías difusas, mediante el uso de anotaciones. Gracias a ello, es posible utilizar cualquier editor OWL2 (como Protégé) para la representación de ontologías difusas y utilizar el razonador \textit{fuzzyDL} para responder a preguntas sobre la ontología realizadas desde el propio plugin.
+	
 
 
 
-%pero la página del proyecto \footnote{http://sharegov.org/\#\%21../protegehgdb/owltools.html} permanece caída en el día de la fecha y no se han encontrado en internet fuentes adicionales a esta para la obtención del plugin. No obstante, el proyecto HypergraphDB continúa, y desde su página \footnote{http://www.hypergraphdb.org/index} podemos descargar la última versión del software e instrucciones sobre su uso, con lo que resulta relativamente sencillo contruir un plugin que, haciendo uso de la OWL API 2.2\footnote{http://owlapi.sourceforge.net/}.
-
-%\todo{Comprueba que la página sigue caída.}
-%
-%\subsubsection{Wikis Semánticas} Las wikis semánticas permiten incorporar a una wiki ordinaria, un modelo de datos que permite capturar e identificar relaciones entre los diversos conceptos, de modo que es posible realizar consutas sobre el contenido y sus relaciones.
-%
-%	El software de wiki semántica más extendido son Freebase, OntoWiki y Semantic Media Wiki.
-%	
-%	Freebase consta de una colección de datos estrucutrados en linea, obtenidos a partir de muy diversas fuentes, con el objetivo de crear un recurso global online que permite a los usuarios un acceso a la información eficaz y equitativo. Metaweb fue adquirida por Google en 2010. Un usuario puede realizar aportaciones a freebase, pero el esquema de datos de su aportación no se adapta al común de la aplicación hasta que un empleado de la compañia le da su visto bueno. 
-%	
-%	OntoWiki es una herramienta que permite la visualización de la infromación contenida en en una base del conocimiento, con varios puntos de vista sobre cada dato. permite la edición de la información de un modo simple,  y la discusión acerca de cada cambio realizado gracias a su control de cambios. 
-%	
-%	Semantic MediaWiki es una extensión de MediaWiki (herramienta para la realización de wikis sintácticas) que permite transformar una wiki sintáctica en una wiki semántica. La principal ventaja de de SMW es la cantidad de extensiones disponibles para personalizar la wiki y añadir nuevas utilidades.
-%	
-%	La principal ventaja de SMW sobre MediaWiki sobre los otros gestores de wikis es la cantidad de funcionalidades que, en forma de añadido, se pueden utilizar para ampliar las capacidades de las wikis creadas.
-%	
-%	A modo de ejemplo, se ha construido una wiki con la ontología del ejemplo. Como inconveniente destacamos el hecho de que algunas estructuras semánticas no se puedan incorporar a la wiki (como una limitación en el número - al menos una- de asinaturas que componen una materia), la imposibilidad de utilizar un razonador directamente sobre la misma, y las actuaciones sobre la ontología deben ser luego trasladadas a mano sobre la wiki, ya que por el momento no se ha encontrado una herramienta que realice este trasvase de información de manera automática \footnote{las limitaciones sobre las estructuras semánticas soportadas por la wiki, hace que en ontologías complejas como la que estamos abordando existan construcciones que no son traducibles directamente a la wiki}, al menos con las herramientas encontradas en el directorio de extensiones de MediaWiki y Semantic MediaWiki.
-%	
-%	Como punto a su favor, las wikis son extremadamente fáciles de crear y mantener, y además, cuentan con extensiones que facilitan la interacción con el usuario y protegen a la wiki de cambios que destruyan la coherencia de la información almacenada.
-%	
-%	\paragraph{Puesta en marcha de la wiki}
-%	Para poner en marcha la wiki, es preciso instalar un servidor web, php y un gestor de bases de datos. En la wiki creada al efecto hemos utilizado el software apache 2.2.22, php 5.4.6-1 y mysql 5.5.29. Sobre ello hemos puesto en marcha la versión 1.20 de Mediawiki y hemos instalado las extensiones SemanticMediaWiki 1.8 y Semantic Forms 2.1 para crear formularios para la introducción de la información por parte de los usuarios y disminuir, si no evitar, errores semánticos. Adicionalmente se recomienda permitir la edición de artículos únicamente a los usuarios editores y administradores.
-%	
-%	Se han probado varias extensiones de Mediawiki y SMW que permiten subir una ontología en formato RDF/XML a la wiki, como Ontology Editor o RDFIO, pero dada la complejidad de la ontología, muchas de las restricciones impuestas causaban que la extensión fallase, o en el mejor de los casos, simplemente ignorasen esas restricciones, provocando comportamientos no deseados en la ontología. Finalmente, se ha optado por crear la wiki de forma manual, al no contar con herramientas fiables que permitan el volcado de información de forma fiable, y con el fin de poder mostrar la idoneidad de trabajar con herramientas semánticas, como ontologías y wikis semánticas, cuando se trata de proyectos o trabajo cuyo principal objetivo es el de capturar conocimiento.
-%	
-%	\todo{Adjuntar algunas capturas de pantalla de la wiki en el documento}
-%
-%
-%
-%%\todo{Consideramos SPARQL útil? par apoder utilizarlo}
-%%\todo{las otras herramientas como tabajo a futro/mejoras}
-%
 %%%% Local Variables: 
 %%%% mode: latex
 %%%% TeX-master: "tfc-ontologia-grado"
