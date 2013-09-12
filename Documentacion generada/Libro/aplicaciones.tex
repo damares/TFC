@@ -88,7 +88,7 @@ A modo de ejemplo, se muestra una parte de la ontología:
 
 
 \subsubsection{ChangeView}
-Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView} Plugin resulta muy útil durante el desarrollo de la ontología, ya que nos permite tener un control de cambios realizados desde la apertura de la ontología. El listado de cambios sigue un orden cronológico, por lo que siempre sabemos cuál ha sido el último cambio realizado en la ontología, lo que nos permite desahcer los cambios deseados.
+Este\footnote{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView} plugin resulta muy útil durante el desarrollo de la ontología, ya que nos permite tener un control de cambios realizados desde la apertura de la ontología. El listado de cambios sigue un orden cronológico, por lo que siempre sabemos cuál ha sido el último cambio realizado en la ontología, lo que nos permite desahcer los cambios deseados.
 
 \begin{figure}[h!]
 	\centering
@@ -236,7 +236,7 @@ Además tiene la posibilidad de integrarse en varios sistemas de control de versi
 
 \lstinputlisting[language=Java,mathescape=false,firstline=1, lastline=50]{codigo/Materia.java}
 
-\section{Otros}
+\section{Control de versiones}
 
 \subsubsection{ProtégéHGDB}
 Es un software que permite la colaboración de un equipo y realizar el control de versiones desde dentro de Protégé. Este plugin\footnote{http://sharegov.org/\#!../protegehgdb/owltools.html} ha sido desarrollado por el condado de Miami-Dade, para el control de versiones y salvaguarda de la ontología en desarrollo. Haciendo uso de hipergrafos dirigidos, es capaz de realizar el control de versiones a nivel de la ontología, por lo que las operaciones de salvaguarda y restauración trabajan directamente con cambios sobre el conjunto de axiomas.
@@ -245,17 +245,37 @@ Este plugin está basado en el software HypergraphDB\footnote{http://www.hypergra
 
 Por desgracia, al igual que con muchos otros plugins probados, no nos ha sido posible instalar el software de manera satisfactoria. El arranque de la aplicación finaliza con una excepción no tratada que detiene la ejecución de Protégé.
 
+\subsubsection{Owl2Vcs}
+Owl2Vcs\footnote{https://github.com/utapyngo/owl2vcs} es un conjunto de herramientas diseñadas para facilitar un servicio de control de versiones para las ontologías OWL2. Está basado en el API OWL y es capaz de trabajar con los sistemas de control de versiones Git, Subversion y Mercurial. La herramienta hace uso de la herramienta OWL2Diff para mostrar las diferencias entre las diversas versiones.
+
+\subsubsection{Collaborative Protégé}
+Se trata de una extensión de Protégé que permite la edición colaborativa de ontologías. Además de permitir la edición de ontologías, permite realizar anotaciones sobre la ontología y sobre los cambios realizados en ella. De este modo podemos realizar búsquedas sobre esas anotaciones.
+
+Collaborative Protégé\footnote{http://protegewiki.stanford.edu/wiki/Collaborative\_Protege} permite dos modos de trabajo: concurrente y consecutiva. En el modo concurrente, varios clientes pueden acceder y modificar de forma simultánea a una ontología situada en un servidor, y los cambios realizados en la ontología son inmediatamente visibles al resto de clientes. En el modo consecutivo, varios usuarios pueden acceder a la ontología, pero de forma consecutiva, nunca simultánea. 
+
+\section{Wikis semántica}
+
 \subsubsection{AceWIKI}
 AceWIKI\footnote{http://attempto.ifi.uzh.ch/acewiki/} Es una potente herramienta que nos permite construir una wiki semántica utilizando el lenguaje ACE, lo que permite que cualquier usuario, sin tener que lidiar con RDF o OWL, pueda construir y mantener una wiki, además manteniendo siempre la coherencia del contenido. 
 
 Si bien resulta perfecta para crear cualquier ontología desde cero utilizando únicamente el lenguaje natural, no es posible la creación de una wiki desde una ontología dada, ya que las los individuos, clases y propiedades están contenidas en el propio artículo, y no en anotaciones sobre la ontología, como en otros constructores.
 
-\subsubsection{BeanshellView}
-BeanshellView\footnote{https://code.google.com/p/co-ode-owl-plugins/wiki/BeanshellView} es un script que permite al usuario realizar consultar o manipular la ontología através del API de Protégé sin necesidad instalar un entorno de desarrollo java, todo ello a través de un shell incrustado en Protégé.
+\subsubsection{SweetWiki}
+Sweetwiki\footnote{http://www-sop.inria.fr/teams/edelweiss/wiki/wakka.php?wiki=SweetWiki} es una herramienta diseñada para la construcción de wikis mediante un modelo colaborativo. Los usuarios crean y editan páginas y etiquetan conceptos en la wiki de manera ordinaria como en cualquier otra wiki. posteriormente, mediante herramientas facilitadas por SweetWiki, editores especializados y administradores revisan el contenido creado por los usuarios y lo complementan añadiendo semántica al contenido (mediante la inclusión de relaciones, por ejemplo), pero sin modificar el contenido ya creado. De este modo la navegación y la búsqueda semántica dentro de la wiki quedan mejoradas gracias a la semántica introducida de este modo.
+
+\subsubsection{Kaukolu}
+Kaukolu\footnote{http://kaukoluwiki.opendfki.de/} es una herramienta en desarrollo que busca un enfoque alternativo para lograr mapear el contenido de una web semántica a una base de conocimiento. La mayoría de las wikis semánticas asocian a las páginas de la wiki un recurso RDF, y a los enlaces entre las páginas les asigna un predicado RDF. Kaukolu permite crear recursos RDF y asociarlos a fragmentos de texto formando anotaciones sobre el mismo. Una vez hecho esto, Kaukolu permite la navegación por la wiki bien desde el punto de vista tradicional de las wikis, o bien a través de las anotaciones creadas. 
+
+Esta forma de trabajo resulta especialmente útil cuando queremos capturar conocimiento desde wikis corrientes, o desde textos ya creados. La captura de ese concocimiento no requiere la definición y utilización de sintaxis especial, ni tener que redefinir el contenido de los textos con una visión ```semántica'' en mente, ni retocar los textos preexistentes. Lástima que la herramienta se encuentre en fase de desarrollo y no exista aún ninguna beta del software a disposición del público.
 
 \subsubsection{Watson}
 Watson Semantic Web Search\footnote{http://watson.kmi.open.ac.uk/editor\_plugins.html} es un proyecto que realiza labores de interfaz de acceso a la web semántica. Esto se lleva a cabo recopilando contenido semántico de la web, analizándolo y extrayendo metainformación e implementando métodos eficaces para el acceso a la información recopilada. Todo ello permite al usuario realizar búsquedas en ontologías y documentos semánticos donde la cadena de la búsqueda aparece en identificadores, clases, propiedades, e individuos. Además, permite el uso de comodines, restringir la búsqueda a ciertos tipos de entidades o a ciertos elementos de esas entidades. 
 El plugin realiza la consulta en Watson Semantic Web Search\footnote{http://watson.kmi.open.ac.uk/WatsonWUI/} y nos permite, desde el propio plugin, incorporar esos resultados a la ontología.
+
+\section{Otros}
+
+\subsubsection{BeanshellView}
+BeanshellView\footnote{https://code.google.com/p/co-ode-owl-plugins/wiki/BeanshellView} es un script que permite al usuario realizar consultar o manipular la ontología através del API de Protégé sin necesidad instalar un entorno de desarrollo java, todo ello a través de un shell incrustado en Protégé.
 
 \subsubsection{SWRL Tab}
 SWRL Tab\footnote{http://protegewiki.stanford.edu/wiki/SWRLTab} es un plugin que nos permite la creación y ejecución de sentencias SWRL desde Protégé. Incluye una librería de para interactuar con documentos HTML, y bibliotecas con operadores matemáticos, de cadenas, y RDF's. También se incluye un lenguaje basado en OWL denominado SQWRL. Por desgracia, el plugin sólo es compatible con las versiones 3.x de Protégé.
