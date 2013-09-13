@@ -66,11 +66,9 @@
 \contentsline {lstlisting}{a\textendash box.ms}{69}{lstlisting.2.-66}
 \contentsline {lstlisting}{a\textendash box.ms}{69}{lstlisting.2.-67}
 \contentsline {lstlisting}{a\textendash box.ms}{70}{lstlisting.2.-68}
-\contentsline {lstlisting}{a\textendash box.ms}{70}{lstlisting.2.-69}
-\contentsline {lstlisting}{a\textendash box.ms}{70}{lstlisting.2.-70}
-\contentsline {lstlisting}{a\textendash box.ms}{70}{lstlisting.2.-71}
-\contentsline {lstlisting}{a\textendash box.ms}{70}{lstlisting.2.-72}
-\contentsline {lstlisting}{a\textendash box.ms}{70}{lstlisting.2.-73}
-\contentsline {lstlisting}{\numberline {3.1}Ontolog\IeC {\'\i }a en lenguaje ACE}{76}{lstlisting.3.1}
-\contentsline {lstlisting}{codigo/Materia.java}{88}{lstlisting.3.-74}
-\contentsline {lstlisting}{t\textendash box.ms}{133}{lstlisting.C.-119}
+\contentsline {lstlisting}{a\textendash box.ms}{126}{lstlisting.2.-69}
+\contentsline {lstlisting}{a\textendash box.ms}{197}{lstlisting.2.-70}
+\contentsline {lstlisting}{a\textendash box.ms}{280}{lstlisting.2.-71}
+\contentsline {lstlisting}{a\textendash box.ms}{309}{lstlisting.2.-72}
+\contentsline {lstlisting}{a\textendash box.ms}{325}{lstlisting.2.-73}
+\contentsline {lstlisting}{t\textendash box.ms}{387}{lstlisting.C.-117}
