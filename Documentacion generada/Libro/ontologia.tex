@@ -13,7 +13,6 @@ Para crear la ontología, se ha partido del documento \cite{FIUPM-MemoAneca}. Est
 Veremos cómo gracias al uso de ontologías, nos es posible corregir las deficiencias que presentaban las hojas de cálculo a la hora de gestionar el desarrollo y mantenimiento de los planes de estudios con el nuevo paradigma, mencionadas en el punto 1.3.1
 
 Con el propósito de poder comprender mejor la construcción de la ontología, vamos a comenzar haciendo un pequeño resumen de los puntos 3 y 5, referidos a los objetivos del título y a la planificación de las enseñanzas.
-%\todo{HAY QUE HABLAR EN ESTA PARTE DE TODO LO QUE COMPONE LAS MATERIAS, ETC; DE ACUERDO CON LO DESCRITO EN LAS DATATYPE PROPERTIES:}
 
 \begin{description}
 	\item [Objetivos generales.]Los objetivos generales del título son la adquisición por parte del egresado, de unos niveles mínimos de adquisición de una serie de capacidades, competencias y destrezas generales. Los objetivos van a fijar las capacidades mínimas de todo alumno al finalizar los estudios.
@@ -311,26 +310,6 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 		\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ ects:MA_Coordinacion-xsd:string]{t-box.ms} 
 
 	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   		%% MA_Resultados
-	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-		\item [MA\_Resultados.] Esta relación sólo enumerará a título informativo, los resultados del aprendizaje obtenidos, o dicho de otro modo, el nivel de adquisición de competencias una vez finalizado el curso de la materia objeto de estudio.  
-   		\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ ects:MA_Resultados-xsd:string]{t-box.ms}
-			
-	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   		%% AS_Creditos
-	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
-		\item [AS\_Creditos.] Cada asignatura tiene asociado un coste en créditos ECTS, que se otorgarán al alumno una vez superada.
-   		\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ ects:AS_Creditos-ects:tipoCredito]{t-box.ms}
-			
-	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   		%% AS_Contenidos
-	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
-		\item [AS\_Contenidos.] La relación \lstinline!AS\_Contenidos!, permite relacionar un individuo de la clase asignatura con un dato literal, de modo que nos permite almacenar una descripción algo más extensa, que ayude en su identificación.  
-		\lstinputlisting[language=owlms,literate=,linerange=DataProperty:\ ects:AS_Contenidos-xsd:string]{t-box.ms}   
-
-
-
-	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    		%% ME_Descripcion
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\item [ME\_Descripcion.] Se trata de una relación entre un individuo de la clase \lstinline!Método\_Docente! y un dato de tipo literal. Esta relación funcional (un método docente sólo puede tener una descripción) es útil para guardar la descripción del método descrito.
@@ -367,10 +346,7 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
   
 	En nuestra ontología todos los individuos que componen la ontología (11 \lstinline!Objetivo_General!, 12 \lstinline!Competencia_General!, 47 \lstinline!Competencia_Especifica!, 12 \lstinline!Materia!, 43 \lstinline!Asignaturas!, 66 \lstinline!Actividades_Formativas!\todo{arregla esto}, 6 \lstinline!Metodos_Docentes!, 4 \lstinline!Caracter!, 9 \lstinline!Metodo_Evaluacion!, 7 \lstinline!Ubicacion_Temporal!) son distintos. Dado el gran número de individuos que componen la ontología, se ha optado por no poner la declaración de todos y cada uno de ellos, si no tan sólo de algunos de ellos, a modo de ejemplo.
  
-  %\lstinputlisting[language=owlms,literate=,linerange=DifferentIndividuals:-UT_7o_semestre]{a-box.ms}
-  
-   %\todo{decir que son distintos, y que no se pone para no extendernos se nombran algunos y punto. decir cuántos son}
-  
+ 
   
 	\begin{description}
 
@@ -429,7 +405,7 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
 			\item [Aprendizaje basado en problemas.] El punto de partida de este método docente es el diseño de un problema por parte del profesor que el estudiante ha de resolver, para desarrollar unas competencias previamente definidas. El aprendizaje resulta más estimulante ya que requiere un mayor esfuerzo intelectual, y le permite al alumno experimentar e indagar sobre situaciones concretas del mundo real.
 			\item [Aprendizaje Cooperativo.] Se trata de hacer que los alumnos sean responsables de su aprendizaje y del de sus compañeros que mediante estrategias de cooperatividad, permitan alcanzar metas e incentivos grupales. Prioriza la cooperación frente a la competición, y permite la adquisción de competencias para la interacción entre iguales y la adquisición de actitudes y valores.
 			\item [Aprendizaje orientado a proyectos.] En este método los estudiantes llevan a cabo la realización de un proyecto en un tiempo determinado con el fin de resolver un problema o abordar una tarea mediante el diseño y realización de una serie de actividades, aplicando para ello los conocimientos adquiridos y utilizando los recursos disponibles de una manera efectiva.
-			\item [Estudio de Casos.] Se trata de analizar de manera intensivaun problema o suceso real con la finalidad de conocerlo y poder generar hipótesis, resolverlo, intrepertarlo...  y con ello adquirir entrenamiento en los procedimientos de tratamiento y resolución.
+			\item [Estudio de Casos.] Se trata de analizar de manera intensivaun problema o suceso real con la finalidad de conocerlo y poder generar hipótesis, resolverlo, intrepertarlo\ldots  y con ello adquirir entrenamiento en los procedimientos de tratamiento y resolución.
 			\item [Lección magistral.] En la lección magistral el profesor expone verbalmente el contenido de la materia a sus alumnos.
 			\item [Resolución de ejercicios y problemas.] La base de estos métodos consiste el desarrollo por parte de los alumnos de soluciones adecuadas o correctas mediante la ejecución de rutinas y la apliación de procedimientos y una posterior interpretación de resultados.
 		\end{description}
@@ -445,7 +421,6 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 		\item [Actividades Formativas]. Estas son las diferentes actividades formativas definidas en el plan de estudios. Como ya se dijo anteriormente, con el fin de poder almacenar la información relativa a los créditos otorgados por cada actividad formativa, se ha definido un individuo \lstinline$actividad \text{formativa}$ \todo{arregla lo que pone formativa}por cada actividad formativa utilizada en cada materia. Esto hace que el número de individuos sea bastante elevado ($\#Actividades\_Formativas=\#Actividades \text{ } \times \text{ } \#Materias$), incluso después de eliminar aquellas actividades formativas que no se emplean en la docencia de una asignatura.
   
-		%\todo{Habla de las actividades formativas de esta titulacion}
   		En este plan de estudios se utilizan nueve activiades formativas:
   
 		\begin{description}
@@ -487,23 +462,23 @@ A continuación vamos clasificar el título de grado en informática ofertado por l
 	   	%% Carácter
    		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 		\item [Carácter]. Aquí quedan recogidos los diferentes carácteres que asignaturas y materias pueden tener. Una asignatura puede ser básica, obligatoria u optativa, mientras que una materia puede ser, además, de carácter mixto.
-		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Básica-TBox:Caracter]{a-box.ms} 
-		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Mixta-TBox:Caracter]{a-box.ms} 
-		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Obligatoria-TBox:Caracter]{a-box.ms} 
-		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Optativa-TBox:Caracter]{a-box.ms} 
+		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Básica-ects:Caracter]{a-box.ms} 
+		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Mixta-ects:Caracter]{a-box.ms} 
+		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Obligatoria-ects:Caracter]{a-box.ms} 
+		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ CA\-Optativa-ects:Caracter]{a-box.ms} 
   
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%% Ubicaciones Temporales
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 		\item [Ubicaciones temporales]. Aqui se agrupan, con el fin de poder lograr un correcto reparto de las asiganturas entre los trimestres que componen la titulación, los trimestres en los que se divide el título. A modo enunciativo:
-		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ UT\-3er_semestre-TBox:Ubicacion_temporal]{a-box.ms} 
-		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ UT\-5o_semestre-TBox:Ubicacion_temporal]{a-box.ms} 
+		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ UT\-3er_semestre-ects:Ubicacion_temporal]{a-box.ms} 
+		\lstinputlisting[language=owlms,literate=,linerange=Individual:\ UT\-5o_semestre-ects:Ubicacion_temporal]{a-box.ms} 
 
 	\end{description}
-
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "tfc-ontologia-grado"
-%%% TeX-PDF-mode: t
-%%% ispell-local-dictionary: "castellano"
-%%% End: 
+%
+%%%% Local Variables: 
+%%%% mode: latex
+%%%% TeX-master: "tfc-ontologia-grado"
+%%%% TeX-PDF-mode: t
+%%%% ispell-local-dictionary: "castellano"
+%%%% End: 
