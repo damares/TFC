@@ -1,4 +1,4 @@
-package tfc;
+package ects;
 import java.util.Collection;
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;

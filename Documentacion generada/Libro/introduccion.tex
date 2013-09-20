@@ -288,9 +288,9 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 		\subsubsection{Metas de las ontologías}
 		Como regla general, las ontologías vienen a cubrir determinadas necesidades, para las cuales o bien son la única herramienta válida, o bien resultan ser la herramienta más adecuada. De cualquier modo, hay que aclarar que se trata de una mera enumeración de situaciones o casos de uso y no recomendaciones, y que no es preciso que se den todas y cada una de ellas para justificar el uso de ontologías.
       
-		\begin {enumerate}
+		\begin {itemize}
 		
-			\item El intercambio de información requiere para que sea efectivo del acuerdo previo, entre las partes que realizan dicho intercambio, sobre las definiciones de los identificadores utilizados. Las ontologías proveen de identificadores estándarizados y descripciones formales de esos identificadores, de modo que todos los usuarios de esa ontología acuerdan de modo implícito utilizar los mismos identificadores, y lo que es más importante, con el mismo significado. 
+			\item El intercambio de información requiere para que sea efectivo del acuerdo previo, entre las partes que realizan dicho intercambio, sobre las definiciones de los identificadores utilizados. Las ontologías proveen de identificadores estandarizados y descripciones formales de esos identificadores, de modo que todos los usuarios de esa ontología acuerdan de modo implícito utilizar los mismos identificadores, y lo que es más importante, con el mismo significado. 
       	
 			A menudo no es suficiente con usar ontologías compartidas. Pudiera ser que un usuario encontrase que una ontología existente cubre el 80\% de sus necesidades, pero que el 20\% restante no estuviese definido. Este usuario no tendría que comenzar a diseñar una ontología desde cero, sino que podría reutilizar las ya existentes y extenderlas hasta cubrir el 100\% de sus necesidades añadiendo identificadores y definiciones propias.
       	
@@ -298,7 +298,7 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
       	
       			\item El mundo cambia constantemente, y por ello sería desable que las ontologías también lo hiciesen al mismo compás. Las ontologías deberían ser capaces de evolucionar, dado que se pueden encontrar errores en versiones anteriores, o bien aparecer nueva terminología o una nueva forma de modelar el dominio. 
       	
-      			Por ello es importante que cada versión de una ontología posea un número de versión. Es más, también se debería especificar qué versiones son o no compatibles, entre sí, no para eliminar las incompatibles, sino para distinguir unas de otras. Dado que es posible que en una revisión posterior se cambie el significado de un identificador sin modificar su descripción formal, es preciso que el autor de la revisión indique dichos cambios de manera explícita.
+      			Por ello es importante identificar inequívocamente cada versión de una ontología con un número de versión. Es más, también se debería especificar qué versiones son o no compatibles, entre sí, no para eliminar las incompatibles, sino para distinguir unas de otras. Dado que es posible que en una revisión posterior se cambie el significado de un identificador sin modificar su descripción formal, es preciso que el autor de la revisión indique dichos cambios de manera explícita.
       	
       			Pero se ha de tener en cuenta que la evolución de una ontología es distinto de la extensión de ontologías, donde la ontología original no se ve modificada por su extensión.
       	
@@ -308,37 +308,39 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
      	
      			\item Podemos encontrar, entre las distintas ontologías que modelen un mismo universo y aunque a priori puedan ser compatibles, inconsistencias que hagan dichas ontologías incompatibles. Es importante que las inconsistencias puedan ser detectadas de manera automática, de modo que se prevenga la corrupción de datos consistentes o la combinación de datos incompatibles.
      		 
-		\end{enumerate}
+		\end{itemize}
       
 	\subsection{Lenguaje de la Ontología}
 	
-	El World Wide Web Consortium\todo{referencia} es un organización internacional, en el que participan organizaciones miembro, persoanl a tiempo completo y público en general con el fin de desarrollar estándares web que permitan sacar el máximo potencial de la web. 
+	El World Wide Web Consortium\footnote{\url{http://www.w3.org/}}--- W3C en adelante --- es una organización internacional, en el que participan organizaciones miembro, personal a tiempo completo y público en general con el fin de desarrollar estándares web que permitan sacar el máximo potencial de la web. 
 		
 		\subsubsection{¿Porqué desarrollar OWL?}
 		
-		La Web Semántica\todo{referencia} permite dotar de significado a la información, permitiendo que las computadoras puedan más fácilmente procesar e integrar la información presente en la web. Se hizo necesario entonces diseñar un lenguaje para la web ontológica que pudiese complir con los objetivos arriba mencionados fijados por el W3C. Existen varios lenguajes relacionados con la web semántica:
+		La Web Semántica\cite{w3c.es-websemantica} permite dotar de significado a la información, permitiendo que las computadoras puedan más fácilmente procesar e integrar la información presente en la web. Se hizo necesario entonces diseñar un lenguaje para la web ontológica que pudiese cumplir con los objetivos arriba mencionados fijados por el W3C. Existen varios lenguajes relacionados con la web semántica:
 		
-		\begin{itemize}
-			\item[XML]\todo{referencia} Proporciona una sintaxis para documentos estructurados, pero no aporta ningúna semántica a esos documentos.
-			\item[XML Schema]\todo{referencia} Restringe la estructura de los documentos XML y añade la posibilidad de definir tipos de datos.
+		\begin{description}
+		
+			\item [XML]\cite{w3c.org-xml} \hfill \\ Proporciona una sintaxis para documentos estructurados, pero no aporta ningúna semántica a esos documentos.
+			\item [XML Schema]\cite{w3c.org-xmlschema} \hfill \\ Restringe la estructura de los documentos XML y añade la posibilidad de definir tipos de datos.
 
-			\item[RDF]\todo{referencia} Es un lenguaje para el modelado de datos con objetos (llamados recursos en el lenguaje) y relaciones entre ellos, creando una semántica para esos modelos y facilitando su representación en sintaxis XML.
+			\item [RDF]\cite{w3c.org-rdf} \hfill \\ Es un lenguaje para el modelado de datos con objetos (llamados recursos en el lenguaje) y relaciones entre ellos, creando una semántica para esos modelos y facilitando su representación en sintaxis XML.
 
-			\item[RDF Schema]\todo{referencia} Es un vocabulario para la descripción de propiedades y clases de recursos RDF que incorpora una semántica para la definición de jerarquías de propiedades y clases.
+			\item  [RDF Schema]\cite{w3c.org-rdfschema} \hfill \\ Es un vocabulario para la descripción de propiedades y clases de recursos RDF que incorpora una semántica para la definición de jerarquías de propiedades y clases.
 
-			\item[OWL]\todo{referencia} Añade vocabulario para la descripción de clases y propiedades como pueden ser relaciones entre clases, cardinalidad, igualdad, más tipos de relaciones, propiedades de esas relaciones y clases enumeradas. 
-		\end{itemize}
+			\item [OWL]\cite{w3c.org-owlfeatures} \hfill \\ Añade vocabulario para la descripción de clases y propiedades como pueden ser relaciones entre clases, cardinalidad, igualdad, más tipos de relaciones, propiedades de esas relaciones y clases enumeradas. 
+
+		\end{description}
 	
 		\subsubsection{Sublenguajes de OWL}
-		Existen tres sublenguajes de OWL, cada uno más expresivo que el anterior, diseñados para ser utilizados de manera específica por implementadores y usuarios, de modo que éstos puedan disponer de un lenguaje adaptado a sus necesidades. 
+		Existen tres sublenguajes de OWL (OWL Lite, OWL DL y OWL Full), cada uno más expresivo que el anterior, diseñados para ser utilizados de manera específica por implementadores y usuarios, de modo que éstos puedan disponer de un lenguaje adaptado a sus necesidades. 
 	
 		\begin{enumerate}
-			
-			\item \textit{OWL Lite}\todo{referencia} está diseñado para usuarios que principalmente precisen una jerarquía de clases y constantes muy simples. Por poner un ejemplo, \textit{OWL Lite} permite el uso de cardinalidad pero sólo con valor 0 ó 1. \textit{OWL Lite} precisa de herramientas más sencillas que otros sublenguajes de OWL más expresivos y es además una manera rápida de de implementar y compartir tesauros y otras taxonomias.
 		
-			\item \textit{OWL DL}\todo{referencia} permite obtener la máxima expresividad del lenguaje a la par que completitud y decidibilidad sobre ese lenguaje. Incluye todos los constructores de OWL pero sólo permite que sean utilizados bajo ciertas condiciones, 
+			\item \textit{OWL Lite} está diseñado para usuarios que principalmente precisen una jerarquía de clases y constantes muy simples. Por poner un ejemplo, \textit{OWL Lite} permite el uso de cardinalidad pero sólo con valor 0 ó 1. \textit{OWL Lite} precisa de herramientas más sencillas que otros sublenguajes de OWL más expresivos y es además una manera rápida de de implementar y compartir tesauros y otras taxonomias.
+		
+			\item \textit{OWL DL} permite obtener la máxima expresividad del lenguaje a la par que completitud y decidibilidad sobre ese lenguaje. Incluye todos los constructores de OWL pero sólo permite que sean utilizados bajo ciertas condiciones, 
 	
-			\item \textit{OWL Full}\todo{referencia} está pensado para aquellos usuarios que desean trabajar con la máxima expresividad y libertad sintáctica, pero sin ninguna garantía de completitud ni de decidibilidad. 
+			\item \textit{OWL Full} está pensado para aquellos usuarios que desean trabajar con la máxima expresividad y libertad sintáctica, pero sin ninguna garantía de completitud ni de decidibilidad. 
 
 		\end{enumerate}
 		
@@ -346,104 +348,76 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 
 		\begin{itemize}
 
-			\item Todas las ontologías OWL Lite válidas son ontologías OWL DL válidas.
+			\item Todas las ontologías \textit{OWL Lite} válidas son ontologías \textit{OWL DL} válidas.
 
-			\item Todas las ontologías OWL DL válidas son ontologías OWL Full válidas.
+			\item Todas las ontologías \textit{OWL DL} válidas son ontologías \textit{OWL Full} válidas.
 
-			\item Todas las conclusiones válidas sobre una ontología OWL Lite son conclusiones OWL DL válidas.
+			\item Todas las conclusiones válidas sobre una ontología \textit{OWL Lite} son conclusiones \textit{OWL DL} válidas.
 
-			\item Todas las conclusiones válidas sobre una ontología OWL DL son conclusiones OWL Full válidas.
+			\item Todas las conclusiones válidas sobre una ontología \textit{OWL DL} son conclusiones \textit{OWL Full} válidas.
 
 		\end{itemize}
 		
 		\subsubsection{Elección de un sublenguaje OWL}
 
-		A la hora de escoger uno u otro sublenguaje OWL, se ha de tener en cuenta las necesidades que va a tener que satisfacer. La elección entre OWL Lite y OWL DL dependerá de si OWL Lite es capaz de satisfacer la expresividad requerida o no. La elección entre OWL DL y OWL Full dependerá de que el usuario requiera hacer uso de los meta-modelos (posible con la sintaxis de RDF Schema) o no, y de la necesidad de utilizar razonadores sobre la ontología, dado que por el momento no existen razonadores para ontologías OWL Full. 
+		A la hora de escoger uno u otro sublenguaje OWL, se ha de tener en cuenta las necesidades que va a tener que satisfacer. La elección entre \textit{OWL Lite} y \textit{OWL DL} dependerá de si \textit{OWL Lite} es capaz de satisfacer la expresividad requerida o no. La elección entre \textit{OWL DL} y \textit{OWL Full} dependerá de que el usuario requiera hacer uso de los meta-modelos (posible con la sintaxis de RDF Schema) o no, y de la necesidad de utilizar razonadores sobre la ontología, dado que por el momento no existen razonadores para ontologías OWL Full. 
 		
-		EL sublenguaje OWL Full puede ser considerado como una extensión de RDF, mientas que OWL Lite y OWL DL pueden ser considerados como extensiones de un RDF restringido. Cualquier documento OWL (ya sea OWL Lite, OWL DL o OWL Full) es un documento RDF y cada documento RDF es un documento OWL Full, pero sólo algunos documentos RDF serán documentos OWL Lite o OWL DL válidos, debido a las restricciones de sintaxis que cada uno lleva aparejado. 
+		EL sublenguaje \textit{OWL Full} puede ser considerado como una extensión de RDF, mientas que \textit{OWL Lite} y \textit{OWL DL} pueden ser considerados como extensiones de un RDF ``restringido''. Cualquier documento OWL (ya sea \textit{OWL Lite}, \textit{OWL DL} o \textit{OWL Full}) es un documento RDF y cada documento RDF es un documento \textit{OWL Ful}l, pero sólo algunos documentos RDF serán documentos \textit{OWL Lite} o \textit{OWL DL} válidos, debido a las restricciones de sintaxis que cada uno lleva aparejado. 
 		
-		Por ello, es preciso tomar precauciones cuando se desea convertir un documento RDF en uno OWL Lite o OWL DL, ya que el nuevo documento RDF debe cumplir con las restricciones propias de cada sublenguaje OWL. Para obtener más información acerca de las diferentes restricciones que cada sublenguaje impone, se recomienda ver el apéndice E de la referencia de OWL.
+		Por ello, es preciso tomar precauciones cuando se desea convertir un documento RDF en uno \textit{OWL Lite} o \textit{OWL DL}, ya que el nuevo documento RDF debe cumplir con las restricciones propias de cada sublenguaje OWL. Para obtener más información acerca de las diferentes restricciones que cada sublenguaje impone, se recomienda ver el apéndice E de la referencia de OWL.
 		
 		
-%      El uso de ontologías para la especificación del conocimiento nos permitirá
-%      trabajar con una única representación del conocimiento, válida para todos los
-%      actores involucrados en el proceso de educación. Esta visión única y global nos
-%      permitirá que quienes quieran que sean las personas que precisen trabajar sobre
-%      el conocimiento representado compartirán todas ellas una misma visión de
-%      conjunto.
-%      
-%      De manera adicional, se logra que los conceptos utilizados en la descripción del
-%      conocimiento estén definidos de manera precisa en la propia ontología, con lo
-%      que se elimina la necesidad de acudir a fuentes externas, y por tanto se unifica
-%      el significado de los conceptos introducidos.
-%      De este modo, al unificar la representación del conocimiento y las significación
-%      de sus conceptos, logramos crear un marco único y formal, que posibilita:
-%      \begin{itemize}
-%	\item la eliminación de ambigüedades, al trabajar todos los agentes sobre un
-%	mismo marco de representación.
-%	\item un rápido intercambio de ideas, ya que se elimina la necesidad de
-%	"traducción".
-%	\item dotar al modelo de conocimiento de una elevada adaptabilidad a cambios
-%	futuros, pues las bases han sido creadas sin ambigüedades ni incertidumbres.
-%      \end{itemize}
-%
-%    \subsection{Marco unificado}
-%      %{Marco unificado para añadir (open world assumption OWA) y extraer información.}
-%      Aqui tengo que hablar con Ángel, porque no sé muy bien qué poner aqui. Busca en
-%      internet.
-
 	\subsection{Procesos automatizados}
-    	El hecho de que, como ya se ha comentado, las ontologías OWL DL y OWL Lite sean lenguajes completos y decidibles permite la utilización de herramientas automáticas, abriendo una amplio abanico de posibilidades en la utilización de dichas ontologías.
+    	El hecho de que, como ya se ha comentado, las ontologías \textit{OWL DL} y \textit{OWL Lite} sean lenguajes completos y decidibles permite la utilización de herramientas automáticas, abriendo una amplio abanico de posibilidades en la utilización de dichas ontologías.
     	
-    	Algunas herramientas automáticas proporcionan un interfaz de programación para el diseño e implementación de ontologías, exploradores de ontologías, conversores, razonadores, motores de búsqueda, etiquetadores, validadores, visores... Existen diversas páginas como \textit{http://www.w3.org/2001/sw/wiki/Tools}, \textit{http://semanticweb.org/wiki/Tools}, \textit{http://www.mkbergman.com/sweet-tools-simple-list/} o \textit{http://protegewiki.stanford.edu/wiki/Protege\_Plugin\_Library} donde hay repositorios y se pueden encontrar las herramientas agrupadas por categorías, lenguajes de programación \ldots A modo enunciativo, y para que el lector pueda tener una primera impresión de las capacidades del lenguaje, se enumeran algunas de las herramientas.
+    	Algunas herramientas automáticas proporcionan un interfaz de programación para el diseño e implementación de ontologías, exploradores de ontologías, conversores, razonadores, motores de búsqueda, etiquetadores, validadores, visores... Existen diversas páginas\footnote{\url{http://www.w3.org/2001/sw/wiki/Tools}}\footnote{\url{http://semanticweb.org/wiki/Tools}}\footnote{\url{http://www.mkbergman.com/sweet-tools-simple-list/}}\footnote{\url{http://protegewiki.stanford.edu/wiki/Protege\_Plugin\_Library}} donde hay repositorios y se pueden encontrar las herramientas agrupadas por categorías, lenguajes de programación \ldots A modo enunciativo, y para que el lector pueda tener una primera impresión de las capacidades del lenguaje, se enumeran algunas de las herramientas.
     	
 	%\todo{Daniel, nombra aqui las páginas que has encontrado}
     	\begin{itemize}
-		\item \textit{iQvoc} es una herramienta web de código abierto para manejar vocabularios, jerarquías, tesauros.
+		\item \textit{iQvoc}\footnote{\url{http://iqvoc.net/}} es una herramienta web de código abierto para manejar vocabularios, jerarquías, tesauros.
 			
-		\item \textit{ONKI} es un catálogo de ontologías, vocabularios y tesauros, fineses e internacionales, muy útil para poder construir y mantener contenido de la web semántica a un coste aceptable. 
+		\item \textit{ONKI}\footnote{\url{http://onki.fi/}} es un catálogo de ontologías, vocabularios y tesauros, fineses e internacionales, muy útil para poder construir y mantener contenido de la web semántica a un coste aceptable. 
 
-		\item \textit{SMAD} es un catalizador para aplicaciones web para dispositivos móviles, que intenta integrar datos de la web semántica con servicios basados en la localización de esos dispositivos móviles.
+		\item \textit{SMAD}\footnote{\url{http://www.w3.org/2001/sw/wiki/SMAD}} es un catalizador para aplicaciones web para dispositivos móviles, que intenta integrar datos de la web semántica con servicios basados en la localización de esos dispositivos móviles.
 
-		\item \textit{SKOS API} es un interfaz java, que incluye un parser y un editor con soporte para SKOS\todo{referencia} y en el que se pueden integrar razonadores como Pellet o FaCT++.
+		\item \textit{SKOS API}\footnote{\url{http://www.w3.org/2001/sw/wiki/SKOS_API}} es un interfaz java, que incluye un parser y un editor con soporte para SKOS\footnote{\url{http://www.w3.org/2004/02/skos/}} y en el que se pueden integrar razonadores como Pellet o FaCT++.
 
-		\item \textit{TopBraid EVN} es una solución para el desarrollo y mantenimiento de vocabularios interconectados, de modo que todas las partes interesadas en un negocio o empresa pueden colaborar en defniir e interrelacionar vocabularios, taxonomias, tesauros y ontologías.
+		\item \textit{TopBraid EVN}\footnote{\url{http://www.topquadrant.com/solutions/ent\_vocab\_net.html}} es una solución para el desarrollo y mantenimiento de vocabularios interconectados, de modo que todas las partes interesadas en un negocio o empresa pueden colaborar en definir e interrelacionar vocabularios, taxonomías, tesauros y ontologías.
 
-		\item \textit{Graphity} es una plataforma para la construcción de aplicaciones web, y permite explorar fuentes de datos externas, analizarlas e importar información proveniente de otras fuentes privadas de datos.
+		\item \textit{Graphity}\footnote{\url{http://www.w3.org/2001/sw/wiki/Graphity}} es una plataforma para la construcción de aplicaciones web, y permite explorar fuentes de datos externas, analizarlas e importar información proveniente de otras fuentes privadas de datos.
 
-		\item \textit {Callicamchus} permite a los creadores de páginas web crear aplicaciones para la web semántica de manera rápida y sencilla.
+		\item \textit {Callicamchus}\footnote{\url{http://callimachusproject.org/}} permite a los creadores de páginas web crear aplicaciones para la web semántica de manera rápida y sencilla.
 
-		\item \textit{OntoVCS} es un conjunto de herramientas para la línea de comandos que permite obtener las diferencias de varias ontologías, así como unirlas y pueden integrarse en Mercurial\todo{referencia} o Git\todo{referencia} para el control de versiones.
+		\item \textit{OntoVCS}\footnote{\url{https://github.com/utapyngo/owl2vcs}} es un conjunto de herramientas para la línea de comandos que permite obtener las diferencias de varias ontologías, así como unirlas y pueden integrarse en Mercurial\footnote{\url{http://mercurial.selenic.com/}} o Git\footnote{\url{http://git-scm.com/}} para el control de versiones.
 
-		\item \textit{Pellint} es una herramienta para \textit{Pellet}\todo{referencia} que indica e incluso puede reparar diversas construcciones que se sabe que ocasionan problemas, a nivel de ontologías y axiomas.
+		\item \textit{Pellet}\footnote{\url{http://clarkparsia.com/pellet/}} es un razonador que incluye como novedad la capacidad de realizar razonamiento incremental.
 
-		\item \textit{babel} es un servicio del proyecto SIMILE\todo{referencia} del MIT para la conversión desde o hacia diferentes formatos.
+		\item \textit{Pellint}\footnote{\url{http://weblog.clarkparsia.com/2008/07/02/pellint-an-ontology-repair-tool/}} es una herramienta para \textit{Pellet} que indica e incluso puede reparar diversas construcciones que se sabe que ocasionan problemas, a nivel de ontologías y axiomas.
 
-		\item \textit{Morph} es otro conversor entre varios formatos RDF.
+		\item \textit{babel}\footnote{\url{http://service.simile-widgets.org/babel/}} es un servicio del proyecto SIMILE\footnote{\url{http://simile-widgets.org/}} del MIT para la conversión desde o hacia diferentes formatos.
 
-		\item \textit{RDF On The Go} permite almacenar de manera persisitente estructuras RDF, así como procesar consultas, todo ello desde un sistema Android.
+		\item \textit{Morph}\footnote{\url{http://www.w3.org/2001/sw/wiki/Morph}} es otro conversor entre varios formatos RDF.
+
+		\item \textit{RDF On The Go}\footnote{\url{https://code.google.com/p/rdfonthego/}} permite almacenar de manera persisitente estructuras RDF, así como procesar consultas, todo ello desde un sistema Android.
 		
-		\item \textit{TONES Ontology Repository} es un servicio web diseñado para hacer las funciones de almacén de ontologías de prueba para que los desarrolladores de aplicaciones puedar probar sus aplicaciones contra esas ontologías.
+		\item \textit{TONES Ontology Repository}\footnote{\url{http://owl.cs.manchester.ac.uk/repository/}} es un servicio web diseñado para hacer las funciones de almacén de ontologías de prueba para que los desarrolladores de aplicaciones puedan probar sus aplicaciones contra esas ontologías.
 
-		\item \textit{Protégé} es un entorno de desarrollo de ontologías, del que se hablará más detenidamente en próximos capítulos.
+		\item \textit{Protégé}\footnote{\url{http://protege.stanford.edu/}} es un entorno de desarrollo de ontologías, del que se hablará más detenidamente en próximos capítulos.
 
-		\item \textit{OWL Verbalizer} es una herramienta on-line que verbaliza las ontoloías OWL en Attempto Controlled English\todo{referencia}.
+		\item \textit{OWL Verbalizer}\footnote{\url{https://code.google.com/p/owlverbalizer/}} es una herramienta on-line que verbaliza las ontoloías OWL en Attempto Controlled English\footnote{\url{http://attempto.ifi.uzh.ch/site/}}.
 
-		\item \textit{eXperiment Design Automation} es una plataforma de desarrollo que posibilita a los científicos gestionar la información dentro y entre los laboratorios de investigación.
+		\item \textit{Semantic Turkey}\footnote{\url{http://semanticturkey.uniroma2.it/}} es una extensión para Firefox que permite a los usuarios construir ontologías con la información contenida en las páginas web visitadas. 
 
-		\item \textit{Semantic Turkey} es una extensión para Firefox que permite a los usuarios construir ontologías con la información contenida en las páginas web visitadas. 
+		\item \textit{FaCT++}\footnote{\url{http://owl.man.ac.uk/factplusplus/}} es un razonador OWL DL, con soporte para OWL y OWL 2. Es uno de los razonadores incluidos por defecto en Protégé.
 
-		\item \textit{FaCT++} es un razonador OWL DL, soporte para OWL y OWL 2. Es uno de los razonadores incluidos por defecto en Protégé.
+		\item \textit{HermiT}\footnote{\url{http://hermit-reasoner.com/}} es otro razonador, muy potente y útil para clasificar ontologías muy complejas y encontrar inconsistencias en ellas.
 
-		\item \textit{HermiT} es otro razonador, muy potente y útil para clasificar ontologías muy complejas y encontrar inconsistencias en ellas.
-
-		\item \textit{RacerPro} es un razonador para la web semantica.
+		\item \textit{RacerPro}\footnote{\url{http://www.racer-systems.com/products/racerpro/}} es otro razonador para la web semantica.
 	
-		\item \textit{Pellet} otro razonador que incluye como novedad la capacidad de realizar razonamiento incremental.
     	
 	\end{itemize}
     	
-    	Como ya se ha dicho anteriormente, el listado anterior es meramente informativo. Muchas de esas aplicaciones están en forma de plugins para entornos de desarrollo, o herramientas para la linea de comandos, o bien como aplicaciones java. 
+    	Como ya se ha dicho anteriormente, el listado anterior es meramente informativo. Muchas de esas aplicaciones están en forma de plugins para entornos de desarrollo, herramientas para la linea de comandos, o bien como aplicaciones java. 
     	
     	Mención aparte merecen Protégé y el resto de herramientas utilizadas para la realización del TFC, de los que se hablará más detenidamente en el siguiente capítulo.
 
