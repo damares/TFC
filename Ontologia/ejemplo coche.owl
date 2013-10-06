@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-25 "http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#"
+     xml:base="http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-25="http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#Es_propiedad -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-25;Es_propiedad">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-25;Coche"/>
+        <rdfs:range rdf:resource="&untitled-ontology-25;Obligado_tributario"/>
+        <owl:inverseOf rdf:resource="&untitled-ontology-25;Posee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#Posee -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-25;Posee">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-25;Coche"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-25;Obligado_tributario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#Caballos_fiscales -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-25;Caballos_fiscales">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-25;Coche"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#Dirección -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-25;Dirección">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-25;Obligado_tributario"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#Matricula -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-25;Matricula">
+        <rdfs:domain rdf:resource="&untitled-ontology-25;Coche"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#Coche -->
+
+    <owl:Class rdf:about="&untitled-ontology-25;Coche">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-25;Es_propiedad"/>
+                <owl:onClass rdf:resource="&untitled-ontology-25;Obligado_tributario"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#Obligado_tributario -->
+
+    <owl:Class rdf:about="&untitled-ontology-25;Obligado_tributario">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-25;Posee"/>
+                <owl:someValuesFrom rdf:resource="&untitled-ontology-25;Coche"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#56879451X -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-25;56879451X">
+        <rdf:type rdf:resource="&untitled-ontology-25;Obligado_tributario"/>
+        <Dirección>Domicilio 1</Dirección>
+        <Posee rdf:resource="&untitled-ontology-25;LJCPCBLCX11000237"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#B45698210 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-25;B45698210">
+        <rdf:type rdf:resource="&untitled-ontology-25;Obligado_tributario"/>
+        <Dirección>Domicilio 2</Dirección>
+        <Posee rdf:resource="&untitled-ontology-25;VF1EMK40637167054"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#LJCPCBLCX11000237 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-25;LJCPCBLCX11000237">
+        <rdf:type rdf:resource="&untitled-ontology-25;Coche"/>
+        <Caballos_fiscales rdf:datatype="&xsd;decimal">11.5</Caballos_fiscales>
+        <Matricula>4589-JGH</Matricula>
+        <Es_propiedad rdf:resource="&untitled-ontology-25;56879451X"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2013/9/untitled-ontology-25#VF1EMK40637167054 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-25;VF1EMK40637167054">
+        <rdf:type rdf:resource="&untitled-ontology-25;Coche"/>
+        <Caballos_fiscales rdf:datatype="&xsd;decimal">25.5</Caballos_fiscales>
+        <Matricula>0259-BNF</Matricula>
+        <Es_propiedad rdf:resource="&untitled-ontology-25;B45698210"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-25;56879451X"/>
+            <rdf:Description rdf:about="&untitled-ontology-25;B45698210"/>
+            <rdf:Description rdf:about="&untitled-ontology-25;LJCPCBLCX11000237"/>
+            <rdf:Description rdf:about="&untitled-ontology-25;VF1EMK40637167054"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
