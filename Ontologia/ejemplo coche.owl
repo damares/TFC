@@ -79,6 +79,7 @@
     <owl:DatatypeProperty rdf:about="&untitled-ontology-25;Dirección">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:domain rdf:resource="&untitled-ontology-25;Obligado_tributario"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -112,6 +113,7 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="&untitled-ontology-25;Obligado_tributario"/>
     </owl:Class>
     
 
@@ -120,11 +122,32 @@
 
     <owl:Class rdf:about="&untitled-ontology-25;Obligado_tributario">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&untitled-ontology-25;Posee"/>
-                <owl:someValuesFrom rdf:resource="&untitled-ontology-25;Coche"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-25;Posee"/>
+                        <owl:someValuesFrom rdf:resource="&untitled-ontology-25;Coche"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-25;Posee"/>
+                        <owl:allValuesFrom rdf:resource="&untitled-ontology-25;Coche"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-25;Dirección"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-25;Dirección"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

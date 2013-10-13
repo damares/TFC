@@ -256,7 +256,9 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 	
 	\subsubsection{Definición de ontología}
   	
-	Una ontología es una forma de representación del conocimiento que permite tener un entendimiento común y compartido de un dominio, de modo que diferentes personas o sistemas puedan compartir una misma visión de ese dominio. La ontología está compuesta de clases (grupos de individuos que tienen alguna característica en común), propiedades (relación binaria entre individuos, o entre individuos y datos) e individuos (instancias de las clases que se relacionan con otros individuos a través de las propiedades).
+	Una ontología es una forma de representación del conocimiento que permite tener un entendimiento común y compartido de un dominio, de modo que diferentes personas o sistemas puedan compartir una misma visión de ese dominio. La ontología está compuesta de clases (conjuntos de individuos que tienen alguna característica en común), propiedades (relación binaria entre individuos, o entre individuos y datos) e individuos (instancias de las clases que se relacionan con otros individuos a través de las propiedades).
+	
+	Como regla general, al hablar de ontologías suele hacerse una distinción entre dos tipos distintos de sentencias lógicas. Por un lado hay sentencias que describen el diseño de la ontología, es decir, que contienen las definiciones de las clases, de las propiedades y las características de ambas. Por otro lado, tenemos sentencias que describen individuos y sus características. El primer tipo de sentencias, que definen la estructura de la ontología reciben el nombre de T-Box. El segundo tipo de sentencias que expresan instancias de la T-Box reciben el nombre de A-Box.
 	
 	Siguiendo con el ejemplo anterior del coche, desde el punto de vista del fisco, la ontología anterior sería la siguiente:
 	
@@ -266,13 +268,35 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 	\caption[Ejemplo de ontología]{Ejemplo de una ontología}
 \end{figure}
 
-	En la figura podemos ver una ontología compuesta por las clases \textit{``Coche''} y \textit{``Obligado\_tributario''}. \textit{``VF1EMK40637167054''} y \textit{``LJCPCBLCX11000237''} dos coches nombrados identificados por su número de bastidor, y por tanto, pertenecientes a la clase \textit{``Coche''}. Por otro lado tenemos los individuos \textit{``B45698210''} y \textit{``56879451X''} son propietarios de los respectivos vehículos antes mencionados, y por tanto obligados tributarios del impuesto correspondiente, es decir, pertenecientes a la clase \textit{``Obligado\_tributario''}. Vemos además la relación entre cada propietario y su coche en propiedad (propiedad que recibe el nombre de \textit{``Posee''}) y viceversa (su inversa, llamada \textit{``Es\_propiedad''}).
+	En la figura podemos ver una ontología compuesta por las clases \textit{``Coche''} y \textit{``Obligado\_tributario''}. \textit{``VF1EMK40637167054''} y \textit{``LJCPCBLCX11000237''} dos coches nombrados identificados por su número de bastidor, y por tanto, pertenecientes a la clase \textit{``Coche''}. Por otro lado tenemos los individuos \textit{``B45698210''} y \textit{``56879451X''} son propietarios de los respectivos vehículos antes mencionados, y por tanto obligados tributarios del impuesto correspondiente, es decir, pertenecientes a la clase \textit{``Obligado\_tributario''}. Vemos además la relación entre cada propietario y su coche en propiedad (propiedad que recibe el nombre de \textit{``Posee''}) y viceversa (su inversa, llamada \textit{``Es\_propiedad''}). En este caso concreto, la T-Box de la ontología estaría compuesta por las clases \textit{``Coche''} y \textit{``Obligado\_tributario''} y las propiedades \textit{``Posee''} y \textit{``Es\_propiedad''} (y todas las características de las clases y propiedades mencionadas). Por otra parte, la A-Box está compuesta por los individuos \textit{``VF1EMK40637167054''} y  \textit{``LJCPCBLCX11000237''} (instancias de la clase \textit{``Coche''}) y los individuos \textit{``B45698210''} y \textit{``56879451X''} (instancias de la clase \textit{``Obligado\_tributario''}). 
+
+	En este documento se utilizará la sintaxis Manchester para la descripción de sentencias OWL. Utilizaremos el ejemplo del coche para ofrecer una pequeña referencia de la sintaxis Manchester, y remitimos al lector al apéndice B para obtener una comprensión más profunda de la misma.
 	
-	Después de este ejemplo, veremos un par de definiciones formales de Ontología. 
+	\begin{description}
 	
-	La mayoría de fuentes describen la ontología según la definición facilitada por Tom Gruber\cite{Gruber-ont} según la cual, una ontología es un conjunto de primitivas con las cuales se modela un dominio del conocimiento. Las primitivas suelen ser clases, atributos (aunque también pueden recibir los nombres de conjuntos y propiedades, respectivamente) y relaciones.
+		\item[Clases.] La definición de una clase consta de la palabra reservada \lstinline!Class:! seguida del nombre de la clase. A continuación, tras la palabra reservada \lstinline!EquivalentTo:! se enumeran las condiciones necesarias y suficientes de pertenencia a la clase, tras la palabra reservada \lstinline!SubClassOf:! las condiciones necesarias de pertenencia a la clase. Depués pueden aparecer las palabras reservadas \lstinline!DisjointWith:! o \lstinline!DisjjpintUnionOf:! para indicar clases disjuntas o cuya unión sea disjunta, a la que estamos definiendo. 
+		
+		\lstinputlisting[caption={Ejemplo de sintaxis Manchester: Descripción de una clase.},label=Clase,captionpos=b,language=owlms,literate=,firstnumber=92,firstline=92,lastline=103]{codigo/coche.ms}	
+
+		Tomando el ejemplo del coche la definición de la clase \lstinline!Obligado_tributario! vemos que:
+		
+			\begin{itemize}
+				\item Un \lstinline!Obligado_tributario! es aquel individuo que posee al menos un coche (\lstinline!Posee some Coche!) y que sólo posee coches (\lstinline!Posee only Coche!). 
+				\item Un \lstinline!Obligado_tributario! debe tener al menos una dirección (\lstinline!Dirección some xsd:string!) y como máximo una (\lstinline!Dirección max 1 xsd:string!).
+				\item Si un individuo es un \lstinline!Obligado_tributario!, entonces no puede ser un \lstinline!Coche!.
+			\end{itemize}
+		
+		\item[Propiedades.] Las propiedades en sintaxis Manchester se definen comenzado por la palabra reservada
 	
-	Otros autores refieren la definición tal y como a la facilita Hans Weigand\cite{Weigand-ont}, según el cual una ontología es una base de datos que describe los conceptos del mundo o algún subdominio, algunas de sus propiedades, y como se relacionan cada uno de los conceptos.
+		\lstinputlisting[caption={Ejemplo de sintaxis Manchester: Descripción de una propiedad.},label=Propiedad,captionpos=b,language=owlms,literate=,firstnumber=23,firstline=23,lastline=35]{codigo/coche.ms}	
+		
+	\end{description}
+	
+%	Después de este ejemplo, veremos un par de definiciones formales de Ontología. 
+%	
+%	La mayoría de fuentes describen la ontología según la definición facilitada por Tom Gruber\cite{Gruber-ont} según la cual, una ontología es un conjunto de primitivas con las cuales se modela un dominio del conocimiento. Las primitivas suelen ser clases, atributos (aunque también pueden recibir los nombres de conjuntos y propiedades, respectivamente) y relaciones.
+%	
+%	Otros autores refieren la definición tal y como a la facilita Hans Weigand\cite{Weigand-ont}, según el cual una ontología es una base de datos que describe los conceptos del mundo o algún subdominio, algunas de sus propiedades, y como se relacionan cada uno de los conceptos.
 	
 %	El uso de ontologías implica por tanto la definición de un vocabulario y reglas gramaticales que relacionen los vocablos. Estas reglas gramaticales nos permitirán realizar preguntas a la ontología cuyas respuestas deberán ser, forzosamente, coherentes con las definiciones y constantes de la ontología. Todas estas propiedades de las ontologías nos permitirán:
 %
@@ -379,7 +403,7 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 		Una de las carencias detectadas en el estado actual es la dificultad para que herramientas automáticas puedan extraer, procesar y transformar la información contenida en las hojas de cálculo utilizadas para modelar el plan de estudios.
 		
 		
-    	El hecho de que, como ya se ha comentado, las ontologías \textit{OWL DL} y \textit{OWL Lite} sean lenguajes completos y decidibles permite la utilización de herramientas automáticas, abriendo una amplio abanico de posibilidades en la utilización de dichas ontologías.
+    	El hecho de que, como ya se ha comentado, las ontologías \textit{OWL DL} y \textit{OWL Lite} sean lenguajes completos y decidibles permite la utilización de herramientas automáticas, abriendo una amplio abanico de posibilidades en la utilización de dichas ontologías. Por ejemplo, el uso de ontologías OWL-DL, nos permite el uso de herramientas automáticas para validar la ontología creada, razonando qué individuos encajan en qué descripciones, o si la jerarquía establecida es consistente con los individuos presentes y sus descripciones.
     	
     	Existen muy diversos tipos herramientas: razonadores, editores, visores, herramientas para la transformación de datos, interfaces de programación, gestión de versiones, motores de búsqueda\ldots 
     	Existen diversas páginas\footnote{\url{http://www.w3.org/2001/sw/wiki/Tools}}\footnote{\url{http://semanticweb.org/wiki/Tools}}\footnote{\url{http://www.mkbergman.com/sweet-tools-simple-list/}}\footnote{\url{http://protegewiki.stanford.edu/wiki/Protege\_Plugin\_Library}} donde hay repositorios y se pueden encontrar las herramientas agrupadas por categorías, lenguajes de programación \ldots Más adelante, buscaremos entre estas páginas aquellas herramientas que puedan parecer más útiles a la hora de cumplir con las metas del documento y las probaremos.

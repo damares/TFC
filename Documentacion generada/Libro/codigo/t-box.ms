@@ -13,7 +13,7 @@ Ontology: <http://www.semanticweb.org/daniel/Plan_Estudios>
 Datatype: xsd:decimal
 
     
-Datatype: ects:tipoCredito
+Datatype: Ontology1322242361907:tipoCredito
 
     EquivalentTo: 
         xsd:decimal[> 0]
@@ -663,6 +663,10 @@ Class: ects:Asignatura
     
 Class: ects:Objetivo_General
 
+    EquivalentTo: 
+        (ects:OG_seCumpleMedianteLaAdquisicionDe_CO some ects:Competencia)
+         and (ects:OG_seCumpleMedianteLaAdquisicionDe_CO only ects:Competencia)
+    
     SubClassOf: 
         owl:Thing,
         ects:OG_Descripcion some xsd:string,
