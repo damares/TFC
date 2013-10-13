@@ -1,7 +1,8 @@
-\chapter{Trabajo futuro y conclusiones}
+\chapter{Conclusiones y trabajo futuro}
 El proceso de construcción del espacio europeo de educación superior ha llevado a los paises miembros de la unión europea a un proceso de adaptación y convergencia de sus respectivos planes educativos.
 
-Dada la magnitud del cambio que se debe afrontar, hemos visto a lo largo del trabajo que no resulta eficaz intentar modelar el universo con herramientas que no son capaces de capturar la semántica del modelo.
+Dada la magnitud del cambio que se debe afrontar, hemos visto a lo largo del trabajo que no resulta eficaz intentar modelar el universo con herramientas que no son capaces de capturar la semántica del modelo. El hecho de definir una estrategia para abordar y resolver con éxito el problema planteado, supone un ahorro en costes y tiempo importantísimo, puesto que estaremos eliminando desde la concepción de la solución muchos problemas que más adelante supondrán un contratiempo para el desarrollo y la implantación de la solución.
+
 
 \section{Objetivos cumplidos}
 
@@ -17,7 +18,7 @@ Las ontologías permiten capturar el modelo y las connotaciones semánticas. Si tr
 \paragraph{Desarrollo de una herramienta adecuada.}
 El objetivo principal de este trabajo era desarrollar algún método que mejorase la forma de trabajar con el cambio de plan. Era preciso encontrar una alternativa a las engorrosas hojas de cálculo utilizadas para plasmar la información del plan de estudios. Se trataba únicamente de la información de un departamento y resultaba muy complejo el rellenar sólo una de esas hojas de cálculo, no imaginamos ya lo que supondría una materia o el itinerario formativo al completo.
 
-\paragraph{Validación del plan de estudios.}
+\paragraph{Validación del plan de estudios.} Hemos sido capaces, gracias a la potencia de las ontologías para el modelado del universo, de encontrar incongruencias en el plan de estudios que bien pudieran pasarse por alto sin el uso de herramientas adecuadas. Tal y como ya se ha manifestado en el punto 2.5 hemos encontrado competencias que no contribuyen al cumplimiento de ningún objetivo de la titulación, y seguramente, refinando la ontología o utilizando otras herramientas a las aquí propuestas, sea posible encontrar algún otro error en el diseño del plan de estudios.
 
 
 \paragraph{Automatización.}
@@ -67,7 +68,7 @@ La administración pública debe ser el último garante de la calidad de la educaci
 La administración no puede ejercer esta tutela si no es con la ayuda de herramientas automáticas, dada la cantidad, dispersión y variedad de centros docentes. Cada centro docente, ofreciendo información acerca de cada plan educativo ofertado y poniéndolo a disposición del publico, supone que la administración pueda supervisar cómo se ha diseñado y cómo se está ejecutando el plan de estudios.
 
 \section{Desarrollo futuro}
-El desarrollo del trabajo no pretende ser cerrado y hermético. Está sujeto a revisiones y mejoras que amplíen el ámbito del mismo, su utilidad, usabilidad\ldots Estas mejoras pueden aplicarse tanto sobre la ontología, como sobre las herramientas o plugins que se han utilizado, o sobre otros que puedan desarrollarse ad hoc.
+El desarrollo del trabajo no pretende ser cerrado y hermético. Está sujeto a revisiones y mejoras que amplíen el ámbito del mismo, su utilidad, usabilidad, etc. Estas mejoras pueden aplicarse tanto sobre la ontología, como sobre las herramientas o plugins que se han utilizado, o sobre otros que puedan desarrollarse ad hoc.
 
 \subsection{Mejoras en la ontología} La ontología es susceptible de varias mejoras. La estructura básica está ya definida, pero aún cabe mejora si queremos que sea capaz de manejar más información.
 
@@ -105,7 +106,7 @@ De igual modo debería ser posible traducir la información contenida en la wiki a
 \subsection{Consistencia de la wiki}
 Una vez que la información contenida en la wiki y en la ontología pueda fluir desde una hacia la otra y viceversa, resulta interesante disponer de un razonador que pueda trabajar directamente sobre la wiki, para cerciorarnos que la información introducida en la wiki es consistente con el resto del modelo. Algunos plugins como \textit{Semantic Forms} permiten definir formularios para introducir información en la wiki, pero no podemos asegurar que el usuario no cometerá fallos sintácticos o semánticos al añadirla. Si tenemos un razonador que. trabajando directamente sobre la wiki, sea capaz de decidir si ésta es consistente o no, evitaremos tener que realizar dos traducciones de la ontología para conseguir inferir axiomas o comprobar la completud de la misma cuando se está editando desde la wiki.
 
-\section{Conclusiones}
+\section{Conclusiones Personales}
 Como hemos comprobado una vez más, resulta de vital importancia el sentarse a planear una estrategia antes de abordar cualquier problema. Hemos constatado el trabajo perdido que supone el trabajar sin una meta clara al comprobar dónde nos había conducido la solución de las hojas de cálculo. Pero además de fijarnos una meta y unos objetivos, también es vital echar un vistazo alrededor para hacer un inventario de las herramientas de que disponemos. Muchas veces, la herramienta más a mano no es la más adecuada, y es preferible emplear un poco más de tiempo en los primeros compases de diseño y planificación con el fin de comprobar si tenemos las herramientas adecuadas (si no, habría que valorar si merece la pena construirlas o no), a ponernos manos a la obra con lo prumero disponible, pues el resultado suele ser bastante mediocre en términos de eficacia, usabilidad, reutilización de contenidos\ldots
 
 Un ejemplo claro lo tenemos en la ontología, pero también en el sistema de control de versiones utilizado. Resulta tedioso el tener que aprender a manejar un sistema de control de versiones (en el proyecto se ha utilizado Git\footnote{\url{http://git-scm.com/}}), que si bien al principio parecía una solución desproporcionada teniendo en cuenta que sólo iba a aportar contenido una persona (parecía que el sistema de andar con copias de seguridad de distintas versiones en un pendrive iba a ser suficiente), luego ha resultado de lo más útil, pues uno de los escenarios no contemplados en un primer momento era un único usuario pero aportando contenido desde equipos o ubicaciones diferentes. Y ha sido mucho más cómodo y ``limpio'' que el copia-pega de la carpeta contenida en un pendrive. Además, Git me ha salvado en más de una ocasión de una pérdida de datos.
@@ -118,8 +119,7 @@ Todo el desarrollo del proyecto ha sido paso a paso, y el orden de relación en e
 
 Pero también ha habido muchos problemas por el camino. Ha sido preciso leer mucha documentación de normas europeas, del Espacio Europeo de Educación Superior, de Protégé y sus plugins (cuando la había), de \LaTeX{}, de las wikis, del software sobre el que se levanta la wiki\ldots Realmente es asombroso el tener al alcance de unos pocos golpes de ratón tanta información y tan variada, y poder contrastarla con varias fuentes simultáneamente.  Ha habido que tomar decisiones importantes en materia de diseño (como la creación de las instancias de \lstinline!Actividad_Formativa!) e instalar y desinstalar varias veces el editor Protégé (porque cambios de versión en los razonadores o en el editor provocaban fallos en la ejecución de los plugins) y el software de la wiki, hasta que se ha encontrado una combinación correcta que haga el sistema estable.
 
-Sea como fuere, después de tantas horas pegado al ordenador y rebuscando información en internet, me he dado cuenta de que el acceso a la información debe ser libre y gratuito. Parece mentira que hoy en día haya lugares donde no es posible conectarse a internet, o donde sólo se puede acceder a contenidos prefijados por el gobierno o la administración en el poder. El intercambio de información es vital para el hombre. La tradición oral, la tradición escrita, la imprenta y ahora internet, no son sino pasos en la evolución, hasta lo que se ha venido en llamar la sociedad de la información. Pero para ser una auténtica sociedad, el acceso a la información ha de ser libre y gratuito, sin cortapisas de ningún tipo. Hemos de ser nosotros, los usuarios, los que decidamos libremente qué información es importante o útil y cual no, qué queremos difundir y compartir y qué no, y que nadie pueda moldear ese flujo de información para su propio provecho. Porque la información no debería pertenecer a nadie, sino ser de todos.
-\todo{Ángel, quizás es esto demasiado personal?}
+Sea como fuere, después de tantas horas pegado al ordenador y rebuscando información en internet, me he dado cuenta de que el acceso a la información debe ser libre y gratuito. Parece mentira que hoy en día haya lugares donde no es posible conectarse a internet, o donde sólo se puede acceder a contenidos prefijados por el gobierno o la administración en el poder. El intercambio de información es vital para el hombre. La tradición oral, la tradición escrita, la imprenta y ahora internet, no son sino pasos en la evolución, hasta lo que se ha venido en llamar la sociedad de la información. Pero para ser una auténtica sociedad, el acceso a la información ha de ser libre y gratuito, sin cortapisas de ningún tipo. Hemos de ser nosotros, los usuarios, los que decidamos libremente qué información es importante o útil y cual no, qué queremos difundir y compartir y qué no, y que nadie pueda moldear ese flujo de información para su propio provecho. 
 
 %%% Local Variables: 
 %%% mode: latex
