@@ -256,7 +256,9 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 	
 	\subsubsection{Definición de ontología}
   	
-	Una ontología es una forma de representación del conocimiento que permite tener un entendimiento común y compartido de un dominio, de modo que diferentes personas o sistemas puedan compartir una misma visión de ese dominio. La ontología está compuesta de clases (conjuntos de individuos que tienen alguna característica en común), propiedades (relación binaria entre individuos, o entre individuos y datos) e individuos (instancias de las clases que se relacionan con otros individuos a través de las propiedades).
+	Una ontología es una forma de representación del conocimiento que permite tener un entendimiento común y compartido de un dominio, de modo que diferentes personas o sistemas puedan compartir una misma visión de ese dominio. La ontología está compuesta de clases, propiedades e individuos (instancias de las clases que se relacionan con otros individuos a través de las propiedades).
+	
+	Una clase es un conjunto de individuos que tienen alguna característica en común. Poseen las características descritas en teoría de conjuntos, por lo que es posible crear intersecciones, uniones, conjuntos disjuntos, vacíos\ldots \ Las propiedades son relaciones binarias entre dos individuos o entre un individuo y un tipo de datos. Las propiedades pueden tener inversas, pueden ser funcionales, transitivas, simétricas\ldots \ No existen propiedades con cardinalidad tres, lo que implicará que en el caso de que que sea preciso establecer una relación a tres, sería preciso modelarlo como la relación binaria entre el producto escalar de dos de ellas sobre la tercera. Los individuos son 
 	
 	Como regla general, al hablar de ontologías suele hacerse una distinción entre dos tipos distintos de sentencias lógicas. Por un lado hay sentencias que describen el diseño de la ontología, es decir, que contienen las definiciones de las clases, de las propiedades y las características de ambas. Por otro lado, tenemos sentencias que describen individuos y sus características. El primer tipo de sentencias, que definen la estructura de la ontología reciben el nombre de T-Box. El segundo tipo de sentencias que expresan instancias de la T-Box reciben el nombre de A-Box.
 	
@@ -286,9 +288,17 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 				\item Si un individuo es un \lstinline!Obligado_tributario!, entonces no puede ser un \lstinline!Coche!.
 			\end{itemize}
 		
-		\item[Propiedades.] Las propiedades en sintaxis Manchester se definen comenzado por la palabra reservada
-	
+		\item[Propiedades.] Las propiedades en sintaxis Manchester se definen comenzado por la palabra reservada \lstinline!ObjectProperty:!. A continuación se enumeran las características de la propiedad (transitiva, funcional, inversa funcional, simétrica, asimétrica, reflexiva o irreflexiva). A continuación se definen el dominio (\lstinline!Domain:!), el rango (\lstinline!Range:!), subpropiedades (\lstinline!SubPropertyOf:!), propiedades inversas (\lstinline!InverseOf:!), propiedades disjuntas (\lstinline!DisjointWith:!) y otras restricciones de la propiedad. Puede consultarse el detalle y significado de las características y restricciones cuyo significado matemático viene definido en el apéndice B.
+		
+		Veamos como ejemplo la propiedad \lstinline!Posee!.
+		\begin{itemize}
+			\item Tiene por dominio la clase \lstinline!Obligado_tributario!.
+			\item Su rango son todos los individuos que pertenecen a la clase \lstinline!Coche!.
+			\item La propiedad \lstinline!Es_propiedad! es su inversa.
+			\item Es una propiedad cuya inversa es funcional.
+		\end{itemize}	
 		\lstinputlisting[caption={Ejemplo de sintaxis Manchester: Descripción de una propiedad.},label=Propiedad,captionpos=b,language=owlms,literate=,firstnumber=23,firstline=23,lastline=35]{codigo/coche.ms}	
+		
 		
 	\end{description}
 	
