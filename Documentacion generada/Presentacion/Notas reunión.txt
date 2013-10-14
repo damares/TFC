@@ -1,0 +1,27 @@
+sin mencionar nada de esto explícitamente ne la presentación:
+1. Adaptación del sistema de estdio a bolonia conlleva cambios
+2. Se introducen nuevos conceptos no presentes o no definidos con anterioridad. Ahora su significado se formaliza y además son muy importantes en el nuevo modelo educativo.
+3. se unifica el espacio educativo y obliga a todos los actores a ser más formales al hablar de planes de estudio. Las definiciones y uso de los conceptos debne de ser uniformes en todas partes.
+
+Aqui:
+1. Para intentar capturar todos esos conceptos se utlizan herramientas como hojas de cálculo para compartir ese conocimiento.
+2. Yo lo que les enseño es la (conceptualización en lenguaje Bolonia) de una única asignatura
+3. el conocimiento está, pero no se encuentra formalizado. lo sabemos por que lo sabemos pero no existe ninguna definición de ningún concepto, ni qué eiste más allá de una asignatura (por que no está degfinido), no porque no sepamos, que lo sabemos.
+
+esto es un ejerccio para reperesentar la mayor parte de la información en un lenguaje más rico con mayores posiblidades (validez, automatización). Quiero tener la misma riqueza representada en las hojas de cálculo, y además ganar la posibilidad de poder tratar esa información mediante herramientas software.
+
+Y p`ropongo usar ontologías-owldl-proté´gé. ?Poru´qe ontologías, porqué dl, porqué protegé? por lo que ya has comentado en el trabajo.
+
+usar entonces un ejemplo del trabajo, de la tbox y de la abox para definir un par de propiedades y clases y poner un ejemplod l trabajo, no inventado. Voy a dar por hecho que se han leido el trabajo y saben lo que es una ontología, una tbox, una abox.
+
+Muestro dónde he llegado, lo que he construido (los ejemplos en sintaxis manchester), y lo explico.
+
+puedo decir el número de clases, propiedades que he extraido. y pudeo decir que soy capaz de formalizar un plan de estudios utilizando esta ontología.
+
+Y debo decir que esta ontología la he aplicado al plan de estudios de la upm, y que les voy a contar lo que ha resultado de allí. 
+
+tengo entonces una representación del plan de estudios, y ahora que hago? voy a ver qué herramientas automáticas puedo utlizar para sacar más provecho.
+
+y entonces sigue el problema de la usabilidad, y para solventarlo utilizo wikis semanticas.
+
+Conclusiones y trabajo futuro (superreducido)
