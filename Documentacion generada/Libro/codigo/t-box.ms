@@ -13,7 +13,7 @@ Ontology: <http://www.semanticweb.org/daniel/Plan_Estudios>
 Datatype: xsd:decimal
 
     
-Datatype: Ontology1322242361907:tipoCredito
+Datatype: ects:tipoCredito
 
     EquivalentTo: 
         xsd:decimal[> 0]

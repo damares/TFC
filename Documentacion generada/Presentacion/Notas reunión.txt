@@ -5,16 +5,22 @@ sin mencionar nada de esto explícitamente ne la presentación:
 
 Aqui:
 1. Para intentar capturar todos esos conceptos se utlizan herramientas como hojas de cálculo para compartir ese conocimiento.
-2. Yo lo que les enseño es la (conceptualización en lenguaje Bolonia) de una única asignatura
 3. el conocimiento está, pero no se encuentra formalizado. lo sabemos por que lo sabemos pero no existe ninguna definición de ningún concepto, ni qué eiste más allá de una asignatura (por que no está degfinido), no porque no sepamos, que lo sabemos.
 
+
 esto es un ejerccio para reperesentar la mayor parte de la información en un lenguaje más rico con mayores posiblidades (validez, automatización). Quiero tener la misma riqueza representada en las hojas de cálculo, y además ganar la posibilidad de poder tratar esa información mediante herramientas software.
+
+
+2. Yo lo que les enseño es la (conceptualización en lenguaje Bolonia) de una única asignatura
+
 
 Y p`ropongo usar ontologías-owldl-proté´gé. ?Poru´qe ontologías, porqué dl, porqué protegé? por lo que ya has comentado en el trabajo.
 
 usar entonces un ejemplo del trabajo, de la tbox y de la abox para definir un par de propiedades y clases y poner un ejemplod l trabajo, no inventado. Voy a dar por hecho que se han leido el trabajo y saben lo que es una ontología, una tbox, una abox.
 
 Muestro dónde he llegado, lo que he construido (los ejemplos en sintaxis manchester), y lo explico.
+
+
 
 puedo decir el número de clases, propiedades que he extraido. y pudeo decir que soy capaz de formalizar un plan de estudios utilizando esta ontología.
 
