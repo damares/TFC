@@ -1,5 +1,6 @@
 \contentsline {lstlisting}{\numberline {1.1}Ejemplo de sintaxis Manchester: Descripci\'on de una clase.}{21}{lstlisting.1.1}
 \contentsline {lstlisting}{\numberline {1.2}Ejemplo de sintaxis Manchester: Descripci\'on de una propiedad.}{22}{lstlisting.1.2}
+\contentsline {lstlisting}{\numberline {1.3}Ejemplo de sintaxis Manchester: Descripci\'on de un individuo.}{23}{lstlisting.1.3}
 \contentsline {lstlisting}{\numberline {2.1}Descripci\'on de la clase \lstinline !Objetivo General!}{33}{lstlisting.2.1}
 \contentsline {lstlisting}{\numberline {2.2}Descripci\'on de la clase \lstinline !Competencia!}{33}{lstlisting.2.2}
 \contentsline {lstlisting}{\numberline {2.3}Descripci\'on de la clase \lstinline !Competencia_General!}{34}{lstlisting.2.3}

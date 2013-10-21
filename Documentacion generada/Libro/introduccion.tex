@@ -223,7 +223,8 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
       
 		Además, los conceptos de método docente y el de actividad formativa quedan difuminados y se entremezclan. Ambos conceptos se han descrito ya con anterioridad, y hemos visto como, por regla general, las distintas actividades formativas y los diferentes métodos docentes, pueden combinarse entre sí a criterio del docente.
 		     
-		Por otro lado, en la hoja de cálculo no se mencionan los diferentes niveles de adquisición de competencias\todo{Ojo, nosotros en la ontología tampoco hablamos de niveles de adquisición de competencias, pero es que en el documento remitido a ANECA no figura el grado de maestría de una competencia una vez que el alumno ha superado con éxito una asignatura.}, sino que se habla de horas dedicadas a esa competencia, si bien es cierto que esta información no figura en el documento remitido al ANECA, que ha servido de guía para la comprensión del plan de estudios. Salvo que se establezca de forma explícita la correspondencia entre los tres niveles (alto, medio y bajo) de adquisición de competencias indicados en el documento y las horas de dedicación correspondientes a cada nivel, no tiene sentido establecer escalas que luego no podrán ser utilizadas en el documento final del grado. Su única utilidad es la de unidad de medida interna a cada departamento docente, con lo cual tenemos además el riesgo de que cada departamento pueda utilizar diferentes gradaciones para la adquisición de competencias.
+		Por otro lado, en la hoja de cálculo no se mencionan los diferentes niveles de adquisición de competencias, sino que se habla de horas dedicadas a esa competencia, si bien es cierto que esta información no figura en el documento remitido al ANECA, que ha servido de guía para la comprensión del plan de estudios. Salvo que se establezca de forma explícita la correspondencia entre los tres niveles (alto, medio y bajo) de adquisición de competencias indicados en el documento y las horas de dedicación correspondientes a cada nivel, no tiene sentido establecer escalas que luego no podrán ser utilizadas en el documento final del grado. Su única utilidad es la de unidad de medida interna a cada departamento docente, con lo cual tenemos además el riesgo de que cada departamento pueda utilizar diferentes gradaciones para la adquisición de competencias.
+%		\todo{Ojo, nosotros en la ontología tampoco hablamos de niveles de adquisición de competencias, pero es que en el documento remitido a ANECA no figura el grado de maestría de una competencia una vez que el alumno ha superado con éxito una asignatura.}
       
 		En resumen, el sistema de hojas de cálculo empleado adolece de:
 		\begin{enumerate}
@@ -256,7 +257,7 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 	
 	\subsubsection{Definición de ontología}
   	
-	Una ontología es una forma de representación del conocimiento que permite tener un entendimiento común y compartido de un dominio, de modo que diferentes personas o sistemas puedan compartir una misma visión de ese dominio. La ontología está compuesta de clases, propiedades e individuos (instancias de las clases que se relacionan con otros individuos a través de las propiedades).
+	Una ontología\cite{Gruber-ont}\cite{tomgruber.org-ontology2004}\cite{Weigand-ont} es una forma de representación del conocimiento que permite tener un entendimiento común y compartido de un dominio, de modo que diferentes personas o sistemas puedan compartir una misma visión de ese dominio. La ontología está compuesta de clases, propiedades e individuos (instancias de las clases que se relacionan con otros individuos a través de las propiedades).
 	
 	Una clase es un conjunto de individuos que tienen alguna característica en común. Poseen las características descritas en teoría de conjuntos, por lo que es posible crear intersecciones, uniones, conjuntos disjuntos, vacíos\ldots \ Las propiedades son relaciones binarias entre dos individuos o entre un individuo y un tipo de datos. Las propiedades pueden tener inversas, pueden ser funcionales, transitivas, simétricas\ldots \ No existen propiedades con cardinalidad tres, lo que implicará que en el caso de que que sea preciso establecer una relación a tres, sería preciso modelarlo como la relación binaria entre el producto escalar de dos de ellas sobre la tercera. Los individuos son 
 	
@@ -272,7 +273,7 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 
 	En la figura podemos ver una ontología compuesta por las clases \textit{``Coche''} y \textit{``Obligado\_tributario''}. \textit{``VF1EMK40637167054''} y \textit{``LJCPCBLCX11000237''} dos coches nombrados identificados por su número de bastidor, y por tanto, pertenecientes a la clase \textit{``Coche''}. Por otro lado tenemos los individuos \textit{``B45698210''} y \textit{``56879451X''} son propietarios de los respectivos vehículos antes mencionados, y por tanto obligados tributarios del impuesto correspondiente, es decir, pertenecientes a la clase \textit{``Obligado\_tributario''}. Vemos además la relación entre cada propietario y su coche en propiedad (propiedad que recibe el nombre de \textit{``Posee''}) y viceversa (su inversa, llamada \textit{``Es\_propiedad''}). En este caso concreto, la T-Box de la ontología estaría compuesta por las clases \textit{``Coche''} y \textit{``Obligado\_tributario''} y las propiedades \textit{``Posee''} y \textit{``Es\_propiedad''} (y todas las características de las clases y propiedades mencionadas). Por otra parte, la A-Box está compuesta por los individuos \textit{``VF1EMK40637167054''} y  \textit{``LJCPCBLCX11000237''} (instancias de la clase \textit{``Coche''}) y los individuos \textit{``B45698210''} y \textit{``56879451X''} (instancias de la clase \textit{``Obligado\_tributario''}). 
 
-	En este documento se utilizará la sintaxis Manchester para la descripción de sentencias OWL. Utilizaremos el ejemplo del coche para ofrecer una pequeña referencia de la sintaxis Manchester, y remitimos al lector al apéndice B para obtener una comprensión más profunda de la misma.
+	Para definir las ontologías, en este documento, se utilizará el lenguaje OWL del cual hablaremos en la sección 1.3.3. En particular utilizaremos la sintaxis Manchester\cite{ManchesterSyntax}, desarrollada por la Universidad de Manchester. Continuaremos con el ejemplo del coche para ofrecer una pequeña referencia de la sintaxis Manchester, y remitimos al lector al apéndice B para obtener una comprensión más profunda de la misma.
 	
 	\begin{description}
 	
@@ -290,7 +291,7 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 		
 		\item[Propiedades.] Las propiedades en sintaxis Manchester se definen comenzado por la palabra reservada \lstinline!ObjectProperty:!. A continuación se enumeran las características de la propiedad (transitiva, funcional, inversa funcional, simétrica, asimétrica, reflexiva o irreflexiva). A continuación se definen el dominio (\lstinline!Domain:!), el rango (\lstinline!Range:!), subpropiedades (\lstinline!SubPropertyOf:!), propiedades inversas (\lstinline!InverseOf:!), propiedades disjuntas (\lstinline!DisjointWith:!) y otras restricciones de la propiedad. Puede consultarse el detalle y significado de las características y restricciones cuyo significado matemático viene definido en el apéndice B.
 		
-		Veamos como ejemplo la propiedad \lstinline!Posee!.
+		Veamos como ejemplo la propiedad \lstinline!Posee!:
 		\begin{itemize}
 			\item Tiene por dominio la clase \lstinline!Obligado_tributario!.
 			\item Su rango son todos los individuos que pertenecen a la clase \lstinline!Coche!.
@@ -299,6 +300,17 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 		\end{itemize}	
 		\lstinputlisting[caption={Ejemplo de sintaxis Manchester: Descripción de una propiedad.},label=Propiedad,captionpos=b,language=owlms,literate=,firstnumber=23,firstline=23,lastline=35]{codigo/coche.ms}	
 		
+		\item[Individuos.] Los individuos se instancian comenzando con la palabra reservada \lstinline!Individual:!. A continuación se definen la o las clases a las que pertenece el individuo mediante la palabra reservada \lstinline!Types:! y los hechos conocidos acerca del individuos tras la palabra \lstinline!Facts:!.
+
+		\lstinputlisting[caption={Ejemplo de sintaxis Manchester: Descripción de un individuo.},label=Individuo,captionpos=b,language=owlms,linerange=Individual:\ VF1EMK40637167054-xsd:decimal]{codigo/coche.ms}	
+		
+		En el ejemplo vemos que el individuo \lstinline!VF1EMK40637167054!:
+		\begin{itemize}
+			\item Pertenece a la clase \lstinline!Coche!.
+			\item Es propiedad del individuo \lstinline!B45698210!.
+			\item Su matrícula es \lstinline!0259-BNF!.
+			\item Tiene 25.5 caballos fiscales.
+		\end{itemize}
 		
 	\end{description}
 	
@@ -348,15 +360,19 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
       
 	\subsection{Lenguaje de las ontologías: OWL}
 	
-	Las características que han hecho la web tan popular (la abundancia y facilidad de acceso a la información) son a su vez su principal talón de aquiles: sobrecarga de información y heterogeneidad en las fuentes, lo que conlleva a un problema de interoperabilidad. La Web Semántica\cite{w3c.es-websemantica} ofrece una solución a estos dos problemas permitiendo a los usuarios delegar ciertas tareas en el software. Gracias a la introducción de contenido semántico en la web, el software es capaz de procesar su contenido, combinarlo, y realizar deducciones lógicas razonadas para resolver algunos problemas de manera automática. 
+%	Las características que han hecho la web tan popular (la abundancia y facilidad de acceso a la información) son a su vez su principal talón de aquiles: sobrecarga de información y heterogeneidad en las fuentes, lo que conlleva a un problema de interoperabilidad. 
+
+		OWL nace ante la necesidad de un lenguaje capaz de describir de manera formal el significado de los términos contenidos en una página web. 
 		
 		\subsubsection{¿Porqué desarrollar OWL?}
+				El World Wide Web Consortium\footnote{\url{http://www.w3.org/}}--- W3C en adelante --- es una organización internacional, en el que participan organizaciones miembro, personal a tiempo completo y público en general con el fin de desarrollar estándares web que permitan sacar el máximo potencial de la web. Este consorcio ha sido el encargado del desarrollo de este lenguaje, llamado OWL\cite{w3c.org-owlfeatures} --- Ontology Web Language ---, creado específicamente para ser usado en aquellos casos en que la información necesita ser procesada por una aplicación. 
+		
+		OWL proporciona un vocabulario para para la descripción de clases, clases enumeradas, propiedades y sus características (transitividad, funcionalidad, simetría, reflexividad), cardinalidad de las propiedades e igualdad. 
 				
-		La Web Semántica\cite{w3c.es-websemantica} permite dotar de significado a la información, permitiendo que las computadoras puedan más fácilmente procesar e integrar la información presente en la web. Se hizo necesario entonces diseñar un lenguaje para la web ontológica que pudiese cumplir con los objetivos arriba mencionados fijados por el W3C. 
+		La Web Semántica\cite{w3c.es-websemantica} permite dotar de significado a la información, permitiendo que las computadoras puedan más fácilmente procesar e integrar la información presente en la web. La Web Semántica\cite{w3c.es-websemantica} ofrece una solución a los problemas de sobrecarga de información y heterogeneidad en las fuentes permitiendo a los usuarios delegar ciertas tareas en el software. Gracias a la introducción de contenido semántico en la web, el software es capaz de procesar su contenido, combinarlo, y realizar deducciones lógicas razonadas para resolver algunos problemas de manera automática. Se hizo necesario entonces diseñar un lenguaje para la web ontológica que pudiese cumplir con los objetivos arriba mencionados fijados por el W3C. 
 		
-		El World Wide Web Consortium\footnote{\url{http://www.w3.org/}}--- W3C en adelante --- es una organización internacional, en el que participan organizaciones miembro, personal a tiempo completo y público en general con el fin de desarrollar estándares web que permitan sacar el máximo potencial de la web. Este consorcio ha sido el encargado del desarrollo de este lenguaje, llamado OWL\cite{w3c.org-owlfeatures} --- Ontology Web Language ---, creado específicamente para ser usado en aquellos casos en que la información necesita ser procesada por una aplicación. 
+
 		
-		OWL nace ante la necesidad de un lenguaje capaz de describir de manera formal el significado de los términos contenidos en una página web. OWL proporciona un vocabulario para para la descripción de clases, clases enumeradas, propiedades y sus características (transitividad, funcionalidad, simetría, reflexividad), cardinalidad de las propiedades e igualdad. 
 		
 		%Existen varios lenguajes relacionados con la web semántica:
 		
@@ -408,7 +424,7 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 %		
 %		Por ello, es preciso tomar precauciones cuando se desea convertir un documento RDF en uno \textit{OWL Lite} o \textit{OWL DL}, ya que el nuevo documento RDF debe cumplir con las restricciones propias de cada sublenguaje OWL. Para obtener más información acerca de las diferentes restricciones que cada sublenguaje impone, se recomienda ver el apéndice E de la referencia de OWL.
 	
-	\subsection{Herramientas ontológicas}
+	\subsection{Herramientas y ontologías}
 	
 		Una de las carencias detectadas en el estado actual es la dificultad para que herramientas automáticas puedan extraer, procesar y transformar la información contenida en las hojas de cálculo utilizadas para modelar el plan de estudios.
 		
