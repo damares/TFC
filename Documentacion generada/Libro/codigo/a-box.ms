@@ -130,8 +130,8 @@ Individual: PlanInfo:AS-Ingenier√≠a_del_Software_I
 
     Annotations: 
         ects:AS_Contenidos "- Requisitos.
-- T√©cnicas de an·lisis y dise√±o software.
-- Criterios de dise√±o software
+- T√©cnicas de an·lisis y diseÒo software.
+- Criterios de diseÒo software
 - Arquitecturas software"^^xsd:string,
         ects:AS_ubicada_UT <PlanInfo#UT-6o_semestre>,
         ects:AS_tiene_CA <PlanInfo#CA-Obligatoria>,
@@ -261,7 +261,7 @@ Individual: PlanInfo:AF-Informatica-PA
 Individual: PlanInfo:CE-9
 
     Annotations: 
-        ects:CO_Descripcion "Poseer las destrezas que se requieren para dise√±ar e implementar unidades estructurales mayores que utilizan los algoritmos y las estructuras de datos, as√≠ como las interfaces por las que se comunican estas unidades."^^xsd:string,
+        ects:CO_Descripcion "Poseer las destrezas que se requieren para diseÒar e implementar unidades estructurales mayores que utilizan los algoritmos y las estructuras de datos, as√≠ como las interfaces por las que se comunican estas unidades."^^xsd:string,
         ects:CO_seAdquiereParaCumplir_OG <http://www.semanticweb.org/daniel/Plan_Info#OBJ08>
     
     Types: 
@@ -294,7 +294,7 @@ Individual: PlanInfo:MA-Estad√≠stica
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-6>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-3-4>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-43>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_larga>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-3-4>,
@@ -355,7 +355,7 @@ Individual: PlanInfo:CE-6
 Individual: PlanInfo:CE-5
 
     Annotations: 
-        ects:CO_Descripcion "Capacidad de dise√±ar y realizar experimentos apropiados, interpretar los datos y extraer conclusiones."^^xsd:string,
+        ects:CO_Descripcion "Capacidad de diseÒar y realizar experimentos apropiados, interpretar los datos y extraer conclusiones."^^xsd:string,
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ07>
     
     Types: 
@@ -372,7 +372,7 @@ Individual: PlanInfo:AS-Plan_de_negocio
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Inteligencia_Artificial>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Sistemas_Orientados_a_Servicios>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_II>,
-        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Concurrencia>,
+        ects:AS_tieneComoRequisito_AS <PlanInfo#Concurrencia>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Procesadores_de_Lenguajes>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Seguridad_de_las_TI>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Matem·tica_Discreta_II>,
@@ -479,7 +479,7 @@ Individual: PlanInfo:AS-Algoritmos_y_Estructuras_de_Datos
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-ProgramaciÛn_I>,
         ects:AS_tiene_CA <PlanInfo#CA-Obligatoria>,
         ects:AS_Contenidos "- Algoritmos b·sicos.
-- Dise√±o de algoritmos.
+- DiseÒo de algoritmos.
 - Implementacion de tipos de datos.
 - An·lisis de terminaciÛn, correcciÛn y complejidad."^^xsd:string,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-ProgramaciÛn_II>,
@@ -501,7 +501,7 @@ Individual: PlanInfo:AS-Bases_de_Datos
         ects:AS_ubicada_UT <PlanInfo#UT-3er_semestre>,
         ects:AS_Creditos "6"^^xsd:decimal,
         ects:AS_Contenidos "- Modelos de datos
-- Dise√±o lÛgico de bases de datos
+- DiseÒo lÛgico de bases de datos
 - ManipulaciÛn de bases de datos
 - Modelo relacional"^^xsd:string
     
@@ -607,18 +607,18 @@ Individual: PlanInfo:MA-Trabajo_fin_de_grado
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-7-8-9-10-16-17>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-22>,
         ects:MA_constaDe_AS <PlanInfo#AS-Proyecto_de_sistema_o_servicio>,
-        ects:MA_Resultados "- Dise√±ar, planificar, desarrollar, documentar y presupuestar una aplicaciÛn software en el contexto de un proyecto individual o en equipo.
+        ects:MA_Resultados "- DiseÒar, planificar, desarrollar, documentar y presupuestar una aplicaciÛn software en el contexto de un proyecto individual o en equipo.
 - Elaborar el pliego de condiciones t√©cnicas de una instalaciÛn inform·tica que cumpla los est·ndares y normativas vigentes.
-- Dise√±ar, planificar, desarrollar, documentar y presupuestar un sistema o servicios TI en un equipo de trabajo, en un contexto empresarial o institucional para obtener una ventaja competitiva y una mejora de los procesos de negocio y la productividad
+- DiseÒar, planificar, desarrollar, documentar y presupuestar un sistema o servicios TI en un equipo de trabajo, en un contexto empresarial o institucional para obtener una ventaja competitiva y una mejora de los procesos de negocio y la productividad
 - Analizar las necesidades de los clientes, los plazos y los medios disponibles, as√≠ como los condicionantes que podr√≠an existir para ofrecer la soluciÛn m·s beneficiosa para el cliente.
-- Dise√±ar y crear prototipos para su evaluaciÛn con el cliente y otras partes involucradas.
+- DiseÒar y crear prototipos para su evaluaciÛn con el cliente y otras partes involucradas.
 - Establecer una comunicaciÛn abierta y fluida entre todos los miembros que participen en el proyecto, teniendo en cuenta en todo momento el encargo, las directrices, las especificaciones y la informaciÛn necesaria para la ejecuciÛn del mismo.
 - Asegurar que los miembros del equipo cumplan los plazos establecidos y administrar adecuadamente el presupuesto asignado al proyecto para conseguir los resultados deseados.
 - Participar en los proyectos de forma activa, aportando ideas, resolviendo problemas y definiendo el contenido de los proyectos.
 - Analizar y responder a los requisitos de los clientes present·ndoles propuestas formales que permitan seleccionar los productos m·s adecuados.
-- Proporcionar asesoramiento y orientaciÛn respecto al uso, funcionamiento y dise√±o de sistemas utilizando productos espec√≠ficos, mediante informes escritos, respondiendo a sus
+- Proporcionar asesoramiento y orientaciÛn respecto al uso, funcionamiento y diseÒo de sistemas utilizando productos espec√≠ficos, mediante informes escritos, respondiendo a sus
 preguntas y realizando presentaciones.
-- DecisiÛn de dise√±ar o comprar los componentes necesarios del software.
+- DecisiÛn de diseÒar o comprar los componentes necesarios del software.
 - Concebir un nuevo producto y planificar su puesta en el mercado.
 - Decidir el posicionamiento del producto.
 - Identificar oportunidades para el desarrollo de nuevos productos de Internet.
@@ -671,7 +671,7 @@ Individual: PlanInfo:AS-Proyecto_de_Software
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-InteracciÛn_Persona-Ordenador>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Inteligencia_Artificial>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_II>,
-        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Concurrencia>,
+        ects:AS_tieneComoRequisito_AS <PlanInfo#Concurrencia>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Procesadores_de_Lenguajes>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Seguridad_de_las_TI>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Matem·tica_Discreta_II>,
@@ -730,7 +730,7 @@ Individual: PlanInfo:MA-ProgramaciÛn
 - Adquirir destreza en la aplicaciÛn de los diferentes m√©todos de demostraciÛn.
 - Distinguir y reconocer las distintas clases de lenguajes y sus autÛmatas asociados seg√∫n la jerarqu√≠a de Chomsky.
 - Conocer modelos de cÛmputo universales as√≠ como los l√≠mites de lo que puede o no ser computado mediante un algoritmo.
-- Ser capaz de dise√±ar y construir un sistema para analizar l√©xica, sint·ctica y sem·nticamente un cÛdigo escrito en un determinado formato.
+- Ser capaz de diseÒar y construir un sistema para analizar l√©xica, sint·ctica y sem·nticamente un cÛdigo escrito en un determinado formato.
 - Reconocer la concurrencia inherente a un sistema SW.
 - Especificar propiedades relativas a la ejecuciÛn concurrente de un sistema SW.
 - Desarrollar aplicaciones concurrentes, en al menos un lenguaje ampliamente utilizado, como puede ser Java.
@@ -774,12 +774,12 @@ Individual: PlanInfo:MA-ProgramaciÛn
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_corta>,
         ects:MA_Creditos "30"^^xsd:decimal,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-3-4>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-19-20>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-42>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_constaDe_AS <PlanInfo#AS-ProgramaciÛn_II>,
-        ects:MA_constaDe_AS <PlanInfo#AS-Concurrencia>,
+        ects:MA_constaDe_AS <PlanInfo#Concurrencia>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-40>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-19>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-9>,
@@ -818,7 +818,7 @@ Individual: PlanInfo:AS-Proyecto_de_instalaciÛn_de_infraestructura_inform·tica
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-InteracciÛn_Persona-Ordenador>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Sistemas_Orientados_a_Servicios>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Inteligencia_Artificial>,
-        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Concurrencia>,
+        ects:AS_tieneComoRequisito_AS <PlanInfo#Concurrencia>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Procesadores_de_Lenguajes>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_II>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Seguridad_de_las_TI>,
@@ -1001,8 +1001,8 @@ Individual: PlanInfo:AS-InteracciÛn_Persona-Ordenador
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_I>,
         ects:AS_tiene_CA <PlanInfo#CA-Obligatoria>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_II>,
-        ects:AS_Contenidos "- Ergonom√≠a, usabilidad y dise√±o centrado en el usuario
-- Accesibilidad y dise√±o para todos
+        ects:AS_Contenidos "- Ergonom√≠a, usabilidad y diseÒo centrado en el usuario
+- Accesibilidad y diseÒo para todos
 - Estilos y dispositivos de interacciÛn
 - An·lisis y evaluaciÛn de la usabilidad y accesibilidad
 - Prototipado de bajo coste"^^xsd:string,
@@ -1132,14 +1132,14 @@ Individual: PlanInfo:AS-GestiÛn_de_procesos_de_Tecnolog√≠as_de_la_InformaciÛn
         ects:Asignatura
     
     
-Individual: PlanInfo:AS-Concurrencia
+Individual: PlanInfo:Concurrencia
 
     Annotations: 
         ects:AS_Creditos "3"^^xsd:decimal,
         ects:AS_tiene_CA <PlanInfo#CA-Obligatoria>,
         ects:AS_ubicada_UT <PlanInfo#UT-4o_semestre>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-ProgramaciÛn_II>,
-        ects:AS_Contenidos "- An·lisis y dise√±o de sistemas concurrentes
+        ects:AS_Contenidos "- An·lisis y diseÒo de sistemas concurrentes
 - ProgramaciÛn de aplicaciones concurrentes
 - EspecificaciÛn de sistemas concurrentes"^^xsd:string,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Lenguajes_Formales_AutÛmatas_y_Computabilidad>
@@ -1185,7 +1185,7 @@ Individual: PlanInfo:MA-Ingenier√≠a_de_computadores
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_corta>,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Computadores-CP>,
         ects:MA_Creditos "12"^^xsd:decimal,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Computadores-CT>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-22>,
@@ -1253,12 +1253,12 @@ Individual: PlanInfo:MA-Inform·tica
         ects:MA_constaDe_AS <PlanInfo#AS-Sistemas_Digitales>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-2-CE45>,
         ects:MA_tiene_CA <PlanInfo#CA-B·sica>,
-        ects:MA_Resultados "-  Dise√±ar y analizar un sistema digital (combinacional y secuencial) y su construcciÛn en tecnolog√≠a CMOS.
+        ects:MA_Resultados "-  DiseÒar y analizar un sistema digital (combinacional y secuencial) y su construcciÛn en tecnolog√≠a CMOS.
 -  Especificar y simular el funcionamiento de sistemas digitales mediante lenguajes de descripciÛn hardware.
 - Destreza en el uso de todo tipo de herramientas (software o metodolÛgicas y conceptuales) necesarias para el correcto y eficaz desarrollo de software, incluyendo entornos, librer√≠as, depuradores, herramientas de modelado, documentaciÛn, control de versiones,
 refactorizaciÛn, etc.
 - Poseer destrezas fundamentales de la programaciÛn que permitan la implementaciÛn de los algoritmos y las estructuras de datos.
-- Conocimiento y aplicaciÛn de algoritmos y estructuras de datos b·sico, as√≠ como las t√©cnicas y m√©todos generales para su dise√±o."^^xsd:string,
+- Conocimiento y aplicaciÛn de algoritmos y estructuras de datos b·sico, as√≠ como las t√©cnicas y m√©todos generales para su diseÒo."^^xsd:string,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Informatica-ETAI>,
         ects:MA_utiliza_MV <PlanInfo#MV-PresentaciÛn_de_trabajos>,
         ects:MA_utiliza_MV <PlanInfo#MV-PresentaciÛn_de_informes>,
@@ -1269,7 +1269,7 @@ refactorizaciÛn, etc.
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Informatica-PA>,
         ects:MA_Creditos "12"^^xsd:decimal,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-3-4>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Informatica-T>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-3-4>,
@@ -1312,7 +1312,7 @@ Individual: PlanInfo:MA-Optatividad
         ects:MA_constaDe_AS <PlanInfo#AS-Optativa4_6ECTS>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-13-CE55>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-44>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-19-20>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_tiene_CA <PlanInfo#CA-Optativa>,
@@ -1330,8 +1330,8 @@ Individual: PlanInfo:MA-Optatividad
 - AdaptaciÛn a nuevos entornos acad√©micos/profesionales
 nacionales/internacionales.
 -Para el Practicum:
--- Experiencia del desempe√±o profesional del ingeniero y de sus funciones m·s habituales en un entorno real de empresa.
--- CapacitaciÛn para dise√±ar las l√≠neas maestras de un proyecto.
+-- Experiencia del desempeÒo profesional del ingeniero y de sus funciones m·s habituales en un entorno real de empresa.
+-- CapacitaciÛn para diseÒar las l√≠neas maestras de un proyecto.
 -- CapacitaciÛn para formar parte de un equipo de trabajo en los diferentes cargos que se le asignen.
 - Para la Movilidad Internacional:
 -- Experiencia de estudio y trabajo en un contexto internacional."^^xsd:string
@@ -1377,7 +1377,7 @@ Individual: PlanInfo:MA-F√≠sica
     Annotations: 
         ects:MA_Resultados "- Comprender los principios b·sicos y conceptos fundamentales de electricidad, magnetismo y an·lisis de circuitos en los que se basan los dispositivos de computaciÛn.
 - Analizar la estructura y funcionamiento delos dispositivos electrÛnicos semiconductores empleados en la construcciÛn de sistemas digitales.
-- Aplicar las herramientas de simulaciÛn el√©ctrica y dise√±o relacionadas con el proceso tecnolÛgico de fabricaciÛn de circuitos CMOS.
+- Aplicar las herramientas de simulaciÛn el√©ctrica y diseÒo relacionadas con el proceso tecnolÛgico de fabricaciÛn de circuitos CMOS.
 - Manejar la instrumentaciÛn de medida y an·lisis empleada en sistemas electrÛnicos."^^xsd:string,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Fisica-ETAI>,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Fisica-CT>,
@@ -1393,7 +1393,7 @@ Individual: PlanInfo:MA-F√≠sica
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-6>,
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_ejecuciÛn>,
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_corta>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_larga>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-3-4>,
@@ -1489,7 +1489,7 @@ Individual: PlanInfo:AS-Sistemas_Distribuidos
         ects:AS_Contenidos "- Infraestructura y arquitectura de los sistemas distribuidos
 - Mecanismos de comunicaciÛn de bajo nivel
 - Servicios de sistema para entornos distribuidos
-- Dise√±o de aplicaciones distribuidas"^^xsd:string
+- DiseÒo de aplicaciones distribuidas"^^xsd:string
     
     Types: 
         ects:Asignatura
@@ -1516,19 +1516,19 @@ Individual: PlanInfo:MA-Ingenier√≠a_del_software_sistemas_de_informaciÛn_y_siste
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-2-CE45>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-7-8-9-10-16-17>,
         ects:MA_constaDe_AS <PlanInfo#AS-Ingenier√≠a_del_Software_I>,
-        ects:MA_Resultados "- Dise√±o, creaciÛn, consulta y manipulaciÛn de repositorios de datos, e integraciÛn con aplicaciones del sistema.
+        ects:MA_Resultados "- DiseÒo, creaciÛn, consulta y manipulaciÛn de repositorios de datos, e integraciÛn con aplicaciones del sistema.
 - ConfiguraciÛn, administraciÛn, uso y optimizaciÛn de sistemas gestores de bases de datos relacionales.
 - Aplicar t√©cnicas para representar conocimientos.
 - Aplicar t√©cnicas de inferencia.
-- Dise√±ar y construir sistemas inform·ticos capaces de resolver problemas para los que no se conoce soluciÛn.
+- DiseÒar y construir sistemas inform·ticos capaces de resolver problemas para los que no se conoce soluciÛn.
 - Capacidad de llevar a cabo la definiciÛn y gestiÛn de requisitos.
-- Capacidad de aplicar t√©cnicas para el an·lisis, dise√±o y desarrollo de un sistema software.
-- Destrezas y criterios para el dise√±o y desarrollo de software.
-- AplicaciÛn de los principios, m√©todos, gu√≠as y est·ndares del dise√±o centrado en el usuario y del dise√±o para todos en el dise√±o de la interacciÛn persona-ordenador.
+- Capacidad de aplicar t√©cnicas para el an·lisis, diseÒo y desarrollo de un sistema software.
+- Destrezas y criterios para el diseÒo y desarrollo de software.
+- AplicaciÛn de los principios, m√©todos, gu√≠as y est·ndares del diseÒo centrado en el usuario y del diseÒo para todos en el diseÒo de la interacciÛn persona-ordenador.
 - ComprensiÛn de las posibilidades y limitaciones de los distintos estilos y dispositivos de interacciÛn.
 - ComprensiÛn del procesamiento de la informaciÛn y las limitaciones y diversidad de los seres humanos en su interacciÛn con sistemas inform·ticos.
 - An·lisis y evaluaciÛn de la usabilidad y accesibilidad de sistemas interactivos.
-- ElaboraciÛn de prototipos de bajo coste para evaluaciÛn del dise√±o de la interacciÛn persona-ordenador.
+- ElaboraciÛn de prototipos de bajo coste para evaluaciÛn del diseÒo de la interacciÛn persona-ordenador.
 - T√©cnicas de trabajo en equipo en proyectos software.
 - AplicaciÛn de actividades de control y de aseguramiento de la calidad del software, y gestiÛn de la calidad del software.
 - AplicaciÛn de actividades de estimaciÛn, PlanificaciÛn, monitorizaciÛn y control de proyectos software.
@@ -1563,7 +1563,7 @@ Individual: PlanInfo:MA-Ingenier√≠a_del_software_sistemas_de_informaciÛn_y_siste
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-53-54>,
         ects:MA_Creditos "30"^^xsd:decimal,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-3-4>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-41>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-42>,
@@ -1633,7 +1633,7 @@ Individual: PlanInfo:AS-Optativa4_3ECTS
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-InteracciÛn_Persona-Ordenador>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Procesadores_de_Lenguajes>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_II>,
-        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Concurrencia>,
+        ects:AS_tieneComoRequisito_AS <PlanInfo#Concurrencia>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Redes_de_Computadores>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Ingenier√≠a_del_Software_I>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-AdministraciÛn_y_GestiÛn_de_Empresas>,
@@ -1705,23 +1705,23 @@ Individual: PlanInfo:MA-Sistemas_operativos_sistemas_distribuidos_y_redes
 
     Annotations: 
         ects:MA_constaDe_AS <PlanInfo#AS-Redes_de_Computadores>,
-        ects:MA_Resultados "-  Realizar el dise√±o arquitectÛnico de aplicaciones utilizando eficientemente los servicios de un sistema operativo.
+        ects:MA_Resultados "-  Realizar el diseÒo arquitectÛnico de aplicaciones utilizando eficientemente los servicios de un sistema operativo.
 - Seleccionar un sistema operativo (n√∫cleo y aplicaciones) y adaptarlo a las necesidades y plataforma del cliente proponiendo soluciones alternativas.
 - Realizar la parametrizaciÛn del sistema operativo para alcanzar objetivos espec√≠ficos: algoritmos de gestiÛn de sistema de ficheros, algoritmos de planificaciÛn de procesos y algoritmos gestiÛn del sistema de memoria, tanto a nivel local como distribuido.
 - Monitorizar, dimensionar y administrar sistemas inform·ticos y redes de ordenadores.
 - Simular, analizar y hacer pruebas de protocolos de comunicaciones mediante prototipos.
 - Desarrollar Arquitecturas de Red para atender los requisitos de los clientes en servicios telem·ticos.
-- Dise√±ar y configurar soluciones de red que permitan la interconexiÛn de diferentes redes heterog√©neas y su dimensionamiento para cumplir con los requisitos de conectividad y capacidad dados por el cliente, utilizando las tecnolog√≠as, los protocolos y los componentes de red disponibles.
+- DiseÒar y configurar soluciones de red que permitan la interconexiÛn de diferentes redes heterog√©neas y su dimensionamiento para cumplir con los requisitos de conectividad y capacidad dados por el cliente, utilizando las tecnolog√≠as, los protocolos y los componentes de red disponibles.
 - Monitorizar, dimensionar y administrar redes de ordenadores.
-- Pliego de condiciones t√©cnicas y el dise√±o.
+- Pliego de condiciones t√©cnicas y el diseÒo.
 - Fundamentos, criptograf√≠a y criptoan·lisis.
 - Seguridad de los Datos de car·cter Personal.
 - Arquitectura de Seguridad y de Red frente a incidencias y ataques.
-- Dise√±o arquitectÛnico de aplicaciones basadas en servicios y desarrollo de soluciones tecnolÛgicas orientadas a la integraciÛn de servicios (SOA).
+- DiseÒo arquitectÛnico de aplicaciones basadas en servicios y desarrollo de soluciones tecnolÛgicas orientadas a la integraciÛn de servicios (SOA).
 - Concebir, desplegar, organizar y gestionar servicios en contextos empresariales o institucionales para mejorar sus procesos de negocio.
 - Manejar los est·ndares de Servicios Web y las tecnolog√≠as asociadas
 - Modelar la organizaciÛn de los servicios en t√©rminos de composiciÛn, coreograf√≠as y orquestaciones.
-- Dise√±ar aplicaciones distribuidas con los mecanismos tecnolÛgicos de bajo y alto nivel disponibles.
+- DiseÒar aplicaciones distribuidas con los mecanismos tecnolÛgicos de bajo y alto nivel disponibles.
 - Seleccionar, parametrizar y extender servicios distribuidos para un entorno espec√≠fico (servicios de nombrado, de datos, de almacenamiento, de gestiÛn, etc.)."^^xsd:string,
         ects:MA_seImparteMediante_ME <PlanInfo#ME-LecciÛn_magistral>,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Sistemas-PO>,
@@ -1762,7 +1762,7 @@ Individual: PlanInfo:MA-Sistemas_operativos_sistemas_distribuidos_y_redes
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_corta>,
         ects:MA_Creditos "30"^^xsd:decimal,
         ects:MA_constaDe_AS <PlanInfo#AS-Sistemas_Distribuidos>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-42>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Sistemas-ETAI>,
@@ -1815,7 +1815,7 @@ Individual: PlanInfo:AS-Sistemas_Orientados_a_Servicios
 - Tecnolog√≠as para desarrollo de Servicios
 - Arquitecturas y tecnolog√≠as para orientaciÛn a servicios
 - Garant√≠a del nivel de servicio
-- Dise√±o, composiciÛn y coordinaciÛn de servicios"^^xsd:string
+- DiseÒo, composiciÛn y coordinaciÛn de servicios"^^xsd:string
     
     Types: 
         ects:Asignatura
@@ -1883,7 +1883,7 @@ Individual: PlanInfo:AS-Optativa3_6ECTS
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Sistemas_Digitales>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Sistemas_Operativos>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Estructura_de_Computadores>,
-        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Concurrencia>,
+        ects:AS_tieneComoRequisito_AS <PlanInfo#Concurrencia>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_II>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Procesadores_de_Lenguajes>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Redes_de_Computadores>,
@@ -2004,7 +2004,7 @@ Individual: PlanInfo:AS-Optativa4_6ECTS
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-InteracciÛn_Persona-Ordenador>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_II>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Procesadores_de_Lenguajes>,
-        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Concurrencia>,
+        ects:AS_tieneComoRequisito_AS <PlanInfo#Concurrencia>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Redes_de_Computadores>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Ingenier√≠a_del_Software_I>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-AdministraciÛn_y_GestiÛn_de_Empresas>,
@@ -2390,7 +2390,7 @@ Individual: PlanInfo:CE-17
 Individual: PlanInfo:CG-13-CE55
 
     Annotations: 
-        ects:CO_Descripcion "Capacidad de comunicarse de forma efectiva con los compa√±eros, usuarios (potenciales) y el p√∫blico en general acerca de cuestiones reales y problemas relacionados con la especializaciÛn elegida."^^xsd:string,
+        ects:CO_Descripcion "Capacidad de comunicarse de forma efectiva con los compaÒeros, usuarios (potenciales) y el p√∫blico en general acerca de cuestiones reales y problemas relacionados con la especializaciÛn elegida."^^xsd:string,
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ10>,
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ02>
     
@@ -2456,8 +2456,8 @@ Individual: PlanInfo:AS-Lenguajes_Formales_AutÛmatas_y_Computabilidad
     Annotations: 
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-LÛgica>,
         ects:AS_tiene_CA <PlanInfo#CA-Obligatoria>,
-        ects:AS_Contenidos "- Teor√≠a y dise√±o de lenguajes formales y gram·ticas
-- Teor√≠a y dise√±o de autÛmatas finitos y autÛmatas con pila
+        ects:AS_Contenidos "- Teor√≠a y diseÒo de lenguajes formales y gram·ticas
+- Teor√≠a y diseÒo de autÛmatas finitos y autÛmatas con pila
 - M·quinas de Turing y modelos de cÛmputo universales
 - Teor√≠a de la computabilidad"^^xsd:string,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Matem·tica_Discreta_II>,
@@ -2485,7 +2485,7 @@ Individual: PlanInfo:CE-22
     Annotations: 
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ09>,
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ04>,
-        ects:CO_Descripcion "Capacidad de aplicar sus conocimientos e intuiciÛn para dise√±ar el hardware/software que cumple unos requisitos especificados."^^xsd:string
+        ects:CO_Descripcion "Capacidad de aplicar sus conocimientos e intuiciÛn para diseÒar el hardware/software que cumple unos requisitos especificados."^^xsd:string
     
     Types: 
         ects:Competencia_Especifica,
@@ -2495,7 +2495,7 @@ Individual: PlanInfo:CE-22
 Individual: PlanInfo:CE-23
 
     Annotations: 
-        ects:CO_Descripcion "Modelizar y dise√±ar la interacciÛn humana-ordenador adoptando un enfoque centrado en el usuario, y siendo capaz de dise√±ar, desarrollar, evaluar y asegurar la accesibilidad, ergonom√≠a, usabilidad y seguridad de los mismos."^^xsd:string,
+        ects:CO_Descripcion "Modelizar y diseÒar la interacciÛn humana-ordenador adoptando un enfoque centrado en el usuario, y siendo capaz de diseÒar, desarrollar, evaluar y asegurar la accesibilidad, ergonom√≠a, usabilidad y seguridad de los mismos."^^xsd:string,
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ05>
     
     Types: 
@@ -2519,7 +2519,7 @@ Individual: PlanInfo:CE-25
     Annotations: 
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ09>,
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ08>,
-        ects:CO_Descripcion "Concebir y dise√±ar la arquitectura de un sistema software."^^xsd:string
+        ects:CO_Descripcion "Concebir y diseÒar la arquitectura de un sistema software."^^xsd:string
     
     Types: 
         ects:Competencia_Especifica,
@@ -2536,7 +2536,7 @@ Individual: PlanInfo:CE-28
 
     Annotations: 
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ09>,
-        ects:CO_Descripcion "Evaluar y seleccionar adecuadamente sistemas de gestiÛn de bases de datos, y dise√±ar y crear estos sistemas integr·ndolos con el resto de tecnolog√≠as del sistema."^^xsd:string,
+        ects:CO_Descripcion "Evaluar y seleccionar adecuadamente sistemas de gestiÛn de bases de datos, y diseÒar y crear estos sistemas integr·ndolos con el resto de tecnolog√≠as del sistema."^^xsd:string,
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ05>
     
     Types: 
@@ -2598,7 +2598,7 @@ Individual: PlanInfo:AS-Proyecto_de_sistema_o_servicio
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Inteligencia_Artificial>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Sistemas_Orientados_a_Servicios>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_II>,
-        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Concurrencia>,
+        ects:AS_tieneComoRequisito_AS <PlanInfo#Concurrencia>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Procesadores_de_Lenguajes>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Seguridad_de_las_TI>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Matem·tica_Discreta_II>,
@@ -2728,7 +2728,7 @@ Individual: PlanInfo:CE-36
 
     Annotations: 
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ10>,
-        ects:CO_Descripcion "Capacidad para dise√±ar, planificar, documentar y presupuestar la instalaciÛn de un sistema hardware y de puestos de trabajo en un espacio f√≠sico."^^xsd:string
+        ects:CO_Descripcion "Capacidad para diseÒar, planificar, documentar y presupuestar la instalaciÛn de un sistema hardware y de puestos de trabajo en un espacio f√≠sico."^^xsd:string
     
     Types: 
         ects:Competencia_Especifica,
@@ -2759,7 +2759,7 @@ Individual: PlanInfo:CE-30
 
     Annotations: 
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ09>,
-        ects:CO_Descripcion "Dise√±ar sistemas, creando prototipos hardware y desarrollando software, que se vayan a explotar en entornos industriales y de tiempo real."^^xsd:string
+        ects:CO_Descripcion "DiseÒar sistemas, creando prototipos hardware y desarrollando software, que se vayan a explotar en entornos industriales y de tiempo real."^^xsd:string
     
     Types: 
         ects:Competencia_Especifica,
@@ -2845,7 +2845,7 @@ Individual: PlanInfo:CE-29
 
     Annotations: 
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ09>,
-        ects:CO_Descripcion "Dise√±ar, desarrollar, y evaluar la seguridad de los sistemas, aplicaciones, servicios inform·ticos y sistemas operativos sobre los que se ejecutan, as√≠ como de la informaciÛn que proporcionan."^^xsd:string,
+        ects:CO_Descripcion "DiseÒar, desarrollar, y evaluar la seguridad de los sistemas, aplicaciones, servicios inform·ticos y sistemas operativos sobre los que se ejecutan, as√≠ como de la informaciÛn que proporcionan."^^xsd:string,
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ05>
     
     Types: 
@@ -2892,7 +2892,7 @@ Individual: PlanInfo:CE-48
 Individual: PlanInfo:CE-49
 
     Annotations: 
-        ects:CO_Descripcion "Hacer recomendaciones sobre la estrategia de la empresa en materia de dise√±o y desarrollo de nuevos productos, relaciones en los canales de distribuciÛn y estrategia de comunicaciÛn empresarial."^^xsd:string,
+        ects:CO_Descripcion "Hacer recomendaciones sobre la estrategia de la empresa en materia de diseÒo y desarrollo de nuevos productos, relaciones en los canales de distribuciÛn y estrategia de comunicaciÛn empresarial."^^xsd:string,
         ects:CO_seAdquiereParaCumplir_OG <PlanInfo#OBJ10>
     
     Types: 
@@ -3001,7 +3001,7 @@ Individual: PlanInfo:MA-English_for_professional_and_academic_communication
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_corta>,
         ects:MA_constaDe_AS <PlanInfo#AS-English_for_Professional_and_Academic_Communications>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-13-CE55>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-3-4>,
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_larga>,
@@ -3057,7 +3057,7 @@ Individual: PlanInfo:AS-Optativa3_3ECTS
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Estructura_de_Computadores>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Procesadores_de_Lenguajes>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Probabilidades_y_Estad√≠stica_II>,
-        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Concurrencia>,
+        ects:AS_tieneComoRequisito_AS <PlanInfo#Concurrencia>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Redes_de_Computadores>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-AdministraciÛn_y_GestiÛn_de_Empresas>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Bases_de_Datos>,
@@ -3100,14 +3100,14 @@ Individual: PlanInfo:MA-Empresa
 - Aplicar t√©cnicas de presupuestos en el marco de un plan de negocio.
 - Utilizar t√©cnicas de an·lisis de mercados, identificar necesidades de productos y servicios dentro de un marco de innovaciÛn tecnolÛgica y generaciÛn de ideas que permitan la innovaciÛn.
 - Identificar, planificar, seguir y evaluar las acciones necesarias para definir y alcanzar un objetivo dentro de una estrategia empresarial.
-- Capacidad para la identificaciÛn, an·lisis y dise√±o de procesos de negocio en una organizaciÛn.
+- Capacidad para la identificaciÛn, an·lisis y diseÒo de procesos de negocio en una organizaciÛn.
 - Conocimiento y aplicaciÛn de los principales marcos de procesos aplicables a las TI (Tecnolog√≠as de la InformaciÛn).
 - Definir indicadores y m√©tricas en los procesos de negocio y de TI que permitan la mejora continua de los mismos.
 - Conocimiento de las t√©cnicas que permiten la mejora de procesos en los entornos de desarrollo, adquisiciÛn y servicios de TI.
 - Capacitarse para la realizaciÛn de certificaciones b·sicas relacionadas con procesos de negocio y TI."^^xsd:string,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Empresa-PA>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-46>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_seImparteSegun_AF <PlanInfo#AF-Empresa-ETAI>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_larga>,
@@ -3269,7 +3269,7 @@ Individual: PlanInfo:MA-Matem·ticas
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_corta>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-53-54>,
         ects:MA_otorgaCompetenciasEspecificas_CE <PlanInfo#CE-3-4>,
-        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las ense√±anzas."^^xsd:string,
+        ects:MA_Coordinacion "La coordinaciÛn en esta materia se va llevar a cabo por medio de la ComisiÛn de CoordinaciÛn Vertical establecida para la misma, tal y como se describe en la secciÛn 5. PlanificaciÛn de las enseÒanzas."^^xsd:string,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-5>,
         ects:MA_utiliza_MV <PlanInfo#MV-Pruebas_de_respuesta_larga>,
         ects:MA_otorgaCompetenciasGenerales_CG <PlanInfo#CG-3-4>,
@@ -3328,5 +3328,5 @@ Individual: PlanInfo:ME-Aprendizaje_orientado_a_proyectos
     
     
 DifferentIndividuals: 
-    PlanInfo:AF-Computadores-CP,PlanInfo:AF-Computadores-CT,PlanInfo:AF-Computadores-EG,PlanInfo:AF-Computadores-ETAI,PlanInfo:AF-Computadores-PA,PlanInfo:AF-Computadores-PO,PlanInfo:AF-Computadores-T,PlanInfo:AF-Empresa-CP,PlanInfo:AF-Empresa-CT,PlanInfo:AF-Empresa-ETAI,PlanInfo:AF-Empresa-PA,PlanInfo:AF-English-CP,PlanInfo:AF-English-CT,PlanInfo:AF-English-ETAI,PlanInfo:AF-English-PA,PlanInfo:AF-English-T,PlanInfo:AF-Estadistica-CP,PlanInfo:AF-Estadistica-CT,PlanInfo:AF-Estadistica-ETAI,PlanInfo:AF-Estadistica-PA,PlanInfo:AF-Estadistica-T,PlanInfo:AF-Fisica-CT,PlanInfo:AF-Fisica-ETAI,PlanInfo:AF-Fisica-L,PlanInfo:AF-Fisica-T,PlanInfo:AF-Informatica-CT,PlanInfo:AF-Informatica-ETAI,PlanInfo:AF-Informatica-L,PlanInfo:AF-Informatica-PA,PlanInfo:AF-Informatica-T,PlanInfo:AF-Ingenieria-CP,PlanInfo:AF-Ingenieria-CT,PlanInfo:AF-Ingenieria-EG,PlanInfo:AF-Ingenieria-ETAI,PlanInfo:AF-Ingenieria-L,PlanInfo:AF-Ingenieria-PA,PlanInfo:AF-Ingenieria-PO,PlanInfo:AF-Ingenieria-ST,PlanInfo:AF-Ingenieria-T,PlanInfo:AF-Matematicas-CP,PlanInfo:AF-Matematicas-CT,PlanInfo:AF-Matematicas-ETAI,PlanInfo:AF-Matematicas-L,PlanInfo:AF-Matematicas-PA,PlanInfo:AF-Matematicas-ST,PlanInfo:AF-Matematicas-T,PlanInfo:AF-Programacion-CP,PlanInfo:AF-Programacion-CT,PlanInfo:AF-Programacion-EG,PlanInfo:AF-Programacion-ETAI,PlanInfo:AF-Programacion-L,PlanInfo:AF-Programacion-PA,PlanInfo:AF-Programacion-PO,PlanInfo:AF-Programacion-ST,PlanInfo:AF-Programacion-T,PlanInfo:AF-Proyecto-CT,PlanInfo:AF-Proyecto-PO,PlanInfo:AF-Sistemas-CP,PlanInfo:AF-Sistemas-CT,PlanInfo:AF-Sistemas-EG,PlanInfo:AF-Sistemas-ETAI,PlanInfo:AF-Sistemas-L,PlanInfo:AF-Sistemas-PA,PlanInfo:AF-Sistemas-PO,PlanInfo:AF-Sistemas-ST,PlanInfo:AF-Sistemas-T,PlanInfo:AS-AdministraciÛn_y_GestiÛn_de_Empresas,PlanInfo:AS-Algoritmos_y_Estructuras_de_Datos,PlanInfo:AS-Arquitectura_de_Computadores,PlanInfo:AS-Bases_de_Datos,PlanInfo:AS-Concurrencia,PlanInfo:AS-C·lculo,PlanInfo:AS-English_for_Professional_and_Academic_Communications,PlanInfo:AS-Estructura_de_Computadores,PlanInfo:AS-Fundamentos_f√≠sicos_y_tecnolÛgicos_de_la_inform·tica,PlanInfo:AS-GestiÛn_de_procesos_de_Tecnolog√≠as_de_la_InformaciÛn,PlanInfo:AS-Ingenier√≠a_del_Software_I,PlanInfo:AS-Ingenier√≠a_del_Software_II,PlanInfo:AS-Inteligencia_Artificial,PlanInfo:AS-InteracciÛn_Persona-Ordenador,PlanInfo:AS-Lenguajes_Formales_AutÛmatas_y_Computabilidad,PlanInfo:AS-LÛgica,PlanInfo:AS-Matem·tica_Discreta_I,PlanInfo:AS-Matem·tica_Discreta_II,PlanInfo:AS-Optativa3_3ECTS,PlanInfo:AS-Optativa3_6ECTS,PlanInfo:AS-Optativa4_3ECTS,PlanInfo:AS-Optativa4_6ECTS,PlanInfo:AS-Plan_de_negocio,PlanInfo:AS-Probabilidades_y_Estad√≠stica_I,PlanInfo:AS-Probabilidades_y_Estad√≠stica_II,PlanInfo:AS-Procesadores_de_Lenguajes,PlanInfo:AS-Programa_Movilidad_Internacional,PlanInfo:AS-ProgramaciÛn_Declarativa_LÛgica_y_Restricciones,PlanInfo:AS-ProgramaciÛn_I,PlanInfo:AS-ProgramaciÛn_II,PlanInfo:AS-ProgramaciÛn_para_sistemas,PlanInfo:AS-Proyecto_de_Software,PlanInfo:AS-Proyecto_de_instalaciÛn_de_infraestructura_inform·tica,PlanInfo:AS-Proyecto_de_sistema_o_servicio,PlanInfo:AS-Pr·cticum_No_TFC,PlanInfo:AS-Pr·cticum_TFC,PlanInfo:AS-Redes_de_Computadores,PlanInfo:AS-Seguridad_de_las_TI,PlanInfo:AS-Sistemas_Digitales,PlanInfo:AS-Sistemas_Distribuidos,PlanInfo:AS-Sistemas_Operativos,PlanInfo:AS-Sistemas_Orientados_a_Servicios,PlanInfo:AS-√Ålgebra_Lineal,PlanInfo:CA-B·sica,PlanInfo:CA-Mixta,PlanInfo:CA-Obligatoria,PlanInfo:CA-Optativa,PlanInfo:CE-1,PlanInfo:CE-10,PlanInfo:CE-11,PlanInfo:CE-12-16,PlanInfo:CE-13-18,PlanInfo:CE-14-15,PlanInfo:CE-17,PlanInfo:CE-19-20,PlanInfo:CE-2,PlanInfo:CE-21,PlanInfo:CE-22,PlanInfo:CE-23,PlanInfo:CE-24,PlanInfo:CE-25,PlanInfo:CE-26-27,PlanInfo:CE-28,PlanInfo:CE-29,PlanInfo:CE-3-4,PlanInfo:CE-30,PlanInfo:CE-31,PlanInfo:CE-32,PlanInfo:CE-33,PlanInfo:CE-34,PlanInfo:CE-35,PlanInfo:CE-36,PlanInfo:CE-37,PlanInfo:CE-38,PlanInfo:CE-39,PlanInfo:CE-40,PlanInfo:CE-41,PlanInfo:CE-42,PlanInfo:CE-43,PlanInfo:CE-44,PlanInfo:CE-46,PlanInfo:CE-47,PlanInfo:CE-48,PlanInfo:CE-49,PlanInfo:CE-5,PlanInfo:CE-50,PlanInfo:CE-51,PlanInfo:CE-52,PlanInfo:CE-53-54,PlanInfo:CE-56,PlanInfo:CE-6,PlanInfo:CE-7,PlanInfo:CE-8,PlanInfo:CE-9,PlanInfo:CG-1-21,PlanInfo:CG-11-12-20,PlanInfo:CG-13-CE55,PlanInfo:CG-14-15-18-23,PlanInfo:CG-19,PlanInfo:CG-2-CE45,PlanInfo:CG-22,PlanInfo:CG-24-25-26-27,PlanInfo:CG-3-4,PlanInfo:CG-5,PlanInfo:CG-6,PlanInfo:CG-7-8-9-10-16-17,PlanInfo:MA-Empresa,PlanInfo:MA-English_for_professional_and_academic_communication,PlanInfo:MA-Estad√≠stica,PlanInfo:MA-F√≠sica,PlanInfo:MA-Inform·tica,PlanInfo:MA-Ingenier√≠a_de_computadores,PlanInfo:MA-Ingenier√≠a_del_software_sistemas_de_informaciÛn_y_sistemas_inteligentes,PlanInfo:MA-Matem·ticas,PlanInfo:MA-Optatividad,PlanInfo:MA-ProgramaciÛn,PlanInfo:MA-Sistemas_operativos_sistemas_distribuidos_y_redes,PlanInfo:MA-Trabajo_fin_de_grado,PlanInfo:ME-Aprendizaje_basado_en_problemas,PlanInfo:ME-Aprendizaje_cooperativo,PlanInfo:ME-Aprendizaje_orientado_a_proyectos,PlanInfo:ME-Estudio_de_casos,PlanInfo:ME-LecciÛn_magistral,PlanInfo:ME-ResoluciÛn_de_ejercicios_y_problemas,PlanInfo:MV-Escalas_de_actitudes,PlanInfo:MV-EvaluaciÛn_Pr·cticum,PlanInfo:MV-PresentaciÛn_de_informes,PlanInfo:MV-PresentaciÛn_de_trabajos,PlanInfo:MV-Pruebas_de_ejecuciÛn,PlanInfo:MV-Pruebas_de_respuesta_corta,PlanInfo:MV-Pruebas_de_respuesta_larga,PlanInfo:MV-Pruebas_orales,PlanInfo:MV-Sistemas_de_AutoevaluaciÛn,PlanInfo:OBJ01,PlanInfo:OBJ02,PlanInfo:OBJ03,PlanInfo:OBJ04,PlanInfo:OBJ05,PlanInfo:OBJ06,PlanInfo:OBJ07,PlanInfo:OBJ08,PlanInfo:OBJ09,PlanInfo:OBJ10,PlanInfo:OBJ11,PlanInfo:UT-1er_semestre,PlanInfo:UT-2o_semestre,PlanInfo:UT-3er_semestre,PlanInfo:UT-4o_semestre,PlanInfo:UT-5o_semestre,PlanInfo:UT-6o_semestre,PlanInfo:UT-7o_semestre
+    PlanInfo:AF-Computadores-CP,PlanInfo:AF-Computadores-CT,PlanInfo:AF-Computadores-EG,PlanInfo:AF-Computadores-ETAI,PlanInfo:AF-Computadores-PA,PlanInfo:AF-Computadores-PO,PlanInfo:AF-Computadores-T,PlanInfo:AF-Empresa-CP,PlanInfo:AF-Empresa-CT,PlanInfo:AF-Empresa-ETAI,PlanInfo:AF-Empresa-PA,PlanInfo:AF-English-CP,PlanInfo:AF-English-CT,PlanInfo:AF-English-ETAI,PlanInfo:AF-English-PA,PlanInfo:AF-English-T,PlanInfo:AF-Estadistica-CP,PlanInfo:AF-Estadistica-CT,PlanInfo:AF-Estadistica-ETAI,PlanInfo:AF-Estadistica-PA,PlanInfo:AF-Estadistica-T,PlanInfo:AF-Fisica-CT,PlanInfo:AF-Fisica-ETAI,PlanInfo:AF-Fisica-L,PlanInfo:AF-Fisica-T,PlanInfo:AF-Informatica-CT,PlanInfo:AF-Informatica-ETAI,PlanInfo:AF-Informatica-L,PlanInfo:AF-Informatica-PA,PlanInfo:AF-Informatica-T,PlanInfo:AF-Ingenieria-CP,PlanInfo:AF-Ingenieria-CT,PlanInfo:AF-Ingenieria-EG,PlanInfo:AF-Ingenieria-ETAI,PlanInfo:AF-Ingenieria-L,PlanInfo:AF-Ingenieria-PA,PlanInfo:AF-Ingenieria-PO,PlanInfo:AF-Ingenieria-ST,PlanInfo:AF-Ingenieria-T,PlanInfo:AF-Matematicas-CP,PlanInfo:AF-Matematicas-CT,PlanInfo:AF-Matematicas-ETAI,PlanInfo:AF-Matematicas-L,PlanInfo:AF-Matematicas-PA,PlanInfo:AF-Matematicas-ST,PlanInfo:AF-Matematicas-T,PlanInfo:AF-Programacion-CP,PlanInfo:AF-Programacion-CT,PlanInfo:AF-Programacion-EG,PlanInfo:AF-Programacion-ETAI,PlanInfo:AF-Programacion-L,PlanInfo:AF-Programacion-PA,PlanInfo:AF-Programacion-PO,PlanInfo:AF-Programacion-ST,PlanInfo:AF-Programacion-T,PlanInfo:AF-Proyecto-CT,PlanInfo:AF-Proyecto-PO,PlanInfo:AF-Sistemas-CP,PlanInfo:AF-Sistemas-CT,PlanInfo:AF-Sistemas-EG,PlanInfo:AF-Sistemas-ETAI,PlanInfo:AF-Sistemas-L,PlanInfo:AF-Sistemas-PA,PlanInfo:AF-Sistemas-PO,PlanInfo:AF-Sistemas-ST,PlanInfo:AF-Sistemas-T,PlanInfo:AS-AdministraciÛn_y_GestiÛn_de_Empresas,PlanInfo:AS-Algoritmos_y_Estructuras_de_Datos,PlanInfo:AS-Arquitectura_de_Computadores,PlanInfo:AS-Bases_de_Datos,PlanInfo:Concurrencia,PlanInfo:AS-C·lculo,PlanInfo:AS-English_for_Professional_and_Academic_Communications,PlanInfo:AS-Estructura_de_Computadores,PlanInfo:AS-Fundamentos_f√≠sicos_y_tecnolÛgicos_de_la_inform·tica,PlanInfo:AS-GestiÛn_de_procesos_de_Tecnolog√≠as_de_la_InformaciÛn,PlanInfo:AS-Ingenier√≠a_del_Software_I,PlanInfo:AS-Ingenier√≠a_del_Software_II,PlanInfo:AS-Inteligencia_Artificial,PlanInfo:AS-InteracciÛn_Persona-Ordenador,PlanInfo:AS-Lenguajes_Formales_AutÛmatas_y_Computabilidad,PlanInfo:AS-LÛgica,PlanInfo:AS-Matem·tica_Discreta_I,PlanInfo:AS-Matem·tica_Discreta_II,PlanInfo:AS-Optativa3_3ECTS,PlanInfo:AS-Optativa3_6ECTS,PlanInfo:AS-Optativa4_3ECTS,PlanInfo:AS-Optativa4_6ECTS,PlanInfo:AS-Plan_de_negocio,PlanInfo:AS-Probabilidades_y_Estad√≠stica_I,PlanInfo:AS-Probabilidades_y_Estad√≠stica_II,PlanInfo:AS-Procesadores_de_Lenguajes,PlanInfo:AS-Programa_Movilidad_Internacional,PlanInfo:AS-ProgramaciÛn_Declarativa_LÛgica_y_Restricciones,PlanInfo:AS-ProgramaciÛn_I,PlanInfo:AS-ProgramaciÛn_II,PlanInfo:AS-ProgramaciÛn_para_sistemas,PlanInfo:AS-Proyecto_de_Software,PlanInfo:AS-Proyecto_de_instalaciÛn_de_infraestructura_inform·tica,PlanInfo:AS-Proyecto_de_sistema_o_servicio,PlanInfo:AS-Pr·cticum_No_TFC,PlanInfo:AS-Pr·cticum_TFC,PlanInfo:AS-Redes_de_Computadores,PlanInfo:AS-Seguridad_de_las_TI,PlanInfo:AS-Sistemas_Digitales,PlanInfo:AS-Sistemas_Distribuidos,PlanInfo:AS-Sistemas_Operativos,PlanInfo:AS-Sistemas_Orientados_a_Servicios,PlanInfo:AS-√Ålgebra_Lineal,PlanInfo:CA-B·sica,PlanInfo:CA-Mixta,PlanInfo:CA-Obligatoria,PlanInfo:CA-Optativa,PlanInfo:CE-1,PlanInfo:CE-10,PlanInfo:CE-11,PlanInfo:CE-12-16,PlanInfo:CE-13-18,PlanInfo:CE-14-15,PlanInfo:CE-17,PlanInfo:CE-19-20,PlanInfo:CE-2,PlanInfo:CE-21,PlanInfo:CE-22,PlanInfo:CE-23,PlanInfo:CE-24,PlanInfo:CE-25,PlanInfo:CE-26-27,PlanInfo:CE-28,PlanInfo:CE-29,PlanInfo:CE-3-4,PlanInfo:CE-30,PlanInfo:CE-31,PlanInfo:CE-32,PlanInfo:CE-33,PlanInfo:CE-34,PlanInfo:CE-35,PlanInfo:CE-36,PlanInfo:CE-37,PlanInfo:CE-38,PlanInfo:CE-39,PlanInfo:CE-40,PlanInfo:CE-41,PlanInfo:CE-42,PlanInfo:CE-43,PlanInfo:CE-44,PlanInfo:CE-46,PlanInfo:CE-47,PlanInfo:CE-48,PlanInfo:CE-49,PlanInfo:CE-5,PlanInfo:CE-50,PlanInfo:CE-51,PlanInfo:CE-52,PlanInfo:CE-53-54,PlanInfo:CE-56,PlanInfo:CE-6,PlanInfo:CE-7,PlanInfo:CE-8,PlanInfo:CE-9,PlanInfo:CG-1-21,PlanInfo:CG-11-12-20,PlanInfo:CG-13-CE55,PlanInfo:CG-14-15-18-23,PlanInfo:CG-19,PlanInfo:CG-2-CE45,PlanInfo:CG-22,PlanInfo:CG-24-25-26-27,PlanInfo:CG-3-4,PlanInfo:CG-5,PlanInfo:CG-6,PlanInfo:CG-7-8-9-10-16-17,PlanInfo:MA-Empresa,PlanInfo:MA-English_for_professional_and_academic_communication,PlanInfo:MA-Estad√≠stica,PlanInfo:MA-F√≠sica,PlanInfo:MA-Inform·tica,PlanInfo:MA-Ingenier√≠a_de_computadores,PlanInfo:MA-Ingenier√≠a_del_software_sistemas_de_informaciÛn_y_sistemas_inteligentes,PlanInfo:MA-Matem·ticas,PlanInfo:MA-Optatividad,PlanInfo:MA-ProgramaciÛn,PlanInfo:MA-Sistemas_operativos_sistemas_distribuidos_y_redes,PlanInfo:MA-Trabajo_fin_de_grado,PlanInfo:ME-Aprendizaje_basado_en_problemas,PlanInfo:ME-Aprendizaje_cooperativo,PlanInfo:ME-Aprendizaje_orientado_a_proyectos,PlanInfo:ME-Estudio_de_casos,PlanInfo:ME-LecciÛn_magistral,PlanInfo:ME-ResoluciÛn_de_ejercicios_y_problemas,PlanInfo:MV-Escalas_de_actitudes,PlanInfo:MV-EvaluaciÛn_Pr·cticum,PlanInfo:MV-PresentaciÛn_de_informes,PlanInfo:MV-PresentaciÛn_de_trabajos,PlanInfo:MV-Pruebas_de_ejecuciÛn,PlanInfo:MV-Pruebas_de_respuesta_corta,PlanInfo:MV-Pruebas_de_respuesta_larga,PlanInfo:MV-Pruebas_orales,PlanInfo:MV-Sistemas_de_AutoevaluaciÛn,PlanInfo:OBJ01,PlanInfo:OBJ02,PlanInfo:OBJ03,PlanInfo:OBJ04,PlanInfo:OBJ05,PlanInfo:OBJ06,PlanInfo:OBJ07,PlanInfo:OBJ08,PlanInfo:OBJ09,PlanInfo:OBJ10,PlanInfo:OBJ11,PlanInfo:UT-1er_semestre,PlanInfo:UT-2o_semestre,PlanInfo:UT-3er_semestre,PlanInfo:UT-4o_semestre,PlanInfo:UT-5o_semestre,PlanInfo:UT-6o_semestre,PlanInfo:UT-7o_semestre
 

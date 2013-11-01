@@ -1,0 +1,1231 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1322242361907 "http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#" >
+]>
+
+
+<rdf:RDF xmlns="TFC"
+     xml:base="TFC"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Ontology1322242361907="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito -->
+
+    <rdfs:Datatype rdf:about="&Ontology1322242361907;tipoCredito">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="&xsd;integer">0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Literal -->
+
+    <rdfs:Datatype rdf:about="&rdfs;Literal"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#decimal -->
+
+    <rdfs:Datatype rdf:about="&xsd;decimal"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <rdfs:Datatype rdf:about="&xsd;integer"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdfs:Datatype rdf:about="&xsd;string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AF_utilizadaParaImpartir_MA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;AF_utilizadaParaImpartir_MA">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Actividad_Formativa"/>
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;MA_seImparteSegun_AF"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_esRequisitoPara_AS -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;AS_esRequisitoPara_AS">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Asignatura"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AS_tieneComoRequisito_AS -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;AS_tieneComoRequisito_AS">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;AS_esRequisitoPara_AS"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Asignatura"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_AS -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;CA_agrupa_AS">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <rdfs:subPropertyOf rdf:resource="&Ontology1322242361907;CA_agrupa_ASMA"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Caracter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_ASMA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;CA_agrupa_ASMA">
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Caracter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Ontology1322242361907;Asignatura"/>
+                    <rdf:Description rdf:about="&Ontology1322242361907;Materia"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CA_agrupa_MA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;CA_agrupa_MA">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&Ontology1322242361907;CA_agrupa_ASMA"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Caracter"/>
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;MA_tiene_CA"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CE_esOtorgadaPor_MA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;CE_esOtorgadaPor_MA">
+        <rdfs:subPropertyOf rdf:resource="&Ontology1322242361907;CO_esOtorgadaPor_MA"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Competencia_Especifica"/>
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;MA_otorgaCompetenciasEspecificas_CE"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CG_esOtorgadaPor_MA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;CG_esOtorgadaPor_MA">
+        <rdfs:subPropertyOf rdf:resource="&Ontology1322242361907;CO_esOtorgadaPor_MA"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Competencia_General"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_esOtorgadaPor_MA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;CO_esOtorgadaPor_MA">
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Competencia"/>
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;MA_otorgaCompetencias_CO"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_seAdquiereParaCumplir_OG -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;CO_seAdquiereParaCumplir_OG">
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Competencia"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Objetivo_General"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_constaDe_AS -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MA_constaDe_AS">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetenciasEspecificas_CE -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MA_otorgaCompetenciasEspecificas_CE">
+        <rdfs:range rdf:resource="&Ontology1322242361907;Competencia_Especifica"/>
+        <rdfs:subPropertyOf rdf:resource="&Ontology1322242361907;MA_otorgaCompetencias_CO"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetenciasGenerales_CG -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MA_otorgaCompetenciasGenerales_CG">
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;CG_esOtorgadaPor_MA"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Competencia_General"/>
+        <rdfs:subPropertyOf rdf:resource="&Ontology1322242361907;MA_otorgaCompetencias_CO"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_otorgaCompetencias_CO -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MA_otorgaCompetencias_CO">
+        <rdfs:range rdf:resource="&Ontology1322242361907;Competencia"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_seImparteMediante_ME -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MA_seImparteMediante_ME">
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Metodo_Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_seImparteSegun_AF -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MA_seImparteSegun_AF">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Actividad_Formativa"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_tiene_CA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MA_tiene_CA">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Caracter"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_ubicada_UT -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MA_ubicada_UT">
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Ubicacion_temporal"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322242361907;MA_constaDe_AS"/>
+            <rdf:Description rdf:about="&Ontology1322242361907;seImparteDurante"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_utiliza_MV -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MA_utiliza_MV">
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;MV_esUtilizadoEn_MA"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Metodo_Evaluacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#ME_utilizadoParaImpartir_MA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;ME_utilizadoParaImpartir_MA">
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;MA_seImparteMediante_ME"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Materia"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Metodo_Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MV_esUtilizadoEn_MA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;MV_esUtilizadoEn_MA">
+        <rdfs:range rdf:resource="&Ontology1322242361907;Materia"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Metodo_Evaluacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#OG_seCumpleMedianteLaAdquisicionDe_CO -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;OG_seCumpleMedianteLaAdquisicionDe_CO">
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;CO_seAdquiereParaCumplir_OG"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Competencia"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Objetivo_General"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_AS -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;UT_contiene_AS">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <rdfs:subPropertyOf rdf:resource="&Ontology1322242361907;UT_contiene_ASMA"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Ubicacion_temporal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_ASMA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;UT_contiene_ASMA">
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Ubicacion_temporal"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Ontology1322242361907;Asignatura"/>
+                    <rdf:Description rdf:about="&Ontology1322242361907;Materia"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#UT_contiene_MA -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;UT_contiene_MA">
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;MA_ubicada_UT"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Materia"/>
+        <rdfs:subPropertyOf rdf:resource="&Ontology1322242361907;UT_contiene_ASMA"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Ubicacion_temporal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#esDeCaracter -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;esDeCaracter">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;CA_agrupa_AS"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Caracter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#formaParteDe -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;formaParteDe">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;MA_constaDe_AS"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Materia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#seImparteDurante -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1322242361907;seImparteDurante">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <owl:inverseOf rdf:resource="&Ontology1322242361907;UT_contiene_AS"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;Ubicacion_temporal"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#AF_Creditos -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;AF_Creditos">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Actividad_Formativa"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;tipoCredito"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#CO_Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;CO_Descripcion">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Competencia"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_Coordinacion -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;MA_Coordinacion">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_Creditos -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;MA_Creditos">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;tipoCredito"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MA_Resultados -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;MA_Resultados">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Materia"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#ME_Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;ME_Descripcion">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Metodo_Docente"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#MV_Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;MV_Descripcion">
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Metodo_Evaluacion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#OG_Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;OG_Descripcion">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Objetivo_General"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#contenidosDeLaAsignatura -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;contenidosDeLaAsignatura">
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#creditosDeLaAsignatura -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1322242361907;creditosDeLaAsignatura">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1322242361907;Asignatura"/>
+        <rdfs:range rdf:resource="&Ontology1322242361907;tipoCredito"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Actividad_Formativa">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;AF_utilizadaParaImpartir_MA"/>
+                        <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;AF_utilizadaParaImpartir_MA"/>
+                        <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;AF_utilizadaParaImpartir_MA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;AF_Creditos"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;tipoCredito"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;AF_Creditos"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&Ontology1322242361907;tipoCredito"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;AF_utilizadaParaImpartir_MA"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Asignatura">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;formaParteDe"/>
+                        <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;formaParteDe"/>
+                        <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;formaParteDe"/>
+                <owl:onClass rdf:resource="&Ontology1322242361907;Materia"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;contenidosDeLaAsignatura"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;formaParteDe"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;seImparteDurante"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Ubicacion_temporal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;seImparteDurante"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Ubicacion_temporal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;formaParteDe"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;esDeCaracter"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Caracter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;esDeCaracter"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Caracter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;contenidosDeLaAsignatura"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;creditosDeLaAsignatura"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&Ontology1322242361907;tipoCredito"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;creditosDeLaAsignatura"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;tipoCredito"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Caracter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;CA_agrupa_AS"/>
+                                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;CA_agrupa_AS"/>
+                                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;CA_agrupa_MA"/>
+                                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;CA_agrupa_MA"/>
+                                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CA_agrupa_ASMA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CA_agrupa_MA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CA_agrupa_MA"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CA_agrupa_AS"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CA_agrupa_AS"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Competencia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;CO_seAdquiereParaCumplir_OG"/>
+                        <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Objetivo_General"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;CO_seAdquiereParaCumplir_OG"/>
+                        <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Objetivo_General"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CO_Descripcion"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CO_Descripcion"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CO_seAdquiereParaCumplir_OG"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Objetivo_General"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CO_esOtorgadaPor_MA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CO_seAdquiereParaCumplir_OG"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Objetivo_General"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CO_esOtorgadaPor_MA"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_Especifica -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Competencia_Especifica">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Ontology1322242361907;Competencia"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;CE_esOtorgadaPor_MA"/>
+                                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;CE_esOtorgadaPor_MA"/>
+                                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Ontology1322242361907;Competencia"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CE_esOtorgadaPor_MA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&Ontology1322242361907;Competencia_General"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Competencia_General">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Ontology1322242361907;Competencia"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;CG_esOtorgadaPor_MA"/>
+                                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;CG_esOtorgadaPor_MA"/>
+                                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Ontology1322242361907;Competencia"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;CG_esOtorgadaPor_MA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Materia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;MA_otorgaCompetenciasGenerales_CG"/>
+                        <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Competencia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;MA_otorgaCompetenciasGenerales_CG"/>
+                        <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Competencia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_ubicada_UT"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Ubicacion_temporal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_seImparteSegun_AF"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Actividad_Formativa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_Resultados"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_Coordinacion"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_ubicada_UT"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Ubicacion_temporal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_seImparteSegun_AF"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Actividad_Formativa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_tiene_CA"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Caracter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_otorgaCompetencias_CO"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Competencia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_utiliza_MV"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Metodo_Evaluacion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_constaDe_AS"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_Resultados"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_Creditos"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&Ontology1322242361907;tipoCredito"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_seImparteMediante_ME"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Metodo_Docente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_utiliza_MV"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Metodo_Evaluacion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_Creditos"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;tipoCredito"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_tiene_CA"/>
+                <owl:onClass rdf:resource="&Ontology1322242361907;Caracter"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_seImparteMediante_ME"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Metodo_Docente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_constaDe_AS"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MA_tiene_CA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Caracter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Metodo_Docente">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;ME_utilizadoParaImpartir_MA"/>
+                        <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;ME_utilizadoParaImpartir_MA"/>
+                        <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;ME_Descripcion"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;ME_utilizadoParaImpartir_MA"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;ME_Descripcion"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;ME_utilizadoParaImpartir_MA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Metodo_Evaluacion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;MV_esUtilizadoEn_MA"/>
+                        <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;MV_esUtilizadoEn_MA"/>
+                        <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MV_esUtilizadoEn_MA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MV_esUtilizadoEn_MA"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MV_Descripcion"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;MV_Descripcion"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Objetivo_General">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;OG_seCumpleMedianteLaAdquisicionDe_CO"/>
+                        <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Competencia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1322242361907;OG_seCumpleMedianteLaAdquisicionDe_CO"/>
+                        <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Competencia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;OG_Descripcion"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;OG_seCumpleMedianteLaAdquisicionDe_CO"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Competencia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;OG_seCumpleMedianteLaAdquisicionDe_CO"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Competencia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;OG_Descripcion"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal -->
+
+    <owl:Class rdf:about="&Ontology1322242361907;Ubicacion_temporal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;UT_contiene_AS"/>
+                                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;UT_contiene_AS"/>
+                                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;UT_contiene_MA"/>
+                                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1322242361907;UT_contiene_MA"/>
+                                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;UT_contiene_AS"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;UT_contiene_ASMA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;UT_contiene_MA"/>
+                <owl:allValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;UT_contiene_AS"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Asignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1322242361907;UT_contiene_MA"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1322242361907;Materia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322242361907;Actividad_Formativa"/>
+            <rdf:Description rdf:about="&Ontology1322242361907;Asignatura"/>
+            <rdf:Description rdf:about="&Ontology1322242361907;Caracter"/>
+            <rdf:Description rdf:about="&Ontology1322242361907;Competencia"/>
+            <rdf:Description rdf:about="&Ontology1322242361907;Materia"/>
+            <rdf:Description rdf:about="&Ontology1322242361907;Metodo_Docente"/>
+            <rdf:Description rdf:about="&Ontology1322242361907;Metodo_Evaluacion"/>
+            <rdf:Description rdf:about="&Ontology1322242361907;Objetivo_General"/>
+            <rdf:Description rdf:about="&Ontology1322242361907;Ubicacion_temporal"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
