@@ -328,11 +328,11 @@ El resto de tipos de datos utilizados, son los primitivos del lenguaje xml, y vi
 	
 
 \chapter{Aplicación de la ontología}
-A continuación vamos clasificar el título de grado en informática ofertado por la Universidad Politécnica de Madrid utilizando la ontología antes descrita, mediante la inclusión en la misma de los individuos que la componen. De este modo comprobaremos cómo la ontología es capaz de clasificar a todos los individuos que componen el título, además de comprobar la decidibilidad del conjunto. Este modelo del plan de estudios, nos permitirá más adelante (si está correctamente construido), la utilización de herramientas automáticas para profundizar en el análisis del plan de estudios que permitan encontrar inconsistencias en su diseño. 
+A continuación vamos instanciar el título de grado en informática ofertado por la Universidad Politécnica de Madrid utilizando la ontología antes descrita, mediante la inclusión en la misma de los individuos que la componen. De este modo comprobaremos cómo la ontología es capaz de clasificar a todos los individuos que componen el título, además de comprobar la decidibilidad del conjunto. Este modelo del plan de estudios, nos permitirá más adelante (si está correctamente construido), la utilización de herramientas automáticas para profundizar en el análisis del plan de estudios que permitan encontrar inconsistencias en su diseño. 
 
 
 \section{A-Box}
-	Los individuos representan objetos de la ontología en el dominio que estamos estudiando. Protégé no hace uso del Unique Name Assumption, es decir, para Protégé dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontologías OWL: todo lo que no sea dicho de forma explícita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo, para ese dominio. Por ello, es preciso especificar este hecho mediante la declaración \lstinline!DifferentIndividuals!, al final de la instancia de todos los individuos.  
+	Los individuos representan objetos de la ontología en el dominio que estamos estudiando. Protégé no hace uso del Unique Name Assumption, es decir, para Protégé dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontologías OWL: todo lo que no sea dicho de forma explícita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo para ese dominio. Por ello, es preciso especificar este hecho mediante la declaración \lstinline!DifferentIndividuals! al final de la instancia de todos los individuos.  
   
 %	En nuestra ontología todos los individuos que componen la ontología (11 \lstinline!Objetivo_General!, 12 \lstinline!Competencia_General!, 47 \lstinline!Competencia_Especifica!, 12 \lstinline!Materia!, 43 \lstinline!Asignaturas!, 66 \lstinline!Actividades_Formativas!, 6 \lstinline!Metodos_Docentes!, 4 \lstinline!Caracter!, 9 \lstinline!Metodo_Evaluacion!, 7 \lstinline!Ubicacion_Temporal!) son distintos. 
 
@@ -346,7 +346,7 @@ Dado el gran número de individuos que componen la ontología, se ha optado por no
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	   	%% Objetivos Generales
    		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-		\item [Objetivos Generales.] Son individuos pertenecientes a la clase \lstinline!Objetivo_General!, que representan los objetivos generales del título, desde el número 1 al 11. A modo de ejemplo:
+		\item [Objetivos Generales.] Son individuos pertenecientes a la clase \lstinline!Objetivo_General! que representan los objetivos generales del título. Están numerados desde el número 1 al 11. A modo de ejemplo:
 	 	\lstinputlisting[caption={Instancia de \lstinline!Objetivo_General!: \lstinline!OBJ01!},captionpos=b,label=obj1,language=owlms,literate=,linerange=Individual:\ OBJ01-xsd:string]{a-box.ms}
 
 		\lstinputlisting[caption={Instancia de \lstinline!Objetivo_General!: \lstinline!OBJ02!},captionpos=b,label=obj2,language=owlms,literate=,linerange=Individual:\ OBJ02-xsd:string]{a-box.ms}
