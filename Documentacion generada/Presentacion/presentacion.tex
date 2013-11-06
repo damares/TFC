@@ -68,11 +68,11 @@ Se estableció como unidad de medida de los planes de estudios el ECTS. Este nuev
 	\end{enumerate}
 %	\end{LARGE}
 \end{frame}
-\note{El presente trabajo es un ejercicio para intentar representar la información y los conceptos del espacio europeo de educación superior de una forma diferente a como se hizo con las hojas de cálculo, con una herramienta que capture el conocimiento de una manera formal y que permita ver las relaciones que existen entre los diversos conceptos. Esa herramienta son las ontologías. Hemos instanciado la titulación de grado en informática ofertado por la universidad politécnica de Madrid, y a continuación, una vez comprobada su validez, valoraremos los posibles usos de la herramienta conceptual.}
+\note{El presente trabajo es un ejercicio para intentar representar la información y los conceptos del espacio europeo de educación superior de una forma diferente a como se hizo con las hojas de cálculo, con una herramienta que capture el conocimiento de una manera formal y que permita ver las relaciones que existen entre los diversos conceptos. Esa herramienta son las ontologías. Hemos instanciado la titulación de grado en informática ofertado por la universidad politécnica de Madrid, y a continuación, una vez comprobada su validez, valoraremos los posibles usos de la herramienta.}
 
 
 %--- OWL, ontologías y protegé ------%
-\begin{frame}{Modelización del universo}
+\begin{frame}[label=ejemplo]{Modelización del universo}
 %\begin{LARGE}
 	\begin{enumerate}
 	\item Esquema conceptual: Ontologías.
@@ -100,7 +100,7 @@ De una manera informal, puede decirse que una ontología consta de clases (conjun
 \note{Lenguaje utilizado: OWL\\
 Las ontologías se expresan en lenguajes basados en conceptos lógicos que permiten almacenar información sintáctica y semántica. De entre todos los lenguajes existentes, hemos elegido OWL por ser un estándar desarrollado por W3C. Existen tres sublenguajes dentro de OWL. El más sencillo, OWL lite, es decidible y completo, pero no resulta lo suficientemente expresivo. En el lado contrario tenemos OWL-Full que por permitir la máxima expresividad y libertad sintáctica, no aporta garantías sobre su decidibilidad o completitud. Por ello hemos elegido el sublenguaje OWL-DL, que como término medio, ofrece todos los constructores de OWL pero con pequeñas condiciones, lo que le permite tener una mayor expresividad que OWL-Lite, manteniendo las propiedades de decidibiliadd y completitud de las que carece OWL-Full.}
 \note{Herramienta utiliada: Protégé\\
-Protégé es un framework libre de código abierto, desarrollado conjuntamente por las universidades de Standford y Manchester (creadora de la sintaxis concreta que lleva su nombre, válida para la construcción de ontologías en lenguaje OWL-DL y utilizada en el trabajo.) Se ha escogido sobre otras herramientas para el desarrollo de ontologías por admitir el uso de extensiones en forma de plugins - facilitando la incorporación de herramientas que faciliten el desarrollo de la ontología-, y por su interfaz clara y fácil de utilizar, lo que le convierte en una excelente base para el desarrollo de aplicaciones o prototipos.}
+Protégé es un framework libre de código abierto, desarrollado conjuntamente por las universidades de Standford y Manchester (creadora de la sintaxis concreta que lleva su nombre, utilizada en el presente trabajo.) Se ha escogido sobre otras herramientas para el desarrollo de ontologías por admitir el uso de extensiones en forma de plugins - facilitando la incorporación de herramientas que agilizan el desarrollo de la ontología-, y por su interfaz clara y fácil de utilizar, lo que le convierte en una excelente base para el desarrollo de aplicaciones o prototipos.}
 
 
 %--- Definición de Asignatura en sintaxis Manchester ---%
@@ -150,7 +150,10 @@ Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo
 \lstinputlisting[breaklines,language=protege,literate=,linerange=Individual:\ PlanInfo:Concurrencia-ects:Asignatura]{../Libro/codigo/a-box.ms} 	
 	\end{footnotesize}
 \end{frame}
-\note{Y esta es la instancia de la asignatura concurrencia en sintaxis Manchester. Esta forma de representación de ontologías, más idónea que las tablas utilizadas por los docentes y ya comentadas, permite capturar conocimiento de manera formal, e incluso realizar inferencias a partir del ya formalizado. Por ejemplo, podemos definir la asignatura concurrencia como una asignatura, obligatoria, de 3 creditos, que se imparte en el 4o trimestre, que tiene como requisitos (entendiendo como requisitos simples recomendaciones a la hora de cursar las asignaturas) Programacion II y Lenguajes formales, y con unos contenidos resumidos en Análisis y diseño (sigue leyendo la diapo). El resto de propiedades vistas en el ejemplo de ontología mostrado al principio  de la asignatura son inferidos gracias a razonadores automáticos. El plan de estudios en su conjunto consta de 11 Objetivo General, 12 Competencia General, 47 Competencia Especifica, 12 Materia, 43 Asignaturas, 66 Actividades Formativas, 6 Metodos Docentes, 4 Caracter, 9 Metodo Evaluacion y 7 Ubicacion Temporal.\\}
+\note{Y esta es la instancia de la asignatura concurrencia en sintaxis Manchester. Definimos la asignatura concurrencia como una asignatura, obligatoria, de 3 creditos, que se imparte en el 4o trimestre, que tiene como requisitos (entendiendo como requisitos simples recomendaciones a la hora de cursar las asignaturas) Programacion II y Lenguajes formales, y con unos contenidos resumidos en Análisis y diseño (sigue leyendo la diapo).}
+
+\againframe{ejemplo}
+\note{El resto de propiedades vistas en el ejemplo de ontología mostrado al principio  de la asignatura son inferidos gracias a razonadores automáticos. El plan de estudios en su conjunto consta de 11 Objetivo General, 12 Competencia General, 47 Competencia Especifica, 12 Materia, 43 Asignaturas, 66 Actividades Formativas, 6 Metodos Docentes, 4 Caracter, 9 Metodo Evaluacion y 7 Ubicacion Temporal.\\}
 %\note{ Como vemos hemos cumplido los dos primeros objetivos del trabajo. Hemos logrado, a través de la descripción de una ontología a través de un lenguaje formal (OWL-DL), crear un marco de conocimiento formal, sin ambigüedades, y con una expresividad superior a la facilitada por las hojas de cálculo utilizadas en un principio, para a continuación lograr instanciar de forma correcta un plan de estudios. Ahora veremos cómo incrementar la aplicabilidad del trabajo incorporando herramientas automáticas a la ontología.}
 
 
@@ -165,13 +168,12 @@ Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo
 %\note{quédate con la idea de las dos vueltas, de cómo se ha llegado hasta la wiki (que no era el destino inicialmente), de porqué, de lo que hay y lo queda por hacer. Y porqué es útil e importante.}
 \end{frame}
 
-\note{Y hasta aquí lo que daba de si el proyecto. Habí­amos logrado, trabajando con ontologías, crear un marco formal de conocimiento que permitiese especificar de un modo formal el nuevo plan de estudios de modo que permitiese capturar más concocimiento.  Se habí­a logrado cambiar el trabajo con herramientas no eficientes como las hojas de cálculo por las ontologías, y se habí­a conseguido con una herramienta que además permitia el trabajo con aplicaciones automáticas. XXX PÁRATE Y LEE LA DIAPOSITIVA. CUANDO ACABES DE LEER, PASA A LA SIGUIENTE}
+\note{Y hasta aquí lo que daba de si el proyecto. Habí­amos logrado, trabajando con ontologías, crear un marco formal de conocimiento que permitiese especificar de un modo formal el nuevo plan de estudios de modo que permitiese capturar más concocimiento.  Se habí­a logrado cambiar el trabajo con herramientas no eficientes como las hojas de cálculo por las ontologías, y se habí­a conseguido con una herramienta que además permitia el trabajo con aplicaciones automáticas, como razonadores, editores, visores, herramientas para la transformación de datos y otros.}
 \note{Llegados a este punto la ontología se encontraba lista y terminada, pero ocurrí­a que para cualquier persona que no estuviese familiriazada con las ontologías y sus lenguajes descriptivos, resultaba igualmente de complejo y farragoso el trabajo con hojas de cálculo y ontologías. Y así­ el punto y final del trabajo se convirtió en el punto incial de una pequeña ampliación. ¿Porqué no aprovechar la web semántica para lograr mayor aplicabilidad a la ontología diseñada?}
 
 \begin{frame}{Aplicaciones del diseño}
 	\begin{itemize}
 		\item Web Semántica \newline
-		\item Wiki \newline
 		\item Wiki Semántica
 	\end{itemize}
 \end{frame}
@@ -179,11 +181,9 @@ Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo
 La web semántica es una web extendida dotada de un mayor significado (semántica) al delegar tareas en software que es capaz de procesar su contenido, razonar sobre éste, combinarlo y realizar deducciones lógicas para resolver problemas cotidianos de manera automática. Estas soluciones se apoyan en el uso de lenguajes universales (como OWL) que resuelven los problemas ocasionados por una web carente de semántica. Vamos a aprovechar las capacidades descritas de las web semánticas para superar el problema de la usabilidad de nuestra ontologia.}
 
 \note{WIKI SEMÁNTICA:\\
-Una wiki es una espacio web que permite a los usuarios crear contenido de modo colaborativo. Una wiki permite capturar e identificar información acerca de los datos contenidos en sus páginas y las relaciones entre éstas. Una wiki semántica no es más que una wiki normal que incorpora las capacidades descritas para la web semántica. De este modo es posible crear un espacio web colaborativo donde se almacenan datos y capaz de capturar los detalles semánticos del modelo, creando un sistema de consulta ágil y usable.}
+Una wiki semántica es un espacio web que permite a los usuarios crear contenido de modo colaborativo incorporando las capacidades descritas para la web semántica. De este modo es posible crear un espacio web colaborativo donde se almacenan datos y capaz de capturar los detalles semánticos del modelo, creando un sistema de consulta ágil y usable.}
 
-% Uno de los motores más conocidos es Semantic Media Wiki (una extensión de Media Wiki) que permite añadir más funcionalidades mediante la aplicación de addons. Se han probado varias extensiones de Mediawiki y SMW que permiten subir una ontología en formato RDF/XML a la wiki, como Ontology Editor o RDFIO, pero dada la complejidad de la ontología, muchas de las restricciones impuestas causaban que la extensión fallase, o en el mejor de los casos, simplemente ignorasen esas restricciones, provocando comportamientos no deseados en la ontología. }
 
-%\note{Finalmente, se ha optado por crear la wiki de forma manual (utilizando plantillas creadas con el addon "forms"), al no contar con herramientas fiables que permitan el volcado de información de forma fiable, y con el fin de poder mostrar la idoneidad de trabajar con herramientas semánticas, como ontologías y wikis semánticas, cuando se trata de proyectos o trabajo cuyo principal objetivo es el de capturar conocimiento.}
 \note{muestra un ejemplo de la wiki en la presentacion}
 
 %\begin{frame}{Aplicaciones del diseño}
@@ -205,7 +205,7 @@ Las ontologías nos han permitido capturar el universo de observación y las conno
 Hemos instanciado el plan de estudios del grado en informática de la upm, con el fin de validar la ontologia y el plan de estudios. Durante la validación, hemos encontrado incongruencias en el plan de estudios que bien pudieran pasarse por alto sin el uso de herramientas adecuadas. Por ejemplo, hemos encontrado competencias que no contribuyen al cumplimiento de ningún objetivo de la titulación, y posiblemente, refinando la ontología o utilizando otras herramientas a las aquí propuestas, sea posible encontrar algún otro error en el diseño del plan de estudios.\\}
 
 \note{Usabilidad:\\
-Resulta muy pesado y engorroso trabajar directamente con ontologías y sus definiciones. Si bien existe software y plugins que pretenden mejorar la experiencia con ontologías, no dejan de ser malas aproximaciones a un interfaz realmente útil para todo tipo de usuarios. Las wikis permiten almacenar la información semántica capturada en la ontología, y no sólo eso, sino también trabajar directamente sobre ella. Tienen soporte para varios usuarios, es fácil de desplegar e independiente de la plataforma del usuario. Una wiki semántica tiene la capacidad de ofrecer al actor una herramienta informática capaz de almacenar, procesar y mostrar la información almacenada, junto con su contenido semántico. Las wikis semánticas parecen ser pues el camino a seguir.}
+Resulta muy pesado y engorroso trabajar directamente con ontologías y sus definiciones. Si bien existe software y plugins que pretenden mejorar la experiencia con ontologías, no dejan de ser malas aproximaciones a un interfaz realmente útil para todo tipo de usuarios. Las wikis semánticas permiten mejorar la usabilidad de la herramienta de una manera drástica.}
 
 
 \begin{frame}{Trabajo a futuro}
@@ -221,7 +221,7 @@ A partir de aquí se abren diferentes caminos como trabajo a futuro. En primer lu
 \note{Integracion OWL y Wiki:\\
 En segundo lugar serí­a interesante lograr una mayor integración entre la ontología y la wiki semántica de forma que, por ejemplo, cambios sobre la ontología tuviesen su reflejo automático sobre la wiki. De este modo serí­a posible adaptar una wiki ya en funcionamiento a las modificaciones que pudiese sufrir la ontología subyacente, sin necesidad de tener que traspasar de forma manual el concimiento capturado, ahorrándonos la posibilidad de incurrir en errores debidos al tratamiento manual de esos datos.}
 \note{Razonadores automáticos:\\
-Y por último, y lo que me ha parecido más importante, la posiblidad de ejecutar razonadores automáticos directamente sobre la wiki semántica. Cualquier usuario autorizado podría de este modo incluir información no recogida previamente en la wiki, o modificar la ya existente. Pero el hecho de poderla incluir no nos asegura que dicha información sea sintáctica y semánticamente correcta. Para asegurarnos de ello, resulta imprescindible que algún razonador automático nos confirmase que la ontología subyacente resultante es decidible, y completa.}
+Y por último, y lo que me ha parecido más importante, la posiblidad de ejecutar razonadores automáticos directamente sobre la wiki semántica. Cualquier usuario podría de este modo incluir información no recogida previamente en la wiki, o modificar la ya existente. Pero el hecho de poderla incluir no nos asegura que dicha información sea sintáctica y semánticamente correcta. Para asegurarnos de ello, resulta imprescindible que algún razonador automático nos confirmase que la ontología subyacente resultante es decidible, y completa.}
 
 
 

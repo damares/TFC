@@ -1135,14 +1135,14 @@ Individual: PlanInfo:AS-Gestión_de_procesos_de_TecnologÃ­as_de_la_Información
 Individual: PlanInfo:Concurrencia
 
     Annotations: 
-        ects:AS_Creditos "3"^^xsd:decimal,
         ects:AS_tiene_CA <PlanInfo#CA-Obligatoria>,
         ects:AS_ubicada_UT <PlanInfo#UT-4o_semestre>,
         ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Programación_II>,
+        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Lenguajes_Formales_Autómatas_y_Computabilidad>,
+        ects:AS_Creditos "3"^^xsd:decimal,
         ects:AS_Contenidos "- Análisis y diseño de sistemas concurrentes
 - Programación de aplicaciones concurrentes
 - Especificación de sistemas concurrentes"^^xsd:string,
-        ects:AS_tieneComoRequisito_AS <PlanInfo#AS-Lenguajes_Formales_Autómatas_y_Computabilidad>
     
     Types: 
         ects:Asignatura
