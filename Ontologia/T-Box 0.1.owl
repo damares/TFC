@@ -34,9 +34,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito -->
 
-    <rdfs:Datatype rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito">
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito">
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="&xsd;decimal"/>
@@ -90,8 +90,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#constaDe">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
     </owl:ObjectProperty>
     
 
@@ -101,8 +101,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#contiene">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seComponeDe"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
     </owl:ObjectProperty>
     
 
@@ -113,8 +113,8 @@
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#hereda"/>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/vieneDadoPor#agrupa"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
     </owl:ObjectProperty>
     
 
@@ -123,8 +123,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#esRequisitoPara">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
     </owl:ObjectProperty>
     
 
@@ -132,8 +132,8 @@
     <!-- http://www.semanticweb.org/daniel/Plan_Estudios#esUtilizadoEnLaEvaluacionDe -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#esUtilizadoEnLaEvaluacionDe">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Evaluacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
     </owl:ObjectProperty>
     
 
@@ -143,8 +143,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#fracciona">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seComponeDe"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#ubicada"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
     </owl:ObjectProperty>
     
 
@@ -153,8 +153,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#hereda">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
         <rdfs:subPropertyOf>
             <rdf:Description>
                 <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/vieneDadoPor#agrupa"/>
@@ -168,8 +168,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetenciaEspecifica">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetencias"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia_Especifica"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_Especifica"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
         <rdfs:subPropertyOf>
             <rdf:Description>
                 <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereAlCursar"/>
@@ -182,8 +182,8 @@
     <!-- http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetencias -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetencias">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
     </owl:ObjectProperty>
     
 
@@ -193,8 +193,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetenciasGenerales">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetencias"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereCompetenciaGeneralAlCursar"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia_General"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
         <rdfs:subPropertyOf>
             <rdf:Description>
                 <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereAlCursar"/>
@@ -208,8 +208,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereAlCursar">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetencias"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
     </owl:ObjectProperty>
     
 
@@ -219,8 +219,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereCompetenciaEspecificaAlCursar">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetenciaEspecifica"/>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereAlCursar"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia_Especifica"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_Especifica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
         <rdfs:subPropertyOf>
             <rdf:Description>
                 <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetencias"/>
@@ -234,8 +234,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereCompetenciaGeneralAlCursar">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereAlCursar"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia_General"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
         <rdfs:subPropertyOf>
             <rdf:Description>
                 <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetencias"/>
@@ -248,8 +248,8 @@
     <!-- http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereParaCumplir -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereParaCumplir">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
     </owl:ObjectProperty>
     
 
@@ -257,12 +257,12 @@
     <!-- http://www.semanticweb.org/daniel/Plan_Estudios#seComponeDe -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seComponeDe">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -274,8 +274,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seCumpleMedianteLaAdquisicionDe">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereParaCumplir"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
     </owl:ObjectProperty>
     
 
@@ -284,8 +284,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seEvaluaCon">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esUtilizadoEnLaEvaluacionDe"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Evaluacion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
     </owl:ObjectProperty>
     
 
@@ -293,8 +293,8 @@
     <!-- http://www.semanticweb.org/daniel/Plan_Estudios#seImparteMediante -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteMediante">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Docente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
     </owl:ObjectProperty>
     
 
@@ -303,8 +303,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteSegun">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Actividad_Formativa"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
     </owl:ObjectProperty>
     
 
@@ -314,8 +314,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#tieneComoRequisito">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esRequisitoPara"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
     </owl:ObjectProperty>
     
 
@@ -323,12 +323,12 @@
     <!-- http://www.semanticweb.org/daniel/Plan_Estudios#ubicada -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#ubicada">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#constaDe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteDurante"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#seImparteDurante"/>
         </owl:propertyChainAxiom>
         <rdfs:subPropertyOf>
             <rdf:Description>
@@ -344,8 +344,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadaParaImpartir">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteSegun"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Actividad_Formativa"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
     </owl:ObjectProperty>
     
 
@@ -354,8 +354,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadoParaImpartir">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteMediante"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Docente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
     </owl:ObjectProperty>
     
 
@@ -365,8 +365,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#vieneDadoPor">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/vieneDadoPor#agrupa"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
     </owl:ObjectProperty>
     
 
@@ -374,12 +374,12 @@
     <!-- http://www.semanticweb.org/daniel/vieneDadoPor#agrupa -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/vieneDadoPor#agrupa">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -387,13 +387,13 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#esDeCaracter -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#esDeCaracter -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#esDeCaracter">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#esDeCaracter">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#vieneDadoPor"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
         <rdfs:subPropertyOf>
             <rdf:Description>
                 <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/vieneDadoPor#agrupa"/>
@@ -403,24 +403,24 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#formaParteDe -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#formaParteDe -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#formaParteDe">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#formaParteDe">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#constaDe"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#seImparteDurante -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#seImparteDurante -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteDurante">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#seImparteDurante">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#contiene"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
         <rdfs:subPropertyOf>
             <rdf:Description>
@@ -452,7 +452,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#coordinacionDeLaMateria">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -462,8 +462,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaActividadFormativa">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Actividad_Formativa"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
     </owl:DatatypeProperty>
     
 
@@ -472,8 +472,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaMateria">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
     </owl:DatatypeProperty>
     
 
@@ -482,7 +482,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#descripcionDeLaCompetencia">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -491,7 +491,7 @@
     <!-- http://www.semanticweb.org/daniel/Plan_Estudios#descripcionDelMetodoDeEvaluacion -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#descripcionDelMetodoDeEvaluacion">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Evaluacion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -501,7 +501,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#descripcionDelMetodoDocente">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Docente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -511,7 +511,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#descripcionDelObjetivoGeneral">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -521,27 +521,27 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#resultadosDelAprendizaje">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#contenidosDeLaAsignatura -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#contenidosDeLaAsignatura -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#contenidosDeLaAsignatura">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#contenidosDeLaAsignatura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaAsignatura -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#creditosDeLaAsignatura -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaAsignatura">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#creditosDeLaAsignatura">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
     </owl:DatatypeProperty>
     
 
@@ -557,19 +557,19 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Actividad_Formativa -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Actividad_Formativa">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadaParaImpartir"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadaParaImpartir"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -579,44 +579,44 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaActividadFormativa"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito"/>
+                <owl:onDataRange rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaActividadFormativa"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadaParaImpartir"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadaParaImpartir"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#formaParteDe"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#formaParteDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#formaParteDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#formaParteDe"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -624,80 +624,80 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esDeCaracter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#esDeCaracter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteDurante"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#seImparteDurante"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaAsignatura"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#creditosDeLaAsignatura"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#contenidosDeLaAsignatura"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#contenidosDeLaAsignatura"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#contenidosDeLaAsignatura"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#contenidosDeLaAsignatura"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteDurante"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#seImparteDurante"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#formaParteDe"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#formaParteDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esDeCaracter"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#esDeCaracter"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaAsignatura"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#creditosDeLaAsignatura"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito"/>
+                <owl:onDataRange rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#formaParteDe"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#formaParteDe"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#formaParteDe"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#formaParteDe"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Caracter -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -705,11 +705,11 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esDe"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esDe"/>
-                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -717,11 +717,11 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#vieneDadoPor"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#vieneDadoPor"/>
-                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -732,50 +732,50 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esDe"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esDe"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/vieneDadoPor#agrupa"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#vieneDadoPor"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#vieneDadoPor"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Competencia -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereParaCumplir"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereParaCumplir"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -784,7 +784,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereParaCumplir"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -796,13 +796,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereAlCursar"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereAlCursar"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -815,93 +815,93 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereParaCumplir"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Competencia_Especifica -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_Especifica -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia_Especifica">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_Especifica">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereCompetenciaEspecificaAlCursar"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereCompetenciaEspecificaAlCursar"/>
-                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereCompetenciaEspecificaAlCursar"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia_General"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Competencia_General -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia_General">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia_General">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereCompetenciaGeneralAlCursar"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereCompetenciaGeneralAlCursar"/>
-                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seAdquiereCompetenciaGeneralAlCursar"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Materia -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Materia">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetenciasGenerales"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetenciasGenerales"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -916,19 +916,19 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaMateria"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#hereda"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#hereda"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -936,13 +936,13 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#creditosDeLaMateria"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#tipoCredito"/>
+                <owl:onDataRange rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#tipoCredito"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteSegun"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Actividad_Formativa"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -955,7 +955,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#ubicada"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -967,80 +967,80 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#ubicada"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seEvaluaCon"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Evaluacion"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteSegun"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Actividad_Formativa"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#constaDe"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#otorgaCompetencias"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteMediante"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Docente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seImparteMediante"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Docente"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#constaDe"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seEvaluaCon"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Evaluacion"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#hereda"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Docente -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Docente">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadoParaImpartir"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadoParaImpartir"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1055,13 +1055,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadoParaImpartir"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#utilizadoParaImpartir"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1075,19 +1075,19 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Evaluacion -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Evaluacion">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esUtilizadoEnLaEvaluacionDe"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esUtilizadoEnLaEvaluacionDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1109,32 +1109,32 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esUtilizadoEnLaEvaluacionDe"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#esUtilizadoEnLaEvaluacionDe"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seCumpleMedianteLaAdquisicionDe"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seCumpleMedianteLaAdquisicionDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1143,13 +1143,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seCumpleMedianteLaAdquisicionDe"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seCumpleMedianteLaAdquisicionDe"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1169,9 +1169,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal -->
+    <!-- http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1179,11 +1179,11 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#contiene"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#contiene"/>
-                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1191,11 +1191,11 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#fracciona"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#fracciona"/>
-                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1206,31 +1206,31 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#contiene"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#seComponeDe"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#fracciona"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#fracciona"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#contiene"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1254,15 +1254,15 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Actividad_Formativa"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Asignatura"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Caracter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Competencia"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Materia"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Docente"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Metodo_Evaluacion"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Objetivo_General"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Plan_Estudios#Ubicacion_temporal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Actividad_Formativa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Asignatura"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Caracter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Competencia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Materia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Docente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Metodo_Evaluacion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Objetivo_General"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/10/Ontology1322242361907.owl#Ubicacion_temporal"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
