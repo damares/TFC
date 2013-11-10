@@ -923,9 +923,16 @@
 - Especificación de sistemas concurrentes</tbox:contenidosDeLaAsignatura>
         <tbox:creditosDeLaAsignatura rdf:datatype="&tbox;tipoCredito">3</tbox:creditosDeLaAsignatura>
         <tbox:seImparteDurante rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#4o_semestre"/>
+        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Fundamentos_fisicos_y_tecnologicos_de_la_informatica"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Lenguajes_Formales_Automatas_y_Computabilidad"/>
+        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Logica"/>
+        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Matematica_Discreta_I"/>
+        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Matematica_Discreta_II"/>
         <tbox:esDeCaracter rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Obligatoria"/>
+        <tbox:formaParteDe rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion"/>
+        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion_I"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion_II"/>
+        <tbox:esRequisitoPara rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Proyecto_de_Software"/>
     </owl:NamedIndividual>
     
 
