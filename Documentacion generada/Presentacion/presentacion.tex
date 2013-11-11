@@ -83,22 +83,28 @@ Se estableció como unidad de medida de los planes de estudios el ECTS. Este nuev
 %\end{LARGE}
 \end{frame}
 \note{Esquema conceptual: Ontologías\\
-De una manera informal, puede decirse que una ontología consta de clases (conjuntos de individuos con alguna característica en común), propiedades (relaciones binarias entre dos individuos o entre un individuo y un tipo de datos) e individuos. Las ontologías nos permiten describir de manera formal algún subconjunto del universo en función de sus propiedades y de la forma en que éstas se interrelacionan, lo que permite que diferentes personas o sistemas tengan un entendimiento común y compartido de ese dominio. Esto es la representación gráfica de un individuo de la ontología, en concreto de la asignatura Concurrencia. Podemos ver en color naranja la propiedad tieneCarácter, en verde la propiedad ubicadaEn, en azul oscuro formaParteDe, y en azul claro la propiedad tieneComoRequisito. Podemos ver que la asignatura es de carácter obligatoria, está incluida en la materia Programación, y ubicada en el cuarto semestre. Además es requisito para las asignaturas \textbf{nombrar}}
+De una manera informal, puede decirse que una ontología consta de clases (conjuntos de individuos con alguna característica en común), propiedades (relaciones binarias entre dos individuos o entre un individuo y un tipo de datos) e individuos. Las ontologías nos permiten describir de manera formal algún subconjunto del universo en función de sus propiedades y de la forma en que éstas se interrelacionan, lo que permite que diferentes personas o sistemas tengan un entendimiento común y compartido de ese dominio. Esto es la representación gráfica de un individuo de la ontología, en concreto de la asignatura Concurrencia. Podemos ver en color naranja la propiedad esDeCaracter, en verde la propiedad seImparteDurante, en dorado formaParteDe, y en morado la propiedad tieneComoRequisito. Podemos ver que la asignatura es de carácter obligatoria, está incluida en la materia Programación, y ubicada en el cuarto semestre. Además es requisito para las asignaturas \textbf{nombrar}}
 
+
+\begin{frame}{Modelización del universo}
+	\begin{enumerate}
+	\item Esquema conceptual: Ontologías. 
+	\item Lenguaje utilizado: OWL-DL. 
+	\end{enumerate}
+\end{frame}
+\note{Lenguaje utilizado: OWL\\
+Las ontologías se expresan en lenguajes basados en conceptos lógicos que permiten almacenar información sintáctica y semántica. De entre todos los lenguajes existentes, hemos elegido OWL por ser un estándar desarrollado por W3C. Existen tres sublenguajes dentro de OWL. El más sencillo, OWL lite, es decidible y completo, pero no resulta lo suficientemente expresivo. En el lado contrario tenemos OWL-Full que por permitir la máxima expresividad y libertad sintáctica, no aporta garantías sobre su decidibilidad o completitud. Por ello hemos elegido el sublenguaje OWL-DL, que como término medio, ofrece todos los constructores de OWL pero con pequeñas condiciones, lo que le permite tener una mayor expresividad que OWL-Lite, manteniendo las propiedades de decidibiliadd y completitud de las que carece OWL-Full.}
 
 \begin{frame}{Modelización del universo}
 	\begin{enumerate}
 	\item Esquema conceptual: Ontologías.
 	\item Lenguaje utilizado: OWL-DL.
-	\pause
 	\item Herramienta utilizada: Protégé.	
 	\end{enumerate}
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{asignatura-ont.png}
 	\end{center}
 \end{frame}
-\note{Lenguaje utilizado: OWL\\
-Las ontologías se expresan en lenguajes basados en conceptos lógicos que permiten almacenar información sintáctica y semántica. De entre todos los lenguajes existentes, hemos elegido OWL por ser un estándar desarrollado por W3C. Existen tres sublenguajes dentro de OWL. El más sencillo, OWL lite, es decidible y completo, pero no resulta lo suficientemente expresivo. En el lado contrario tenemos OWL-Full que por permitir la máxima expresividad y libertad sintáctica, no aporta garantías sobre su decidibilidad o completitud. Por ello hemos elegido el sublenguaje OWL-DL, que como término medio, ofrece todos los constructores de OWL pero con pequeñas condiciones, lo que le permite tener una mayor expresividad que OWL-Lite, manteniendo las propiedades de decidibiliadd y completitud de las que carece OWL-Full.}
 \note{Herramienta utiliada: Protégé\\
 Protégé es un framework libre de código abierto, desarrollado conjuntamente por las universidades de Standford y Manchester (creadora de la sintaxis concreta que lleva su nombre, utilizada en el presente trabajo.) Se ha escogido sobre otras herramientas para el desarrollo de ontologías por admitir el uso de extensiones en forma de plugins - facilitando la incorporación de herramientas que agilizan el desarrollo de la ontología-, y por su interfaz clara y fácil de utilizar, lo que le convierte en una excelente base para el desarrollo de aplicaciones o prototipos.}
 
@@ -107,11 +113,8 @@ Protégé es un framework libre de código abierto, desarrollado conjuntamente por 
 \lstset{inputencoding=latin1}
 \lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
 \begin{frame}{Definición de la clase Asignatura}
-%	\begin{LARGE}
-%		Definición de Asignatura en sintaxis Manchester:
-%	\end{LARGE}
 	\begin{scriptsize}
-\lstinputlisting[breaklines,language=protege,literate=,linerange=Class:\ ects:Asignatura-max\ 1\ xsd:string]{../Libro/codigo/t-box.ms} 	
+\lstinputlisting[breaklines,language=protege,literate=,linerange=Class:\ Asignatura-max\ 1\ xsd:string]{../Libro/codigo/t-box.ms} 	
 	\end{scriptsize}
 \end{frame}
 \note{Esta es la descripción de la clase asignatura realizada en sintaxis Manchester, que nos permite representar cosas como la vista antes de la asignatura concurrencia. Resulta una forma de representar conocimiento muy potente ya que permite capturar relaciones y conceptos que no era posible con las hojas de cálculo. 
@@ -129,9 +132,9 @@ Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo
 	\begin{scriptsize}
 		\begin{columns}[t]
 			\column{0.5\textwidth}
-\lstinputlisting[breaklines,language=protege,literate=,linerange=ObjectProperty:\ ects:formaParteDe-ects:constaDe]{../Libro/codigo/t-box.ms} 	
+\lstinputlisting[breaklines,language=protege,literate=,linerange=ObjectProperty:\ formaParteDe-constaDe]{../Libro/codigo/t-box.ms} 	
 			\column{0.5\textwidth}
-\lstinputlisting[breaklines,language=protege,literate=,linerange=DataProperty:\ ects:creditosDeLaAsignatura-ects:tipoCredito]{../Libro/codigo/t-box.ms}
+\lstinputlisting[breaklines,language=protege,literate=,linerange=DataProperty:\ creditosDeLaAsignatura-tipoCredito]{../Libro/codigo/t-box.ms}
 		\end{columns}
 		\begin{center}
 		\lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape=false}
@@ -147,28 +150,31 @@ Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo
 \lstset{language=protege,basicstyle=\sffamily,columns=flexible,mathescape}
 \begin{frame}[fragile]{Instancia de \lstinline!Asignatura!}
 	\begin{footnotesize}
-\lstinputlisting[breaklines,language=protege,literate=,linerange=Individual:\ PlanInfo:Concurrencia-ects:Asignatura]{../Libro/codigo/a-box.ms} 	
+\lstinputlisting[breaklines,language=protege,literate=,linerange=Individual:\ Concurrencia-xsd:string]{../Libro/codigo/a-box.ms} 	
 	\end{footnotesize}
 \end{frame}
 \note{Y esta es la instancia de la asignatura concurrencia en sintaxis Manchester. Definimos la asignatura concurrencia como una asignatura, obligatoria, de 3 creditos, que se imparte en el 4o trimestre, que tiene como requisitos (entendiendo como requisitos simples recomendaciones a la hora de cursar las asignaturas) Programacion II y Lenguajes formales, y con unos contenidos resumidos en Análisis y diseño (sigue leyendo la diapo).}
 
 \againframe{ejemplo}
-\note{El resto de propiedades vistas en el ejemplo de ontología mostrado al principio  de la asignatura son inferidos gracias a razonadores automáticos. El plan de estudios en su conjunto consta de 11 Objetivo General, 12 Competencia General, 47 Competencia Especifica, 12 Materia, 43 Asignaturas, 66 Actividades Formativas, 6 Metodos Docentes, 4 Caracter, 9 Metodo Evaluacion y 7 Ubicacion Temporal.\\}
-%\note{ Como vemos hemos cumplido los dos primeros objetivos del trabajo. Hemos logrado, a través de la descripción de una ontología a través de un lenguaje formal (OWL-DL), crear un marco de conocimiento formal, sin ambigüedades, y con una expresividad superior a la facilitada por las hojas de cálculo utilizadas en un principio, para a continuación lograr instanciar de forma correcta un plan de estudios. Ahora veremos cómo incrementar la aplicabilidad del trabajo incorporando herramientas automáticas a la ontología.}
+\note{El resto de propiedades vistas en el ejemplo de ontología mostrado al principio  de la asignatura son inferidos gracias a razonadores automáticos. El plan de estudios en su conjunto consta de 11 Objetivo General, 12 Competencia General, 47 Competencia Especifica, 12 Materia, 43 Asignaturas, 4 Carácteres, 66 Actividades Formativas, 6 Metodos docentes, 10 Métodos de evaluación y 7 Ubicaciones temporales}
 
 
 \begin{frame}{Aplicaciones del diseño}
 	Aplicaciones automáticas:
 	
 	Razonadores (FaCT++, HermiT), editores (ACE View, ChangeView, Hypergraph DB), visores (CloudViews, Matrix, NavigOWL, Ontograf, OWLGrEd, SOVA, DL-Query, Cardinality view, Tree views, OWLDoc, OWLViz, OWLPropViz, OWLDiff), transformación (OWL2RDB).
-\pause
-\begin{center}
-	{\Huge ¡¡Web semántica!!}
-\end{center}
-%\note{quédate con la idea de las dos vueltas, de cómo se ha llegado hasta la wiki (que no era el destino inicialmente), de porqué, de lo que hay y lo queda por hacer. Y porqué es útil e importante.}
 \end{frame}
 
 \note{Y hasta aquí lo que daba de si el proyecto. Habí­amos logrado, trabajando con ontologías, crear un marco formal de conocimiento que permitiese especificar de un modo formal el nuevo plan de estudios de modo que permitiese capturar más concocimiento.  Se habí­a logrado cambiar el trabajo con herramientas no eficientes como las hojas de cálculo por las ontologías, y se habí­a conseguido con una herramienta que además permitia el trabajo con aplicaciones automáticas, como razonadores, editores, visores, herramientas para la transformación de datos y otros.}
+
+\begin{frame}{Aplicaciones del diseño}
+	Aplicaciones automáticas:
+	
+	Razonadores (FaCT++, HermiT), editores (ACE View, ChangeView, Hypergraph DB), visores (CloudViews, Matrix, NavigOWL, Ontograf, OWLGrEd, SOVA, DL-Query, Cardinality view, Tree views, OWLDoc, OWLViz, OWLPropViz, OWLDiff), transformación (OWL2RDB).
+\begin{center}
+	{\Huge ¡¡Web semántica!!}
+\end{center}
+\end{frame}
 \note{Llegados a este punto la ontología se encontraba lista y terminada, pero ocurrí­a que para cualquier persona que no estuviese familiriazada con las ontologías y sus lenguajes descriptivos, resultaba igualmente de complejo y farragoso el trabajo con hojas de cálculo y ontologías. Y así­ el punto y final del trabajo se convirtió en el punto incial de una pequeña ampliación. ¿Porqué no aprovechar la web semántica para lograr mayor aplicabilidad a la ontología diseñada?}
 
 \begin{frame}{Aplicaciones del diseño}
@@ -184,7 +190,11 @@ La web semántica es una web extendida dotada de un mayor significado (semántica)
 Una wiki semántica es un espacio web que permite a los usuarios crear contenido de modo colaborativo incorporando las capacidades descritas para la web semántica. De este modo es posible crear un espacio web colaborativo donde se almacenan datos y capaz de capturar los detalles semánticos del modelo, creando un sistema de consulta ágil y usable.}
 
 
-\note{muestra un ejemplo de la wiki en la presentacion}
+\begin{frame}{Ejemplo de la implantación de la wiki semántica}
+	Acceso a la wiki semántica:\newline
+	
+	\url{127.0.0.1:8080/w/index.php/Concurrencia}
+\end{frame}
 
 %\begin{frame}{Aplicaciones del diseño}
 %	{\Huge Â¡Wiki semánticaÂ¡}

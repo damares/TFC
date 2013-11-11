@@ -10,7 +10,7 @@ Adicionalmente, Protégé cuenta con una amplia comunidad de usuarios (desarrollad
 \section{Introducción al documento de trabajo}
 Para crear la ontología, se ha partido de la memoria\cite{FIUPM-MemoAneca} enviada a ANECA para su validación de acuerdo a las normas especificadas en el marco europeo. ANECA, como miembro de ENQA\footnote{European Association for Quality Assurance in Higher Education - \url{www.enqa.eu}}, EQAR\footnote{European Quality Assurance Register for Higher Education - \url{www.eqar.eu}} y INQAAHE\footnote{International Network for Quality Assurance Agencies in Higher Education - \url{www.inqaahe.org}} es el encargado de validar los planes de estudios y de certificar el cumplimiento de los estándares marcados por el EEES.
 
-Veremos cómo gracias al uso de ontologías, nos es posible corregir las deficiencias que presentaban las hojas de cálculo a la hora de gestionar el desarrollo y mantenimiento de los planes de estudios con el nuevo paradigma, mencionadas en el punto 1.3.1.
+Veremos cómo gracias al uso de ontologías, nos es posible corregir las deficiencias que presentaban las hojas de cálculo mencionadas en el punto 1.3.1. a la hora de gestionar el desarrollo y mantenimiento de los planes de estudios con el nuevo paradigma.
 
 Con el propósito de poder comprender mejor la construcción de la ontología, vamos a comenzar haciendo un pequeño resumen de los puntos 3 y 5 del documento remitido a ANECA, referidos a los objetivos del título y a la organización de las enseñanzas.
 
@@ -21,7 +21,6 @@ Con el propósito de poder comprender mejor la construcción de la ontología, vamo
  
 	En general, están orientadas a la toma actitudes y adquisición de aptitudes y capacidades enfocadas hacia aspectos humanos, (como el trabajo en equipo, la motivación, o la actualización de conocimientos de manera autónoma, por citar algunos), que serán útiles al alumno en su incorporación al mundo laboral. Las competencias se diferencian entre ellas según sean específicas de un título (suelen estar orientadas más hacia aspectos prácticos de la titulación e incluyen la adquisición de metodologías y rutinas de trabajo y desarrollo eminentemente prácticas) o generales si lo que definen son competencias de carácter general, aplicables a varios títulos.
 			 
-%	En cuanto al nivel de adquisición de cada competencia, se asumirá que el alumno alcanza un nivel de adquisición óptimo, de acuerdo a los objetivos propuestos, conforme va superando las distintas asignaturas. Dicho de otro modo, una asignatura únicamente puede superarse cuando el alumno ha adquirido ciertas competencias en un grado definido. Es tarea del evaluador, comprobar que el grado de adquisición de competencias por parte del alumno es el adecuado. Esto es así ya que en el documento remitido a ANECA, y sobre el que hemos trabajado, no se menciona el grado de maestría adquirido por el alumno una vez superada la asignatura, por lo cual vamos a suponer que si un alumno supera una asignatura ha adquirido un nivel óptimo de maestría. A fecha 25 de Agosto de 2013 no hemos podido encontrar en la web referencia alguna a distintos niveles de maestría en las diversas competencias que componen el titulo.
 
 	\item [Materias.] Las materias están compuestas por asignaturas, de las cuales heredarán una ubicación temporal (una materia esta ubicada en los trimestres en que estén ubicadas las asignaturas que la componen) y un carácter. Además, las materias tienen una duración en créditos ECTS que depende de la extensión de las asignaturas que la componen. 
 	
@@ -37,20 +36,15 @@ Con el propósito de poder comprender mejor la construcción de la ontología, vamo
  
 \end{description}
     
-Como ya se comentó al describir las ontologías, su propósito es lograr una descripción lógica del mundo que se está modelando. Por tanto, es posible introducir restricciones del tipo ``toda asignatura debe pertenecer a una materia'', o ``las competencias satisfacen los objetivos establecidos sobre el plan de estudios'', pero no es posible decir, en sintaxis OWL-DL ``la suma de los créditos de una materia debe ser igual a la suma de los créditos de todas las asignaturas que lo componen'', o ``las asignaturas básicas deben sumar 60 créditos''. 	
+Como ya se comentó al describir las ontologías, su propósito es lograr una descripción lógica del mundo que se está modelando. Por tanto, es posible introducir restricciones del tipo ``toda asignatura debe pertenecer a una materia'', o ``las competencias satisfacen los objetivos establecidos sobre el plan de estudios'', pero no es posible decir, en el lenguaje \textit{OWL DL} ``la suma de los créditos de una materia debe ser igual a la suma de los créditos de todas las asignaturas que lo componen'', o ``las asignaturas básicas deben sumar 60 créditos''. 	
 
 \section{T-Box}
-
-%Como ya se ha explicado, las ontologías están compuestas por clases, propiedades e individuos. Las ontologías OWL incluyen además operadores, como unión, intersección o negación, lo que nos permite, además de describir conceptos, definirlos. De este modo, los conceptos más complejos pueden construirse sobre definiciones de otros más simples, lo que facilita la concepción y mantenimiento de estos sistemas. 
-
-%Primeramente se mostrarán las clases, pero no se hablará de sus relaciones ni de los individuos que la componen. Posteriormente se tratarán la propiedades de los objetos (sus relaciones), y por último se entrará a detalle con los individuos que componen la ontología, explicando las relaciones, clases y propiedades de ellos.
 
 Antes de continuar con la definición de cada clase y propiedad, vamos a definir la sintaxis utilizada y la semántica asociada. De entre todas las sintaxis definidas en el estándar W3C, se ha optado por utilizar la sintaxis Manchester, por ser la más sencilla y la de más fácil comprensión entre todas. Para facilitar la comprensión del lector, se incluye en el apéndice una tabla con la semántica de la sintaxis utilizada.
 
 \subsection{Clases de la ontología}
 	\lstset{language=owlms,basicstyle=\sffamily,columns=flexible,mathescape}
 	Las clases se describen utilizando descripciones formales que definen inequívocamente los requisitos de pertenencia a una clase. Las clases se organizan en conjuntos de superclases y subclases, que forman la taxonomía de nuestro universo en observación. Esta taxonomía puede ser obtenida de manera automática por un razonador, que también puede comprobar su consistencia. Se debe tener en cuenta que todas las clases se han definido como disjuntas entre ellas de modo general, salvo las clases \lstinline!Competencia_Especifica! y \lstinline!Competencia_General! cuya disjunción se define de modo particular por ser subclases de \lstinline!Competencia! y ser su unión disjunta (una competencia puede ser general o específica, pero ninguna otra cosa no definida). La T-Box al completo se encuentra disponible en el apéndice C.
-  %\lstinputlisting[language=owlms,literate=,firstnumber=671,firstline=671,lastline=672]{codigo/t-box.ms}
 
   
 	Se han definido diez clases para la creación de nuestra ontología.	
@@ -63,7 +57,7 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 		\item[Objetivo\_General.]
 		Con la clase \lstinline!Objetivo_General! queremos definir el conjunto de individuos que componen los objetivos generales del título. Es un objetivo general todos aquellos individuos que representen objetivos de la titulación que se instancia, y que además quedan cumplidos cuando se adquieren ciertas competencias. Por regla general, los objetivos generales vienen definidos en el propio itinerario formativo.
 
-		\lstinputlisting[caption={Descripción de la clase \lstinline!Objetivo General!},label=Objetivo,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Objetivo_General-max\ 1\ xsd:string]{codigo/t-box.ms}
+		\lstinputlisting[caption={Descripción de la clase \lstinline!Objetivo General!},label=Objetivo,captionpos=b,language=owlms,literate=,linerange=Class:\ Objetivo_General-max\ 1\ xsd:string]{codigo/t-box.ms}
 
 		
       
@@ -75,7 +69,7 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 			
 		Formalmente, se define como aquellos individuos que están relacionados con individuos de la clase \lstinline!Objetivo_General! mediante la propiedad que defina la adquisición, al menos una vez y que sólo tengan relación con individuos de la clase \lstinline!Objetivo_General!:
 		
-		\lstinputlisting[caption={Descripción de la clase \lstinline!Competencia!},label=Competencia,captionpos=b,language=owlms,literate=,firstnumber=595,firstline=595,lastline=608]{codigo/t-box.ms}
+		\lstinputlisting[caption={Descripción de la clase \lstinline!Competencia!},label=Competencia,captionpos=b,language=owlms,literate=,firstnumber=578,firstline=578,lastline=591]{codigo/t-box.ms}
       
 		Dentro de esta clase, podemos definir dos grupos de competencias, según sean competencias específicas (propias de la rama del conocimiento donde se enmarca la titulación) o generales (comunes a todas las ramas del conocimiento y que suelen referirse a aptitudes y actitudes más que a conocimientos o metodologías).
 
@@ -84,7 +78,7 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
     		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\item[Competencia\_General.] Son competencias generales todos aquellos individuos que son competencias y que además adquiere el alumno al cursar una materia definida. Dicho de otro modo, el hecho de superar una determinada materia, demuestra que el alumno ha adquirido ciertas competencias generales.
 
-		\lstinputlisting[caption={Descripción de la clase \lstinline!Competencia_General!},label=cg,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Competencia_General-Competencia_Especifica]{codigo/t-box.ms}
+		\lstinputlisting[caption={Descripción de la clase \lstinline!Competencia_General!},label=cg,captionpos=b,language=owlms,literate=,linerange=Class:\ Competencia_General-Competencia_Especifica]{codigo/t-box.ms}
 		
 
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,7 +88,7 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 
 		Se consideran competencias específicas todos aquellos individuos que son competencias y que además se adquieren durante el curso de una materia. Visto de una manera más formal:
 		
-		\lstinputlisting[caption={Descripción de la clase \lstinline!Competencia_Especifica!},label=ce,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Competencia_Especifica-Competencia_General]{codigo/t-box.ms}	
+		\lstinputlisting[caption={Descripción de la clase \lstinline!Competencia_Especifica!},label=ce,captionpos=b,language=owlms,literate=,linerange=Class:\ Competencia_Especifica-Competencia_General]{codigo/t-box.ms}	
 				
 	
 		Como hemos visto, competencias generales y específicas son disjuntas entre sí, pero para la especificación de una \lstinline!Competencia! dentro de \lstinline!Competencia_General! o \lstinline!Competencia_Especifica! es suficiente con que la relación de la \lstinline!Competencia! con la \lstinline!Materia! tenga como dominio uno u otro conjunto de competencias, sin mayor diferenciación.
@@ -109,7 +103,7 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
     		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\item[Materia.]La clase \lstinline!Materia! aglutina todos los individuos que representan las diferentes materias de que se compone la titulación. Coloquialmente podemos entender las materias como aquellos individuos que permiten al alumno adquirir competencias, de modo que puedan cumplir con las objetivos generales del título. Formalmente hablando, son materias todos aquellos individuos relacionados con algún individuo de la clase \lstinline!Competencia!, y al menos una vez con alguna \lstinline!Competencia_General!. Posteriormente se definirá la propiedad que une \lstinline!Materia! con \lstinline!Competencia! y con \lstinline!Competencia_General!. 
       
-   		\lstinputlisting[caption={Descripción de la clase \lstinline!Materia!},label=Materia,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Materia-ects:coordinacionDeLaMateria\ some\ xsd:string]{codigo/t-box.ms}	
+   		\lstinputlisting[caption={Descripción de la clase \lstinline!Materia!},label=Materia,captionpos=b,language=owlms,literate=,linerange=Class:\ Materia-coordinacionDeLaMateria\ some\ xsd:string]{codigo/t-box.ms}	
 				
       
       
@@ -127,7 +121,7 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 	
 	Las asignaturas optativas quedan, por el momento, fuera del alcance de este trabajo, por no estar definidas en el documento remitido a ANECA. No obstante, tal y como se verá más adelante, es posible crear incorporar al plan de estudios cualquier asignatura optativa, con todas las características de cualquier asignatura, de modo que la materia ``Optatividad'' esté completa.
       	
-      	\lstinputlisting[caption={Descripción de la clase \lstinline!Asignatura!},label=Asignatura,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Asignatura-max\ 1\ xsd:string]{codigo/t-box.ms}		
+      	\lstinputlisting[caption={Descripción de la clase \lstinline!Asignatura!},label=Asignatura,captionpos=b,language=owlms,literate=,linerange=Class:\ Asignatura-max\ 1\ xsd:string]{codigo/t-box.ms}		
       
       
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,7 +135,7 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 		
 		La otra opción disponible, que pasa por tener únicamente un individuo por cada \lstinline!Actividad_Formativa! que esté relacionada con las materias, no permite guardar la información de los créditos ECTS, ya que en el caso de una misma actividad formativa utilizada para la docencia de dos asignaturas diferentes, nos sería imposible discernir si la duración de dicha actividad formativa se refiere a la utilizada para la impartición de una u otra asignatura.
 
-      	\lstinputlisting[caption={Descripción de la clase \lstinline!Actividad_Formativa!},label=Actividad,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Actividad_Formativa-max\ 1\ ects:tipoCredito]{codigo/t-box.ms}		
+      	\lstinputlisting[caption={Descripción de la clase \lstinline!Actividad_Formativa!},label=Actividad,captionpos=b,language=owlms,literate=,linerange=Class:\ Actividad_Formativa-max\ 1\ tipoCredito]{codigo/t-box.ms}		
 		
 %      	\lstinputlisting[caption={Descripción de la clase \lstinline!Actividad_Formativa!},label=Actividad,captionpos=b,language=owlms,literate=,firstnumber=720,firstline=720,lastline=731]{codigo/t-box.ms}	
 
@@ -150,15 +144,15 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\item[Metodo\_Docente.]En la ontología definimos la clase \lstinline!Método_Docente! como el conjunto de procedimientos y técnicas de enseñanza y aprendizaje utilizados para impartir una materia. Más formalmente, podríamos definir un método docente como aquellos individuos que están relacionados al menos una vez con al menos un individuo de la clase materia. 
 	
-	\lstinputlisting[caption={Descripción de la clase \lstinline!Metodo_Docente!},label=docente,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Metodo_Docente-max\ 1\ xsd:string]{codigo/t-box.ms}
+	\lstinputlisting[caption={Descripción de la clase \lstinline!Metodo_Docente!},label=docente,captionpos=b,language=owlms,literate=,linerange=Class:\ Metodo_Docente-max\ 1\ xsd:string]{codigo/t-box.ms}
 
 
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%% Metodo_Evaluacion
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\item[Metodo\_Evaluacion.]Al igual que ocurre con los métodos docentes, existen múltiples variedades de métodos de evaluación que permiten comprobar si el alumno ha adquirido las competencias necesarias para que se le otorguen los créditos de las materias cursadas. Con el fin de adecuar los métodos de evaluación ópitmos a cada una de las materias del plan, se ha optado por recoger en una clase individual las distintas modalidades de evaluación que se aplicarán para conocer el aprovechamiento de una materia.
+		\item[Metodo\_Evaluacion.]Al igual que ocurre con los métodos docentes, existen múltiples variedades de métodos de evaluación que permiten comprobar si el alumno ha adquirido las competencias necesarias para que se le otorguen los créditos de las materias cursadas. Con el fin de adecuar los métodos de evaluación óptimos a cada una de las materias del plan, se ha optado por recoger en una clase individual las distintas modalidades de evaluación que se aplicarán para conocer el aprovechamiento de una materia.
 	
-	\lstinputlisting[caption={Descripción de la clase \lstinline!Metodo_Evaluacion!},label=evaluacion,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Metodo_Evaluacion-max\ 1\ xsd:string]{codigo/t-box.ms}
+	\lstinputlisting[caption={Descripción de la clase \lstinline!Metodo_Evaluacion!},label=evaluacion,captionpos=b,language=owlms,literate=,linerange=Class:\ Metodo_Evaluacion-max\ 1\ xsd:string]{codigo/t-box.ms}
 	
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%% Ubicacion_Temporal
@@ -167,22 +161,19 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 
 		Además de las asignaturas, las materias también tienen asignada una ubicación temporal, que dependerá de las ubicaciones de las asignaturas que la compongan. Es decir, si una materia está compuesta de dos asignaturas, y una asignatura está asignada al primer semestre y la otra asignatura lo está al segundo semestre, la materia queda ubicada en el primer y segundo semestre.
 
-	\lstinputlisting[caption={Descripción de la clase \lstinline!Ubicacion_Temporal!},label=ubicacion,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Ubicacion_temporal-ects:seComponeDe\ some\ ects:Materia]{codigo/t-box.ms}
+	\lstinputlisting[caption={Descripción de la clase \lstinline!Ubicacion_Temporal!},label=ubicacion,captionpos=b,language=owlms,literate=,linerange=Class:\ Ubicacion_temporal-seComponeDe\ some\ Materia]{codigo/t-box.ms}
 
     	
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%% Caracter
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\item[Caracter.]	El carácter de una asignatura viene definido por el organismo que impone su estudio para una titulación. Pero al contrario que en el caso de las ubicaciones, no podemos decir que si una materia está compuesta de asignaturas básicas, ella sea de carácter básico, pues en el documento remitido a ANECA, hemos encontrado casos de materias (estadística, pej.) en los que una materia compuesta de asignaturas básicas y obligatorias es de carácter básico, y no mixto como a priori podría parecer. 
+		\item[Caracter.]	El carácter de una asignatura viene definido por el organismo que impone su estudio para una titulación. Pero al contrario que en el caso de las ubicaciones, no podemos decir que si una materia está compuesta de asignaturas básicas, ella sea de carácter básico, pues en el documento remitido a ANECA, hemos encontrado casos de materias (la materia \textit{estadística}, por ejemplo) en los que una materia compuesta de asignaturas básicas y obligatorias es de carácter básico, y no mixto como a priori podría parecer. 
 	
-	\lstinputlisting[caption={Descripción de la clase \lstinline!Caracter!},label=caracter,captionpos=b,language=owlms,literate=,linerange=Class:\ ects:Caracter-agrupa\ some\ ects:Asignatura]{codigo/t-box.ms}
+	\lstinputlisting[caption={Descripción de la clase \lstinline!Caracter!},label=caracter,captionpos=b,language=owlms,literate=,linerange=Class:\ Caracter-agrupa\ some\ Asignatura]{codigo/t-box.ms}
     	
 	\end{description}
 
 	\subsection{Propiedades entre individuos}
-%	Las propiedades son relaciones binarias entre individuos, es decir, una propiedad une dos individuos entre sí. Las propiedades pueden tener inversas, pueden ser funcionales, transitivas, simétricas\ldots  Estas relaciones se pueden dar tanto entre individuos de la misma clase, como entre individuos de distintas clases.
-%	Un razonador automático puede computar si una relación entre dos individuos es consistente con el resto de la ontología. 
-%	Es de destacar que las propiedades únicamente se pueden establecer entre dos individuos. No existen propiedades con cardinalidad tres, lo que implicará que en el caso de que que sea preciso establecer una relación a tres, sería preciso modelarlo como la relación binaria entre el producto escalar de dos de ellas sobre la tercera (tal y como se comentó al mencionar la clase \lstinline!Actividad_Formativa! y la forma de almacenar la cantidad de créditos otorgados).
 	Son propiedades entre dos individuos, de forma que podemos establecer relaciones entre ellos.
   
 	\begin{description}[style=unboxed]
@@ -190,81 +181,81 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
    		\item [seCumpleMedianteLaAdquisicionDe y seAdquiereParaCumplir.] Como ya se comentó anteriormente, el objetivo de las titulaciones de grado es lograr que el alumno adquiera unos niveles de destreza mínimos en el manejo de ciertas competencias definidas en el título, de modo que esté capacitado para enfrentarse al mercado laboral.
     
 	    Estas competencias se van adquiriendo conforme el alumno avanza por el itinerario formativo, hasta alcanzar los niveles mínimos exigidos en la titulación al finalizar sus estudios. Es por tanto la adquisición de esas competencias lo que permite al alumno cumplir con las objetivos generales establecidos en el título de grado. Dicho de otro modo, la titulación permite el cumplimiento de los objetivos marcados, en la medida que permite al alumno ir adquiriendo las competencias precisas para ello.
-		\lstinputlisting[caption={Descripción de la propiedad \lstinline!seCumpleMedianteLaAdquisicionDe!},label=og-co,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seCumpleMedianteLaAdquisicionDe-ects:seAdquiereParaCumplir]{codigo/t-box.ms}	
-		\lstinputlisting[caption={Descripción de la propiedad \lstinline!seAdquiereParaCumplir!},label=co-og,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seAdquiereParaCumplir-ects:seCumpleMedianteLaAdquisicionDe]{codigo/t-box.ms}	
+		\lstinputlisting[caption={Descripción de la propiedad \lstinline!seCumpleMedianteLaAdquisicionDe!},label=og-co,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seCumpleMedianteLaAdquisicionDe-seAdquiereParaCumplir]{codigo/t-box.ms}	
+		\lstinputlisting[caption={Descripción de la propiedad \lstinline!seAdquiereParaCumplir!},label=co-og,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seAdquiereParaCumplir-seCumpleMedianteLaAdquisicionDe]{codigo/t-box.ms}	
     
 
 	    \item [seAdquiereAlCursar y otorgaCompetencias.] Los alumnos adquieren las competencias conforme van superando con éxito las materias del plan de estudio, lo que les permite, una vez superadas todas las materias, cumplir con los objetivos generales del título.
-    	\lstinputlisting[caption={Descripción de la propiedad \lstinline!seAdquiereAlCursar!},label=co-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seAdquiereAlCursar-ects:otorgaCompetencias]{codigo/t-box.ms}	
-		\lstinputlisting[caption={Descripción de la propiedad \lstinline!otorgaCompetencias!},label=ma-co,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:otorgaCompetencias-ects:seAdquiereAlCursar]{codigo/t-box.ms}	
+    	\lstinputlisting[caption={Descripción de la propiedad \lstinline!seAdquiereAlCursar!},label=co-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seAdquiereAlCursar-otorgaCompetencias]{codigo/t-box.ms}	
+		\lstinputlisting[caption={Descripción de la propiedad \lstinline!otorgaCompetencias!},label=ma-co,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ otorgaCompetencias-seAdquiereAlCursar]{codigo/t-box.ms}	
     
  
 
    		\item [seAdquiereCompetenciaGeneralAlCursar y otorgaCompetenciasGenerales.] Es obligatorio que el alumno, al finalizar la titulación haya adquirido ciertas competencias que resultan básicas para el desempeño profesional en el campo de la titulación. Estas competencias obligatorias reciben el nombre de competencias generales, y son las líneas maestras que definirán el progreso del alumno en la titulación.
    		\captionsetup{justification=centering,margin=2cm}
-	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!seAdquiereCompetenciaGeneralAlCursar!},label=cg-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seAdquiereCompetenciaGeneralAlCursar-ects:otorgaCompetenciasGenerales]{codigo/t-box.ms}	
+	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!seAdquiereCompetenciaGeneralAlCursar!},label=cg-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seAdquiereCompetenciaGeneralAlCursar-otorgaCompetenciasGenerales]{codigo/t-box.ms}	
 
 	    \captionsetup{justification=centering,margin=-2cm}
-    	\lstinputlisting[caption={Descripción de la propiedad \lstinline!otorgaCompetenciasGenerales!},label=ma-cg,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:otorgaCompetenciasGenerales-ects:seAdquiereCompetenciaGeneralAlCursar]{codigo/t-box.ms}	
+    	\lstinputlisting[caption={Descripción de la propiedad \lstinline!otorgaCompetenciasGenerales!},label=ma-cg,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ otorgaCompetenciasGenerales-seAdquiereCompetenciaGeneralAlCursar]{codigo/t-box.ms}	
     
 
    		\item [seAdquiereCompetenciaEspecificaAlCursar y otorgaCompetenciaEspecifica.] Al igual que ocurre con las competencias generales, también es preciso que un alumno adquiera las competencias específicas propias de la titulación para cumplir los objetivos generales de esa titulación. Y al igual que ocurre con las competencias generales, las específicas únicamente se obtienen cuando el alumno supera con éxito las materias de la titulación.
    		\captionsetup{justification=centering,margin=1cm}
-   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!seAdquiereCompetenciaEspecificaAlCursar!},label=ce-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seAdquiereCompetenciaEspecificaAlCursar-ects:otorgaCompetenciaEspecifica]{codigo/t-box.ms}
+   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!seAdquiereCompetenciaEspecificaAlCursar!},label=ce-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seAdquiereCompetenciaEspecificaAlCursar-otorgaCompetenciaEspecifica]{codigo/t-box.ms}
    		\captionsetup{justification=centering,margin=-1cm}
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!otorgaCompetenciaEspecifica!},label=ma-ce,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:otorgaCompetenciaEspecifica-ects:seAdquiereCompetenciaEspecificaAlCursar]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!otorgaCompetenciaEspecifica!},label=ma-ce,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ otorgaCompetenciaEspecifica-seAdquiereCompetenciaEspecificaAlCursar]{codigo/t-box.ms}
 
 
    		\item [constaDe y formaParteDe.] Una materia está compuesta por varias asignaturas, que quedan de ese modo agrupadas bajo esa materia. Se podría decir de otro modo: que las asignaturas quedan agrupadas en diversas materias. Es una relación inversamente funcional, es decir, su función inversa es funcional. Dicho coloquialmente, significa que una materia puede constar de una o varias asignaturas, pero una asignatura sólo puede pertenecer a una materia.
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!constaDe!},label=ma-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:constaDe-ects:formaParteDe]{codigo/t-box.ms}
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!formaParteDe!},label=as-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:formaParteDe-ects:constaDe]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!constaDe!},label=ma-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ constaDe-formaParteDe]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!formaParteDe!},label=as-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ formaParteDe-constaDe]{codigo/t-box.ms}
     
   
    		\item [seImparteMediante y utilizadoParaImpartir.] Las materias se imparten según dictan ciertos métodos docentes considerados adecuados por los docentes de la titulación. Estos métodos docentes pueden ser complementarios entre sí, y en ningún caso son excluyentes entre ellos. De este modo se logra que la adquisición de competencias por parte del alumno sea óptima.
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!seImparteMediante!},label=ma-,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seImparteMediante-ects:utilizadoParaImpartir]{codigo/t-box.ms}
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!utilizadoParaImpartir!},label=me-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:utilizadoParaImpartir-ects:seImparteMediante]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!seImparteMediante!},label=ma-,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seImparteMediante-utilizadoParaImpartir]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!utilizadoParaImpartir!},label=me-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ utilizadoParaImpartir-seImparteMediante]{codigo/t-box.ms}
     
 
    		\item [seImparteSegun y utilizadaParaImpartir.] Las materias se imparten realizando ciertas actividades formativas definidas por los docentes de la materia. Los créditos de docencia de esa materia, deben estar por tanto distribuidos entre las distintas actividades formativas. Al igual que ocurre con los métodos docentes, las diferentes actividades formativas no son excluyentes entre sí, sino complementarios. Además se ha considerado importante, de cara al diseño del título, conocer cuántos créditos se dedican a cada actividad formativa. Más adelante, veremos cómo se almacena esa información.
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!seImparteSegun!},label=ma-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seImparteSegun-ects:utilizadaParaImpartir]{codigo/t-box.ms}
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!utilizadaParaImpartir!},label=af-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:utilizadaParaImpartir-ects:seImparteSegun]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!seImparteSegun!},label=ma-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seImparteSegun-utilizadaParaImpartir]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!utilizadaParaImpartir!},label=af-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ utilizadaParaImpartir-seImparteSegun]{codigo/t-box.ms}
 
  
 		\item[hereda y esDe.] Las materias pueden ser básicas, obligatorias, optativas o mixtas. Este carácter de las materias dependerá en gran medida (aunque no de forma única) del carácter de las asignaturas que lo compongan.
-		\lstinputlisting[caption={Descripción de la propiedad \lstinline!hereda!},label=ma-ca,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:hereda-ects:esDe]{codigo/t-box.ms}
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!esDe!},label=ca-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:esDe-ects:hereda]{codigo/t-box.ms}
+		\lstinputlisting[caption={Descripción de la propiedad \lstinline!hereda!},label=ma-ca,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ hereda-esDe]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!esDe!},label=ca-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ esDe-hereda]{codigo/t-box.ms}
 
 
 		\item[ubicada y fracciona.] El desarrollo de la docencia se estructura en trimestres. Estas ubicaciones temporales son útiles a la hora de estructurar el desarrollo de la docencia y adecuarlo a la duración de la misma.
-		\lstinputlisting[caption={Descripción de la propiedad \lstinline!ubicada!},label=ma-ut,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:ubicada-ects:fracciona]{codigo/t-box.ms}
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!fracciona!},label=ut-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:fracciona-ects:ubicada]{codigo/t-box.ms}
+		\lstinputlisting[caption={Descripción de la propiedad \lstinline!ubicada!},label=ma-ut,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ubicada-fracciona]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!fracciona!},label=ut-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ fracciona-ubicada]{codigo/t-box.ms}
     				
 
 		\item[seEvaluaCon y esUtilizadoEnLaEvaluacionDe.] Cada una de las materias tiene pruebas de evaluación idóneas, que serán las utilizadas para comprobar el correcto aprovechamiento del curso de esas materias por parte del alumno, es decir, la adquisición de las competencias indicadas en el grado adecuado.
-		\lstinputlisting[caption={Descripción de la propiedad \lstinline!seEvaluaCon!},label=ma-mv,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seEvaluaCon-esUtilizadoEnLaEvaluacionDe]{codigo/t-box.ms}
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!esUtilizadoEnLaEvaluacionDe!},label=mv-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:esUtilizadoEnLaEvaluacionDe-ects:seEvaluaCon]{codigo/t-box.ms}
+		\lstinputlisting[caption={Descripción de la propiedad \lstinline!seEvaluaCon!},label=ma-mv,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seEvaluaCon-esUtilizadoEnLaEvaluacionDe]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!esUtilizadoEnLaEvaluacionDe!},label=mv-ma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ esUtilizadoEnLaEvaluacionDe-seEvaluaCon]{codigo/t-box.ms}
 
 
    		\item [esRequisitoPara y tieneComoRequisito.] Como ya se explicó antes, el hecho de que una asignatura tenga como requisito en la guía de la titulación el haber cursado una asignatura anteriormente, no implica que obligatoriamente se haya de cursar esa asignatura con anterioridad. Es decir, se trata de una mera recomendación de cara al itinerario a seguir en la titulación, y en ningún caso de obligado cumplimiento. Se ha tenido en cuenta a la hora de elaborar la ontología, ya que el fin último de esta es proporcionar una herramienta para un diseño de la titulación correcto, lo que incluye el trayecto curricular del alumno. Por tanto, dado que lo que estamos haciendo es ayudar a diseñar el título, vamos a incluir los requisitos para el curso de asignaturas, como si de cumplimiento obligatorio se tratase.
     		
     		Es una relación transitiva, es decir, que si la asignatura ``A'' es requisito de la asignatura ``B'' y a su vez ``B'' es requisito de la asignatura ``C'', entonces la asignatura ``A'' es un requisito de la asignatura ``C''.
-	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!esRequisitoPara!},label=as-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:esRequisitoPara-ects:tieneComoRequisito]{codigo/t-box.ms}
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!tieneComoRequisito!},label=as-as2,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:tieneComoRequisito-ects:esRequisitoPara]{codigo/t-box.ms}
+	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!esRequisitoPara!},label=as-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ esRequisitoPara-tieneComoRequisito]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!tieneComoRequisito!},label=as-as2,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ tieneComoRequisito-esRequisitoPara]{codigo/t-box.ms}
     
 
     		\item [esDeCaracter y vieneDadoPor.] Las asignaturas también tienen diferentes carácteres, lo que a su vez permite dotar de carácter a las materias que las engloban.
-	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!esDeCaracter!},label=as-ca,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:esDeCaracter-ects:vieneDadoPor]{codigo/t-box.ms}
-	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!vieneDadoPor!},label=ca-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:vieneDadoPor-ects:esDeCaracter]{codigo/t-box.ms}
+	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!esDeCaracter!},label=as-ca,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ esDeCaracter-vieneDadoPor]{codigo/t-box.ms}
+	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!vieneDadoPor!},label=ca-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ vieneDadoPor-esDeCaracter]{codigo/t-box.ms}
 
 
     		\item [seImparteDurante y contiene.] Las asignaturas se programan para que se desarrollen en trimestres, de modo que el alumno pueda cursar las asignaturas de un modo ordenado, lo que hará que el itinerario formativo sea estructurado. Una adecuada estructuración del itinerario formativo sólo es posible mediante el uso de un diseño adecuado.
-	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!seImparteDurante!},label=as-ut,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seImparteDurante-ects:contiene]{codigo/t-box.ms}
-		\lstinputlisting[caption={Descripción de la propiedad \lstinline!contiene!},label=ut-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:contiene-ects:seImparteDurante]{codigo/t-box.ms}
+	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!seImparteDurante!},label=as-ut,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seImparteDurante-contiene]{codigo/t-box.ms}
+		\lstinputlisting[caption={Descripción de la propiedad \lstinline!contiene!},label=ut-as,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ contiene-seImparteDurante]{codigo/t-box.ms}
     
 
    	 	\item [agrupa y seComponeDe.] Es interesante, como herramienta para poder realizar un diseño coherente del itinerario formativo, conocer la estructuración temporal y de carácter de las diferentes asignaturas y materias de que consta la titulación, pues de este modo se pueden distribuir adecuadamente las asignaturas a lo largo del itinerario formativo, así como conocer la composición de asignaturas y materias
-	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!agrupa!},label=ca-asma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:agrupa-or\ ects:Materia]{codigo/t-box.ms}
-        \lstinputlisting[caption={Descripción de la propiedad \lstinline!seComponeDe!},label=ut-asma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ ects:seComponeDe-or\ ects:Materia]{codigo/t-box.ms}
+	    \lstinputlisting[caption={Descripción de la propiedad \lstinline!agrupa!},label=ca-asma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ agrupa-or\ Materia]{codigo/t-box.ms}
+        \lstinputlisting[caption={Descripción de la propiedad \lstinline!seComponeDe!},label=ut-asma,captionpos=b,language=owlms,literate=,linerange=ObjectProperty:\ seComponeDe-or\ Materia]{codigo/t-box.ms}
     
 	\end{description}
   
@@ -276,45 +267,47 @@ Antes de continuar con la definición de cada clase y propiedad, vamos a definir 
 	   	%% OG_Descripcion
    		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 		\item [descripcionDelObjetivoGeneral.] Se trata de una relación entre un individuo de la clase \lstinline!Objetivo_General! y un dato de tipo literal. Esta relación funcional (un objetivo sólo puede tener una descripción) es útil para guardar la descripción del objetivo descrito, y poder identificarlo por algo menos formal y más útil que la numeración del objetivo.
-   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!descripcionDelObjetivoGeneral!},label=og,captionpos=b,language=owlms,literate=,linerange=DataProperty:\ ects:descripcionDelObjetivoGeneral-xsd:string]{codigo/t-box.ms}
+		\captionsetup{justification=centering,margin=1cm}
+   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!descripcionDelObjetivoGeneral!},label=og,captionpos=b,language=owlms,literate=,linerange=DataProperty:\ descripcionDelObjetivoGeneral-xsd:string]{codigo/t-box.ms}
+		\captionsetup{justification=centering,margin=-1cm}
 
 	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    		%% CO_Descripcion
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 	   \item [descripcionDeLaCompetencia.] Esta propiedad relaciona una competencia con un literal. También es una propiedad funcional, y al igual que el resto de propiedades dedicadas a almacenar información acerca de descripciones de individuos, es útil para poder identificar los mismos por algo más que el código descriptivo.
-   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!descripcionDeLaCompetencia!},label=co,captionpos=b,language=owlms,literate=,linerange=DataProperty:\ ects:descripcionDeLaCompetencia-xsd:string]{codigo/t-box.ms}
+   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!descripcionDeLaCompetencia!},label=co,captionpos=b,language=owlms,literate=,linerange=DataProperty:\ descripcionDeLaCompetencia-xsd:string]{codigo/t-box.ms}
   
 	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    		%% MA_Creditos
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
 	   	\item [creditosDeLaMateria.] Se utliza para saber qué cantidad de créditos otorga al alumno el curso de una materia, o lo que es lo mismo, el coste en créditos ECTS de cursar una materia. Como todas la propiedades que sólo pueden aparecer asociadas a un mismo individuo una vez, se trata de una propiedad funcional.
-   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!creditosDeLaMateria!},language=owlms,captionpos=b,label=ma,literate=,linerange=DataProperty:\ ects:creditosDeLaMateria-tipoCredito]{codigo/t-box.ms} 
+   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!creditosDeLaMateria!},language=owlms,captionpos=b,label=ma,literate=,linerange=DataProperty:\ creditosDeLaMateria-tipoCredito]{codigo/t-box.ms} 
    
 	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    		%% MA_Coordinacion
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 	   \item [coordinacionDeLaMateria.] Esta ``type property'' se utiliza como un campo libre donde se define de manera informal los agentes que coordinarán la materia, y cuando se defina, las herramentas que utilizarán en su cometido.
-		\lstinputlisting[caption={Descripción de la propiedad \lstinline!coordinacionDeLaMateria!},label=ma,language=owlms,captionpos=b,language=owlms,literate=,linerange=DataProperty:\ ects:coordinacionDeLaMateria-xsd:string]{codigo/t-box.ms} 
+		\lstinputlisting[caption={Descripción de la propiedad \lstinline!coordinacionDeLaMateria!},label=ma,language=owlms,captionpos=b,language=owlms,literate=,linerange=DataProperty:\ coordinacionDeLaMateria-xsd:string]{codigo/t-box.ms} 
 
 	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    		%% ME_Descripcion
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\item [descripcionDelMetodoDocente.] Se trata de una relación entre un individuo de la clase \lstinline!Método\Docente! y un dato de tipo literal. Esta relación funcional (un método docente sólo puede tener una descripción) es útil para guardar la descripción del método descrito.
-   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!descripcionDelMetodoDocente!},captionpos=b,label=de,language=owlms,literate=,linerange=DataProperty:\ ects:descripcionDelMetodoDocente-xsd:string]{codigo/t-box.ms}   
+   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!descripcionDelMetodoDocente!},captionpos=b,label=de,language=owlms,literate=,linerange=DataProperty:\ descripcionDelMetodoDocente-xsd:string]{codigo/t-box.ms}   
 			
 	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    		%% AF_Creditos
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\item [creditosDeLaActividadFormativa.] Es preciso, de cara a la construcción y mantenimiento del título, conocer qué tiempo ha de dedicar el alumno a cada actividad formativa, con el fin de asegurar la correcta adquisición de las competencias en el tiempo establecido.			
 		\captionsetup{justification=centering,margin=1cm}
-		\lstinputlisting[caption={Descripción de la propiedad \lstinline!creditosDeLaActividadFormativa!},captionpos=b,label=af,language=owlms,literate=,linerange=DataProperty:\ ects:creditosDeLaActividadFormativa-ects:tipoCredito]{codigo/t-box.ms}   
+		\lstinputlisting[caption={Descripción de la propiedad \lstinline!creditosDeLaActividadFormativa!},captionpos=b,label=af,language=owlms,literate=,linerange=DataProperty:\ creditosDeLaActividadFormativa-tipoCredito]{codigo/t-box.ms}   
 		\captionsetup{justification=centering,margin=-1cm}
 
 	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    		%% MV_Descripcion
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 		\item [descripcionDelMetodoDeEvaluacion.] Recoge una pequeña descripción informal del método de evaluación con el que está relacionado, de modo que sea fácil comprobar las pruebas y técnicas de evaluación que el docente utilizará a la hora de verificar el nivel de adquisición de competencias por parte de los alumnos.
-   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!descripcionDelMetodoDeEvaluacion!},captionpos=b,label=mv,language=owlms,literate=,linerange=DataProperty:\ ects:descripcionDelMetodoDeEvaluacion-xsd:string]{codigo/t-box.ms} 
+   		\lstinputlisting[caption={Descripción de la propiedad \lstinline!descripcionDelMetodoDeEvaluacion!},captionpos=b,label=mv,language=owlms,literate=,linerange=DataProperty:\ descripcionDelMetodoDeEvaluacion-xsd:string]{codigo/t-box.ms} 
 	\end{description}
   
 \subsection{Definiciones de tipos de datos}
@@ -334,7 +327,6 @@ A continuación vamos instanciar el título de grado en informática ofertado por l
 \section{A-Box}
 	Los individuos representan objetos de la ontología en el dominio que estamos estudiando. Protégé no hace uso del Unique Name Assumption, es decir, para Protégé dos individuos pueden referirse al mismo objeto del mundo real, salvo que se especifique lo contrario. Esta es una consecuencia de las ontologías OWL: todo lo que no sea dicho de forma explícita puede ser cierto. El hecho de que no especifiquemos si dos individuos son o no los mismos, significa que pueden o no serlo para ese dominio. Por ello, es preciso especificar este hecho mediante la declaración \lstinline!DifferentIndividuals! al final de la instancia de todos los individuos.  
   
-%	En nuestra ontología todos los individuos que componen la ontología (11 \lstinline!Objetivo_General!, 12 \lstinline!Competencia_General!, 47 \lstinline!Competencia_Especifica!, 12 \lstinline!Materia!, 43 \lstinline!Asignaturas!, 66 \lstinline!Actividades_Formativas!, 6 \lstinline!Metodos_Docentes!, 4 \lstinline!Caracter!, 9 \lstinline!Metodo_Evaluacion!, 7 \lstinline!Ubicacion_Temporal!) son distintos. 
 
 Dado el gran número de individuos que componen la ontología, se ha optado por no poner la declaración de todos y cada uno de ellos, si no tan sólo de algunos de ellos, a modo de ejemplo.
  
@@ -347,34 +339,43 @@ Dado el gran número de individuos que componen la ontología, se ha optado por no
 	   	%% Objetivos Generales
    		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 		\item [Objetivos Generales.] Son individuos pertenecientes a la clase \lstinline!Objetivo_General! que representan los objetivos generales del título. Están numerados desde el número 1 al 11. A modo de ejemplo:
-	 	\lstinputlisting[caption={Instancia de \lstinline!Objetivo_General!: \lstinline!OBJ01!},captionpos=b,label=obj1,language=owlms,literate=,linerange=Individual:\ OBJ01-xsd:string]{codigo/a-box.ms}
+	 	\lstinputlisting[caption={Instancia de \lstinline!Objetivo_General!: \lstinline!Objetivo_General_01!},captionpos=b,label=obj1,language=owlms,literate=,linerange=Individual:\ Objetivo_General_01-xsd:string]{codigo/a-box.ms}
 
-		\lstinputlisting[caption={Instancia de \lstinline!Objetivo_General!: \lstinline!OBJ02!},captionpos=b,label=obj2,language=owlms,literate=,linerange=Individual:\ OBJ02-xsd:string]{codigo/a-box.ms}
+		\lstinputlisting[caption={Instancia de \lstinline!Objetivo_General!: \lstinline!Objetivo_General_02!},captionpos=b,label=obj2,language=owlms,literate=,linerange=Individual:\ Objetivo_General_02-xsd:string]{codigo/a-box.ms}
  		
 	 
 	 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    		%% Competencias Generales
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-		\item [Competencias Generales.] Estos son todos los individuos pertenecientes a la clase \lstinline!Competencia_General!, que representan las competencias generales que el alumno adquiere durante el itinerario formativo. Son las siguientes: \lstinline!CG-1-21!, \lstinline!CG-2-CE45!, \lstinline!CG-3-4!, \lstinline!CG-5!, \lstinline!CG-6!, \lstinline!CG-7-8-9-10-16-17!, \lstinline!CG-11-12-20!, \lstinline!CG-13-CE55!, \lstinline!CG-14-15-18-23!, \lstinline!CG-19!, \lstinline!CG-22! y \lstinline!CG-24-25-26-27!. A modo de ejemplo se incluyen:
-		\lstinputlisting[caption={Instancia de \lstinline!Competencia_General!: \lstinline! CG-1-21!},captionpos=b,label=cg1,language=owlms,literate=,linerange=Individual:\ CG\-1\-21-xsd:string]{codigo/a-box.ms}
- 	 	\lstinputlisting[caption={Instancia de \lstinline!Competencia_General!: \lstinline! CG-11-12-20!},captionpos=b,label=cg2,language=owlms,literate=,linerange=Individual:\ CG\-11\-12\-20-xsd:string]{codigo/a-box.ms}
- 	 	\lstinputlisting[caption={Instancia de \lstinline!Competencia_General!: \lstinline!CG-13-CE55!},captionpos=b,label=cg3,language=owlms,literate=,linerange=Individual:\ CG\-13\-CE55-xsd:string]{codigo/a-box.ms}
- 	
+		\item [Competencias Generales.] Estos son todos los individuos pertenecientes a la clase \lstinline!Competencia_General!, que representan las competencias generales que el alumno adquiere durante el itinerario formativo. El grado en informática por la Universidad Politécnica de Madrid consta de 12 competencias generales. A modo de ejemplo, se incluye la instancia de dos de ellas.
+
+		\captionsetup{justification=centering,margin=1cm}
+		\lstinputlisting[caption={Instancia de \lstinline!Competencia_General!: \lstinline! Competencia_General_01-21!},captionpos=b,label=cg1,language=owlms,literate=,linerange=Individual:\ Competencia\_General\_01\-21-xsd:string]{codigo/a-box.ms}
+		\captionsetup{justification=centering,margin=-1cm}
+
+		\captionsetup{justification=centering,margin=1cm}
+ 	 	\lstinputlisting[caption={Instancia de \lstinline!Competencia_General!: \lstinline! Competencia_General_11-12-20!},captionpos=b,label=cg2,language=owlms,literate=,linerange=Individual:\ Competencia\_General\_11\-12\-20-xsd:string]{codigo/a-box.ms}
+		\captionsetup{justification=centering,margin=-1cm}
+		
+		\captionsetup{justification=centering,margin=1cm}
+ 	 	\lstinputlisting[caption={Instancia de \lstinline!Competencia_General!: \lstinline!Competencia_General_13-CE55!},captionpos=b,label=cg3,language=owlms,literate=,linerange=Individual:\ Competencia\_General\_13\-CE55-xsd:string]{codigo/a-box.ms}
+		\captionsetup{justification=centering,margin=-1cm}
 
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%% Competencias Específicas
    		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-		\item [Competencias Específicas]. Estos individuos pertentecientes a la clase \lstinline!Competencia_Especifica!, representan las diferentes competencias específicas que el alumno debe poseer al finalizar el ciclo formativo. En la titulación que estamos definiendo son: \lstinline!CE-1!, \lstinline!CE-2!, \lstinline!CE-3-4!, \lstinline!CE-5!, \lstinline!CE-6!, \lstinline!CE-7!, \lstinline!CE-8!, \lstinline!CE-9!, \lstinline!CE-10!, \lstinline!CE-12-16!, \lstinline!CE-13-18!, \lstinline!CE-14-15!, \lstinline!CE-17!, \lstinline!CE-19-20!, \lstinline!CE-21!, \lstinline!CE-22!, \lstinline!CE-23!, \lstinline!CE-24!, \lstinline!CE-25!, \lstinline!CE-26-27!, \lstinline!CE-28!, \lstinline!CE-29!, \lstinline!CE-30!, \lstinline!CE-31!, \lstinline!CE-32!, \lstinline!CE-33!, \lstinline!CE-34!, \lstinline!CE-35!, \lstinline!CE-36!, \lstinline!CE-37!, \lstinline!CE-38!, \lstinline!CE-39!, \lstinline!CE-40!, \lstinline!CE-41!, \lstinline!CE-42!, \lstinline!CE-43!, \lstinline!CE-44!, \lstinline!CE-46!, \lstinline!CE-47!, \lstinline!CE-48!, \lstinline!CE-49!, \lstinline!CE-50!, \lstinline!CE-51!, \lstinline!CE-52!, \lstinline!CE-53-54! y \lstinline!CE-56!.
- 		\lstinputlisting[caption={Instancia de \lstinline!Competencia_Especifica!: \lstinline!CE-19-20!},captionpos=b,label=ce1,language=owlms,literate=,linerange=Individual:\ CE\-19\-20-xsd:string]{codigo/a-box.ms}
-		\lstinputlisting[caption={Instancia de \lstinline!Competencia_Especifica!: \lstinline!CE-33!},captionpos=b,label=ce2,language=owlms,literate=,linerange=Individual:\ CE\-33-xsd:string]{codigo/a-box.ms}
+		\item [Competencias Específicas.] las diferentes competencias específicas que el alumno debe poseer al finalizar el ciclo formativo están representadas por los individuos que pertenecen a la clase \lstinline!Competencia_Especifica!. En la titulación que estamos definiendo existen 46 competencias específicas diferentes. De nuevo a modo de ejemplo, se incluye la instancia de dos de ellas.
+		
+ 		\lstinputlisting[caption={Instancia de \lstinline!Competencia_Especifica!: \lstinline!Competencia_Especifica_19-20!},captionpos=b,label=ce1,language=owlms,literate=,linerange=Individual:\ Competencia\_Especifica\_19\-20-xsd:string]{codigo/a-box.ms}
+		\lstinputlisting[caption={Instancia de \lstinline!Competencia_Especifica!: \lstinline!Competencia_Especifica_33!},captionpos=b,label=ce2,language=owlms,literate=,linerange=Individual:\ Competencia\_Especifica\_33-xsd:string]{codigo/a-box.ms}
  
  
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%% Materias
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-		\item [Materias]. Estos individuos representan las diferentes materias de la titulación que estamos modelando Son: \lstinline!MA-Empresa, MA-Estadistica, MA-English_for_professional_and_academic_communication, MA-Fisica, MA-Informatica, MA-Ingenieria_de_computadores, MA-Ingenieria_del_software_sistemas_de_informacion_y_sistemas_inteligentes, MA-Matematicas, MA-Optatividad, MA-Programacion, MA-Sistemas_operativos,_sistemas_distribuidos_y_redes, MA-Trabajo_fin_de_grado!. De igual modo, sólo se incluye una, a modo de ejemplo ilustrativo.
-		%no hacer esta
-		\lstinputlisting[caption={Instancia de \lstinline!Materia!: \lstinline!MA-Ingenieria del software, sistemas de informacion y sistemas inteligentes!},captionpos=b,label=mat,language=owlms,literate=,linerange=Individual:\ MA\-Ingeniería\_del\_software\_sistemas\_de\_información\_y\_sistemas\_inteligentes-xsd:decimal]{codigo/a-box.ms} 
+		\item [Materias.] Estos individuos representan las diferentes materias de la titulación que estamos modelando. La titulación de grado en informática por la universidad Politécnica de Madrid consta de 12 materias. A modo de ejemplo, se incluye la instancia de una de ellas.
+
+		\lstinputlisting[caption={Instancia de \lstinline!Materia!: \lstinline!Ingenieria del software, sistemas de informacion y sistemas inteligentes!},captionpos=b,label=mat,language=owlms,literate=,linerange=Individual:\ Ingenieria\_del\_software\_sistemas\_de\_informacion\_y\_sistemas\_inteligentes-tbox: tipoCredito]{codigo/a-box.ms} 
 	
 
  		 
@@ -383,9 +384,11 @@ Dado el gran número de individuos que componen la ontología, se ha optado por no
 	   	%% Asignaturas
 	   	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     		 
 		\item [Asignaturas]. Estos individuos (43 en total) son la representación de las diferentes asignaturas del plan de estudios. A modo de ejemplo, detallamos los siguientes.
-		\lstinputlisting[caption={Instancia de \lstinline!Asignatura!: \lstinline!AS-Programacion_II!},captionpos=b,label=asi1,language=owlms,literate=,linerange=Individual:\ AS\-Programación_II-xsd:string]{codigo/a-box.ms} 
-		\lstinputlisting[caption={Instancia de \lstinline!Asignatura!: \lstinline!AS-Matematica_Discreta_II!},captionpos=b,label=asi2,language=owlms,literate=,linerange=Individual:\ AS\-Matemática_Discreta_II-xsd:string]{codigo/a-box.ms} 
-		\lstinputlisting[caption={Instancia de \lstinline!Asignatura!: \lstinline!AS-Proyecto_de_Software!},captionpos=b,label=asi3,language=owlms,literate=,linerange=Individual:\ AS\-Proyecto_de_Software-xsd:decimal]{codigo/a-box.ms} 
+		\lstinputlisting[caption={Instancia de \lstinline!Asignatura!: \lstinline!Programacion_II!},captionpos=b,label=asi1,language=owlms,literate=,linerange=Individual:\ Programacion_II-tbox:tipoCredito]{codigo/a-box.ms} 
+
+		\lstinputlisting[caption={Instancia de \lstinline!Asignatura!: \lstinline!Matematica_Discreta_II!},captionpos=b,label=asi2,language=owlms,literate=,linerange=Individual:\ Matematica_Discreta_II-tbox:tipoCredito]{codigo/a-box.ms} 
+
+		\lstinputlisting[caption={Instancia de \lstinline!Asignatura!: \lstinline!Proyecto_de_Software!},captionpos=b,label=asi3,language=owlms,literate=,linerange=Individual:\ Proyecto_de_Software-tbox:tipoCredito]{codigo/a-box.ms} 
   
   
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -404,8 +407,8 @@ Dado el gran número de individuos que componen la ontología, se ha optado por no
 
 		A modo de ejemplo, mostramos un par de ellos.
     
-		\lstinputlisting[caption={Instancia de \lstinline!Metodo docente!: \lstinline!ME-Leccion_magistral!},captionpos=b,label=me1,language=owlms,literate=,linerange=Individual:\ ME\-Lección_magistral-xsd:string]{codigo/a-box.ms} 
-  		\lstinputlisting[caption={Instancia de \lstinline!Metodo docente!: \lstinline!ME-Aprendizaje_orientado_a_proyectos!},captionpos=b,label=me2,language=owlms,literate=,linerange=Individual:\ ME\-Aprendizaje_orientado_a_proyectos-xsd:string]{codigo/a-box.ms} 
+		\lstinputlisting[caption={Instancia de \lstinline!Metodo docente!: \lstinline!Leccion_magistral!},captionpos=b,label=me1,language=owlms,literate=,linerange=Individual:\ Leccion_magistral-xsd:string]{codigo/a-box.ms} 
+  		\lstinputlisting[caption={Instancia de \lstinline!Metodo docente!: \lstinline!Aprendizaje_orientado_a_proyectos!},captionpos=b,label=me2,language=owlms,literate=,linerange=Individual:\ Aprendizaje_orientado_a_proyectos-xsd:string]{codigo/a-box.ms} 
   
   
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -426,8 +429,8 @@ Dado el gran número de individuos que componen la ontología, se ha optado por no
 			\item [Seminarios y Talleres.] Se llama así al espacio donde se construye con profundidad una parte del conocimiento a través de intercambios personales entre sus asistentes, cuyo número deberá ser reducido. Esta participación activa de todos los integrantes supone la elaboración previa de materiales y el acuerdo de unas normas para el desarrollo de la actividad. 
 			\item [Tutorías.] En las tutorías se establece una relación personalizada de ayuda entre el profesor o tutor y el alumno. El tutor facilita y orienta al alumno en su aprendizaje. En una tutoría cabe tratar cualquier faceta del proceso de aprendizaje, como aspectos académicos, actitudinales, u otros.
 		\end{description}
-		\lstinputlisting[caption={Instancia de \lstinline!Actividad_Formativa!: \lstinline!AF-Proyecto-PO!},captionpos=b,label=af1,language=owlms,literate=,linerange=Individual:\ AF\-Proyecto\-PO-xsd:decimal]{codigo/a-box.ms} 
-		\lstinputlisting[caption={Instancia de \lstinline!Actividad_Formativa!: \lstinline!AF-Fisica-L!},captionpos=b,label=af2,language=owlms,literate=,linerange=Individual:\ AF\-Fisica\-L-xsd:decimal]{codigo/a-box.ms} 
+		\lstinputlisting[caption={Instancia de \lstinline!Actividad_Formativa!: \lstinline!Proyecto-PO!},captionpos=b,label=af1,language=owlms,literate=,linerange=Individual:\ Proyecto\-PO-tbox:tipoCredito]{codigo/a-box.ms} 
+		\lstinputlisting[caption={Instancia de \lstinline!Actividad_Formativa!: \lstinline!Fisica-L!},captionpos=b,label=af2,language=owlms,literate=,linerange=Individual:\ Fisica\-L-tbox:tipoCredito]{codigo/a-box.ms} 
   
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	   	%% Métodos de Evaluación
@@ -446,25 +449,31 @@ Dado el gran número de individuos que componen la ontología, se ha optado por no
 			\item Evaluación para el Prácticum. Recogida de informes/encuestas y defensa oral del trabajo realizado.
 			\item Evaluación para los programas de movilidad. Recogida de informes, justificantes, calificaciones, realización de memoria y defensa oral.
 		\end{enumerate}
-		\lstinputlisting[caption={Instancia de \lstinline!Metodo_Evaluacion!: \lstinline!MV-Pruebas_de_ejecucion!},captionpos=b,label=mv1,language=owlms,literate=,linerange=Individual:\ MV\-Pruebas_de_ejecución-xsd:string]{codigo/a-box.ms} 
-		\lstinputlisting[caption={Instancia de \lstinline!Metodo_Evaluacion!: \lstinline!MV-Sistemas_de_Autoevaluacion!},captionpos=b,label=mv1,language=owlms,literate=,linerange=Individual:\ MV\-Sistemas_de_Autoevaluación-xsd:string]{codigo/a-box.ms} 
+		\lstinputlisting[caption={Instancia de \lstinline!Metodo_Evaluacion!: \lstinline!Pruebas_de_ejecucion!},captionpos=b,label=mv1,language=owlms,literate=,linerange=Individual:\ Pruebas_de_ejecucion-xsd:string]{codigo/a-box.ms} 
+		\lstinputlisting[caption={Instancia de \lstinline!Metodo_Evaluacion!: \lstinline!Sistemas_de_Autoevaluacion!},captionpos=b,label=mv1,language=owlms,literate=,linerange=Individual:\ Sistemas_de_Autoevaluacion-xsd:string]{codigo/a-box.ms} 
   
   
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	   	%% Carácter
    		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 		\item [Carácter.] Aquí quedan recogidos los diferentes caracteres que asignaturas y materias pueden tener. Una asignatura puede ser básica, obligatoria u optativa, mientras que una materia puede ser, además, de carácter mixto.
-		\lstinputlisting[caption={Instancia de \lstinline!Caracter!: \lstinline!CA-Basica!},captionpos=b,label=ca1,language=owlms,literate=,linerange=Individual:\ CA\-Básica-ects:Caracter]{codigo/a-box.ms} 
-		\lstinputlisting[caption={Instancia de \lstinline!Caracter!: \lstinline!CA-Mixta!},captionpos=b,label=ca2,language=owlms,literate=,linerange=Individual:\ CA\-Mixta-ects:Caracter]{codigo/a-box.ms} 
-		\lstinputlisting[caption={Instancia de \lstinline!Caracter!: \lstinline!CA-Obligatoria!},captionpos=b,label=ca3,language=owlms,literate=,linerange=Individual:\ CA\-Obligatoria-ects:Caracter]{codigo/a-box.ms} 
-		\lstinputlisting[caption={Instancia de \lstinline!Caracter!: \lstinline!CA-Optativa!},captionpos=b,label=ca4,language=owlms,literate=,linerange=Individual:\ CA\-Optativa-ects:Caracter]{codigo/a-box.ms} 
+		\lstinputlisting[caption={Instancia de \lstinline!Caracter!: \lstinline!Basica!},captionpos=b,label=ca1,language=owlms,literate=,linerange=Individual:\ Basica-tbox:Caracter]{codigo/a-box.ms} 
+		\lstinputlisting[caption={Instancia de \lstinline!Caracter!: \lstinline!Mixta!},captionpos=b,label=ca2,language=owlms,literate=,linerange=Individual:\ Mixta-tbox:Caracter]{codigo/a-box.ms} 
+		\lstinputlisting[caption={Instancia de \lstinline!Caracter!: \lstinline!Obligatoria!},captionpos=b,label=ca3,language=owlms,literate=,linerange=Individual:\ Obligatoria-tbox:Caracter]{codigo/a-box.ms}
+		\lstinputlisting[caption={Instancia de \lstinline!Caracter!: \lstinline!Optativa!},label=ca4,captionpos=b,language=owlms,literate=,firstnumber=877,firstline=877,lastline=880]{codigo/a-box.ms} 
   
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%% Ubicaciones Temporales
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 		\item [Ubicaciones temporales]. Aquí se agrupan, con el fin de poder lograr un correcto reparto de las asignaturas entre los trimestres que componen la titulación, los trimestres en los que se divide el título. A modo enunciativo:
-		\lstinputlisting[caption={Instancia de \lstinline!Ubicacion_Temporal!: \lstinline!UT-3er-semestre!},captionpos=b,label=ut1,language=owlms,literate=,linerange=Individual:\ UT\-3er_semestre-ects:Ubicacion_temporal]{codigo/a-box.ms} 
-		\lstinputlisting[caption={Instancia de \lstinline!Ubicacion_Temporal!: \lstinline!UT-5o-semestre!},captionpos=b,label=ut2,language=owlms,literate=,linerange=Individual:\ UT\-5o_semestre-ects:Ubicacion_temporal]{codigo/a-box.ms} 
+
+		\lstinputlisting[caption={Instancia de \lstinline!Ubicacion_Temporal!: \lstinline!3er_semestre!},label=ut1,captionpos=b,language=owlms,literate=,firstnumber=490,firstline=490,lastline=490]{codigo/a-box.ms} 
+		
+		\lstinputlisting[caption={Instancia de \lstinline!Ubicacion_Temporal!: \lstinline!5o_semestre!},label=ut2,captionpos=b,language=owlms,literate=,firstnumber=1633,firstline=1633,lastline=1633]{codigo/a-box.ms} 
+				
+				
+%		\lstinputlisting[caption={Instancia de \lstinline!Ubicacion_Temporal!: \lstinline!3er-semestre!},captionpos=b,label=ut1,language=owlms,literate=,linerange=Individual:\ 3er_semestre-ects:Ubicacion_temporal]{codigo/a-box.ms} 
+%		\lstinputlisting[caption={Instancia de \lstinline!Ubicacion_Temporal!: \lstinline!5o-semestre!},captionpos=b,label=ut2,language=owlms,literate=,linerange=Individual:\ 5o_semestre-ects:Ubicacion_temporal]{codigo/a-box.ms} 
 
 	\end{description}
 	
@@ -472,7 +481,7 @@ Dado el gran número de individuos que componen la ontología, se ha optado por no
 	
 	La ontología aquí instanciada es correcta sintácticamente, completa y decidible. Ocurre sin embargo que nos encontramos con que el documento que sirvió de base para la realización del presente trabajo presenta algunos problemas, derivados seguramente de la utilización de herramientas no óptimas para su desarrollo.
 	
-	Por ejemplo, cabe destacar que hemos encontrado que las competencias específicas \lstinline!CE-13-18! y la \lstinline!CE-17! no contribuyen al cumplimiento de ningún objetivo de la titulación (entonces, ¿para qué emplear horas de trabajo en adquirirlas?). Este error no se hubiera producido (entiendo que se trata de un error) utilizando herramientas más adecuadas, como las ontologías.
+	Por ejemplo, cabe destacar que hemos encontrado que las competencias específicas \lstinline!Competencia_Especifica_13-18! y la \lstinline!Competencia_Especifica_17! no contribuyen al cumplimiento de ningún objetivo de la titulación (entonces, ¿para qué emplear horas de trabajo en adquirirlas?). Este error no se hubiera producido (entiendo que se trata de un error) utilizando herramientas más adecuadas, como las ontologías.
 	
 	Este error semántico se traslada a la ontología, que sin embargo sigue siendo válida debido a la hipótesis de mundo abierto característica de las ontologías. El hecho de que no hayamos instanciado ningún objetivo a cuyo cumplimiento contribuyan las dos competencias mencionadas, no siginifica que, siempre hipotéticamente, no pudiera existir algún individuo de la clase \lstinline!Objetivo_General! que se cumpliese mediante la adquisición de esas competencias. 
 	

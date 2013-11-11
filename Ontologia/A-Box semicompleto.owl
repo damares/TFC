@@ -55,7 +55,10 @@
 
     <!-- http://www.semanticweb.org/daniel/Grado_Informatica#4o_semestre -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#4o_semestre"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#4o_semestre">
+        <tbox:contiene rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
+        <tbox:seComponeDe rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
+    </owl:NamedIndividual>
     
 
 
@@ -923,16 +926,10 @@
 - Especificación de sistemas concurrentes</tbox:contenidosDeLaAsignatura>
         <tbox:creditosDeLaAsignatura rdf:datatype="&tbox;tipoCredito">3</tbox:creditosDeLaAsignatura>
         <tbox:seImparteDurante rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#4o_semestre"/>
-        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Fundamentos_fisicos_y_tecnologicos_de_la_informatica"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Lenguajes_Formales_Automatas_y_Computabilidad"/>
-        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Logica"/>
-        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Matematica_Discreta_I"/>
-        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Matematica_Discreta_II"/>
         <tbox:esDeCaracter rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Obligatoria"/>
         <tbox:formaParteDe rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion"/>
-        <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion_I"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion_II"/>
-        <tbox:esRequisitoPara rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Proyecto_de_Software"/>
     </owl:NamedIndividual>
     
 
@@ -1356,6 +1353,7 @@
         <tbox:creditosDeLaAsignatura rdf:datatype="&tbox;tipoCredito">6</tbox:creditosDeLaAsignatura>
         <tbox:seImparteDurante rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#1er_semestre"/>
         <tbox:esDeCaracter rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Basica"/>
+        <tbox:esRequisitoPara rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
         <tbox:formaParteDe rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Fisica"/>
     </owl:NamedIndividual>
     
@@ -1761,6 +1759,7 @@ etc.
 - Teoría de la computabilidad</tbox:contenidosDeLaAsignatura>
         <tbox:creditosDeLaAsignatura rdf:datatype="&tbox;tipoCredito">6</tbox:creditosDeLaAsignatura>
         <tbox:seImparteDurante rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#3er_semestre"/>
+        <tbox:esRequisitoPara rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Logica"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Matematica_Discreta_I"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Matematica_Discreta_II"/>
@@ -1780,6 +1779,7 @@ etc.
         <tbox:creditosDeLaAsignatura rdf:datatype="&tbox;tipoCredito">6</tbox:creditosDeLaAsignatura>
         <tbox:seImparteDurante rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#1er_semestre"/>
         <tbox:esDeCaracter rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Basica"/>
+        <tbox:esRequisitoPara rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
     </owl:NamedIndividual>
     
 
@@ -1795,6 +1795,7 @@ etc.
         <tbox:creditosDeLaAsignatura rdf:datatype="&tbox;tipoCredito">6</tbox:creditosDeLaAsignatura>
         <tbox:seImparteDurante rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#1er_semestre"/>
         <tbox:esDeCaracter rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Basica"/>
+        <tbox:esRequisitoPara rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
     </owl:NamedIndividual>
     
 
@@ -1807,6 +1808,7 @@ etc.
 - Teoría de grafos</tbox:contenidosDeLaAsignatura>
         <tbox:creditosDeLaAsignatura rdf:datatype="&tbox;tipoCredito">3</tbox:creditosDeLaAsignatura>
         <tbox:seImparteDurante rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#2o_semestre"/>
+        <tbox:esRequisitoPara rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
         <tbox:esDeCaracter rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Obligatoria"/>
     </owl:NamedIndividual>
     
@@ -2139,6 +2141,8 @@ etc.
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Obligatoria">
         <rdf:type rdf:resource="&tbox;Caracter"/>
+        <tbox:agrupa rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
+        <tbox:vieneDadoPor rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
     </owl:NamedIndividual>
     
 
@@ -2661,6 +2665,7 @@ nacionales/internacionales.
         <tbox:creditosDeLaAsignatura rdf:datatype="&tbox;tipoCredito">6</tbox:creditosDeLaAsignatura>
         <tbox:seImparteDurante rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#1er_semestre"/>
         <tbox:esDeCaracter rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Basica"/>
+        <tbox:esRequisitoPara rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Fundamentos_fisicos_y_tecnologicos_de_la_informatica"/>
     </owl:NamedIndividual>
     
@@ -2677,6 +2682,7 @@ nacionales/internacionales.
         <tbox:creditosDeLaAsignatura rdf:datatype="&tbox;tipoCredito">6</tbox:creditosDeLaAsignatura>
         <tbox:seImparteDurante rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#2o_semestre"/>
         <tbox:esDeCaracter rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Basica"/>
+        <tbox:esRequisitoPara rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Logica"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Matematica_Discreta_I"/>
         <tbox:tieneComoRequisito rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion_I"/>
@@ -3178,228 +3184,6 @@ audiovisuales).</tbox:resultadosDelAprendizaje>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#1er_semestre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#2o_semestre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#3er_semestre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#4o_semestre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#5o_semestre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#6o_semestre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#7o_semestre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Administracion_y_Gestion_de_Empresas"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Algebra_Lineal"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Algoritmos_y_Estructuras_de_Datos"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Aprendizaje_basado_en_problemas"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Aprendizaje_cooperativo"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Aprendizaje_orientado_a_proyectos"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Arquitectura_de_Computadores"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Bases_de_Datos"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Basica"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Calculo"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_01"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_02"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_03-04"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_05"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_06"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_07"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_08"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_09"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_10"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_11"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_12-16"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_13-18"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_14-15"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_17"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_19-20"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_21"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_22"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_23"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_24"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_25"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_26-27"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_28"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_29"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_30"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_31"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_32"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_33"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_34"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_35"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_36"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_37"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_38"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_39"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_40"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_41"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_42"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_43"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_44"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_46"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_47"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_48"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_49"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_50"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_51"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_52"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_53-54"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_Especifica_56"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_01-21"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_02-CE45"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_03-04"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_05"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_06"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_07-08-09-10-16-17"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_11-12-20"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_13-CE55"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_14-15-18-23"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_19"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_22"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_24-25-26-27"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Computadores-CP"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Computadores-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Computadores-EG"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Computadores-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Computadores-PA"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Computadores-PO"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Computadores-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Empresa"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Empresa-CP"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Empresa-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Empresa-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Empresa-PA"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#English-CP"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#English-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#English-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#English-PA"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#English-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#English_for_Professional_and_Academic_Communications"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#English_for_professional_and_academic_communication"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Escalas_de_actitudes"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Estadistica"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Estadistica-CP"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Estadistica-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Estadistica-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Estadistica-PA"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Estadistica-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Estructura_de_Computadores"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Estudio_de_casos"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Evaluacion_Practicum"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Fisica"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Fisica-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Fisica-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Fisica-L"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Fisica-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Fundamentos_fisicos_y_tecnologicos_de_la_informatica"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Gestion_de_procesos_de_Tecnologias_de_la_Informacion"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Informatica"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Informatica-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Informatica-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Informatica-L"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Informatica-PA"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Informatica-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria-CP"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria-EG"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria-L"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria-PA"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria-PO"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria-ST"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria_de_computadores"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria_del_Software_I"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria_del_Software_II"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria_del_software_sistemas_de_informacion_y_sistemas_inteligentes"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Inteligencia_Artificial"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Interaccion_Persona-Ordenador"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Leccion_magistral"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Lenguajes_Formales_Automatas_y_Computabilidad"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Logica"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematica_Discreta_I"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematica_Discreta_II"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas-CP"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas-L"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas-PA"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas-ST"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Mixta"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_01"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_02"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_03"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_04"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_05"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_06"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_07"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_08"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_09"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_10"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_11"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Obligatoria"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Optativa"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Optativa3_3ECTS"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Optativa3_6ECTS"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Optativa4_3ECTS"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Optativa4_6ECTS"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Optatividad"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Plan_de_negocio"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Practicum_No_TFC"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Practicum_TFC"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Presentacion_de_informes"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Presentacion_de_trabajos"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Probabilidades_y_Estadistica_I"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Probabilidades_y_Estadistica_II"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Procesadores_de_Lenguajes"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programa_Movilidad_Internacional"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion-CP"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion-EG"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion-L"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion-PA"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion-PO"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion-ST"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion_Declarativa_Logica_y_Restricciones"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion_I"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion_II"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion_para_sistemas"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Proyecto-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Proyecto-PO"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Proyecto_de_Software"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Proyecto_de_instalacion_de_infraestructura_informatica"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Proyecto_de_sistema_o_servicio"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Pruebas_de_ejecucion"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Pruebas_de_respuesta_corta"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Pruebas_de_respuesta_larga"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Pruebas_orales"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Redes_de_Computadores"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Resolucion_de_ejercicios_y_problemas"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Seguridad_de_las_TI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas-CP"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas-CT"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas-EG"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas-ETAI"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas-L"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas-PA"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas-PO"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas-ST"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas-T"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas_Digitales"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas_Distribuidos"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas_Operativos"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas_Orientados_a_Servicios"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas_de_Autoevaluacion"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas_operativos_sistemas_distribuidos_y_redes"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Trabajo_fin_de_grado"/>
-        </owl:distinctMembers>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">

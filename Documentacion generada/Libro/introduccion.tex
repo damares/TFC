@@ -390,33 +390,19 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 %		\end{description}
 	
 		\subsubsection{Sublenguajes de OWL}
-		Existen tres sublenguajes de OWL (OWL Lite, OWL DL y OWL Full), cada uno más expresivo que el anterior, diseñados para ser utilizados de manera específica por implementadores y usuarios, de modo que éstos puedan disponer de un lenguaje adaptado a sus necesidades. 
+		Existen tres sublenguajes de OWL (\textit{OWL Lite}, \textit{OWL DL} y \textit{OWL Full}), cada uno más expresivo que el anterior, diseñados para ser utilizados de manera específica por implementadores y usuarios, de modo que éstos puedan disponer de un lenguaje adaptado a sus necesidades. 
 	
 		\begin{enumerate}
 		
 			\item \textit{OWL Lite} está diseñado para usuarios que principalmente precisen una jerarquía de clases y constantes muy simples. \textit{OWL Lite} precisa de herramientas más sencillas que otros sublenguajes de OWL más expresivos y es además una manera rápida de de implementar y compartir tesauros\footnote{\url{http://en.wikipedia.org/wiki/Thesaurus\_(information\_retrieval)}} y otras taxonomias\footnote{\url{http://en.wikipedia.org/wiki/Taxonomy}}.
 		
-			\item \textit{OWL DL} permite obtener la máxima expresividad del lenguaje a la par que completitud y decidibilidad sobre ese lenguaje. Incluye todos los constructores de OWL pero sólo permite que sean utilizados bajo ciertas condiciones, de modo que pueda asegurar la completitud y decidibilidad antedichas. OWL DL recibe el nombre por su correspondencia con la \textit{``lógica descriptiva''} (Description Logic\cite{dlhandbook}), un campo de investigación que estudia la lógica que compone la base formal de OWL.
+			\item \textit{OWL DL} permite obtener la máxima expresividad del lenguaje a la par que completitud y decidibilidad sobre ese lenguaje. Incluye todos los constructores de OWL pero sólo permite que sean utilizados bajo ciertas condiciones, de modo que pueda asegurar la completitud y decidibilidad antedichas. \textit{OWL DL} recibe el nombre por su correspondencia con la \textit{``lógica descriptiva''} (Description Logic\cite{dlhandbook}), un campo de investigación que estudia la lógica que compone la base formal de OWL.
 	
-			\item \textit{OWL Full} está pensado para aquellos usuarios que desean trabajar con la máxima expresividad y libertad sintáctica, pero sin ninguna garantía computacional. No existe en la actualidad ningún software que sea capaz de obtener un razonamiento completo para cada característica de OWL Full.
+			\item \textit{OWL Full} está pensado para aquellos usuarios que desean trabajar con la máxima expresividad y libertad sintáctica, pero sin ninguna garantía computacional. No existe en la actualidad ningún software que sea capaz de obtener un razonamiento completo para cada característica de \textit{OWL Full}.
 
 		\end{enumerate}
 		
 		Cada uno de estos sublenguajes es una extensión de su predecesor más simple respecto a lo que puede ser expresado legalemente y a la validación de sus conclusiones. 
-
-%		\begin{itemize}
-%
-%			\item Todas las ontologías \textit{OWL Lite} válidas son ontologías \textit{OWL DL} válidas.
-%
-%			\item Todas las ontologías \textit{OWL DL} válidas son ontologías \textit{OWL Full} válidas.
-%
-%			\item Todas las conclusiones válidas sobre una ontología \textit{OWL Lite} son conclusiones \textit{OWL DL} válidas.
-%
-%			\item Todas las conclusiones válidas sobre una ontología \textit{OWL DL} son conclusiones \textit{OWL Full} válidas.
-%
-%		\end{itemize}
-		
-%		\subsubsection{Elección de un sublenguaje OWL}
 
 		A la hora de escoger uno u otro sublenguaje OWL, se ha de tener en cuenta las necesidades que va a tener que satisfacer. La elección entre \textit{OWL Lite} y \textit{OWL DL} dependerá de si \textit{OWL Lite} es capaz de satisfacer la expresividad requerida o no. La elección entre \textit{OWL DL} y \textit{OWL Full} dependerá de que la expresividad de \textit{OWL DL} sea suficiente y de la necesidad de utilizar razonadores sobre la ontología, dado que como ya se ha dicho, por el momento no existen razonadores completos que abarquen todas las características de \textit{OWL Full}. 
 		
@@ -429,61 +415,10 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 		Una de las carencias detectadas en el estado actual es la dificultad para que herramientas automáticas puedan extraer, procesar y transformar la información contenida en las hojas de cálculo utilizadas para modelar el plan de estudios.
 		
 		
-    	El hecho de que, como ya se ha comentado, las ontologías \textit{OWL DL} y \textit{OWL Lite} sean lenguajes completos y decidibles permite la utilización de herramientas automáticas, abriendo una amplio abanico de posibilidades en la utilización de dichas ontologías. Por ejemplo, el uso de ontologías OWL-DL, nos permite el uso de herramientas automáticas para validar la ontología creada, razonando qué individuos encajan en qué descripciones, o si la jerarquía establecida es consistente con los individuos presentes y sus descripciones.
+    	El hecho de que, como ya se ha comentado, las ontologías \textit{OWL DL} y \textit{OWL Lite} sean lenguajes completos y decidibles permite la utilización de herramientas automáticas, abriendo una amplio abanico de posibilidades en la utilización de dichas ontologías. Por ejemplo, el uso de ontologías \textit{OWL DL}, nos permite el uso de herramientas automáticas para validar la ontología creada, razonando qué individuos encajan en qué descripciones, o si la jerarquía establecida es consistente con los individuos presentes y sus descripciones.
     	
-    	Existen muy diversos tipos herramientas: razonadores, editores, visores, herramientas para la transformación de datos, interfaces de programación, gestión de versiones, motores de búsqueda\ldots 
-    	Existen diversas páginas\footnote{\url{http://www.w3.org/2001/sw/wiki/Tools}}\footnote{\url{http://semanticweb.org/wiki/Tools}}\footnote{\url{http://www.mkbergman.com/sweet-tools-simple-list/}}\footnote{\url{http://protegewiki.stanford.edu/wiki/Protege\_Plugin\_Library}} donde hay repositorios y se pueden encontrar las herramientas agrupadas por categorías, lenguajes de programación y otros criterio. Más adelante, buscaremos entre estas páginas aquellas herramientas que puedan parecer más útiles a la hora de cumplir con las metas del documento y las probaremos.
+    	Existen muy diversos tipos herramientas: razonadores, editores, visores, herramientas para la transformación de datos, interfaces de programación, gestión de versiones, motores de búsqueda, \ldots \ Existen diversas páginas\footnote{\url{http://www.w3.org/2001/sw/wiki/Tools}}\footnote{\url{http://semanticweb.org/wiki/Tools}}\footnote{\url{http://www.mkbergman.com/sweet-tools-simple-list/}}\footnote{\url{http://protegewiki.stanford.edu/wiki/Protege\_Plugin\_Library}} donde hay repositorios y se pueden encontrar las herramientas agrupadas por categorías, lenguajes de programación y otros criterio. Más adelante, buscaremos entre estas páginas aquellas herramientas que puedan parecer más útiles a la hora de cumplir con las metas del documento y las probaremos.
     	
-	%\todo{Daniel, nombra aqui las páginas que has encontrado}
-%    	\begin{itemize}
-%		\item \textit{iQvoc}\footnote{\url{http://iqvoc.net/}} es una herramienta web de código abierto para manejar vocabularios, jerarquías, tesauros.
-%			
-%		\item \textit{ONKI}\footnote{\url{http://onki.fi/}} es un catálogo de ontologías, vocabularios y tesauros, fineses e internacionales, muy útil para poder construir y mantener contenido de la web semántica a un coste aceptable. 
-%
-%		\item \textit{SMAD}\footnote{\url{http://www.w3.org/2001/sw/wiki/SMAD}} es un catalizador para aplicaciones web para dispositivos móviles, que intenta integrar datos de la web semántica con servicios basados en la localización de esos dispositivos móviles.
-%
-%		\item \textit{SKOS API}\footnote{\url{http://www.w3.org/2001/sw/wiki/SKOS_API}} es un interfaz java, que incluye un parser y un editor con soporte para SKOS\footnote{\url{http://www.w3.org/2004/02/skos/}} y en el que se pueden integrar razonadores como Pellet o FaCT++.
-%
-%		\item \textit{TopBraid EVN}\footnote{\url{http://www.topquadrant.com/solutions/ent\_vocab\_net.html}} es una solución para el desarrollo y mantenimiento de vocabularios interconectados, de modo que todas las partes interesadas en un negocio o empresa pueden colaborar en definir e interrelacionar vocabularios, taxonomías, tesauros y ontologías.
-%
-%		\item \textit{Graphity}\footnote{\url{http://www.w3.org/2001/sw/wiki/Graphity}} es una plataforma para la construcción de aplicaciones web, y permite explorar fuentes de datos externas, analizarlas e importar información proveniente de otras fuentes privadas de datos.
-%
-%		\item \textit {Callicamchus}\footnote{\url{http://callimachusproject.org/}} permite a los creadores de páginas web crear aplicaciones para la web semántica de manera rápida y sencilla.
-%
-%		\item \textit{OntoVCS}\footnote{\url{https://github.com/utapyngo/owl2vcs}} es un conjunto de herramientas para la línea de comandos que permite obtener las diferencias de varias ontologías, así como unirlas y pueden integrarse en Mercurial\footnote{\url{http://mercurial.selenic.com/}} o Git\footnote{\url{http://git-scm.com/}} para el control de versiones.
-%
-%		\item \textit{Pellet}\footnote{\url{http://clarkparsia.com/pellet/}} es un razonador que incluye como novedad la capacidad de realizar razonamiento incremental.
-%
-%		\item \textit{Pellint}\footnote{\url{http://weblog.clarkparsia.com/2008/07/02/pellint-an-ontology-repair-tool/}} es una herramienta para \textit{Pellet} que indica e incluso puede reparar diversas construcciones que se sabe que ocasionan problemas, a nivel de ontologías y axiomas.
-%
-%		\item \textit{babel}\footnote{\url{http://service.simile-widgets.org/babel/}} es un servicio del proyecto SIMILE\footnote{\url{http://simile-widgets.org/}} del MIT para la conversión desde o hacia diferentes formatos.
-%
-%		\item \textit{Morph}\footnote{\url{http://www.w3.org/2001/sw/wiki/Morph}} es otro conversor entre varios formatos RDF.
-%
-%		\item \textit{RDF On The Go}\footnote{\url{https://code.google.com/p/rdfonthego/}} permite almacenar de manera persisitente estructuras RDF, así como procesar consultas, todo ello desde un sistema Android.
-%		
-%		\item \textit{TONES Ontology Repository}\footnote{\url{http://owl.cs.manchester.ac.uk/repository/}} es un servicio web diseñado para hacer las funciones de almacén de ontologías de prueba para que los desarrolladores de aplicaciones puedan probar sus aplicaciones contra esas ontologías.
-%
-%		\item \textit{Protégé}\footnote{\url{http://protege.stanford.edu/}} es un entorno de desarrollo de ontologías, del que se hablará más detenidamente en próximos capítulos.
-%
-%		\item \textit{OWL Verbalizer}\footnote{\url{https://code.google.com/p/owlverbalizer/}} es una herramienta on-line que verbaliza las ontoloías OWL en Attempto Controlled English\footnote{\url{http://attempto.ifi.uzh.ch/site/}}.
-%
-%		\item \textit{Semantic Turkey}\footnote{\url{http://semanticturkey.uniroma2.it/}} es una extensión para Firefox que permite a los usuarios construir ontologías con la información contenida en las páginas web visitadas. 
-%
-%		\item \textit{FaCT++}\footnote{\url{http://owl.man.ac.uk/factplusplus/}} es un razonador OWL DL, con soporte para OWL y OWL 2. Es uno de los razonadores incluidos por defecto en Protégé.
-%
-%		\item \textit{HermiT}\footnote{\url{http://hermit-reasoner.com/}} es otro razonador, muy potente y útil para clasificar ontologías muy complejas y encontrar inconsistencias en ellas.
-%
-%		\item \textit{RacerPro}\footnote{\url{http://www.racer-systems.com/products/racerpro/}} es otro razonador para la web semantica.
-%	
-%    	
-%	\end{itemize}
-%    	
-%    	Como ya se ha dicho anteriormente, el listado anterior es meramente informativo. Muchas de esas aplicaciones están en forma de plugins para entornos de desarrollo, herramientas para la linea de comandos, o bien como aplicaciones java. 
-%    	
-%    	Mención aparte merecen Protégé y el resto de herramientas utilizadas para la realización del TFC, de los que se hablará más detenidamente en el siguiente capítulo.
-
-      
 \section{Objetivos del trabajo}
   
   	Habiendo visto las carencias que presenta el sistema de las hojas de cálculo utilizado hasta el momento, es hora de crear un sistema de conocimiento que permita manejar de manera más fluida toda la información relativa a los planes de estudio. 
@@ -496,8 +431,7 @@ No tiene como objetivo estandarizar los diversos sistemas de educación superior 
 	\item[Valoración de los posibles usos.] Probar la completud de la instancia, sobre la cual se utilizarán diversas herramientas con el fin de analizar los posibles usos y aplicaciones que pudiera tener.
 \end{description}  	
   	
-%  	Es por tanto la meta princpipal de este documento elaborar un marco único y formal que unifique el conocimiento, de modo que todos los conceptos sean  inequívocos y cualquier persona, aún a pesar de no estar familiarizada con la estructura de un plan de estudios pueda consultar, añadir y modificar información al sistema. Este marco único garantizará que toda la información incluida en el sistema sea coherente con el conocimiento modelado. Además, ello permitirá mejorar la presentación de la información, por lo que las relaciones entre asignaturas, materias y planes de estudios serán más claras, de modo que el usuario pueda ubicar en todo momento el lugar que ocupa en el universo modelado, comprendiendo de manera más amplia cómo encaja su labor y la información que maneja en el plan de estudios que estamos modelando. Así, crearemos un sistema mucho más flexible que permita, ante cambios normativos o cambios funcionales, adaptar más fácilmente el sistema de estudios a las nuevas situaciones cambiantes que se presenten. 
-  	
+ 	
 	Con estos objetivos cumplidos, estaremos sentando las bases para tener un sistema estable y acotado, de modo que podamos, 
 	\begin{itemize}
 		\item Ampliar el modelo de conocimiento hacia otros planes de estudios, incluidos aquellos cursados en universidades extranjeras adheridas al marco europeo de educación superior.
