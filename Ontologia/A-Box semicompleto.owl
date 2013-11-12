@@ -56,8 +56,8 @@
     <!-- http://www.semanticweb.org/daniel/Grado_Informatica#4o_semestre -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#4o_semestre">
-        <tbox:contiene rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
         <tbox:seComponeDe rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
+        <tbox:contiene rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
     </owl:NamedIndividual>
     
 
@@ -825,9 +825,24 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Competencia_General_19">
         <rdf:type rdf:resource="&tbox;Competencia"/>
+        <rdf:type rdf:resource="&tbox;Competencia_General"/>
         <tbox:descripcionDeLaCompetencia rdf:datatype="&xsd;string">Capacidad para usar las tecnologías de la información y la comunicación.</tbox:descripcionDeLaCompetencia>
+        <tbox:seAdquiereCompetenciaGeneralAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Fisica"/>
+        <tbox:seAdquiereAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Fisica"/>
+        <tbox:seAdquiereCompetenciaGeneralAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Informatica"/>
+        <tbox:seAdquiereAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Informatica"/>
+        <tbox:seAdquiereAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria_del_software_sistemas_de_informacion_y_sistemas_inteligentes"/>
+        <tbox:seAdquiereCompetenciaGeneralAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Ingenieria_del_software_sistemas_de_informacion_y_sistemas_inteligentes"/>
+        <tbox:seAdquiereCompetenciaGeneralAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas"/>
+        <tbox:seAdquiereAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Matematicas"/>
         <tbox:seAdquiereParaCumplir rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_03"/>
         <tbox:seAdquiereParaCumplir rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Objetivo_General_10"/>
+        <tbox:seAdquiereAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Optatividad"/>
+        <tbox:seAdquiereCompetenciaGeneralAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Optatividad"/>
+        <tbox:seAdquiereAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion"/>
+        <tbox:seAdquiereCompetenciaGeneralAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Programacion"/>
+        <tbox:seAdquiereCompetenciaGeneralAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas_operativos_sistemas_distribuidos_y_redes"/>
+        <tbox:seAdquiereAlCursar rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Sistemas_operativos_sistemas_distribuidos_y_redes"/>
     </owl:NamedIndividual>
     
 
@@ -2141,8 +2156,8 @@ etc.
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/Grado_Informatica#Obligatoria">
         <rdf:type rdf:resource="&tbox;Caracter"/>
-        <tbox:agrupa rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
         <tbox:vieneDadoPor rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
+        <tbox:agrupa rdf:resource="http://www.semanticweb.org/daniel/Grado_Informatica#Concurrencia"/>
     </owl:NamedIndividual>
     
 

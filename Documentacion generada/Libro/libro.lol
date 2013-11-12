@@ -71,7 +71,6 @@
 \contentsline {lstlisting}{\numberline {3.21}Instancia de \lstinline !Caracter!: \lstinline !Optativa!}{72}{lstlisting.3.21}
 \contentsline {lstlisting}{\numberline {3.22}Instancia de \lstinline !Ubicacion_Temporal!: \lstinline !3er_semestre!}{73}{lstlisting.3.22}
 \contentsline {lstlisting}{\numberline {3.23}Instancia de \lstinline !Ubicacion_Temporal!: \lstinline !5o_semestre!}{73}{lstlisting.3.23}
-\contentsline {lstlisting}{\numberline {4.1}Descripci\'on de la clase Objetivo\_General en ACE}{77}{lstlisting.4.1}
-\contentsline {lstlisting}{\numberline {4.2}C\'odigo generado para la clase \lstinline !Materia!}{91}{lstlisting.4.2}
+\contentsline {lstlisting}{\numberline {4.1}C\'odigo generado para la clase \lstinline !Materia!}{91}{lstlisting.4.1}
 \contentsline {lstlisting}{\numberline {6.1}Fragmento de la definici\'on de \lstinline !Actividad\_Formativa!}{115}{lstlisting.6.1}
 \contentsline {lstlisting}{\numberline {C.1}TBox completa}{137}{lstlisting.C.1}

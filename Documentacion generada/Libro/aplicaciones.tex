@@ -2,17 +2,11 @@
 
 La ontología mostrada se ha desarrollado utilizando el framework Protégé\cite{protege.standfor.edu}. Protégé es un editor de ontologías libre, con una filosofía open source que además soporta varios formatos, entre los que destaca OWL. Protégé ha sido desarrollado por el centro de investigación informática y biomédica de la Escuela Universitaria de Medicina de la universidad de  Standford\footnote{\url{http://bmir.stanford.edu/}}, con la colaboración de DARPA\footnote{\url{http://www.darpa.mil/}}, eBay\footnote{\url{http://www.ebay.com/}}, National Cancer Institute\footnote{\url{http://www.cancer.gov/}}, National Institute of Standards and Technology\footnote{\url{http://www.nist.gov/index.html}}, National Library of Medicine\footnote{\url{http://www.nlm.nih.gov/}} y National Science Foundation\footnote{\url{http://www.nsf.gov/}}, entre otros.
 
-Gracias al lenguaje OWL soportado por Protégé, a su filosofía de software libre, y a los apoyos recibidos por parte de diversas instituciones como las arriba mencionadas, existen multitud de herramientas disponibles para trabajar de manera automática con las ontologías creadas por Protégé, ya sea en forma de plugins o en forma de herramientas que trabajan directamente sobre la ontología en formato OWL. Además, en versiones de Protégé posteriores a la 3.x, es posible exportar directamente desde la herramienta, métodos en lenguaje java (gracias a OWL2API\cite{protege.standfor.edu-owlapi}) que permiten trabajar con esa ontología desde un programa java.
-
-%El uso de un lenguaje estructurado como OWL-DL, hace posible la utilización de herramientas automáticas que facilitan la presentación y el manejo de la información, de modo que pueda resultar más usable para los diversos actores que utilizarán la ontología: profesores, alumnos, administraciones públicas y privadas\ldots Estas personas y/o entidades podrán trabajar con documentos html, grafos y diagramas más comprensibles que la mera expresión de la ontología en sintaxis Manchester (o cualquier otra sintaxis a la que quisiéramos exportar la información). Además, dado que las ontologías son en sí mismas un modelo de datos, también es posible generar a partir de ella diferentes modelos de datos, como el modelo UML o el relacional.
+Gracias al lenguaje OWL soportado por Protégé, a su filosofía de software libre, y a los apoyos recibidos por parte de diversas instituciones como las arriba mencionadas, existen multitud de herramientas disponibles para trabajar de manera automática con las ontologías creadas por Protégé, ya sea en forma de plugins o en forma de herramientas que trabajan directamente sobre la ontología en formato OWL. Además, en versiones de Protégé posteriores a la 3.x, es posible exportar directamente métodos en lenguaje java desde la herramienta, gracias a OWL2API\cite{protege.standfor.edu-owlapi}, lo que permite trabajar con esa ontología desde un programa java.
 
 Por último, gracias al carácter completo y decidible del lenguaje utilizado, resulta posible (y muy útil) utilizar herramientas capaces de llevar a cabo labores de razonamiento sobre la ontología creada, de modo que nos es posible descubrir errores o inconsistencias en su diseño (insatisfactibilidad de un concepto, subsunción de conceptos, etc) y en las instancias del mismo (consistencia de ABox y TBox). 
 
-%Es por ello que se ha optado por realizar una enumeración de las diferentes herramientas que es posible utilizar, atendiendo al tipo de tarea que dicha herramienta automatiza. Así tendremos herramientas que llevan a cabo algún tipo de razonamiento sobre la ontología, herramientas que permiten la transformación de la ontología en diversos tipos de datos para ampliar su aplicabilidad, editores que permiten manipular la ontología y las diversas instancias creadas sobre ella, visores que nos presentan la información contenida en la ontología en las más diversas formas, y otras herramientas que realizan las más diversas tareas, como veremos más adelante. Todas estas herramientas en forma plugins se pueden encontrar en \textit{\url{http://protege.stanford.edu/download/plugins.html}}. Estas categorías no son atómicas, y como veremos, muchas de las herramientas podrían, por su versatilidad, encajar perfectamente en otras categorías.
-
 De todo el amplísimo conjunto de herramientas existentes, las aquí comentadas son tan sólo una pequeña parte. Es posible que existan aplicaciones o plugins con más funcionalidades de las aquí descritas, o bien que parte de la información acerca de las herramientas se haya quedado desactualizada con motivo del lanzamiento de nuevas versiones. 
-
-%Por último, la mayoría de las herramientas que vamos a ver a continuación son plugins escritos en java. Es posible utilizarlos de manera aislada de Protégé, pero por comodidad, y dada la potencia de Protégé, se mostrarán en su forma de plugin. 
 
 Debemos mencionar que existen otras muchas herramientas para el trabajo con web semántica, y que resulta inadecuado incluir en estas páginas un compendio de todas las herramientas. Podemos encontrar páginas como \textit{\url{http://semanticweb.org/wiki/Tools}}, \textit{\url{http://www.mkbergman.com/sweet-tools/}} o \textit{\url{http://www.w3.org/2001/sw/wiki/Tools}} donde existen cientos de aplicaciones clasificadas por tipos.
 
@@ -36,22 +30,13 @@ ACE View\footnote{\url{http://attempto.ifi.uzh.ch/aceview/}} es un editor de reg
 
 Permite obtener de manera rápida una lectura en lenguaje seminatural (inglés en este caso). Existe el problema de que el visor no es capaz de interpretar reglas inferidas por el razonador, sino únicamente aquellas definidas manualmente. De igual modo, no le es posible trabajar con ontologías importadas, lo cual limita su uso (para este caso en particular) a una lectura de la traducción de la ontología a ACE. Si fuese preciso explotar al máximo esta herramienta, podríamos entonces exportar la ontología a una única fuente autocontenida.
 
-A modo de ejemplo, se muestra la parte de la ontología que define \lstinline!Objetivo_General!:
+A modo de ejemplo, se muestra una la definición de \lstinline!Competencia_General!:
 
-\lstset{language=ace}
-\begin{lstlisting}[caption={Descripción de la clase Objetivo\_General en ACE},label=ace,captionpos=b]
-		Every Objetivo\_General is something.
-		Every Objetivo\_General OG\_seCumpleMedianteLaAdquisicionDe\_COes a Competencia.
-		Everything that is OG\_seCumpleMedianteLaAdquisicionDe\_COed by an Objetivo\_General is a Competencia.
-		Every Competencia CO\_seAdquiereParaCumplir\_OGs an Objetivo\_General.
-		Everything that is CO\_seAdquiereParaCumplir\_OGed by something is an Objetivo\_General.
-		Every Objetivo\_General is something that OG\_seCumpleMedianteLaAdquisicionDe\_COes nothing but Competencias and that OG\_seCumpleMedianteLaAdquisicionDe\_COes a Competencia.
-		Everything that OG\_seCumpleMedianteLaAdquisicionDe\_COes nothing but Competencias and that OG\_seCumpleMedianteLaAdquisicionDe\_COes a Competencia is an Objetivo\_General.
-		Everything that is CO\_seAdquiereParaCumplir\_OGed by a Competencia is an Objetivo\_General.
-		Everything that OG\_seCumpleMedianteLaAdquisicionDe\_COes something is an Objetivo\_General.
-		Every Competencia is something that CO\_seAdquiereParaCumplir\_OGs nothing but Objetivo\_Generals and that CO\_seAdquiereParaCumplir\_OGs an Objetivo\_General.
-		Everything that CO\_seAdquiereParaCumplir\_OGs nothing but Objetivo\_Generals and that CO\_seAdquiereParaCumplir\_OGs an Objetivo\_General is a Competencia.
-\end{lstlisting}
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-ACE.png}
+	\caption[ACE]{Definición de \lstinline!Competencia_General! en ACE mediante ACE View.}
+\end{figure}
 
 
 \section{Razonadores}
@@ -91,7 +76,7 @@ OWLDoc\footnote{\url{http://code.google.com/p/co-ode-owl-plugins/wiki/OWLDoc}} e
 \begin{figure}[!h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLDoc.png}
-	\caption[OWLDoc]{Vista del individuo \lstinline!MV-Evaluacion_Movilidad!}
+	\caption[OWLDoc]{Vista de la propiedad \lstinline!formaParteDe! obtenida con OWLDoc}
 \end{figure}
 
 \subsubsection{CloudViews}
@@ -102,20 +87,26 @@ Además, permite exportar los resultados a formato html que luego pueden visualiz
 \begin{figure}[!h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-cloudview.png}
-	\caption[CloudViews]{Vista en un navegador a pantalla completa de la nube de tags}
+		\captionsetup{justification=centering,margin=1cm}
+		\caption[CloudViews]{Vista en un navegador a pantalla completa de la nube de tags generada por CloudViews}
+		\captionsetup{justification=centering,margin=-1cm}
 \end{figure}
 
-\subsubsection{Matrix}
+\subsubsection{MatrixViews}
 El plugin Matrix\footnote{\url{http://code.google.com/p/co-ode-owl-plugins/wiki/MatrixViews}} nos permite tener una visión de la ontología en forma de tabla, seleccionando aquella información que de las diferentes clases, propiedades e individuos nos interesa. Incluso es posible, desde la propia tabla, incluir información en la ontología, lo que la convierte en muy útil para completar información. Tiene el inconveniente de que no es capaz de trabajar con axiomas inferidos, por lo que pierde una gran parte de su utilidad, ya que toda la información debe estar insertada en la ontología.
 
 \begin{figure}[!h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-matrix.png}
-	\caption[Matrix: Individuos]{Vista de los individuos}
+		\captionsetup{justification=centering,margin=1cm}
+		\caption[Matrix: Individuos]{Vista de las materias de la instancia obtenida mediante MatrixViews}
+		\captionsetup{justification=centering,margin=-1cm}
 \end{figure}
 \begin{figure}[!h]
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-matrix2.png}
-	\caption[Matrix: Propiedades]{Vista de las propiedades}
+		\captionsetup{justification=centering,margin=1cm}
+		\caption[Matrix: Propiedades]{Vista de las propiedades de la ontologia obtenida mediante MatrixViews}
+		\captionsetup{justification=centering,margin=-1cm}
 \end{figure}
 
 \subsubsection{NavigOWL}
@@ -148,7 +139,7 @@ Es un modo de ver la estructura de la ontología muy rápidamente, pero cuenta con
 \begin{figure}[!h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLGrEd.png}
-	\caption[OWLGrEd]{Diagrama UML parcial de la TBox}
+	\caption[OWLGrEd]{Diagrama UML parcial de la TBox obtenido con OWLGrEd}
 \end{figure}
 
 \subsubsection{SOVA}
@@ -159,12 +150,14 @@ SOVA tiene dos modos de trabajo. En el primer modo obtener una visualización int
 \begin{figure}[!h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-SOVAvis.png}
-	\caption[SOVA - Interactiva]{Visualización de las relaciones entre Materia y Asignatura}
+	\caption[SOVA - Interactiva]{Visualización de las relaciones entre \lstinline!Materia! y \lstinline!Asignatura! desde el plugin SOVA}
 \end{figure}
 \begin{figure}[!h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-SOVAhie.png}
-	\caption[SOVA - Jerarquía]{Visualización jerarquizada de las clases e individuosde la ontología}
+		\captionsetup{justification=centering,margin=1cm}
+		\caption[SOVA - Jerarquía]{Visualización jerarquizada de las clases e individuos de la ontología obtenida desde SOVA}
+		\captionsetup{justification=centering,margin=-1cm}
 \end{figure}
 
 \subsubsection{DL-Query}
@@ -173,7 +166,9 @@ Se trata de un plugin de Protégé que nos permite, mediante el uso de un razonado
 \begin{figure}[!h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-DLQuery.png}
-	\caption[DL-Query]{``¿Qué valores son requisitos para poder cursar Programación Concurrente?''}
+		\captionsetup{justification=centering,margin=1cm}
+		\caption[DL-Query]{``¿Qué \lstinline!Asignaturas! son requisitos para poder cursar Programación Concurrente?''}
+		\captionsetup{justification=centering,margin=-1cm}
 \end{figure}
 
 \subsubsection{Cardinality View}
@@ -182,7 +177,9 @@ Es un plugin, integrado en Protégé que nos permite visualizar las restricciones 
 \begin{figure}
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-CardinalityView.png}
-	\caption[Cardinality View]{Vista de la clase \lstinline!Materia!}
+		\captionsetup{justification=centering,margin=1cm}
+		\caption[Cardinality View]{Vista de las cardinalidades de la clase \lstinline!Materia! con Cardinality View}
+		\captionsetup{justification=centering,margin=-1cm}
 \end{figure}
 
 \subsubsection{Outline and Existential Tree Views}
@@ -191,7 +188,9 @@ Este\footnote{\url{http://code.google.com/p/co-ode-owl-plugins/wiki/OutlineView}
 \begin{figure}[!h]
 	\centering
 				\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-ExistentialTree.png}
-	\caption[Outline and existential Tree Views]{Árbol generado a partir de \lstinline!Asignatura!}
+		\captionsetup{justification=centering,margin=1cm}
+		\caption[Outline and existential Tree Views]{Árboles generados a partir de \lstinline!Objetivo_General! y \lstinline!Asignatura! con Tree Views}
+		\captionsetup{justification=centering,margin=-1cm}
 \end{figure}
 
 
@@ -209,7 +208,9 @@ Además tiene la posibilidad de integrarse en varios sistemas de control de versi
 \begin{figure}[!h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-OWLdiff.png}
-	\caption[OWLDiff]{Muestra de dos ontologías distintintas analizadas por la herramienta}
+		\captionsetup{justification=centering,margin=1cm}
+		\caption[OWLDiff]{Muestra de dos versiones distintintas de la ontología analizadas por OWLDiff}
+		\captionsetup{justification=centering,margin=-1cm}
 \end{figure}
 
 
@@ -219,7 +220,7 @@ Además tiene la posibilidad de integrarse en varios sistemas de control de versi
 
 \subsubsection{Protege-OWL Code Generator} Creado por los desarrolladores de Protégé, este plugin busca facilitar el desarrollo de aplicaciones a partir de ontologías. El plugin genera, a partir de una ontología, código en java, con el cual podemos trabajar directamente. A modo de ejemplo, se muestra parte del código generado por la versión 1.0.0 para la clase \lstinline!Materia!
 
-\lstinputlisting[caption={Código generado para la clase \lstinline!Materia!},captionpos=b,label=owl-code,language=Java,mathescape=false,firstline=1, lastline=50]{codigo/Materia.java}
+\lstinputlisting[caption={Código generado para la clase \lstinline!Materia!},captionpos=b,label=owl-code,language=Java,mathescape=false,firstline=1, lastline=40]{codigo/Materia.java}
 
 \section{Control de versiones}
 
@@ -244,7 +245,7 @@ Este\footnote{\url{http://code.google.com/p/co-ode-owl-plugins/wiki/ChangeView}}
 \begin{figure}[h!]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Herramientas-changeview.png}
-	\caption[ChangeView]{Vista de la herramienta ChangeView}
+	\caption[ChangeView]{Vista de la herramienta \lstinline!ChangeView!}
 \end{figure}
 
 \section{Wikis}
