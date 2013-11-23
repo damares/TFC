@@ -54,7 +54,7 @@ De entre todos ellos, he optado por utilizar \textit{SemanticMediaWiki}, por las
 	\end{description}		
 
 	\subsubsection{Nuestro servidor}
-	El servidor de nuestra wiki es un equipo modesto (Intel Atom N450 con 2GB de RAM), donde ya se encontraba instalado un entorno \textit{LAMP}, por lo que para proceden a realizar una instalación inocua decidí crear una máquina virtual utilizando el software de \textit{Oracle VirtualBox}\footnote{\url{https://www.virtualbox.org/}}sobre la que realizar una instalación en limpio.
+	El servidor de nuestra wiki es un equipo modesto (Intel Atom N450 con 2GB de RAM), donde ya se encontraba instalado un entorno \textit{LAMP}, por lo que para proceder a realizar una instalación inocua decidí crear una máquina virtual utilizando el software de \textit{Oracle VirtualBox}\footnote{\url{https://www.virtualbox.org/}}sobre la que realizar una instalación en limpio.
 	
 	Sobre esa máquina virtual se instaló \textit{Lubuntu 13.04}, y sobre ello el servidor web \textit{Apache} en su versión 2.2.22\footnote{\url{http://httpd.apache.org/download.cgi}}, el intérprete de \textit{PHP 5.4.6-1}\footnote{\url{http://php.net/downloads.php}} y el servidor \textit{mysql 5.5.29}\footnote{\url{http://dev.mysql.com/downloads/mysql/}}.
 	

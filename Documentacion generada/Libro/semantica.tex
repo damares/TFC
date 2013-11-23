@@ -49,7 +49,7 @@ Dado un vocabulario $V$, de ahora en adelante se utilizará la siguiente notacíón
 	\begin{itemize}
 		\item $\bigtriangleup_I$ es un conjunto no vacío llamado el \textit{dominio de objetos}.
 		\item $\bigtriangleup_D$ es un conjunto no vacío disjunto a $\bigtriangleup_I$ llamado el \textit{dominio de datos} tal que $(DT)^{DT} \subseteq \bigtriangleup_D$ para cada tipo de datos $DT \in V_{DT}$.
-		\item $\cdot^C$ es la \textit{función de intrepretación de clases} que asigna a cada clase $C \in V_C$ un subconjunto $(C)^C \subseteq \bigtriangleup_I$ tal que $(owl_Thing)^C=\bigtriangleup_I \cap (owl:Thing)^C=\varnothing$.
+		\item $\cdot^C$ es la \textit{función de intrepretación de clases} que asigna a cada clase $C \in V_C$ un subconjunto $(C)^C \subseteq \bigtriangleup_I$ tal que $(owl\_Thing)^C=\bigtriangleup_I \cap (owl:Thing)^C=\varnothing$.
 		\item $\cdot^{OP}$ es la \textit{función de interpretación de propiedades de objetos} que asigna a cada propiedad $OP \in V_{OP}$ un subconjunto $(OP)^{OP} \subseteq \bigtriangleup_I \times \bigtriangleup_I$ tal que $(owl:topObjectProperty)^{OP}=\bigtriangleup_I \times \bigtriangleup_I \land (owl:bottomObjectProperty)^{OP}=\varnothing$.
 		\item $\cdot^{DP}$ es la \textit{función de interpretación de datos} que asigna a cada propiedad $DP \in V_{DP}$ un subconjunto $(DP)^{DP} \subseteq \bigtriangleup_I \times \bigtriangleup_D$ tal que $(owl:topDataProperty)^{DP}=\bigtriangleup_I \times \bigtriangleup_D \land (owl:bottomDataProperty)^{DP}=\varnothing$.
 		\item $\cdot^I$ es la \textit{función de interpretación de individuos} que asigna a cada individuo $a \in V_I$ un elemento $(a)^I \in \bigtriangleup_I$.
@@ -504,7 +504,7 @@ DataProperty: $DPE_1$
     	\begin{array}{l}
    		   (DPE_j)^{dp} \cap (DPE_k)^{dp} = \varnothing \\
    		   	\text{para cada} 1 \leq j \leq n \\
-   		   \text{y cada } 1 \leq k \leq n 
+   		   \text{y cada } 1 \leq k \leq n\  
    		   \text{tales que } j \neq k\\
    		\end{array}
    	\end{displaymath}
