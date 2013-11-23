@@ -18,8 +18,8 @@
 \date[Octubre 2013]{17 de Octubre de 2013}
 \selectlanguage{spanish}
 %\setbeameroption{show only notes}
-%\setbeameroption{show notes}
-\setbeameroption{hide notes}
+\setbeameroption{show notes}
+%\setbeameroption{hide notes}
 \begin{document}
 %--- Tí­tulo -------------------------%
 \begin{frame}[plain]
@@ -54,7 +54,7 @@ Se estableció como unidad de medida de los planes de estudios el ECTS. Este nuev
 		\includegraphics[width=1\textwidth]{collage.png}
 	\end{center}
 \end{frame}
-\note{La primera aproximación al problema por parte de los docentes de la Facultad de informática consistió en la elaboración de hojas de cálculo - hasta 7 por asignatura- para capturar el conocimiento de Bolonia. Las hojas se utilizaban para el intercambio de información entre los docentes con el fin de definir un plan de estudios. La información contenida en las hojas de cálculo es muy poco práctica y difícilmente aprovechable por otras aplicaciones, al carecer de una sintaxis y semántica definidas. No existían definiciones de ningún concepto, ni ninguna relación entre ellos. Nuestro universo se limitaba a una única asignatura.}
+\note{La primera aproximación al problema por parte de la comisión de la Facultad de informática consistió en la elaboración de hojas de cálculo - hasta 7 por asignatura- para capturar el conocimiento de Bolonia. Las hojas se utilizaban para el intercambio de información entre los docentes con el fin de definir un plan de estudios. La información contenida en las hojas de cálculo es muy poco práctica y difícilmente aprovechable por otras aplicaciones, al carecer de una sintaxis y semántica definidas. No existían definiciones de ningún concepto, ni ninguna relación entre ellos. Nuestro universo se limitaba a una única asignatura.}
 
 
 
@@ -84,7 +84,7 @@ Se estableció como unidad de medida de los planes de estudios el ECTS. Este nuev
 %\end{LARGE}
 \end{frame}
 \note{Esquema conceptual: Ontologías\\
-De una manera informal, puede decirse que una ontología consta de clases (conjuntos de individuos con alguna característica en común), propiedades (relaciones binarias entre dos individuos o entre un individuo y un tipo de datos) e individuos. Las ontologías nos permiten describir de manera formal algún subconjunto del universo en función de sus propiedades y de la forma en que éstas se interrelacionan, lo que permite que diferentes personas o sistemas tengan un entendimiento común y compartido de ese dominio. Esto es la representación gráfica de un individuo de la ontología, en concreto de la asignatura Concurrencia. Podemos ver en color naranja la propiedad esDeCaracter, en verde la propiedad seImparteDurante, en dorado formaParteDe, y en morado la propiedad tieneComoRequisito. Podemos ver que la asignatura es de carácter obligatoria, está incluida en la materia Programación, y ubicada en el cuarto semestre. Además es requisito para las asignaturas \textbf{nombrar}}
+De una manera informal, puede decirse que una ontología consta de clases (conjuntos de individuos con alguna característica en común), propiedades (relaciones binarias entre dos individuos o entre un individuo y un tipo de datos) e individuos. Las clases junto con las propiedades conforman la TBox de una onotlogía, mientras que los individuos conforman el conjunto de la ABox. Las ontologías nos permiten describir de manera formal algún subconjunto del universo en función de sus propiedades y de la forma en que éstas se interrelacionan, lo que permite que diferentes personas o sistemas tengan un entendimiento común y compartido de ese dominio. Esto es la representación gráfica de un individuo de la ontología, en concreto de la asignatura Concurrencia. Podemos ver en color naranja la propiedad esDeCaracter, en verde la propiedad seImparteDurante, en dorado formaParteDe, y en morado la propiedad tieneComoRequisito. Podemos ver que la asignatura es de carácter obligatoria, está incluida en la materia Programación, y ubicada en el cuarto semestre. Además es requisito para las asignaturas \textbf{nombrar}}
 
 
 \begin{frame}{Modelización del universo}
@@ -94,7 +94,7 @@ De una manera informal, puede decirse que una ontología consta de clases (conjun
 	\end{enumerate}
 \end{frame}
 \note{Lenguaje utilizado: OWL\\
-Las ontologías se expresan en lenguajes basados en conceptos lógicos que permiten almacenar información sintáctica y semántica. De entre todos los lenguajes existentes, hemos elegido OWL por ser un estándar desarrollado por W3C. Existen tres sublenguajes dentro de OWL. El más sencillo, OWL lite, es decidible y completo, pero no resulta lo suficientemente expresivo. En el lado contrario tenemos OWL-Full que por permitir la máxima expresividad y libertad sintáctica, no aporta garantías sobre su decidibilidad o completitud. Por ello hemos elegido el sublenguaje OWL-DL, que como término medio, ofrece todos los constructores de OWL pero con pequeñas condiciones, lo que le permite tener una mayor expresividad que OWL-Lite, manteniendo las propiedades de decidibiliadd y completitud de las que carece OWL-Full.}
+Las ontologías se expresan en lenguajes basados en conceptos lógicos que permiten almacenar información sintáctica y semántica. De entre todos los lenguajes existentes, hemos elegido OWL por ser un estándar desarrollado por W3C. OWL tiene tres subconjuntos más o menos potentes en función de su expresividad y completitud. OWL Lite, es decidible y completo, pero no resulta lo suficientemente expresivo. En el lado contrario tenemos OWL-Full que por permitir la máxima expresividad y libertad sintáctica, no aporta garantías sobre su decidibilidad o completitud. Por ello hemos elegido el sublenguaje OWL-DL, que como término medio tiene una mayor expresividad que OWL-Lite, manteniendo las propiedades de decidibiliadd y completitud de las que carece OWL-Full.}
 
 \begin{frame}{Modelización del universo}
 	\begin{enumerate}
@@ -119,7 +119,7 @@ Protégé es un framework libre de código abierto, desarrollado conjuntamente por 
 	\end{scriptsize}
 \end{frame}
 \note{Esta es la descripción de la clase asignatura realizada en sintaxis Manchester, que nos permite representar cosas como la vista antes de la asignatura concurrencia. Resulta una forma de representar conocimiento muy potente ya que permite capturar relaciones y conceptos que no era posible con las hojas de cálculo. 
-Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo de materias. Además, debe ser alguna cosa; debe pertenecer como máximo a una materia; debe estar planificada en al menos una ubicación temporal, y sólo en ubicaciones temporales; debe tener definido un carácter, y sólo definido el carácter; debe constar de unos créditos y sólo de esos; y debe tener una descripción de los contenidos, y sólo una.
+La condición necesaria y sufciente de pertenencia a la clase asignatura es que el individuo forme parte de alguna materia y sólo de materias. Además, debe ser alguna cosa; debe pertenecer como máximo a una materia; debe estar planificada en al menos una ubicación temporal, y sólo en ubicaciones temporales; debe tener definido un carácter, y sólo definido el carácter; debe constar de unos créditos y sólo de esos; y debe tener una descripción de los contenidos, y sólo una.
 }
 
 
@@ -143,7 +143,7 @@ Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo
 		\end{center}
 	\end{scriptsize}
 \end{frame}
-\note{Por ejemplo, la propiedad formaParteDe, relaciona siempre una asignatura con una materia, es una relación funcional y su inversa es la propiedad constaDe. La propiedad creditosDeLaAsignatura relaciona una asignatura con un dato de tipo credito y es una propiedad funcional. Y qué es un tipocredito? pues un decimal mayor que cero. }
+\note{Por ejemplo, la propiedad formaParteDe, relaciona siempre una asignatura con una materia, es una relación funcional y su inversa es la propiedad constaDe. La propiedad creditosDeLaAsignatura relaciona una asignatura con un dato de tipo credito y es una propiedad funcional. Y qué es un tipocredito? pues un decimal mayor que cero. Algunas de las características de las propiedades mencionadas se pueden deducir sin necesidad de explicitarlas gracias a la semántica del lenguaje y a los razonadores automáticos.}
 
 
 %--- Instancia del plan de estudios -%
@@ -154,10 +154,10 @@ Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo
 \lstinputlisting[breaklines,language=protege,literate=,linerange=Individual:\ Concurrencia-xsd:string]{../Libro/codigo/a-box.ms} 	
 	\end{footnotesize}
 \end{frame}
-\note{Y esta es la instancia de la asignatura concurrencia en sintaxis Manchester. Definimos la asignatura concurrencia como una asignatura, obligatoria, de 3 creditos, que se imparte en el 4o trimestre, que tiene como requisitos (entendiendo como requisitos simples recomendaciones a la hora de cursar las asignaturas) Programacion II y Lenguajes formales, y con unos contenidos resumidos en Análisis y diseño (sigue leyendo la diapo).}
+\note{Y hasta aqui la TBox. Vamos ahora con la ABox, en concreto con la asignatura concurrencia en sintaxis Manchester. Definimos la asignatura concurrencia como una asignatura, obligatoria, de 3 creditos, que se imparte en el 4o trimestre, que tiene como requisitos (entendiendo como requisitos simples recomendaciones a la hora de cursar las asignaturas) Programacion II y Lenguajes formales, y con unos contenidos resumidos en Análisis y diseño (sigue leyendo la diapo).}
 
 \againframe{ejemplo}
-\note{El resto de propiedades vistas en el ejemplo de ontología mostrado al principio  de la asignatura son inferidos gracias a razonadores automáticos. El plan de estudios en su conjunto consta de 11 Objetivo General, 12 Competencia General, 47 Competencia Especifica, 12 Materia, 43 Asignaturas, 4 Carácteres, 66 Actividades Formativas, 6 Metodos docentes, 10 Métodos de evaluación y 7 Ubicaciones temporales}
+\note{El resto de propiedades vistas en el ejemplo de ontología mostrado al principio  de la asignatura son inferidos gracias a razonadores automáticos. El plan de estudios en su conjunto consta de un total de 218 individuos.}
 
 
 \begin{frame}{Aplicaciones del diseño}
@@ -166,7 +166,7 @@ Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo
 	Razonadores (FaCT++, HermiT), editores (ACE View, ChangeView, Hypergraph DB), visores (CloudViews, Matrix, NavigOWL, Ontograf, OWLGrEd, SOVA, DL-Query, Cardinality view, Tree views, OWLDoc, OWLViz, OWLPropViz, OWLDiff), transformación (OWL2RDB).
 \end{frame}
 
-\note{Y hasta aquí lo que daba de si el proyecto. Habí­amos logrado, trabajando con ontologías, crear un marco formal de conocimiento que permitiese especificar de un modo formal el nuevo plan de estudios de modo que permitiese capturar más concocimiento.  Se habí­a logrado cambiar el trabajo con herramientas no eficientes como las hojas de cálculo por las ontologías, y se habí­a conseguido con una herramienta que además permitia el trabajo con aplicaciones automáticas, como razonadores, editores, visores, herramientas para la transformación de datos y otros.}
+\note{Y hasta aquí lo que daba de si el proyecto. Habí­amos logrado, trabajando con ontologías, crear un marco formal de conocimiento que permitiese especificar de un modo formal el nuevo plan de estudios de modo que permitiese capturar más concocimiento.  Hemos cambiado el trabajo con herramientas no eficientes como las hojas de cálculo por las ontologías, y habíamos conseguido con una herramienta que además permitia el trabajo con aplicaciones automáticas, como razonadores, editores, visores, herramientas para la transformación de datos y otros.}
 
 \begin{frame}{Aplicaciones del diseño}
 	Aplicaciones automáticas:
@@ -185,7 +185,7 @@ Un individuo es una asignatura si y sólo si forma parte de alguna materia y sólo
 	\end{itemize}
 \end{frame}
 \note{WEB SEMÁNTICA:\\
-La web semántica es una web extendida dotada de un mayor significado (semántica) al delegar tareas en software que es capaz de procesar su contenido, razonar sobre éste, combinarlo y realizar deducciones lógicas para resolver problemas cotidianos de manera automática. Estas soluciones se apoyan en el uso de lenguajes universales (como OWL) que resuelven los problemas ocasionados por una web carente de semántica. Vamos a aprovechar las capacidades descritas de las web semánticas para superar el problema de la usabilidad de nuestra ontologia.}
+La web semántica es una web extendida gracias a la adición de semántica por parte de un usuario, lo que permite que software especializado sea capaz de procesar su contenido, razonar sobre éste, combinarlo y realizar deducciones lógicas para resolver problemas cotidianos de manera automática. Estas soluciones se apoyan en el uso de lenguajes universales (como OWL) que resuelven los problemas ocasionados por una web carente de semántica. Vamos a aprovechar las capacidades descritas de las web semánticas para superar el problema de la usabilidad de nuestra ontologia.}
 
 \note{WIKI SEMÁNTICA:\\
 Una wiki semántica es un espacio web que permite a los usuarios crear contenido de modo colaborativo incorporando las capacidades descritas para la web semántica. De este modo es posible crear un espacio web colaborativo donde se almacenan datos y capaz de capturar los detalles semánticos del modelo, creando un sistema de consulta ágil y usable.}
@@ -209,30 +209,30 @@ Una wiki semántica es un espacio web que permite a los usuarios crear contenido 
 	\end{enumerate}
 \end{frame}
 
-\note{Marco formal:\\
+\note{Voy a terminar la exposición de mi TFC con unas conclusiones sobre las metas alcancades durante el desarrollo del presente trabajo.\\Marco formal:\\
 Las ontologías nos han permitido capturar el universo de observación y las connotaciones semánticas en un modelo formal y coherente con el marco normativo del espacio europeo de educación superior. Si trabajamos las ontologías con herramientas adecuadas como Protégé, nos es posible además aprovechar razonadores y otras herramientas que facilitan el desarrollo y el mantenimiento de las mismas. \\}
 
 \note{Validacion:\\
 Hemos instanciado el plan de estudios del grado en informática de la upm, con el fin de validar la ontologia y el plan de estudios. Durante la validación, hemos encontrado incongruencias en el plan de estudios que bien pudieran pasarse por alto sin el uso de herramientas adecuadas. Por ejemplo, hemos encontrado competencias que no contribuyen al cumplimiento de ningún objetivo de la titulación, y posiblemente, refinando la ontología o utilizando otras herramientas a las aquí propuestas, sea posible encontrar algún otro error en el diseño del plan de estudios.\\}
 
 \note{Usabilidad:\\
-Resulta muy pesado y engorroso trabajar directamente con ontologías y sus definiciones. Si bien existe software y plugins que pretenden mejorar la experiencia con ontologías, no dejan de ser malas aproximaciones a un interfaz realmente útil para todo tipo de usuarios. Las wikis semánticas permiten mejorar la usabilidad de la herramienta de una manera drástica.}
+Resulta muy pesado y engorroso trabajar directamente con ontologías y sus definiciones. Si bien existe software y plugins que pretenden mejorar la experiencia con ontologías, no dejan de ser malas aproximaciones a un interfaz realmente útil para todo tipo de usuarios. Las wikis semánticas permiten mejorar la usabilidad de la herramienta, aunque no terminan de satisfacer al 100\% todas mis expectativas.}
 
 
 \begin{frame}{Trabajo a futuro}
 	\begin{itemize}
-		\item Mejoras en la ontología. \newline
 		\item Integración de OWL y Wiki semántica. \newline
+		\item Mejoras en la ontología. \newline
 		\item Razonadores automáticos sobre la wiki.
 	\end{itemize}
 \end{frame}
+\note{Por ello dejo sería interesante de cara a un trabajo a futuro, mejorar la integración entre la ontología y la wiki semántica. Hemos encontrado problemas al trasvasar el conocimiento de la ontología a la wiki debido a construcciones semánticas que la herramienta automática no era capaz traducir a la wiki semántica, e incluso sería interesante que cambios sobre la ontología tuviesen su reflejo automático sobre la wiki para poder adaptarla a las modificaciones que pudiese sufrir la ontología subyacente.}
+
+\note{De igual modo, ahora mismo la solución carece de la posibilidad de ejecutar razonadores automáticos directamente sobre la wiki semántica, de forma que la inclusión de nueva información por parte de cualquier usuario, o la modificación de la ya existente pueda hacerse con la seguridad de que la información sea sintáctica y semánticamente correcta y la ontología subyacente correcta.}
 
 \note{Mejoras en la ontología:\\
-A partir de aquí se abren diferentes caminos como trabajo a futuro. En primer lugar siempre cabe la posiblidad de mejorar la ontología diseñada, haciendo ésta más eficiente, o ampliando el universo descrito ante cambios normativos o por necesidades de la aplicabilidad.}
-\note{Integracion OWL y Wiki:\\
-En segundo lugar serí­a interesante lograr una mayor integración entre la ontología y la wiki semántica de forma que, por ejemplo, cambios sobre la ontología tuviesen su reflejo automático sobre la wiki. De este modo serí­a posible adaptar una wiki ya en funcionamiento a las modificaciones que pudiese sufrir la ontología subyacente, sin necesidad de tener que traspasar de forma manual el concimiento capturado, ahorrándonos la posibilidad de incurrir en errores debidos al tratamiento manual de esos datos.}
-\note{Razonadores automáticos:\\
-Y por último, y lo que me ha parecido más importante, la posiblidad de ejecutar razonadores automáticos directamente sobre la wiki semántica. Cualquier usuario podría de este modo incluir información no recogida previamente en la wiki, o modificar la ya existente. Pero el hecho de poderla incluir no nos asegura que dicha información sea sintáctica y semánticamente correcta. Para asegurarnos de ello, resulta imprescindible que algún razonador automático nos confirmase que la ontología subyacente resultante es decidible, y completa.}
+Y por último, siempre cabe la posiblidad de mejorar la ontología diseñada, haciendo ésta más eficiente, o ampliando el universo descrito ante cambios normativos o por necesidades de la aplicabilidad.}
+
 
 
 
