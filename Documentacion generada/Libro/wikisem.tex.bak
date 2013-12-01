@@ -80,7 +80,7 @@ De entre todos ellos, he optado por utilizar \textit{SemanticMediaWiki}, por las
 \begin{figure}
 	\centering
 		\includegraphics[width=1.00\textwidth]{Imagenes/Wiki2.png}
-	\caption[Wiki - vista de una propiedad]{Vista de la propiedad \lstinline!OG_seCumpleMedianteLaAdquisiciónDe_CO!}
+	\caption[Wiki - vista de una propiedad]{Vista de la propiedad \lstinline!seCumpleMedianteLaAdquisiciónDe!}
 \end{figure}
 	
 	Además, las wikis son extremadamente fáciles de crear y mantener. Su usabilidad puede expandirse de manera casi ilimitada gracias a la posibilidad de introducir extensiones en el motor de la wiki que ejecuten o automaticen tareas de búsqueda, referencia y mantenimiento de la base de conocimiento, que facilitan la interacción con el usuario, protegen a la wiki de cambios que destruyan la coherencia de la información almacenada, exportan su contenido, e incluso permiten crear nuevas wikis que trabajen con conocimiento ya almacenado en otras. Y si todas las funcionalidades que nos ofrecen esas extensiones ya creadas\footnote{podemos encontrar cientos de ellas en páginas como \url{http://semantic-mediawiki.org/wiki/Help:Extensions} y \url{http://semanticweb.org/wiki/Main_Page}} aún es posible crear nuestra propia extensión de acuerdo a nuestras necesidades, gustos y preferencias.
